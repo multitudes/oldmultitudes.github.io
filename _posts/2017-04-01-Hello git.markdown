@@ -10,29 +10,31 @@ This post is a summary of the basic of Git. I use it everyday now.
  
 ### INSTALL GIT 
  
-Configure user information for all local repositories
+Configure user information for all local repositories. Here an example, my user name is "multitudes"
 
-    $ git config --global user.name "[name]"
+    $ git config --global user.name "[multitudes]"
     
-Sets the name you want attached to your commit transactions
+Sets the user name you want attached to your commit transactions.
 
 
      $ git config --global user.email "[wrmultitudes@gmail.com]"
 
-Sets the email you want attached to your commit transactions 
+Sets the email you want attached to your commit transactions. Here is my email in the brackets. 
 
     $ git config --global color.ui auto
 
 Enables helpful colorization of command line output 
 
 ### CREATE REPOSITORIES 
-Start a new repository or obtain one from an existing URL 
+Start a new repository in a folder on your hard disk. 
 
-    $ git init [project-name]
+    $ git init [name]
+    $ git init [multitudes.github.io]
+    
 
 Creates a new local repository with the specified name 
 
-    $ git clone [url]
+    $ git clone [https://github.com/multitudes/multitudes.github.io.git]
 
 Downloads a project and its entire version history 
 
@@ -54,6 +56,7 @@ Snapshots the file in preparation for versioning
     $ git diff --staged
 
 Shows file differences between staging and the last file version 
+    
     $ git reset [file]
 
 Unstages the file, but preserve its contents 
@@ -76,6 +79,7 @@ Creates a new branch
     $ git checkout [branch-name]
 
 Switches to the specified branch and updates the working directory 
+    
     $ git merge [branch]
 
 Combines the specified branch’s history into the current branch 
@@ -97,6 +101,7 @@ Deletes the file from the working directory and stages the deletion
     $ git rm --cached [file]
 
 Removes the file from version control but preserves the file locally 
+    
     $ git mv [file-original] [file-renamed]
 
 Changes the file name and prepares it for commit 
@@ -108,7 +113,7 @@ Exclude temporary files and paths
     build/
     temp-*
 
-A text file named .gitignore suppresses accidental versioning of files and paths matching the specified pa erns 
+A text file named .gitignore suppresses accidental versioning of files and paths matching the specified patterns 
 
     $ git ls-files --other --ignored --exclude-standard
 
@@ -160,7 +165,12 @@ Erase mistakes and cra replacement history
     
     $ git reset [commit]
 
-Undoes all commits a er [commit], preserving changes locally $ git reset --hard [commit] Discards all history and changes back to the specified commit 
+Undoes all commits a er [commit], preserving changes locally 
+
+    $ git reset --hard [commit] 
+    
+Discards all history and changes back to the specified commit 
+
 
 #### SYNCHRONIZE CHANGES 
 
