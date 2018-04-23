@@ -1,20 +1,22 @@
 <!DOCTYPE html>
-<html lang="{{ page.lang | default: site.lang | default: "en" }}">
+<html>
+    {% include head.html %}
+    <body id="page-top" class="index">
+    {% include nav.html %}
+    {% include header.html %}
+    {% include portfolio_grid.html %}
+    {% include about.html %}
 
-  {%- include head.html -%}
+    {% if site.contact == "static" %}
+    {% include contact_static.html %}
+    {% elsif site.contact == "disqus" %}
+    {% include contact_disqus.html %}
+    {% else %}
+    {% include contact.html %}
+    {% endif %}
 
-  <body>
-
-    {%- include header.html -%}
-
-    <main class="page-content" aria-label="Content">
-      <div class="wrapper">
-        {{ content }}
-      </div>
-    </main>
-
-    {%- include footer.html -%}
-
-  </body>
-
+    {% include footer.html %}
+    {% include modals.html %}
+    {% include js.html %}
+    </body>
 </html>

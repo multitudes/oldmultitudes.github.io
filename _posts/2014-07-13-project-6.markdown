@@ -1,0 +1,12 @@
+---
+title: Lorem
+layout: default
+modal-id: 6
+date: 2018-04-15
+img: cake.png
+alt: image-alt
+project-date: April 2018
+category: Web Development
+description: Lorem
+---
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum sit amet feugiat risus. Vivamus placerat iaculis luctus. Aliquam vehicula pellentesque tortor, in auctor urna malesuada eget. Maecenas at erat vitae lectus viverra egestas. Duis euismod aliquet ultrices. Nunc iaculis congue lorem, interdum consectetur sapien posuere non. Morbi luctus convallis arcu, eu consequat lacus tristique et. Duis rhoncus justo vel tortor faucibus imperdiet.
