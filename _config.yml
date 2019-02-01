@@ -1,26 +1,26 @@
 # Dependencies
 markdown:         redcarpet
-highlighter:      pygments
+highlighter:      rouge
 
 # Permalinks
 permalink:        pretty
 
 
 # Setup
-title:            Laurence B
-tagline:          'A Personal Site'
+title:            Laurent Brusa
+tagline:          ''
 description:      ''
 
 baseurl:          /
 
 author:
-  name:           'Laurence B'
+  name:           'Laurent Brusa'
   url:            https://twitter.com/
 
 paginate:         5
 
 # Custom vars
-version:          2.1.0
+#version:          2.1.0
 
 github:
   repo:           https://github.com/multitudes/multitudes.github.io.git
