@@ -10,7 +10,7 @@ permalink:        pretty
 title:            Laurent Brusa
 tagline:          ''
 description:      ''
-node.url:         /
+#node.url:         /
 baseurl:          /
 
 author:
