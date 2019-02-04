@@ -1,6 +1,7 @@
 ---
 layout: post
 title: How to get your website up and running with Jekyll and GitHub hosting 
+published: false
 ---
 
 (For developers in a hurry )
@@ -135,10 +136,4 @@ I can see on his page that I am not the only one who asked for changes and the r
 I hope you enjoy this tutorial. Please see how to create a bash script to push your commits to github if you want to optimize your workflow.
  
 
-
-
 Thanks for reading!
-
-Hyde is developed on and hosted with GitHub. Head to the <a href="https://github.com/poole/hyde">GitHub repository</a> for downloads, bug reports, and features requests.
-
-Thanks!
