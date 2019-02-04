@@ -17,7 +17,7 @@ author:
   name:           'Laurent Brusa'
   url:            https://twitter.com/
 
-paginate:         5
+paginate:         3
 
 # Custom vars
 #version:          2.1.0
