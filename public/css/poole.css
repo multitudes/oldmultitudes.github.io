@@ -113,7 +113,7 @@ p {
 }
 
 strong {
-  color: #303030;
+  color: #4a525a;
 }
 
 
@@ -311,10 +311,10 @@ tbody tr:nth-child(odd) th {
 .masthead-title {
   margin-top: 0;
   margin-bottom: 0;
-  color: #505050;
+  color: #4a525a;
 }
 .masthead-title a {
-  color: #505050;
+  color: #4a525a;
 }
 .masthead-title small {
   font-size: 75%;
@@ -340,7 +340,7 @@ tbody tr:nth-child(odd) th {
 .page-title,
 .post-title,
 .post-title a {
-  color: #303030;
+  color: #4a525a;
 }
 .page-title,
 .post-title {
