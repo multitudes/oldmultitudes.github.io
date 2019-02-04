@@ -1,7 +1,7 @@
 ---
 layout: post
 title: How to get your website up and running with Jekyll and GitHub hosting 
-#published: false
+published: false
 ---
 
 (For developers in a hurry )
@@ -83,13 +83,13 @@ We add pictures with
 push the changes and see your first post on your new website!!
 
 
-## step 8 
+step 8 
 This theme is customisable however the optional color schemes as described in the documentation  did not work for me. I think it is best to modify the CSS and add some HTML in the template. Fonts can be modified easily for instance I changed the font of the main title and the blog to the system fonts.  
 
-## step 9
+step 9
 Optional. You can set up a development environment for Jekyll on your computer. The necessary files and downloads are on their website, however expect to spend some time debugging various issues and bugs. I prefer to edit my post and push them to github an see the results there. 
 
-## step 10 
+step 10 a hint.
 keep the draft of the post in the same folder, just add unpublished to the header above as follows:
 
 published: false
