@@ -1,6 +1,6 @@
 # Dependencies
-markdown:         redcarpet
-highlighter:      pygments
+#markdown:         redcarpet
+highlighter:      rouge
 
 # Permalinks
 permalink:        pretty
@@ -10,7 +10,7 @@ permalink:        pretty
 title:            Laurent Brusa
 tagline:          'We are Multitudes'
 description:      'my profile and blog'
-url:              https://multitudes.github.io
+node.url:              https://multitudes.github.io
 baseurl:          /
 
 author:
