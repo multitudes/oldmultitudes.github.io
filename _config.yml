@@ -10,7 +10,7 @@ permalink:        pretty
 title:            Laurent Brusa
 tagline:          'We are Multitudes'
 description:      'my profile and blog'
-node.url:              https://multitudes.github.io
+node.url:         https://multitudes.github.io
 baseurl:          /
 
 author:
