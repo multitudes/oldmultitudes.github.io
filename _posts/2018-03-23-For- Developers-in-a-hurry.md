@@ -7,10 +7,10 @@ title: How to get your website up and running with Jekyll and GitHub hosting
 (For developers in a hurry )
 My great inspiration recently has been a course about Machine and Deep Learning from Jeremy Howard at the San Francisco University, currently free to follow as a MOOC on the [fast.ai](https://course.fast.ai) website. One of the things he said remained with me. He said: 'Start a blog about the things you are learning even if you think you are not quite there yet, it does'nt matter. Writing will be of great help to understand the study material better, and it is a great exercise.'
 So this is one thing which motivated me to start a blog and not just have a profile page. I gave myselt three days time to get this blog started. Started last Friday morning and by Friday midday I already spent two hours looking at different fonts. It means it took me two hours max to get the template uploaded and working! It is so fast to get going and I will explain how in this tutorial. I found a few bugs which were annoying. This theme has been released in 2013 and since then a few things have changed.
-I am working on a macBook with High Sierra and I use a terminal. Windows users might need a different approach or they can try to download ![git bash](https://gitforwindows.org) for windows 
+I am working on a macBook with High Sierra and I use a terminal. Windows users might need a different approach or they can try to download [git bash](https://gitforwindows.org) for windows 
 
 Why Jekyll? I wanted a blog which is customisable, and quick to get started. And Jekyll is free. It has also support for syntax highlighting which is great for coders and a number of other advantages, like supporting markdown which I love. It is such a perfect markup language for writing on the web.
-oh, another inspiration for this blog has been ![daring fireball](https://daringfireball.net), he invented markdown by the way... but lets get started! 
+oh, another inspiration for this blog has been [daring fireball](https://daringfireball.net), he invented markdown by the way... but lets get started! 
 
 ### step 1
 
@@ -24,7 +24,7 @@ And keep it on master. Clone or download the new repo to your mac or pc. It will
 
 ### step 3
 
-Github natively support the ![Jekyll](http://jekyllrb.com) plattform and will host one static website for you at no cost. Jekyll has templates and themes. you can see here some ![examples](https://jekyllrb.com/showcase/).
+Github natively support the [Jekyll](http://jekyllrb.com) plattform and will host one static website for you at no cost. Jekyll has templates and themes. you can see here some [examples](https://jekyllrb.com/showcase/).
 
 Clone or download the theme to your computer. Copy all the files minus the .git hidden file to your previously downloaded repo.
 If you don’t see hidden files and directories, or those that begin with a ., press Command + SHIFT + . (the last one is a dot)
@@ -44,7 +44,7 @@ git push -u origin master           # push your changes to GitHub
 Go to your page and check the result. You should see the template with the default.
 
 ### step 5
-We will need to troubleshoot. I choose the Hyde and Poole ![Hyde and Poole](https://github.com/poole/hyde) theme because frankly I wanted something like the fastai website and it looks similar and quite simple.
+We will need to troubleshoot. I choose the Hyde and Poole [Hyde and Poole](https://github.com/poole/hyde) theme because frankly I wanted something like the fastai website and it looks similar and quite simple.
 
 However this theme is already a few years old and doesnt work out of the box anymore. No worries, only a few changes were necessary.
 I will list them here. 
@@ -74,11 +74,11 @@ open your terminal and :
 Need to check that the links are working. We Look at the folders posts.
 The Jekyll pages are auto generated from those files. There is a certain format we need to keep. The title has to start with the date, followed by the name.. like this example:
 2012-02-06-whats-jekyll.md
-md is the markdown extension. You can read more about markdown ![here](https://daringfireball.net/projects/markdown/) and there are different flavours, but it is really easy to get started.
-I would start to duplicate the post file with command-d (on a mac) and edit it. You can use your favourite editor or use brackets ![Brackets](http://brackets.io), which is free. The first few lines enclosed in '---' have to be present in every post. We change the title of course.
+md is the markdown extension. You can read more about markdown [here](https://daringfireball.net/projects/markdown/) and there are different flavours, but it is really easy to get started.
+I would start to duplicate the post file with command-d (on a mac) and edit it. You can use your favourite editor or use brackets [Brackets](http://brackets.io), which is free. The first few lines enclosed in '---' have to be present in every post. We change the title of course.
 
 We add pictures with
-![image-title-here](/path/to/image.jpg){:class="img-responsive"}
+[image-title-here](/path/to/image.jpg){:class="img-responsive"}
 
 push the changes and see your first post on your new website!!
 
