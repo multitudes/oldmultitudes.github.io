@@ -1,5 +1,5 @@
 # Dependencies
-#markdown:         redcarpet
+markdown:         kramdown
 highlighter:      rouge
 
 # Permalinks
@@ -11,7 +11,7 @@ title:            Laurent Brusa
 tagline:          'We are Multitudes'
 description:      'my profile and blog'
 node.url:              https://multitudes.github.io
-baseurl:          "/"
+baseurl:          /
 
 author:
   name:           'laurent b'
