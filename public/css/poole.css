@@ -59,7 +59,7 @@ html {
 }
 
 body {
-  color: #515151;
+  color: #4a525a;
   background-color: #fff;
   -webkit-text-size-adjust: 100%;
       -ms-text-size-adjust: 100%;
@@ -76,7 +76,10 @@ a strong {
 /* `:focus` is linked to `:hover` for basic accessibility */
 a:hover,
 a:focus {
-  text-decoration: underline;
+  
+    /* 
+    text-decoration: underline;
+   */
 }
 
 /* Headings */
@@ -84,7 +87,7 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: .5rem;
   font-weight: bold;
   line-height: 1.25;
-  color: #313131;
+  color: #4a525a;
   text-rendering: optimizeLegibility;
 }
 h1 {
@@ -214,7 +217,7 @@ pre code {
 blockquote {
   padding: .5rem 1rem;
   margin: .8rem 0;
-  color: #7a7a7a;
+  color: #4a525a;
   border-left: .25rem solid #e5e5e5;
 }
 blockquote p:last-child {
@@ -274,7 +277,7 @@ tbody tr:nth-child(odd) th {
 .message {
   margin-bottom: 1rem;
   padding: 1rem;
-  color: #717171;
+  color: #4a525a;
   background-color: #f9f9f9;
 }
 
