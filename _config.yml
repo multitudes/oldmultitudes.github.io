@@ -10,7 +10,7 @@ permalink:        pretty
 title:            Laurent Brusa
 tagline:          ''
 description:      'My profile and blog'
-node.url:         http://multitudes.github.io/
+#node.url:         http://multitudes.github.io/
 baseurl:          /
 
 author:
