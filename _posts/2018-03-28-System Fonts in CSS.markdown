@@ -40,7 +40,7 @@ Craig made a [page](http://furbo.org/stuff/systemfonts-new.html) which can be us
 
 
 ### What about macOS?
-The last three versions of Mac OS X use three different system UI fonts: 
+The last three versions of Mac OS X till El Capitan used three different system UI fonts: 
 * Lucida Grande on Mac OS 10.9 (Mavericks); 
 * A special version of Neue Helvetica on Mac OS 10.10 (Yosemite); 
 * A special version of San Francisco on Mac OS 10.11 (El Capitan).
