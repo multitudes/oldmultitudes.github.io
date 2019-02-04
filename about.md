@@ -5,9 +5,7 @@ title: About
 
 ## about me
 
-<p class="message">
-  Hey there! I am Laurent Brusa and this is my page.
-</p>
+
 
 I love the new opportunities created by computers since the web was born, and want to contribute and be in the winning team at the crossroads of liberal arts and technology.
 
