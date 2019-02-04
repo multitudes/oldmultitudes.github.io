@@ -9,8 +9,8 @@ permalink:        pretty
 # Setup
 title:            Laurent Brusa
 tagline:          ''
-description:      ''
-node.url:         https://multitudes.github.io/
+description:      'My profile and blog'
+node.url:         http://multitudes.github.io/
 baseurl:          /
 
 author:
