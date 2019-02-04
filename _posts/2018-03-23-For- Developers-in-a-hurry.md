@@ -67,8 +67,7 @@ This is because of an issue caused by a git hub upgrade that broke this theme a 
 
 ## step 6
 push the changes done locally on your github account. for this 
-open your terminal and :
-
+open your terminal and repeat as in step 4
 
 ## step 7 
 Need to check that the links are working. We Look at the folders posts.
@@ -78,8 +77,12 @@ md is the markdown extension. You can read more about markdown [here](https://da
 I would start to duplicate the post file with command-d (on a mac) and edit it. You can use your favourite editor or use brackets [Brackets](http://brackets.io), which is free. The first few lines enclosed in '---' have to be present in every post. We change the title of course.
 
 We add pictures with
+
+{% highlight yml %}
+
 [image-title-here](/path/to/image.jpg){:class="img-responsive"}
 
+{% endhighlight %}
 push the changes and see your first post on your new website!!
 
 
@@ -92,46 +95,50 @@ Optional. You can set up a development environment for Jekyll on your computer. 
 ## step 10 
 keep the draft of the post in the same folder, just add unpublished to the header above as follows:
 
+{% highlight yml %}
 published: false
-
+{% endhighlight %}
 The post will be unvisible until change to published.
 
-ps extra point
 
-How to do a pull request.
+
+## How to do a pull request.
+We found some bugs and some outdated code. We will do a pull request.
 Go to the repository. In thia example I will go to the Hyde[Hyde](https://github.com/poole/hyde) theme
 On the top right I will click on fork to save a copy in my repository.
 I will start by copying the link on my clipboard an will open my terminal to download it locally.
+
+{% highlight bash %}
+
 git clone https://github.com/multitudes/hyde.git
 
-cd hyde/
+cd hyde/            # I am going to the downloaded folder
 
-ls
+ls                  # list all files
 
-open _config.yml 
+open _config.yml    # open the config file in my editor
 
-I remove the line: relative_permalinks: true 
+
+{% endhighlight %}
+
+I remove the line: "relative_permalinks: true" 
 This setting is deprecated as has been removed from the latest version of Jekyll.
 
 It would give me an error message if I keep it.
 
-I do git status
-add to the staging directory
-git add _config.yml 
-git commit -m "line removed: 'relative_permalinks: true'. This setting is deprecated" 
-
-then 
-origin is the place where the code originates from, so it is the remote repository on github, my fork copy. then I specify master which is the branch. In this case it was expressely requested from the source to submit pull requests to master..
-
+I will now push the change to my copy of Hyde which had been forked.
+The "origin" is the place where the code originates from, so it is the remote repository on github, my fork copy. then I specify master which is the branch. In this case it was expressely requested from the source to submit pull requests to master..
+{% highlight bash %}
 
 git push origin master
 
-go back to our fork.. go back to the original page.
-click new pull request
-click on compare across forks
-need to select my repo and then click on pull request button.
+{% endhighlight %}
+We go back to the GitHub website.
+Click new pull request
+Click on compare across forks
+Need to select my repo and then click on pull request button.
 Now it is up to the developer to reply or accept our changes and merge the two repos.
-I can see on his page that I am not the only one who asked for changes and the requests are mostly unanswered. Anyway it is good practice!
+I can see on his page that I am not the only one who asked for changes and the requests are mostly unanswered! Anyway it is good practice!
 
 
 I hope you enjoy this tutorial. Please see how to create a bash script to push your commits to github if you want to optimize your workflow.
