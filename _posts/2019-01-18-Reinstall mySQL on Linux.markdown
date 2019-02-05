@@ -13,6 +13,7 @@ sudo apt autoremove
 sudo rm -rf /var/lib/mysql*
 {% endhighlight %}
 
+Then reinstall:
 {% highlight bash %}
 sudo apt update
 sudo apt install mysql-server
