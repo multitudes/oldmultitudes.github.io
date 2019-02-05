@@ -7,13 +7,15 @@ published: true
 To start with Java on your mac strt with download the [JDK](https://www.oracle.com/technetwork/java/javase/downloads/jdk11-downloads-5066655.html)
 Download the [Eclipse IDE](https://www.eclipse.org/downloads/download.php?file=/oomph/epp/2018-12/R/eclipse-inst-mac64.dmg&mirror_id=518)
 
+Open eclipse
+
 #### Open the currect perspective (view).
 If you're not already in the Java perspective, in the main 
 menu select 
 Window> Open Perspective > Java 
-
+<!--excerpt.start-->
 ![screenshot1](/assets/img/java/ScreenShot1.png){:class="img-responsive"}
-
+<!--excerpt.end-->
 #### Create a Java Project
 Before creating a class, we need a project to put it in. In the main toolbar, click on the New Java Project button, or click on the link below. Enter "HelloWorld" for the project name, then click 'Finish'
 
