@@ -25,4 +25,4 @@ version:          2.1.0
 github:
   repo:           https://github.com/multitudes/
 
-excerpt_separator: <!--more-->
+#excerpt_separator: <!--more-->
