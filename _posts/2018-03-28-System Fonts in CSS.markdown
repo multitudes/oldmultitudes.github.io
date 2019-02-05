@@ -6,7 +6,7 @@ categories: fonts
 ---
 
 There has been a new font-family in the works for the last 3 years and recently this has included in the CSS Font Module and made official.
-This has been pointed out today in Daring Fireball with a link to [this great post](https://furbo.org/2018/03/28/system-fonts-in-css/) by Craig Hockenberry .
+This has been pointed out today in Daring Fireball with a link to [this great post](https://furbo.org/2018/03/28/system-fonts-in-css/) by Craig Hockenberry.
 
 System UI fonts have zero latency and are a great alternative for websites.
 San Francisco is the new Apple system font since El Capitan.
