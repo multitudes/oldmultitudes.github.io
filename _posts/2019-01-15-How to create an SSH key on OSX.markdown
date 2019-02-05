@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "How to create an SSH key on OSX"
+title:  "How to create an SSH key on macOS High Sierra to use to connect to a remote server"
 date:   2019-01-15 10:41:47 +0100
 categories: OSX, Linux, SSH
 ---
