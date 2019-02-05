@@ -22,15 +22,9 @@ title: Home
             {{ post.content | strip_html | truncatewords: 20 }}
         {% endif %}
 
-    </p>
+       <a href="{{ post.url }}">Read More...</a>
+     </p>
        
-       <a href="{{ post.url }}">
-        
-        Read More...
-        
-      </a>
-     
-      </p>
    
   </div>
   {% endfor %}
