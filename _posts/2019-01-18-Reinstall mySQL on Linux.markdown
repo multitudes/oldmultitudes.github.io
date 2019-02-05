@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Reinstall mySQL on Linux"
+title:  "Reinstall mySQL on Linux Server 18.04"
 date:   2019-01-18 10:41:47 +0100
 categories: OSX, Linux, mySQL
 ---
