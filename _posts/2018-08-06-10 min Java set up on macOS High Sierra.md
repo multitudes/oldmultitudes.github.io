@@ -14,11 +14,12 @@ Window> Open Perspective > Java
 
 #### Create a Java Project
 Before creating a class, we need a project to put it in. In the main toolbar, click on the New Java Project button, or click on the link below. Enter "HelloWorld" for the project name, then click Finish
+![screenshot2](/assets/img/java/ScreenShot2.png){:class="img-responsive"}
 
 #### Create the class
 The next step is to create a new class. In the main toolbar again, click on the "New Java Class" button (or the link below). If not already specified, select 'HelloWorld/src' as the source folder. Enter HelloWorld for the class name, select the checkbox to create the main() method, then click Finish.
 The Java editor will automatically open showing your new class.
-
+![screenshot3](/assets/img/java/ScreenShot3.png){:class="img-responsive"}
 #### Add a print statement
 Now that you have your HelloWorld class, in the main() method, add the following statement:
 {% highlight java %}
@@ -30,3 +31,4 @@ upon saving.
 #### Run the application
 To run your application, right-click on your class in the Package Explorer and select Run As > Java Application or press command-fn-f11 on a mac notebook. 
 The Console view should appear at the bottom and display the "Hello, world!" output.
+![screenshot4](/assets/img/java/ScreenShot4.png){:class="img-responsive"}
