@@ -30,6 +30,7 @@ Clone or download the theme to your computer. Copy all the files minus the .git 
 If you don’t see hidden files and directories, or those that begin with a ., press Command + SHIFT + . (the last one is a dot)
 
 ### step 4
+
 Now it is the time to push the changes to your github account.
 {% highlight bash %}
 
@@ -44,6 +45,7 @@ git push -u origin master           # push your changes to GitHub
 Go to your page and check the result. You should see the template with the default.
 
 ### step 5
+
 We will need to troubleshoot. I choose the Hyde and Poole [Hyde and Poole](https://github.com/poole/hyde) theme because frankly I wanted something like the fastai website and it looks similar and quite simple.
 
 However this theme is already a few years old and doesnt work out of the box anymore. No worries, only a few changes were necessary.
@@ -63,13 +65,15 @@ Then eventually the landing page will work but the about me site has no styling!
 Replace the all instances of {{ base_url }} in the head.html file in _includes folder with {{ '/' | relative_url }} 
 do the same in the sidebar.html. 
 This is because of an issue caused by a git hub upgrade that broke this theme a while ago. 
-
+[From this page](https://github.com/poole/hyde/issues/213) look at the third post from the top.
 
 ## step 6
+
 push the changes done locally on your github account. for this 
 open your terminal and repeat as in step 4
 
 ## step 7 
+
 Need to check that the links are working. We Look at the folders posts.
 The Jekyll pages are auto generated from those files. There is a certain format we need to keep. The title has to start with the date, followed by the name.. like this example:
 2012-02-06-whats-jekyll.md
@@ -87,12 +91,15 @@ push the changes and see your first post on your new website!!
 
 
 ## step 8 
+
 This theme is customisable however the optional color schemes as described in the documentation  did not work for me. I think it is best to modify the CSS and add some HTML in the template. Fonts can be modified easily for instance I changed the font of the main title and the blog to the system fonts.  
 
 ## step 9
+
 Optional. You can set up a development environment for Jekyll on your computer. The necessary files and downloads are on their website, however expect to spend some time debugging various issues and bugs. I prefer to edit my post and push them to github an see the results there. 
 
 ## step 10 
+
 keep the draft of the post in the same folder, just add unpublished to the header above as follows:
 
 {% highlight yml %}
@@ -100,9 +107,8 @@ published: false
 {% endhighlight %}
 The post will be unvisible until change to published.
 
-
-
 ## How to do a pull request.
+
 We found some bugs and some outdated code. We will do a pull request.
 Go to the repository. In thia example I will go to the Hyde[Hyde](https://github.com/poole/hyde) theme
 On the top right I will click on fork to save a copy in my repository.
@@ -128,11 +134,11 @@ It would give me an error message if I keep it.
 
 I will now push the change to my copy of Hyde which had been forked.
 The "origin" is the place where the code originates from, so it is the remote repository on github, my fork copy. then I specify master which is the branch. In this case it was expressely requested from the source to submit pull requests to master..
+
 {% highlight bash %}
-
 git push origin master
-
 {% endhighlight %}
+
 We go back to the GitHub website.
 Click new pull request
 Click on compare across forks
@@ -141,7 +147,6 @@ Now it is up to the developer to reply or accept our changes and merge the two r
 I can see on his page that I am not the only one who asked for changes and the requests are mostly unanswered! Anyway it is good practice!
 
 
-I hope you enjoy this tutorial. Please see how to create a bash script to push your commits to github if you want to optimize your workflow.
- 
+I hope you enjoyed this tutorial. Please see how to create a bash script to push your commits to github if you want to optimize your workflow.
 
 Thanks for reading!
