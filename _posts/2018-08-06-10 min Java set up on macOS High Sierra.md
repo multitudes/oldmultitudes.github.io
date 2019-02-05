@@ -10,11 +10,10 @@ Download the [Eclipse IDE](https://www.eclipse.org/downloads/download.php?file=/
 Open eclipse
 
 #### Open the currect perspective (view).
+<!--excerpt.start-->
 If you're not already in the Java perspective, in the main 
 menu select 
 Window> Open Perspective > Java
-
-<!--excerpt.start-->
 
 ![screenshot1](/assets/img/java/ScreenShot1.png){:class="img-responsive"}
 
