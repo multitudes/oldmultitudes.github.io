@@ -1,12 +1,9 @@
 ---
 layout: post
-title:  "How to create an SSH key on macOS High Sierra to use to connect to a remote server"
+title:  "How to create an SSH key on macOS High Sierra to connect to a remote server"
 date:   2019-01-15 10:41:47 +0100
 categories: OSX, Linux, SSH
 ---
-
-
-## How to create an SSH key on macOS High Sierra to use to connect to a remote server
 
 Once you set up a shell user and try to log in via SSH, you'll find you must enter your password each time. If you’d like to avoid entering your password every time, you can set up Passwordless Login. This way, you'll be able to automatically login each time immediately without needing to enter your password. On your mac open the Terminal. 
 
