@@ -14,7 +14,7 @@ sudo apt autoremove
 sudo rm -rf /var/lib/mysql*
 {% endhighlight %}
 
-<!--more-->
+
 
 Then reinstall:
 {% highlight bash %}

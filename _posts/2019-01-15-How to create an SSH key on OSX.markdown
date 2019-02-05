@@ -6,7 +6,7 @@ categories: OSX, Linux, SSH
 ---
 
 Once you set up a shell user and try to log in via SSH, you'll find you must enter your password each time. If you’d like to avoid entering your password every time, you can set up Passwordless Login. This way, you'll be able to automatically login each time immediately without needing to enter your password. On your mac open the Terminal. 
-<!--more-->
+
 
 {% highlight bash %}
 $ cd ~/.ssh/              #Go to your local ssh folder (hidden)
