@@ -3,7 +3,7 @@ layout: post
 title:  "Reinstall mySQL on Linux Server 18.04"
 date:   2019-01-18 10:41:47 +0100
 comments: true
-categories: OSX, Linux, mySQL
+#categories: OSX, Linux, mySQL
 ---
 This today is a quick tutorial to start afresh and reinstall a new version of mySQL on Linux Server 18.04.
 
