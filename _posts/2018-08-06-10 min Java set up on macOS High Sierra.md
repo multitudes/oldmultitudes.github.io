@@ -11,11 +11,11 @@ Open eclipse
 
 #### Open the currect perspective (view).
 <!--excerpt.start-->
+
+![screenshot1](/assets/img/java/ScreenShot1.png){:class="img-responsive"}
 If you're not already in the Java perspective, in the main 
 menu select 
 Window> Open Perspective > Java
-
-![screenshot1](/assets/img/java/ScreenShot1.png){:class="img-responsive"}
 
 <!--excerpt.end-->
 

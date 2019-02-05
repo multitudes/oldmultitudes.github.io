@@ -3,13 +3,15 @@ layout: post
 title:  "Reinstall mySQL on Linux Server 18.04"
 date:   2019-01-18 10:41:47 +0100
 comments: true
-#categories: OSX, Linux, mySQL
+categories: OSX, Linux, mySQL
 ---
 This today is a quick tutorial to start afresh and reinstall a new version of mySQL on Linux Server 18.04.
 
+<!--excerpt.start-->
+![screenshot1](/assets/img/ubuntu/Screenshot1.png){:class="img-responsive"}
 First, remove MySQL and all the files.
 Open the Terminal and SSH to the server. In the Terminal type this:
-
+<!--excerpt.end-->
 {% highlight bash %}
 sudo apt purge mysql-server mysql-client mysql-common
 sudo apt autoremove
