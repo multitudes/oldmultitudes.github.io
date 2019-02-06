@@ -236,6 +236,14 @@ img {
   margin: 0 0 1rem;
   border-radius: 5px;
 }
+.profile_img {
+  display: block;
+  max-width: 50%;
+  margin: 0 0 1rem;
+  border-radius: 5px;
+}
+
+
 
 /* Tables */
 table {
