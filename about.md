@@ -7,7 +7,7 @@ title: About
 ― Richard Feynmann
 </div>
 <div id="profile_img">
-![laurent](/assets/img/about.jpg){:id="profile_img"}
+![laurent](/assets/img/about.jpg)
 </div> 
 I am excited by the new opportunities created by computers and the advances in the Artificial Intelligence field in the last 30 years and want to contribute and be in the winning team at the crossroads of liberal arts and technology.
 
