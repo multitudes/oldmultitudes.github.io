@@ -418,7 +418,7 @@ a.pagination-item:hover {
   }
   .profile_img {
       display: block;
-      max-width: 50%;
+      max-width: 100%;
       float: left;    
       margin: 0 1rem 1rem 0;
       border-radius: 5px;
