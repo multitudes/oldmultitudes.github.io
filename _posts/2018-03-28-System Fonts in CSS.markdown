@@ -4,8 +4,9 @@ title:  "System Fonts in CSS"
 date:   2018-03-28 10:41:47 +0100
 categories: fonts
 ---
-
+<div class="message">
 There has been a new font-family in the works for the last 3 years and recently this has included in the CSS Font Module and made official.
+</div>
 This has been pointed out today in Daring Fireball with a link to [this great post](https://furbo.org/2018/03/28/system-fonts-in-css/) by Craig Hockenberry.
 
 System UI fonts have zero latency and are a great alternative for websites.

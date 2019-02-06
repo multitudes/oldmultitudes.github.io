@@ -3,8 +3,9 @@ layout: post
 title: How to get your website up and running with Jekyll and GitHub hosting 
 #published: false
 ---
-
-(For developers in a hurry )
+<div class="message">
+(For developers in a hurry ) The quickest way to go to publish your blog
+</div>
 
 My great inspiration recently has been a course about Machine and Deep Learning from Jeremy Howard at the San Francisco University, currently free to follow as a MOOC on the [fast.ai](https://course.fast.ai) website. One of the things he said remained with me. He said: 'Start a blog about the things you are learning even if you think you are not quite there yet, it does'nt matter. Writing will be of great help to understand the study material better, and it is a great exercise.'
 
