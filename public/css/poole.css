@@ -240,7 +240,7 @@ img {
   display: block;
   max-width: 50%;
   float: left;    
-  margin: 0 0 1rem;
+  margin: 1rem 1rem 1rem;
   border-radius: 5px;
 }
 
