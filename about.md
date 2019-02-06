@@ -3,7 +3,8 @@ layout: page
 title: About
 ---
 <div class="message">
-  Hi there! I am Laurent Brusa and this is my profile.
+ “Study hard what interests you the most in the most undisciplined, irreverent and original manner possible.” 
+― Richard Feynmann
 </div>
 
 ![laurent](/assets/img/about.jpg){:class="profile_img"}

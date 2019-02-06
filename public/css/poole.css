@@ -55,7 +55,16 @@ html {
 @media (min-width: 38em) {
   html {
     font-size: 20px;
+      
   }
+  .profile_img {
+      display: block;
+      max-width: 50%;
+      float: left;    
+      margin: 0 1rem 1rem 0;
+      border-radius: 5px;
+}    
+    
 }
 
 body {
@@ -236,14 +245,6 @@ img {
   margin: 0 0 1rem;
   border-radius: 5px;
 }
-.profile_img {
-  display: block;
-  max-width: 50%;
-  float: left;    
-  margin: 1rem 1rem 1rem;
-  border-radius: 5px;
-}
-
 
 
 /* Tables */
@@ -424,6 +425,13 @@ a.pagination-item:hover {
 
 
 @media (min-width: 30em) {
+    .profile_img {
+      display: block;
+      max-width: 100%;   
+      margin: 1rem 0 1rem 0;
+      border-radius: 5px;
+}    
+  
   .pagination {
     margin: 3rem 0;
   }
