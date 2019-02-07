@@ -40,7 +40,7 @@ After exporting the path `export PATH=$PATH:/Users/laurenceb/bin`, it's best to 
 If you don’t see hidden files and directories, or those that begin with a ., press Command + SHIFT + . (dot)
 
 3. Create a script file and make it executable
-Go to your bin folder located in /Users/laurenceb.
+Go to your bin folder located in `/Users/laurenceb`.
 {% highlight bash %}
 cd bin
 touch hello-world  # Create a file called hello-world 
@@ -52,8 +52,8 @@ nano hello-world
 echo Hello, World!
 {% endhighlight %}
 
-A bash script must always begin with #!/bin/bash to signify that the script should run with bash as opposed to any other shell. This is called a “shebang”. heck which bash interpreter you have in your terminal:
-A bash script must always begin with #!/bin/bash to signify that the script should run with bash as opposed to any other shell. This is called a “shebang”. 
+A bash script must always begin with `#!/bin/bash` to signify that the script should run with bash as opposed to any other shell. This is called a “shebang”. heck which bash interpreter you have in your terminal:
+A bash script must always begin with `#!/bin/bash` to signify that the script should run with bash as opposed to any other shell. This is called a “shebang”. 
 
 {% highlight bash %}
 which bash
@@ -63,14 +63,16 @@ As is tradition, we’ll make a “Hello, World!” example to get this working.
 
 Now, you can try to run the file in the terminal but you would get "-bash: hello-world: command not found"
 We have to make it an executable file by changing the permissions.
-
+{% highlight bash %}
 chmod u+x hello-world
+{% endhighlight %}
+
 Now when you run the command, it will output the contents of the echo.
 
 {% highlight bash %}
 laurenceb@computer:~$ hello-world
 {% endhighlight %}
-You just got your first bash script up and running. You can also run this script from anywhere on the computer, not just in the bin directory. If the bash entry to declare the PATH is not correct you will only be able to execute the file with ./hello-world in the same directory.
+You just got your first bash script up and running. You can also run this script from anywhere on the computer, not just in the bin directory. If the bash entry to declare the PATH is not correct you will only be able to execute the file with `./hello-world` in the same directory.
 
 Strings do not need to use single or double quotes by default. However, single and double quoted strings work as well. A single quoted string will not interpolate variables, but a double quoted string will.
 Variables
@@ -92,32 +94,26 @@ We declared a variable in the last example, but we can also have the user set th
 {% highlight bash %}
 hello-world
 #!/bin/bash
-
 echo Who are you?
-
 read who
-
 echo Hello, $who!
 {% endhighlight %}
 
 Conditionals
-
 if statements use the if, then, else, and fi keywords. The condition goes in square brackets.
-
+{% highlight bash %}
 #!/bin/bash
-
 echo How old are you?
-
 read age
-
 if [ "$age" -gt 20 ]
 then
     echo You can drink.
 else 
     echo You are too young to drink.
 fi
+{% endhighlight %}
 
-Operators are slightly different in bash than what you might be used to.
+Operators are slightly different in bash.
 
 Bash Operator	Operator	Description
 -eq	==	Equal
@@ -163,7 +159,7 @@ Then just run the command push_git in terminal
 
 ![push_git](/assets/img/push_git.png)
 
-You can always use add "./" before the file name (e.g. "./hello-world") to run the script from the current directory.
+You can always use add `./` before the file name (e.g. `./hello-world`) to run the script from the current directory.
 
 I hope this article has been helpful for you to get started with bash scripting. 
 
