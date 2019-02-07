@@ -187,6 +187,12 @@ pre code {
   margin-bottom: 0;
 }
 
+/* Hides when display is mobile */
+
+hidden {
+        display:contents;
+    }
+
 /* Gist via GitHub Pages */
 .gist .gist-file {
   font-family: Menlo, Monaco, "Courier New", monospace !important;
@@ -444,7 +450,7 @@ a.pagination-item:hover {
 
 @media screen and (max-width: 479px) {
     .hidden {
-        display: none;
+        display: none !important;
     }
     .profile_img {
       display: block;
