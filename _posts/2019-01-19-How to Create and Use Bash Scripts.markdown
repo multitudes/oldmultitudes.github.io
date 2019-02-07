@@ -51,7 +51,6 @@ Go to your bin folder located in /Users/laurenceb.
 {% highlight bash %}
 cd bin
 touch hello-world  # Create a file called hello-world 
-{% endhighlight bash %}
 # Open the file in your code editor of choice ex nano
 nano hello-world
 # and type on the very beginning of the file:
@@ -166,7 +165,8 @@ git push origin master              # push to origin
 -p prompt	output the string PROMPT without a trailing newline before
 source: http://www.linuxcommand.org/lc3_man_pages/readh.html
 
-Then just run the command.
+Then just run the command push_git in terminal
+![push_git](assets/img/push_git.png)
 You can always use add "./" before the file name (e.g. "./hello-world") to run the script from the current directory.
 
 I hope this article has been helpful for you to get started with bash scripting. 
