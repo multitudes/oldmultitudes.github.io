@@ -418,7 +418,7 @@ a.pagination-item:hover {
   }
   .profile_img {
       display: block;
-      max-width: 100%;
+      max-width: 50%;
       float: left;    
       margin: 0 1rem 1rem 0;
       border-radius: 5px;
@@ -428,7 +428,7 @@ a.pagination-item:hover {
 @media screen and (max-width: 479px) {
     .profile_img {
       display: block;
-      max-width: 100%;   
+      max-width: 50%;   
       margin: 1rem 0 1rem 0;
       border-radius: 5px;
     }    
