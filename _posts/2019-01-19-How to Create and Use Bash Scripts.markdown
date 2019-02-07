@@ -18,9 +18,9 @@ Now on your mac open the Terminal.
 In this tutorial, we’re going to create a bash script that can be run from any directory on the computer.
 
 ### Create a bin directory.
-The first step is to create a bin directory. bin is the standard naming convention of a subdirectory that contains executable programs. bin stands for binary. /bin is a location for binary files which are programs and commands. note its not the only location where binary files can be stored
+The first step is to create a bin directory. bin is the standard naming convention of a subdirectory that contains executable programs. bin stands for binary. `/bin` is a location for binary files which are programs and commands. note its not the only location where binary files can be stored
 
-Navigate to your home directory ~ (which is a shortcut for current user home directory, or /Users/laurenceb). Typing pwd will confirm your location.
+Navigate to your home directory `~` (which is a shortcut for current user home directory, or `/Users/laurenceb`). Typing `pwd` will confirm your location.
 Create bin in that folder, or wherever you want your bash scripts to live.
 
 {% highlight bash %}
@@ -61,7 +61,8 @@ which bash
 
 As is tradition, we’ll make a “Hello, World!” example to get this working.
 
-Now, you can try to run the file in the terminal but you would get `-bash: hello-world: command not found`
+Now, you can try to run the file in the terminal but you would get 
+`-bash: hello-world: command not found`
 We have to make it an executable file by changing the permissions.
 {% highlight bash %}
 chmod u+x hello-world
@@ -113,15 +114,55 @@ fi
 
 Operators are slightly different in bash.
 
-Bash Operator	Operator	Description
--eq	==	Equal
--ne	!=	Not equal
--gt	>	Greater than
--ge	>=	Greater than or equal
--lt	<	Less than
--le	<=	Less than or equal
--z	== null	Is null
+<table>
+  <thead>
+    <tr>
+      <th>Bash Operator</th>
+      <th>Operator</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>-eq</td>
+      <td>==</td>
+      <td>Equal</td>
+    </tr>
+    <tr>
+      <td>-ne</td>
+      <td>!=</td>
+      <td>Not equal</td>
+    </tr>
 
+-z	== null	Is null
+    <tr>
+      <td>-gt</td>
+      <td>></td>
+      <td>Greater than</td>
+    </tr>
+    <tr>
+      <td>-ge</td>
+      <td>>=</td>
+      <td>Greater than or equal</td>
+    </tr>
+    <tr>
+      <td>-lt</td>
+      <td><</td>
+      <td>Less than</td>
+    </tr>   
+    <tr>
+      <td>-le</td>
+      <td><=</td>
+      <td>Less than or equal</td>
+    </tr>
+    <tr>
+      <td>-z</td>
+      <td>==null</td>
+      <td>Is null</td>
+    </tr>
+    
+  </tbody>
+</table>
 ### Looping
 
 Bash uses for, while, and until loops. In this example, I’ll use the for...in loop to get all the files in a directory and list them.
