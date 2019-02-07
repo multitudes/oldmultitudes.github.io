@@ -17,7 +17,7 @@ Now on your mac open the Terminal.
 
 In this tutorial, we’re going to create a bash script that can be run from any directory on the computer.
 
-1. Create a bin directory.
+### Create a bin directory.
 The first step is to create a bin directory. bin is the standard naming convention of a subdirectory that contains executable programs. bin stands for binary. /bin is a location for binary files which are programs and commands. note its not the only location where binary files can be stored
 
 Navigate to your home directory ~ (which is a shortcut for current user home directory, or /Users/laurenceb). Typing pwd will confirm your location.
@@ -28,7 +28,7 @@ cd ~      # this takes us to /Users/laurenceb
 mkdir bin # this creates /Users/laurenceb/bin
 {% endhighlight %}
 
-2. Export your bin directory to the PATH.
+### Export your bin directory to the PATH.
 Open `.bash_profile`, which will be located at `/Users/laurenceb/.bash_profile`, and add this line to the file. If `.bash_profile` doesn’t exist, create it.
 
 {% highlight bash %}
@@ -39,7 +39,7 @@ After exporting the path `export PATH=$PATH:/Users/laurenceb/bin`, it's best to 
 
 If you don’t see hidden files and directories, or those that begin with a ., press Command + SHIFT + . (dot)
 
-3. Create a script file and make it executable
+### Create a script file and make it executable
 Go to your bin folder located in `/Users/laurenceb`.
 {% highlight bash %}
 cd bin
@@ -80,15 +80,13 @@ A variable is declared without a $, but has a $ when invoked. Let’s edit our h
 
 {% highlight bash %}
 #!/bin/bash
-
 who="World"
-
 echo Hello, $who!
 {% endhighlight %}
 
-Note that who = "World" is not valid – there must not be a space between variable and value.
+Note that `who = "World"` is not valid – there must not be a space between variable and value.
 
-Reading
+### Reading
 We declared a variable in the last example, but we can also have the user set the value of a variable dynamically. For example, instead of just having the script say Hello, World!, we can make it ask for the name of the person calling the script, then output that name. We’ll do this using the read command.
 
 {% highlight bash %}
@@ -99,7 +97,7 @@ read who
 echo Hello, $who!
 {% endhighlight %}
 
-Conditionals
+### Conditionals
 if statements use the if, then, else, and fi keywords. The condition goes in square brackets.
 {% highlight bash %}
 #!/bin/bash
@@ -124,24 +122,22 @@ Bash Operator	Operator	Description
 -le	<=	Less than or equal
 -z	== null	Is null
 
-Looping
+### Looping
 
 Bash uses for, while, and until loops. In this example, I’ll use the for...in loop to get all the files in a directory and list them.
 
 {% highlight bash %}
 #!/bin/bash
-
 FILES=/Users/laurenceb/dev/*
-
 for file in $FILES
 do
   echo $(basename $file)
 done
 {% endhighlight %}
 
-Git Deploy Example Script
+### Git Deploy Example Script
 
-As I mentioned previously, a bash script can use any commands you can use on the command line. An example of a script you might make for yourself is the one below, where the user is prompted for a git commit message and the process of adding, committing, and pushing to origin is all done with a single command.
+A bash script can use any commands you can use on the command line. An example of a script you might make for yourself is the one below, where the user is prompted for a git commit message and the process of adding, committing, and pushing to origin is all done with a single command.
 {% highlight bash %}
 #!/bin/bash
 read -r -p 'Commit message: ' desc  # prompt user for commit message
