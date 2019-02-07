@@ -450,7 +450,8 @@ a.pagination-item:hover {
 
 @media screen and (max-width: 479px) {
     .hidden {
-        display: none !important;
+        display: inline;
+        display: none;
     }
     .profile_img {
       display: block;
