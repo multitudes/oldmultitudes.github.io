@@ -161,12 +161,15 @@ git commit -m "$desc"               # commit with message
 git push origin master              # push to origin
 {% endhighlight %}
 
+The read command:
 -r	do not allow backslashes to escape any characters
 -p prompt	output the string PROMPT without a trailing newline before
-source: http://www.linuxcommand.org/lc3_man_pages/readh.html
+enter 'man read' in terminal to see more!
 
 Then just run the command push_git in terminal
+
 ![push_git](/assets/img/push_git.png)
+
 You can always use add "./" before the file name (e.g. "./hello-world") to run the script from the current directory.
 
 I hope this article has been helpful for you to get started with bash scripting. 
