@@ -37,7 +37,7 @@ export PATH=$PATH:/Users/laurenceb/bin
 
 After exporting the path `export PATH=$PATH:/Users/laurenceb/bin`, it's best to reload the `bash_profile` using `source ~/.bash_profile`. Otherwise you can restart the shell/terminal or open a new tab.
 
-If you don’t see hidden files and directories, or those that begin with a ., press Command + SHIFT + . (dot)
+If you don’t see hidden files and directories, or those that begin with a `.`, press `Command` `+` `SHIFT` `+` `.`
 
 ### Create a script file and make it executable
 Go to your bin folder located in `/Users/laurenceb`.
@@ -61,7 +61,7 @@ which bash
 
 As is tradition, we’ll make a “Hello, World!” example to get this working.
 
-Now, you can try to run the file in the terminal but you would get "-bash: hello-world: command not found"
+Now, you can try to run the file in the terminal but you would get `-bash: hello-world: command not found`
 We have to make it an executable file by changing the permissions.
 {% highlight bash %}
 chmod u+x hello-world
@@ -149,9 +149,9 @@ git push origin master              # push to origin
 The read command:
 -r	do not allow backslashes to escape any characters
 -p prompt	output the string PROMPT without a trailing newline before
-enter 'man read' in terminal to see more!
+enter `man read` in terminal to see more!
 
-Then just run the command push_git in terminal
+Then just run the command `push_git` in terminal
 
 ![push_git](/assets/img/push_git.png)
 
