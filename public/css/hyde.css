@@ -56,7 +56,7 @@ html {
 .sidebar {
   background-color: #4a525a; /* dark blue slate thing */
   text-align: center;
-  padding: 1rem 0.5rem;
+  padding: 0.7rem 0.5rem;
   color: rgba(255,255,255,.5);
   /* background-color: #202020; */
 }
