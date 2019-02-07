@@ -133,8 +133,6 @@ Operators are slightly different in bash.
       <td>!=</td>
       <td>Not equal</td>
     </tr>
-
--z	== null	Is null
     <tr>
       <td>-gt</td>
       <td>></td>
