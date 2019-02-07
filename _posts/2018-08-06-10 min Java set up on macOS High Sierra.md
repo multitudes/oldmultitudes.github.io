@@ -5,7 +5,7 @@ date : 2018-08-06
 published: true
 ---
 <div class="message">
-First time Java with no problems. Install and test the development environment
+First time Java. Install and test the development environment
 </div>
 To start with Java on your mac strt with download the [JDK](https://www.oracle.com/technetwork/java/javase/downloads/jdk11-downloads-5066655.html)
 Download the [Eclipse IDE](https://www.eclipse.org/downloads/download.php?file=/oomph/epp/2018-12/R/eclipse-inst-mac64.dmg&mirror_id=518)
