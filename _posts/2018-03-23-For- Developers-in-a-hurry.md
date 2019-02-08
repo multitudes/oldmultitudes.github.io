@@ -66,7 +66,7 @@ To comment it out set a '#' at the beginning of the line.
 
 Then eventually the landing page will work but the about me site has no styling! We need to edit the CSS file and the head file as follows:
 
-Replace the all instances of `{{`{{ base_url`}} }} in the `head.html` file in the `_includes` folder with `{{ '/' | relative_url }}` 
+Replace the all instances of `{% raw %}{{ base_url }}{% endraw %}` in the `head.html` file in the `_includes` folder with `{{ '/' | relative_url }}` 
 do the same in the `sidebar.html`. 
 This is because of an issue caused by a git hub upgrade that broke this theme a while ago. 
 [From this page](https://github.com/poole/hyde/issues/213) look at the third post from the top.
