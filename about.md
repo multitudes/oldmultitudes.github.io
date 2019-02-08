@@ -6,6 +6,9 @@ title: About
  > Study hard what interests you the most in the most undisciplined, irreverent and original manner possible. 
 ― Richard Feynmann
 <!-- </div> -->
+<!-- <div class="message"> -->
+ > “Learning another language is like becoming another person.” – Haruki Murakami
+<!-- </div> -->
 
 ![laurent](/assets/img/about.jpg){:class="profile_img"}
 I am excited by the new opportunities created by computers and the advances in the Artificial Intelligence field in the last 30 years and want to contribute and be in the winning team at the crossroads of liberal arts and technology.
