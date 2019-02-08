@@ -9,7 +9,7 @@ permalink:        :year/:month/:title:output_ext
 # Setup
 title:            Laurent Brusa
 tagline:          'We are Multitudes'
-description:      'my profile and blog'
+description:      'C++ python and machine learning'
 node.url:         https://multitudes.github.io
 baseurl:          /
 
