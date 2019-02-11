@@ -112,10 +112,12 @@ html, body {
   /* equal to footer height */
   margin-bottom: -70px; 
 }
+
 .page-wrap:after {
   content: "";
   display: block;
 }
+
 .site-footer, .page-wrap:after {
   height: 142px; 
 }
