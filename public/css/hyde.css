@@ -110,7 +110,7 @@ html, body {
 .page-wrap {
   min-height: 100%;
   /* equal to footer height */
-  margin-bottom: -70px; 
+  margin-bottom: -170px; 
 }
 
 .page-wrap:after {
@@ -124,7 +124,6 @@ html, body {
 
 .site-footer {
   padding: 1rem;
-  background: #efefef;
   text-align: center;  
 }
 
