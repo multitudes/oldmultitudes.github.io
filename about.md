@@ -8,7 +8,8 @@ title: About
 <!-- </div> --> 
 <br>
 <!-- <div class="message">
- --> > “Learning another language is like becoming another person.” – Haruki Murakami
+ --> 
+ > “Learning another language is like becoming another person.” – Haruki Murakami
 <!-- </div>
  -->
 <!-- ![laurent](/assets/img/about.jpg){:class="profile_img"} -->
