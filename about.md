@@ -18,7 +18,7 @@ title: About
 </div>
  -->
 <!-- ![laurent](/assets/img/about.jpg){:class="profile_img"} -->
-Hi, I'm Laurent. I’m a developer and aspiring polymath  
+Hi, I'm Laurent. I’m a developer
 
 My areas of interests include C, C++, full stack, front and back end with PHP, JS, and JQuery. I also love Python and started to get into Machine and Deep Learning since summer of 2018 thanks to the great online courses offered by Jeremy Howard of fast.ai. I work on macs and I am at ease with a linux terminal.
 
