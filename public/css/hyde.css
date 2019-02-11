@@ -37,11 +37,13 @@ html {
       "Droid Sans", "Helvetica Neue", sans-serif;
     /* font-family: "PT Sans", Helvetica, Arial, sans-serif; */
 }
+/* here browser on desktop is half width on my mac.. */
 @media (min-width: 48em) {
   html {
     font-size: 16px;
   }
 }
+/* bigger size */
 @media (min-width: 58em) {
   html {
     font-size: 20px;
@@ -60,7 +62,7 @@ html {
   background-color: #a4def2; /* vampire style */
   text-align: center;
   padding: 0.7rem 0.5rem;
-  color: rgba(255,255,255,.5);
+  /* color: rgba(255,255,255,.5); */
   /* background-color: #202020; */
 }
 @media (min-width: 48em) {
