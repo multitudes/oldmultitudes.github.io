@@ -2,7 +2,7 @@
 layout: post
 title: Ten minutes Java set up on macOS High Sierra
 date : 2018-08-06
-published: true
+published: false
 ---
 <div class="message">
 First time Java. Install and test the development environment

@@ -3,6 +3,7 @@ layout: post
 title:  "How to Create and Use Bash Scripts"
 date:   2019-01-19 10:41:47 +0100
 categories: OSX, Linux, SSH
+comments: true
 ---
 <div class="message">
 Bash is a Unix shell, which is a command line interface (CLI) for interacting with an operating system (OS). Any command that you can run from the command line can be used in a bash script. Scripts are used to run a series of commands.
