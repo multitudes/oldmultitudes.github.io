@@ -127,7 +127,10 @@ html, body {
   font: #fff;    
   text-align: center;  
 }
-
+.sidebar-about footer{
+   font: #fff;    
+  text-align: center;   
+}
 
 /* Sticky sidebar
  *
