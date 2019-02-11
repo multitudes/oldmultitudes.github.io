@@ -82,12 +82,13 @@ a:focus {
 h1, h2, h3, h4, h5, h6 {
   margin-bottom: .5rem;
   font-weight: bold;
-  line-height: 1.25;
+  line-height: 1.00;
   color: #4a525a;
   text-rendering: optimizeLegibility;
 }
 h1 {
   font-size: 2rem;
+  line-height: 1;
 }
 h2 {
   margin-top: 1rem;
@@ -469,6 +470,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 h1 {
   font-size: 1.5rem;
+  line-height: 1;
 }
   blockquote {
     padding-right: 5rem;
