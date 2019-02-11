@@ -109,12 +109,13 @@ a.sidebar-nav-item:focus {
 footer{
    color: #fff; 
     font-weight: 200;
+    font-size: 10px;
   text-align: center; 
     position: absolute;
     right:  1rem;
-    top: 43rem;
+    top: 20rem;
     left:   1rem;
-    font-size: 17px;
+    font-size: 15px;
 }
 
 /* Sticky sidebar
