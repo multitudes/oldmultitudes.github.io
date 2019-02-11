@@ -113,9 +113,9 @@ footer{
   text-align: center; 
     position: absolute;
     right:  1rem;
-    top:10rem;
+    top: 10rem;
     left:   1rem;
-    font-size: 1.25rem;
+    font-size: 15px;
 }
 
 /* Sticky sidebar
