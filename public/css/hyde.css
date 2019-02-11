@@ -57,7 +57,7 @@ html {
  */
 
 .sidebar {
-  background-color: #a4def2; /* dark blue slate thing */
+  background-color: #a4def2; /* vampire style */
   text-align: center;
   padding: 0.7rem 0.5rem;
   color: rgba(255,255,255,.5);
@@ -83,7 +83,7 @@ html {
 .sidebar-about h1 {
   color: #fff;
   margin-top: 0;
-  font-family: "Abril Fatface", serif;
+  /*font-family: "Abril Fatface", serif; */
   font-size: 3.25rem;
 }
 
