@@ -6,11 +6,13 @@ title: About
   Study hard what interests you the most in the most undisciplined, irreverent and original manner possible.
 ― Richard Feynmann
 </div>
-<div class="message">
+<!-- <div class="message">
   Learning another language is like becoming another person. – Haruki Murakami
-</div>
+</div> -->
 
 <!-- ![laurent](/assets/img/about.jpg){:class="profile_img"} -->
+
+Hi, I am Laurent. 
 
 I am looking for an internship as a software developer starting on April 22nd 2019 for 3-6 months. I am passionate about sound and music applications, natural language application, education and deep learning applied to computer vision and recursive networks for language applications.
 
