@@ -12,11 +12,11 @@ title: About
 
 <!-- ![laurent](/assets/img/about.jpg){:class="profile_img"} -->
 
-I am excited by the new opportunities created by computers and the advances in the Artificial Intelligence field in the last 30 years and want to contribute and be in the winning team at the crossroads of liberal arts and technology.
+I am looking for an internship as software developer starting on April 22nd 2019 for 3-6 months. I am passionate about sound and music applications, natural language application, education and deep learning applied to computer vision and recursive networks for language applications.
 
-I am a multi-linguist in a technology driven business. I speak and write fluent English and have a demonstrable knowledge of several European languages.
+My preferred languages include C, C++, full stack, front and back end with PHP, JS, and JQuery. I also love Python and started to get into Machine and Deep Learning since summer of 2018 thanks to the great online courses offered by Jeremy Howard of fast.ai. I work on macs and I am at ease with a linux terminal.
 
-My areas of interests include C, C++, full stack, front and back end with PHP, JS, and JQuery. I also love Python and started to get into Machine and Deep Learning since summer of 2018 thanks to the great online courses offered by Jeremy Howard of fast.ai. I work on macs and I am at ease with a linux terminal.
+I am excited by the new opportunities created recently by computers and by the advances in the Artificial Intelligence field and want to be in the winning team at the crossroads of liberal arts and technology.
 
-I love specialty coffee and on the weekends you might see me on my bike going to look for coffee cuppings in town.. 
+I am a multi-linguist in a technology driven business. I speak and write fluent English and have a demonstrable knowledge of several European languages. I love specialty coffee and on the weekends you might see me on my bike going to look for coffee cuppings in town.. 
 
