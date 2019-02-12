@@ -280,6 +280,9 @@ tbody tr:nth-child(odd) th {
   padding: 1rem;
   color: #4a525a;
   background-color: rgba(255, 238, 192,0.5); !important
+  border-left-color: yellow;
+  border-style: solid;
+  border-width: medium;
 }
 
 
