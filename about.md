@@ -2,13 +2,10 @@
 layout: page
 title: About
 ---
-<div class="message">  
-  Study hard what interests you the most in the most undisciplined, irreverent and original manner possible.
-― Richard Feynmann
-</div>
-<!-- <div class="message">
-  Learning another language is like becoming another person. – Haruki Murakami
-</div> -->
+ 
+<!--   Study hard what interests you the most in the most undisciplined, irreverent and original manner possible.
+  ― Richard Feynmann -->
+  > Learning another language is like becoming another person. – Haruki Murakami
 
 <!-- ![laurent](/assets/img/about.jpg){:class="profile_img"} -->
 
