@@ -5,8 +5,8 @@ title: About
  
 <!--   Study hard what interests you the most in the most undisciplined, irreverent and original manner possible.
   ― Richard Feynmann -->
-  > Learning another language is like becoming another person. – Haruki Murakami
-
+  > Learning another language is like becoming another person. 
+  > -- <cite>Haruki Murakami</cite>
 <!-- ![laurent](/assets/img/about.jpg){:class="profile_img"} -->
 
 Hi, I am Laurent. 
