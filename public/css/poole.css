@@ -193,6 +193,7 @@ pre code {
 
 hidden {
         display:contents;
+        display: block;
     }
 
 /* Gist via GitHub Pages */
@@ -412,8 +413,6 @@ div.message {
 a.pagination-item:hover {
   background-color: #f5f5f5;
 }
-
-
   .pagination {
     margin: 3rem 0;
   }
