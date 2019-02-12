@@ -41,8 +41,7 @@
           box-sizing: border-box;
 }
 
-html,
-body {
+html, body {
   margin: 0;
   padding: 0;
 }
@@ -414,13 +413,7 @@ a.pagination-item:hover {
   background-color: #f5f5f5;
 }
 
-.profile_img {
-      display: block;
-      max-width: 50%;
-      float: left;    
-      margin: 0 1rem 1rem 0;
-      border-radius: 5px;
-    } 
+
   .pagination {
     margin: 3rem 0;
   }
@@ -442,27 +435,14 @@ a.pagination-item:hover {
 @media screen and (max-width: 991px) {
   html {
     font-size: 20px;  
-  }
-  .profile_img {
-      display: block;
-      max-width: 50%;
-      float: left;    
-      margin: 0 1rem 1rem 0;
-      border-radius: 5px;
-    }    
+  }   
 }
 
 @media screen and (max-width: 479px) {
     .hidden {
-        display: inline;
         display: none;
     }
-    .profile_img {
-      display: block;
-      max-width: 50%;   
-      margin: 0 1rem 1rem 0;
-      border-radius: 5px;
-    }
+    
     /* Headings */
 h1, h2, h3, h4, h5, h6 {
   margin-bottom: .4rem;
