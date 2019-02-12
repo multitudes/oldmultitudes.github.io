@@ -275,14 +275,12 @@ tbody tr:nth-child(odd) th {
  * or to a parent if there are multiple elements to show.
  */
 
-.message {
-  margin-bottom: 1rem;
+div.message {
+  margin-bottom: .1rem;
   padding: 1rem;
   color: #4a525a;
-  background-color: rgba(255, 238, 192,0.5); !important
-  border-left-color: yellow;
-  border-style: solid;
-  border-width: medium;
+  background-color: #FCF692;  
+  border-left: .4rem solid #BFBA6E;
 }
 
 
