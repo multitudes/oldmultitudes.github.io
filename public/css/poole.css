@@ -279,8 +279,8 @@ div.message {
   margin-bottom: .7rem;
   padding: 1rem;
   color: #4a525a;
-  background-color: #f7f0d6;  
-  border-left: .4rem solid #FCF692;
+  background-color: rgba(247,240,214,0.5);  
+  border-left: .8rem solid #FCF692;
 }
 
 
