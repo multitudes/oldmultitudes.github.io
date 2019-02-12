@@ -121,11 +121,12 @@ footer{
     font-weight: 200;
     font-size: 10px;
     text-align: center; 
-    right:  1rem;/* 
-    top: 43rem; */
+    /* right:  1rem; 
+    top: 43rem; 
     left:   1rem;
+     */    
     font-size: 15px;
-    height: 50px;
+    height: 40px;
 }
 
 /* Sticky sidebar
