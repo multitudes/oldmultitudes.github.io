@@ -112,7 +112,7 @@ a.sidebar-nav-item:focus {
   font-weight: bold;
 }
 div.container{
-    min-height: calc(100vh - 70px);
+    min-height: calc(100vh - 75px);
 }
 
 
