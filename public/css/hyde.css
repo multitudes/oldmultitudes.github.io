@@ -111,8 +111,9 @@ a.sidebar-nav-item:focus {
 .sidebar-nav-item.active {
   font-weight: bold;
 }
+
 div.container{
-    min-height: calc(100vh - 75px);
+    min-height: 30vh;
 }
 
 
@@ -162,6 +163,10 @@ footer{
     margin-left: 20rem;
     margin-right: 2rem;
   }
+  div.container{
+    min-height: calc(100vh - 75px);
+}
+
 }
 
 @media (min-width: 64em) {
@@ -169,6 +174,10 @@ footer{
     margin-left: 22rem;
     margin-right: 4rem;
   }
+  div.container{
+    min-height: calc(100vh - 75px);
+}
+    
 }
 
 
