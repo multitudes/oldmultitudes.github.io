@@ -58,13 +58,7 @@ html {
  * out above content in mobile and later moves to the side with wider viewports.
  */
 
-/* .content {
-  min-height: calc(100vh - 70px);
-} */
-
-
 .sidebar {
-    
   background-color: #a4def2; /* vampire style */
   text-align: center;
   padding: 0.7rem 0.5rem;
@@ -92,7 +86,6 @@ html {
 .sidebar-about h1 {
   color: #fff;
   margin-top: 0;
-  /*font-family: "Abril Fatface", serif; */
   font-size: 3.25rem;
 }
 
@@ -116,16 +109,11 @@ div.container{
     min-height: 30vh;
 }
 
-
 footer{
     color: #fff; 
     font-weight: 200;
     font-size: 10px;
-    text-align: center; 
-    /* right:  1rem; 
-    top: 43rem; 
-    left:   1rem;
-     */    
+    text-align: center;    
     font-size: 15px;
     height: 40px;
 }
@@ -175,7 +163,7 @@ footer{
     margin-right: 4rem;
   }
   div.container{
-    min-height: calc(100vh - 75px);
+    min-height: calc(100vh - 100px);
 }
     
 }
