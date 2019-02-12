@@ -64,16 +64,14 @@ html {
 
 
 .sidebar {
-    min-height: calc(100vh - 70px);
+    
   background-color: #a4def2; /* vampire style */
   text-align: center;
   padding: 0.7rem 0.5rem;
   /* color: rgba(255,255,255,.5); */
   /* background-color: #202020; */
 }
-footer {
-  height: 50px;
-}
+
 @media (min-width: 48em) {
   .sidebar {
     position: fixed;
@@ -113,18 +111,21 @@ a.sidebar-nav-item:focus {
 .sidebar-nav-item.active {
   font-weight: bold;
 }
+div.container{
+    min-height: calc(100vh - 70px);
+}
 
 
 footer{
-   color: #fff; 
+    color: #fff; 
     font-weight: 200;
     font-size: 10px;
-  text-align: center; 
-    position: absolute;
-    right:  1rem;
-    top: 43rem;
+    text-align: center; 
+    right:  1rem;/* 
+    top: 43rem; */
     left:   1rem;
     font-size: 15px;
+    height: 50px;
 }
 
 /* Sticky sidebar
