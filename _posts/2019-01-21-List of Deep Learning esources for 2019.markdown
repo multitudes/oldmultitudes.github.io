@@ -28,7 +28,7 @@ For instance lets see a suggested resource list for learning Python [here](https
 
 Visit [kaggle.com]() and get a feeling for competition and what will be expected from ML and DL practitioners
 You can learn Pandas on Kaggle with interactive jupyter notebooks. They have quite a number of very interesting tutorials.
-This [book](http://wesmckinney.com/pages/book.html) is also great to learn about data analysis with Python and Pandas and is recommended reading.
+This book: [Python for Data Analysis](http://wesmckinney.com/pages/book.html) is also great to learn about data analysis with Python and Pandas and is a recommended reading from Jeremy Howard.
 
 ## Andrew Ng on Coursera
 
@@ -52,18 +52,19 @@ The [CS231n: Convolutional Neural Networks for Visual Recognition](http://cs231n
 
 ## Books
 It is better not to spend too much time on the theory, the practical side of AI should be prioritise, Jeremy Howard talks of a top-down approach and many agree with him. Spend time coding and getting the knowledge you need when you need it. However as a reference I found these books to be a good companion to your journey.
-[Deep Learning by Ian Goodfellow](https://www.deeplearningbook.org) Very math centric, a copy is in html version on the website. Would not recommend unless you have very solid basis in math.
-[Introduction to Machine Learning with Python: A Guide for Data Scientists by Andreas C. Müller, Sarah Guido](https://www.oreilly.com/library/view/introduction-to-machine/9781449369880/)
-[Python Machine Learning: Machine Learning and Deep Learning with Python, scikit-learn, and TensorFlow by Sebastian Raschka, Vahid Mirjalili](https://www.packtpub.com/big-data-and-business-intelligence/python-machine-learning-second-edition)
-[Hands-On Machine Learning with Scikit-Learn and TensorFlow by Aurélien Géron](http://shop.oreilly.com/product/0636920052289.do)
+* [Introduction to Machine Learning with Python: A Guide for Data Scientists by Andreas C. Müller, Sarah Guido](https://www.oreilly.com/library/view/introduction-to-machine/9781449369880/)
+* [Python Machine Learning: Machine Learning and Deep Learning with Python, scikit-learn, and TensorFlow by Sebastian Raschka, Vahid Mirjalili](https://www.packtpub.com/big-data-and-business-intelligence/python-machine-learning-second-edition)
+* [Hands-On Machine Learning with Scikit-Learn and TensorFlow by Aurélien Géron](http://shop.oreilly.com/product/0636920052289.do)
+* [Deep Learning by Ian Goodfellow](https://www.deeplearningbook.org) Very math centric, a copy is in html version on the website. Would not recommend unless you have very solid basis in math.
 
 ## Read some good blogs
-I quite like the Notebooks of [Peter Norvig](http://nbviewer.jupyter.org/url/norvig.com/ipython/ProbabilityParadox.ipynb)
+* I quite like the Notebooks of [Peter Norvig](http://nbviewer.jupyter.org/url/norvig.com/ipython/ProbabilityParadox.ipynb)
 [and](http://norvig.com/ipython/)
-In her blog [Hiromi Suenaga](https://medium.com/@hiromi_suenaga/machine-learning-1-lesson-12-6c2512e005a3) wrote down notes from Fastai machine learning lessons.
-[Olah's Blog](http://colah.github.io)
+*In her blog [Hiromi Suenaga](https://medium.com/@hiromi_suenaga/machine-learning-1-lesson-12-6c2512e005a3) wrote down notes from Fastai machine learning lessons.
+* [Olah's Blog](http://colah.github.io)
 and [distill](https://distill.pub/2018/building-blocks/)
 
+That's it for now. If I missed something let me know in the comments! 
 
 
 
