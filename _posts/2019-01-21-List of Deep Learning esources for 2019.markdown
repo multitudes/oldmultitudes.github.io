@@ -9,7 +9,8 @@ published: true
 <div class="message">
 Machine and Deep Learning move so fast that from year to year resources become easily outdated and new tools and libraries emerge. Here is a guide for of tutorial and resources for 2019
 </div>
-1. fastai
+
+## fastai
 
 I recommend the excellent course by Jeremy Howard at San Francisco University which is free to follow online on their website. This is the new course in 2019
 [Practical Deep Learning for Coders, v3](https://course.fast.ai)
@@ -23,7 +24,7 @@ I watched all their 2018 videos and they are fantastic and still worth to watch:
 Fastai has a very lively [forum](https://forums.fast.ai)
 For instance lets see a suggested resource list for learning Python [here](https://forums.fast.ai/t/recommended-python-learning-resources/26888)
 
-2. Kaggle
+## Kaggle
 
 Visit [kaggle.com]() and get a feeling for competition and what will be expected from ML and DL practitioners
 You can learn Pandas on Kaggle with interactive jupyter notebooks. They have quite a number of very interesting tutorials.
@@ -60,6 +61,8 @@ It is better not to spend too much time on the theory, the practical side of AI 
 I quite like the Notebooks of [Peter Norvig](http://nbviewer.jupyter.org/url/norvig.com/ipython/ProbabilityParadox.ipynb)
 [and](http://norvig.com/ipython/)
 In her blog [Hiromi Suenaga](https://medium.com/@hiromi_suenaga/machine-learning-1-lesson-12-6c2512e005a3) wrote down notes from Fastai machine learning lessons.
+[Olah's Blog](http://colah.github.io)
+and [distill](https://distill.pub/2018/building-blocks/)
 
 
 
