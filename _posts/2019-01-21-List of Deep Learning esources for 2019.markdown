@@ -66,14 +66,17 @@ She is one of the co-founder of fastai.
 
 ## A very practical hands-on tutorials
 * [Adrian Rosebrock of pyimagesearch.com](https://www.pyimagesearch.com) 
-has a very practical blog with lots of tips. The good part is that many of the articles get you up and running in a minimal amount of time. He has written three books on the subject and they are quite expensive. The website and blogs are really promotion for his books but I like his approach and he really always replies to comments ad questions. 
+
+He has a very practical blog with lots of tips. The good part is that many of the articles get you up and running in a minimal amount of time. He has written three books on the subject and they are quite expensive. The website and blogs are really promotion for his books but I like his approach and he really always replies to comments ad questions. 
 
 ## Books
 It is better not to spend too much time on the theory, the practical side of AI should be prioritise, Jeremy Howard talks of a top-down approach and many agree with him. Spend time coding and getting the knowledge you need when you need it. However as a reference I found these books to be a good companion to your journey.
-* [Introduction to Machine Learning with Python: A Guide for Data Scientists by Andreas C. Müller, Sarah Guido](https://www.oreilly.com/library/view/introduction-to-machine/9781449369880/)
-* [Python Machine Learning: Machine Learning and Deep Learning with Python, scikit-learn, and TensorFlow by Sebastian Raschka, Vahid Mirjalili](https://www.packtpub.com/big-data-and-business-intelligence/python-machine-learning-second-edition)
-* [Hands-On Machine Learning with Scikit-Learn and TensorFlow by Aurélien Géron](http://shop.oreilly.com/product/0636920052289.do)
-* [Deep Learning by Ian Goodfellow](https://www.deeplearningbook.org) Very math centric, a copy is in html version on the website. Would not recommend unless you have very solid basis in math.
+* [Introduction to Machine Learning with Python: A Guide for Data Scientists](https://www.oreilly.com/library/view/introduction-to-machine/9781449369880/) by Andreas C. Müller, Sarah Guido
+* [Python Machine Learning: Machine Learning and Deep Learning with Python, scikit-learn, and TensorFlow](https://www.packtpub.com/big-data-and-business-intelligence/python-machine-learning-second-edition) by Sebastian Raschka, Vahid Mirjalili
+* [Hands-On Machine Learning with Scikit-Learn and TensorFlow](http://shop.oreilly.com/product/0636920052289.do) by Aurélien Géron 
+* [Deep Learning](https://www.deeplearningbook.org) by Ian Goodfellow 
+Very math centric, a copy is in html version on the website. Would not recommend unless you have very solid basis in math.
+
 This book: 
 * [Python for Data Analysis](http://wesmckinney.com/pages/book.html) 
 is also great for learning about data analysis with Python and Pandas and is a recommended reading from Jeremy Howard.
