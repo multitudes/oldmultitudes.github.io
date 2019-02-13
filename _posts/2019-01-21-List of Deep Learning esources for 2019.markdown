@@ -57,8 +57,11 @@ It is good to watch but assignments and resource websites are already a bit outd
 
 ## A course in Algebra 
 
-* [Computational Linear Algebra](https://www.youtube.com/playlist?list=PLtmWHNX-gukIc92m1K0P6bIOnZb-mg0hY) taught by Rachel Thomas at the university of San Francisco is a series of videos about that math knowledge you migt need for deep learning. The Python notebooks are on her 
+* [Computational Linear Algebra](https://www.youtube.com/playlist?list=PLtmWHNX-gukIc92m1K0P6bIOnZb-mg0hY) 
+taught by Rachel Thomas at the university of San Francisco is a series of videos about that math knowledge you migt need for deep learning. The Python notebooks are on her 
+
 *[GitHub repo](https://github.com/fastai/numerical-linear-algebra). 
+
 She is one of the co-founder of fastai.
 
 ## A very practical hands-on tutorials
@@ -74,7 +77,9 @@ It is better not to spend too much time on the theory, the practical side of AI 
 This book: 
 * [Python for Data Analysis](http://wesmckinney.com/pages/book.html) 
 is also great for learning about data analysis with Python and Pandas and is a recommended reading from Jeremy Howard.
+
 ## Read some good blogs
+
 * I quite like the Notebooks of [Peter Norvig](http://nbviewer.jupyter.org/url/norvig.com/ipython/ProbabilityParadox.ipynb)
 [and](http://norvig.com/ipython/)
 *In her blog [Hiromi Suenaga](https://medium.com/@hiromi_suenaga/machine-learning-1-lesson-12-6c2512e005a3) wrote down notes from Fastai machine learning lessons.
