@@ -23,7 +23,6 @@ html {
   }
 }
 
-
 /*
  * Sidebar
  *
@@ -37,17 +36,6 @@ html {
   padding: 0.7rem 0.5rem;
   /* color: rgba(255,255,255,.5); */
   /* background-color: #202020; */
-}
-
-@media (min-width: 48em) {
-  .sidebar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    width: 18rem;
-    text-align: left;
-  }
 }
 
 /* Sidebar links */
@@ -77,7 +65,16 @@ a.sidebar-nav-item:focus {
 .sidebar-nav-item.active {
   font-weight: bold;
 }
-
+@media (min-width: 48em) {
+  .sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 18rem;
+    text-align: left;
+  }
+}
 div.container{
     min-height: 30vh;
 }
@@ -98,7 +95,7 @@ footer{
  * contents to the bottom of the sidebar in tablets and up.
  */
 
-@media (min-width: 48em) {
+/* @media (min-width: 48em) {
   .sidebar-sticky {
     position: absolute;
     right:  1rem;
@@ -106,7 +103,7 @@ footer{
     left:   1rem;
   }
 }
-
+ */
 
 /* Container
  *
@@ -149,7 +146,7 @@ footer{
  * Flip the orientation of the page by placing the `.sidebar` on the right.
  */
 
-@media (min-width: 48em) {
+/* @media (min-width: 48em) {
   .layout-reverse .sidebar {
     left: auto;
     right: 0;
@@ -158,14 +155,14 @@ footer{
     margin-left: 2rem;
     margin-right: 20rem;
   }
-}
-
+} */
+/* 
 @media (min-width: 64em) {
   .layout-reverse .content {
     margin-left: 4rem;
     margin-right: 22rem;
   }
-}
+} */
 /* override styles when printing */
 @media print {
   body {
@@ -230,7 +227,7 @@ a:focus {
 
 /* Headings */
 h1, h2, h3, h4, h5, h6 {
-  margin-bottom: .5rem;
+  margin-bottom: .7rem;
   font-weight: bold;
   line-height: 1.00;
   color: #4a525a;
@@ -595,30 +592,29 @@ a.pagination-item:hover {
     .hidden {
         display: none;
     }
-    
-    /* Headings */
-h1, h2, h3, h4, h5, h6 {
-  margin-bottom: .4rem;
-  font-weight: bold;
-  line-height: 1;
-  color: #4a525a;
-  text-rendering: optimizeLegibility;
-}
-h1 {
-  font-size: 1.5rem;
-  line-height: 1;
-}
-  blockquote {
-    padding-right: 5rem;
-    padding-left: 1.25rem;
-  }
+        /* Headings */
+    h1, h2, h3, h4, h5, h6 {
+      margin-bottom: .4rem;
+      font-weight: bold;
+      line-height: 1;
+      color: #4a525a;
+      text-rendering: optimizeLegibility;
+    }
+    h1 {
+      font-size: 1.5rem;
+      line-height: 1;
+    }
+      blockquote {
+        padding-right: 5rem;
+        padding-left: 1.25rem;
+      }
     .sidebar-nav {
-  margin-bottom: 0.2rem;
-}
-.sidebar-nav-item {
-  display: inline;
-  line-height: 1;
-}
+      margin-bottom: 0.2rem;
+    }
+    .sidebar-nav-item {
+      display: inline;
+      line-height: 1;
+    }
 }
 
 
