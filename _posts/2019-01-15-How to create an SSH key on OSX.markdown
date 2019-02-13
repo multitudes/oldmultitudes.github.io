@@ -20,7 +20,7 @@ $ sudo ssh-keygen -t rsa  #generate a RSA private/public key pair
 {% endhighlight %}
 
 ## Copy the key to the server using ssh-copy-id
-Copy the public key on your local computer to DreamHost's server by running the following command on your Linux machine.
+Copy the public key on your local computer to the server by running the following command on your Linux machine.
 
 {% highlight bash %}
 $ cat ~/.ssh/ubuntu.pub | ssh ubuntu@10.101.21.202 "cat >> ~/.ssh/authorized_keys"
@@ -39,3 +39,20 @@ You can confirm the identity (private key) you're using if you add the -v flag v
 ssh -v ubuntu@10.101.21.202 
 {% endhighlight %}
 
+## Finally there is another shortcut
+
+If the Linux server on our network has a known static IP which is not changing, we can edit the SSH config file in `~/.ssh/config` 
+First I open the file in my editor:
+{% highlight bash %}
+nano ~/.ssh/config
+{% endhighlight %}
+then I add the following:
+{% highlight bash %}
+Host ub     # this is the alias for my password less login
+Hostname 10.101.21.24   # The static IP of the server 
+user ubuntu      # username as would I use loggin in 
+{% endhighlight %}
+Now lets login again but this time it is even quicker using the alias we inserted in the config file:
+{% highlight bash %}
+ssh ub
+{% endhighlight %}
