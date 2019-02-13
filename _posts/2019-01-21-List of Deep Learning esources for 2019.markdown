@@ -36,13 +36,18 @@ You can learn Pandas on Kaggle with interactive jupyter notebooks. They have qui
 
 Both courses can be watched free if you enroll as auditor. Please see my article about ["How to audit courses on Coursera"](xxxx) and how to benefit of the MOOC offering.
 The oldest of his courses, 
-* [Coursera: Machine Learning by Andrew Ng](https://www.coursera.org/learn/machine-learning) 
-has been my introduction to Machine Learning. When I first watched this I felt like superman. I used to think ML was beyond my reach (and it still is) but I could develop an intuition for it and I got greatly inspired. Terrific course but now outdated. I believe it has been made around 2012 and they still use octave software for assignments. I would still watch the courses but would recommend to start with: 
-* [Coursera: Deep Learning specialisation in 5 courses](https://www.coursera.org/specializations/deep-learning)
+* [Coursera: Machine Learning by Andrew Ng](https://www.coursera.org/learn/machine-learning)
 
-In this course they use Python and Jupyter notebooks for the assignments and it goes really in deep about forward and back-propagation. Great for your intuition. Not always easy. Some assignments are available for auditors. Probably pay for the course is good value for money, even if you are not interested in the certificates, the assignments are great value to learn.
+has been my introduction to Machine Learning. When I first watched this I felt like superman. I used to think ML was beyond my reach (and it still is) but I could develop an intuition for it and I got greatly inspired. Terrific course but now outdated. I believe it has been made around 2012 and they still use octave software for assignments. 
+I would still watch the courses but would recommend to start with: 
+
+* [Coursera: Deep Learning specialisation](https://www.coursera.org/specializations/deep-learning)
+
+In this specialisation in 5 in 5 coursecourses he uses Python and Jupyter notebooks for the assignments and it goes really indeep about forward and back-propagation. Great for your intuition. Not always easy. Some assignments are available for auditors. Probably pay for the course is good value for money, even if you are not interested in the certificates, the assignments are great value to learn.
 As a curiosity the seminal course by 
-* [Geoffrey Hinton "Neural Networks for Machine Learning" on Coursera](https://www.youtube.com/watch?v=OVwEeSsSCHE&t=0s&index=2&list=PLLssT5z_DsK_gyrQ_biidwvPYCRNGI3iv) is not offered anymore but still to watch on youtube. 
+* [Geoffrey Hinton "Neural Networks for Machine Learning" on Coursera](https://www.youtube.com/watch?v=OVwEeSsSCHE&t=0s&index=2&list=PLLssT5z_DsK_gyrQ_biidwvPYCRNGI3iv) 
+
+is not offered anymore but still to watch on youtube. 
 
 ## Stanford CS231n
 
