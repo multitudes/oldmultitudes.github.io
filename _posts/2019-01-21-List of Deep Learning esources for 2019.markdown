@@ -10,11 +10,13 @@ published: true
 Machine and Deep Learning move so fast that from year to year resources become easily outdated and new tools and libraries emerge. Here is a guide for of tutorial and resources for 2019
 </div>
 
+
 ## fastai
 
-I recommend the excellent course by Jeremy Howard at San Francisco University which is free to follow online on their website. This is the new course in 2019
-[Practical Deep Learning for Coders, v3](https://course.fast.ai)
-Other courses are in progress and they will be uploaded to the website as they are finished.
+First of all I recommend the excellent course by Jeremy Howard at San Francisco University which is free to follow online on their website. This is the new course in 2019:
+* [Practical Deep Learning for Coders, v3](https://course.fast.ai)
+
+There is a courses in progress and it will be uploaded to the website as it finishes.
 
 I watched all their 2018 videos and they are fantastic and still worth to watch:
 * [Practical Deep Learning For Coders, Part 1](http://course18.fast.ai)
@@ -22,13 +24,17 @@ I watched all their 2018 videos and they are fantastic and still worth to watch:
 * [Introduction to Machine Learning for Coders](http://course18.fast.ai/ml.html)
 
 Fastai has a very lively [forum](https://forums.fast.ai)
-For instance lets see a suggested resource list for learning Python [here](https://forums.fast.ai/t/recommended-python-learning-resources/26888)
+For instance lets see a suggested resource list for learning Python [here](https://forums.fast.ai/t/recommended-python-learning-resources/26888).
 
 ## Kaggle
 
-Visit [kaggle.com]() and get a feeling for competition and what will be expected from ML and DL practitioners
+Visit [kaggle.com]() and get a feeling for competition and what will be expected from ML and DL practitioners.
+
 You can learn Pandas on Kaggle with interactive jupyter notebooks. They have quite a number of very interesting tutorials.
-This book: [Python for Data Analysis](http://wesmckinney.com/pages/book.html) is also great to learn about data analysis with Python and Pandas and is a recommended reading from Jeremy Howard.
+
+This book: 
+* [Python for Data Analysis](http://wesmckinney.com/pages/book.html) 
+is also great for learning about data analysis with Python and Pandas and is a recommended reading from Jeremy Howard.
 
 ## Andrew Ng on Coursera
 
