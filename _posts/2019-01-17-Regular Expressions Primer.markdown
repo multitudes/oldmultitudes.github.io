@@ -177,10 +177,18 @@ The python code to extract the name would be:
 {% highlight python %}
 
 import re
+
 string = 'data/oxford-iiit-pet/images/american_bulldog_146.jpg'
+
 pat = r'([^/]+)_\d+.jpg$'
+
 pat = re.compile(pat)
+
 print(pat.search(string).group(1))
+
+# we get this result and not the whole string, 
+# because on the previous expression, we requested 'group 1' which is 
+# that part of the regex with the parentheses
 >american_bulldog
 
 {% endhighlight %}
