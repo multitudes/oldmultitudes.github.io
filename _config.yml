@@ -8,8 +8,8 @@ permalink:        :year/:month/:title:output_ext
 
 # Setup
 title:            Laurent Brusa
-tagline:          'We are Multitudes'
-description:      'Organic Deep Coding '
+tagline:          'WOrganic Deep Coding'
+description:      'Organic Deep Coding'
 node.url:         https://multitudes.github.io
 baseurl:          /
 

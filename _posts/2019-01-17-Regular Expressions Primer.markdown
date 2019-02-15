@@ -8,11 +8,10 @@ published: false
 ---
 <div class="message">
 Many people use different names to refer to Regular Expressions, such as Regexp, Regex, ASCII puke(!).
-They are 'A way to expres a set of strings'. 
-Regular Expressions are one of the most powerful way of using programming languages </div>
+They are 'A way to expres a set of strings'. </div>
 
+Regular Expressions are one of the most powerful way of using programming languages 
 They can be used to 'scrub' website to extract links, informations, titles..
-
 They are just simply a series of codes that you use to define exactly what text you are looking for. And text can be numbers letters punctuation etc.
 
 This code is used to match patterns. ets see an example. I want to find all numbers of one to five digit long followed by a space and the words "Hello World". 
@@ -125,7 +124,40 @@ pattern2 = re.findall(expression,text)
 
 for i in pattern2:
     print(i,end='')
-    
+   
+
+
+### example from fastai DL course v3
+
+lets see this example as seen on fastai deep learning for coders version 3.
+We have a set of image files in a folder with names like 
+
+'data/oxford-iiit-pet/images/american_bulldog_146.jpg'
+
+The label for that particular picture is in the name of the file. Lets see how we can extract it with a regex pattern:
+
+`/([^/]+)_\d+.jpg$`
+
+`/` starts the regex
+`()`  in the parentheses is what we are looking for, a greoup of characters defined as:
+`[^/]+` the `^` is a negation, so it says no forward slash and `+` arbitrarily long
+so ([^/]+) is looking for a group of characters that do not contain forward slashes and are arbitrarily long.
+
+`_` it is literally expecting an underscore character here
+
+The RegEx `\d` refers to numerical digits and the plus `+` sign that comes after it means that there may be arbitrarily many digits. This looks for the numerical ID of the images.
+`.jpg$` The dollar sign at the end tells that we are matching only files which end with `.jpg`
+
+The python code to extract the name would be:
+
+import re
+string = 'data/oxford-iiit-pet/images/american_bulldog_146.jpg'
+pat = r'([^/]+)_\d+.jpg$'
+pat = re.compile(pat)
+print(pat.search(string).group(1))
+>american_bulldog
+
+ 
     
 ### In HTML5
 
