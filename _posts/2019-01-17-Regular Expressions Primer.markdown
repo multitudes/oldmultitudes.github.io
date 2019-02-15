@@ -191,7 +191,7 @@ print(pat.search(string).group(1))
 Regex can be used in HTML5 for form validation with the pattern attribute.
 
 {% highlight html %}
-<input name = 'zip' pattern = "\d{5}" /> 
+<input name="zip" pattern="\d{5}" /> 
 {% endhighlight %}
     
 ### In the command line
