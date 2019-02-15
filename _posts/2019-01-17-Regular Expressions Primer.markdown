@@ -12,11 +12,12 @@ Regular Expressions are one of the most powerful way of using programming langua
 Regex are a way to expres a set of strings. They can be used to 'scrub' website to extract links, informations, titles.. They are just simply a series of codes that you use to define exactly what text you are looking for. And text can be numbers letters punctuation etc.
 
 This code is used to match patterns. lets see an example. I want to find all numbers, one to five digit long followed by a space and the words "Hello World". 
-Example of the string:
 
-12345 Hello World.
+For example:
 
-We get the following syntax. The slash is delimiting the start of a regular expression.
+`12345 Hello World.`
+
+We define the pattern with the following syntax. The slash is delimiting the start of a regular expression.
 
 `\d{1,5}`
 
