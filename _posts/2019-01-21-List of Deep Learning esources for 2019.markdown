@@ -79,8 +79,7 @@ It is better not to spend too much time on the theory, the practical side of AI 
 Very math centric, a copy is in html version on the website. Would not recommend unless you have very solid basis in math.
 
 This book: 
-* [Python for Data Analysis](http://wesmckinney.com/pages/book.html) 
-is also great for learning about data analysis with Python and Pandas and is a recommended reading from Jeremy Howard.
+* Wes McKinney's [Python for Data Analysis, 2nd ed.](http://wesmckinney.com/pages/book.html) is also great for learning about data analysis with Python and Pandas and is a recommended reading from Jeremy Howard.
 
 ## Read some good blogs
 

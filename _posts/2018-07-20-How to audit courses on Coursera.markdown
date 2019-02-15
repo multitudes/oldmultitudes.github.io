@@ -23,7 +23,7 @@ Lets click on acourse. Assuming that we have already logged in, we get this wind
 
 ![coursera](/assets/img/coursera1.png)
 
-There is of course no mention about auditing the course.. we will need change tactic and look for the page of the course in search instead of going through the specialisation menu.
+There is of course no mention about auditing the course.. we will need to change tactic and look for the page of the course in search instead of going through the specialisation menu. Let's find this course again.. Here it is!
 
 ![coursera](/assets/img/coursera3.png)
 

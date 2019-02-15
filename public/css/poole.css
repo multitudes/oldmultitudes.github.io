@@ -458,7 +458,11 @@ h1 {
     padding-right: 5rem;
     padding-left: 1.25rem;
   }
-    .sidebar-nav {
+.sidebar-nav .sidebar-about {
+  text-shadow: horizontal-offset vertical-offset blur color;
+  text-shadow: 2px 4px 3px rgba(0,0,0,0.3);    
+}    
+.sidebar-nav {
   margin-bottom: 0.2rem;
 }
 .sidebar-nav-item {
