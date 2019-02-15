@@ -94,7 +94,7 @@ html {
 /* Sidebar nav */
 .sidebar-nav {
   margin-bottom: 0.7rem;
-  text-shadow: 0.2rem 0.2rem 0.1rem rgba(0,0,0,0.3);    
+  text-shadow: 0.05rem 0.05rem 0.2rem rgba(0,0,0,0.3);    
 }
 .sidebar-nav-item {
   display: block;
