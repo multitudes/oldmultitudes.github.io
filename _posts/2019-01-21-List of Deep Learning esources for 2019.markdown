@@ -85,9 +85,7 @@ This book:
 
 - I quite like the Notebooks of [Peter Norvig](http://nbviewer.jupyter.org/url/norvig.com/ipython/ProbabilityParadox.ipynb)
 and like [this one](http://norvig.com/ipython/)
-
 - In her blog [Hiromi Suenaga](https://medium.com/@hiromi_suenaga/machine-learning-1-lesson-12-6c2512e005a3) wrote down notes from Fastai machine learning lessons.
-
 - [Olah's Blog](http://colah.github.io)
 and [distill](https://distill.pub/2018/building-blocks/)
 
