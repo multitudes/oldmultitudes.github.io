@@ -8,21 +8,19 @@ published: true
 ---
 <div class="message">
 Many people use different names to refer to Regular Expressions, such as Regexp, Regex, ASCII puke(!).
-They are 'A way to expres a set of strings'. </div>
+Regular Expressions are one of the most powerful way of using programming languages and I will give here a brief introduction </div>
+Regex are a way to expres a set of strings. They can be used to 'scrub' website to extract links, informations, titles.. They are just simply a series of codes that you use to define exactly what text you are looking for. And text can be numbers letters punctuation etc.
 
-Regular Expressions are one of the most powerful way of using programming languages 
-They can be used to 'scrub' website to extract links, informations, titles..
-They are just simply a series of codes that you use to define exactly what text you are looking for. And text can be numbers letters punctuation etc.
-
-This code is used to match patterns. ets see an example. I want to find all numbers of one to five digit long followed by a space and the words "Hello World". 
+This code is used to match patterns. lets see an example. I want to find all numbers, one to five digit long followed by a space and the words "Hello World". 
 Example of the string:
 
 12345 Hello World.
 
-The syntax is for the numbers, I read loud, the slash is delimiting the start of a regular expression.
-So this means: A digit between 1 to 5 digits in length, whenever you use these curly brackets, you are saying that you expect between n to m digits 
+We get the following syntax. The slash is delimiting the start of a regular expression.
 
 `\d{1,5}`
+
+So this means: A digit between 1 to 5 digits in length, whenever you use these curly brackets, you are saying that you expect between n to m digits 
 
 Then this is followed by a space. The Regular expression for a space is 
 
