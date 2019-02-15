@@ -9,88 +9,69 @@ published: false
 <div class="message">
 Regular Expressions are one of the most powerful way of using programming languages </div>
 
-They are just simply a series of codes that you use to define exactly what text you are looking for.
+They can be used to 'scrub' website to extract links, informations, titles..
 
-## fastai
+They are just simply a series of codes that you use to define exactly what text you are looking for. And text can be numbers letters punctuation etc.
 
-First of all I recommend the excellent course by Jeremy Howard at San Francisco University which is free to follow online on their website. This is the new course in 2019:
-* [Practical Deep Learning for Coders, v3](https://course.fast.ai)
+This code is used to match patterns. ets see an example. I want to find all numbers of one to five digit long followed by a space and the words "Hello World". 
+Example of the string:
 
-There is a courses in progress and it will be uploaded to the website as it finishes.
+12345 Hello World.
 
-I watched all their 2018 videos and they are fantastic and still worth to watch:
-* [Practical Deep Learning For Coders, Part 1](http://course18.fast.ai)
-* [Cutting Edge Deep Learning For Coders, Part 2](http://course18.fast.ai/part2.html)
-* [Introduction to Machine Learning for Coders](http://course18.fast.ai/ml.html)
+The syntax is for the numbers, I read loud, the slash is delimiting the start of a regular expression.
+So this means: A digit between 1 to 5 digits in length, whenever you use these curly brackets, you are saying that you expect between n to m digits 
 
-Fastai has a very lively [forum](https://forums.fast.ai)
-For instance lets see a suggested resource list for learning Python [here](https://forums.fast.ai/t/recommended-python-learning-resources/26888).
+\d{1,5}
 
-## Kaggle
+Then this is followed by a space. The Regular expression for a space is 
 
-Visit [kaggle.com]() and get a feeling for competition and what will be expected from ML and DL practitioners.
+\s
 
-You can learn Pandas on Kaggle with interactive jupyter notebooks. They have quite a number of very interesting tutorials.
+Then you expect a series of character which will be a serie from 1 to multiple letters in length. This 'w' represents anything which is a character, and the '+' means one or more.
 
-## Andrew Ng on Coursera
+\w+
 
-Both courses can be watched free if you enroll as auditor. Please see my article about ["How to audit courses on Coursera"](xxxx) and how to benefit of the MOOC offering.
-The oldest of his courses, 
-* [Coursera: Machine Learning by Andrew Ng](https://www.coursera.org/learn/machine-learning)
+again followed by space and a word
 
-has been my introduction to Machine Learning. When I first watched this I felt like superman. I used to think ML was beyond my reach (and it still is) but I could develop an intuition for it and I got greatly inspired. Terrific course but now outdated. I believe it has been made around 2012 and they still use octave software for assignments. 
-I would still watch the courses but would recommend to start with: 
+\s\w+
 
-* [Coursera: Deep Learning specialisation](https://www.coursera.org/specializations/deep-learning)
+then the point. The point can be interpreted in regex to mean any character except a newline. So I nee to put a backslash.
 
-In this specialisation in 5 in 5 coursecourses he uses Python and Jupyter notebooks for the assignments and it goes really indeep about forward and back-propagation. Great for your intuition. Not always easy. Some assignments are available for auditors. Probably pay for the course is good value for money, even if you are not interested in the certificates, the assignments are great value to learn.
-As a curiosity the seminal course by 
-* [Geoffrey Hinton "Neural Networks for Machine Learning" on Coursera](https://www.youtube.com/watch?v=OVwEeSsSCHE&t=0s&index=2&list=PLLssT5z_DsK_gyrQ_biidwvPYCRNGI3iv) 
+\.
 
-is not offered anymore but still to watch on youtube. 
+We now put all this together:
 
-## Stanford CS231n
+\d{1,5}\s\w+\s\w+\.
 
-The [CS231n: Convolutional Neural Networks for Visual Recognition](http://cs231n.stanford.edu) course at Stanford is quite popular and on the link above the 2017 videos are on youtube. 
+So lets see a bit of theory now.
 
-It is good to watch but assignments and resource websites are already a bit outdated. Great material though, waiting to watch the 2018 videos when they become available.
+\d   is any number (digit)
+\D   with the capital D is anything but a number (digit)
+\s   A space
+\S   Anything but a space
+\w   Any character
+\W   Anything but a character
+.    matches any character except a line break
+\b   match for a space which precedes or follows a whole word
 
-## A course in Algebra 
+?    zero or one repetition of the code which precedes it
+*    One or more repetition
+{n}  If you know exactly how many repetitions, insert the amount in curly brackets
+{m,n} Here means m to n repetitions as seen above
 
-* [Computational Linear Algebra](https://www.youtube.com/playlist?list=PLtmWHNX-gukIc92m1K0P6bIOnZb-mg0hY) 
+\e    escaped whitespace
+\f    form feed
+\n    newline
+\r    carriage return
+\t    horizontal tab
+ 
+Using [] brackets to find commonly mispelled words. 
 
-taught by Rachel Thomas (one of the co-founder of fastai) at the university of San Francisco is a series of videos about that math knowledge you migt need for deep learning. The Python notebooks are on her GitHub 
+Example tomorrow can be mispelled as tommorow, tommorrow..
 
-* [GitHub repo](https://github.com/fastai/numerical-linear-algebra)
+We can find these like this
 
 
-
-## A very practical hands-on tutorials
-* [Adrian Rosebrock of pyimagesearch.com](https://www.pyimagesearch.com) 
-
-He has a very practical blog with lots of tips. The good part is that many of the articles get you up and running in a minimal amount of time. He has written three books on the subject and they are quite expensive. The website and blogs are really promotion for his books but I like his approach and he really always replies to comments ad questions. 
-
-## Books
-It is better not to spend too much time on the theory, the practical side of AI should be prioritise, Jeremy Howard talks of a top-down approach and many agree with him. Spend time coding and getting the knowledge you need when you need it. However as a reference I found these books to be a good companion to your journey.
-* [Introduction to Machine Learning with Python: A Guide for Data Scientists](https://www.oreilly.com/library/view/introduction-to-machine/9781449369880/) by Andreas C. Müller, Sarah Guido
-* [Python Machine Learning: Machine Learning and Deep Learning with Python, scikit-learn, and TensorFlow](https://www.packtpub.com/big-data-and-business-intelligence/python-machine-learning-second-edition) by Sebastian Raschka, Vahid Mirjalili
-* [Hands-On Machine Learning with Scikit-Learn and TensorFlow](http://shop.oreilly.com/product/0636920052289.do) by Aurélien Géron 
-* [Deep Learning](https://www.deeplearningbook.org) by Ian Goodfellow 
-Very math centric, a copy is in html version on the website. Would not recommend unless you have very solid basis in math.
-
-This book: 
-* Wes McKinney's [Python for Data Analysis, 2nd ed.](http://wesmckinney.com/pages/book.html) is also great for learning about data analysis with Python and Pandas and is a recommended reading from Jeremy Howard.
-
-## Read some good blogs
-
-- The [Sara Hooker's blog](https://www.sarahooker.me/) and [this article](https://medium.com/@sarahooker/slow-learning-d9463f6a800b) for Medium
-- This blog by [Christine mcleavey](http://christinemcleavey.com/clara-a-neural-net-music-generator/) is quite impressive
-- [OpenAI](https://openai.com/)
-- I quite like the Notebooks of [Peter Norvig](http://nbviewer.jupyter.org/url/norvig.com/ipython/ProbabilityParadox.ipynb)
-and like [this one](http://norvig.com/ipython/)
-- In her blog [Hiromi Suenaga](https://medium.com/@hiromi_suenaga/machine-learning-1-lesson-12-6c2512e005a3) wrote down notes from Fastai machine learning lessons. Good if you are starting from the old course of 2018.
-- [Olah's Blog](http://colah.github.io)
-and [distill.pub](https://distill.pub/2018/building-blocks/)
 
 That's it for now. If I missed something let me know in the comments! 
 
