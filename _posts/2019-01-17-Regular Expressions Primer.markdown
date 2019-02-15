@@ -4,7 +4,7 @@ title:  "Regular Expressions Primer"
 date:   2019-01-17 10:41:47 +0100
 categories: Regex, programming, regular expressions
 comments: true
-published: false
+published: true
 ---
 <div class="message">
 Many people use different names to refer to Regular Expressions, such as Regexp, Regex, ASCII puke(!).
@@ -99,6 +99,8 @@ So to find all sentences starting with `Dog`
 
 So now we apply what we have learned to use it in python
 
+{% highlight python %}
+
 # import our regex library
 import re
 # lets take a random text
@@ -125,7 +127,7 @@ pattern2 = re.findall(expression,text)
 for i in pattern2:
     print(i,end='')
    
-
+{% endhighlight %}
 
 ### example from fastai DL course v3
 
@@ -150,6 +152,8 @@ The RegEx `\d` refers to numerical digits and the plus `+` sign that comes after
 
 The python code to extract the name would be:
 
+{% highlight python %}
+
 import re
 string = 'data/oxford-iiit-pet/images/american_bulldog_146.jpg'
 pat = r'([^/]+)_\d+.jpg$'
@@ -157,23 +161,34 @@ pat = re.compile(pat)
 print(pat.search(string).group(1))
 >american_bulldog
 
+{% endhighlight %}
  
     
 ### In HTML5
 
 Regex can be used in HTML5 for form validation with the pattern attribute.
 
+{% highlight html %}
 <input name = 'zip' pattern = "\d{5}" /> 
-    
+{% endhighlight %}
     
 ### In the command line
 
- 
+`cd` to the folder where you are looking for a specific file. 
+Suppose you are looking for all files like with a name like aaa_431x303.jpg
+We can use find with -regex and the pattern to fild them:
+
+{% highlight html %}
+find -E . -regex '.*[0-9]{2,4}x[0-9]{2,4}\.jpg'
+{% endhighlight %}
+
+
 
 ### Resources 
 
 - The excellent [Regex Playground](https://leaverou.github.io/regexplained/) of Lea Verou 
-- The Video tutorials 
+- Tutorials at [RegExr](https://regexr.com/)
+- The Video tutorials [Understanding Regular Expressions (12 minute video)](https://www.youtube.com/watch?v=DRR9fOXkfRE&feature=youtu.be) 
 
 That's it for now. If I missed something let me know in the comments! 
 
