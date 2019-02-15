@@ -1,15 +1,15 @@
 ---
 layout: post
-title:  "Deep Learning Resources for 2019"
-date:   2019-01-21 10:41:47 +0100
-categories: C++, games
+title:  "Regular Expressions Primer"
+date:   2019-01-17 10:41:47 +0100
+categories: Regex, programming, regular expressions
 comments: true
-published: true
+published: false
 ---
 <div class="message">
-Machine and Deep Learning move so fast that from year to year resources become easily outdated and new tools and libraries emerge. Here is a guide for of tutorial and resources for 2019
-</div>
+Regular Expressions are one of the most powerful way of using programming languages </div>
 
+They are just simply a series of codes that you use to define exactly what text you are looking for.
 
 ## fastai
 
@@ -85,7 +85,7 @@ This book:
 
 - The [Sara Hooker's blog](https://www.sarahooker.me/) and [this article](https://medium.com/@sarahooker/slow-learning-d9463f6a800b) for Medium
 - This blog by [Christine mcleavey](http://christinemcleavey.com/clara-a-neural-net-music-generator/) is quite impressive
-- [OpenAI](https://openai.com/), 
+- [OpenAI](https://openai.com/)
 - I quite like the Notebooks of [Peter Norvig](http://nbviewer.jupyter.org/url/norvig.com/ipython/ProbabilityParadox.ipynb)
 and like [this one](http://norvig.com/ipython/)
 - In her blog [Hiromi Suenaga](https://medium.com/@hiromi_suenaga/machine-learning-1-lesson-12-6c2512e005a3) wrote down notes from Fastai machine learning lessons. Good if you are starting from the old course of 2018.
