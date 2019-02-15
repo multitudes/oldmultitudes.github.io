@@ -23,52 +23,73 @@ We define the pattern with the following syntax. The slash is delimiting the sta
 
 So this means: A digit between 1 to 5 digits in length, whenever you use these curly brackets, you are saying that you expect between n to m digits 
 
-Then this is followed by a space. The Regular expression for a space is 
+Then I see in our example, the numbers are followed by a space. The Regular expression for a space is 
 
 `\s`
 
-Then you expect a series of character which will be a serie from 1 to multiple letters in length. This `w` represents anything which is a character, and the `+` means one or more.
+After this you expect a series of character which will be from one to multiple letters in length. This `w` represents anything which is a character, and the `+` means one or more.
 
 `\w+`
 
 again followed by space and a word
 
 `\s\w+`
-then the point. The point can be interpreted in regex to mean any character except a newline. So I nee to put a backslash.
+
+then the point. The point can be interpreted in regex to mean any character except a newline. So I need to put a backslash.
 
 `\.`
 
 We now put all this together:
 
 `\d{1,5}\s\w+\s\w+\.`
+
+
 So lets see a bit of theory now.
 
 `\d`   is any number (digit)
+
 `\D`   with the capital D is anything but a number (digit)
+
 `\s`   A space
+
 `\S`   Anything but a space
+
 `\w`   Any character
+
 `\W`   Anything but a character
+
 `.`    matches any character except a line break
+
 `\b`   match for a space which precedes or follows a whole word
 
+
 `?`    zero or one repetition of the code which precedes it
+
 `*`    One or more repetition
+
 `{n}`  If you know exactly how many repetitions, insert the amount in curly brackets
+
 `{m,n}` Here means m to n repetitions as seen above
 
+
 `\e `   escaped whitespace
+
 `\f `   form feed
+
 `\n`    newline
+
 `\r`    carriage return
+
 `\t `   horizontal tab
+
  
 Using `[]` brackets to find commonly mispelled words. 
 
-Example tomorrow can be mispelled as tommorow, tommorrow..
+Example, tomorrow can be mispelled as tommorow, tommorrow..
 
 We can find these like this
-`\tom[m]or[r]ow`
+
+`\tomm{0,1}orr{0,1}ow`
 
 [a-z]    any lower case letter
 [A-Z]    any upper case letter
