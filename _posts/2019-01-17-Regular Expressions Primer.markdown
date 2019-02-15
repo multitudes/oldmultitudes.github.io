@@ -83,18 +83,20 @@ So lets see a bit of theory now.
 `\t `   horizontal tab
 
  
-Using `[]` brackets to find commonly mispelled words. 
+Using curly brackets to find commonly mispelled words.
+For example, tomorrow can be mispelled as tommorow, tommorrow..
 
-Example, tomorrow can be mispelled as tommorow, tommorrow..
-
-We can find these like this
+We can find them in this way:
 
 `\tomm{0,1}orr{0,1}ow`
 
-[a-z]    any lower case letter
-[A-Z]    any upper case letter
-[0-9]    any number 
-[a-cC-R3-4]  any letter from a to c or uppercase letter from C to R or number from 3-4
+`[a-z] `   any lower case letter
+
+`[A-Z]`    any upper case letter
+
+`[0-9]`    any number 
+
+`[a-cC-R3-4]`  any letter from a to c or uppercase letter from C to R or number from 3-4
 
 Lets look for the name Catherine in our text. But we want to find her last name as well.
 
@@ -198,7 +200,7 @@ Regex can be used in HTML5 for form validation with the pattern attribute.
 Suppose you are looking for all files like with a name like aaa_431x303.jpg
 We can use find with -regex and the pattern to fild them:
 
-{% highlight html %}
+{% highlight bash %}
 find -E . -regex '.*[0-9]{2,4}x[0-9]{2,4}\.jpg'
 {% endhighlight %}
 
