@@ -7,6 +7,8 @@ comments: true
 published: false
 ---
 <div class="message">
+Many people use different names to refer to Regular Expressions, such as Regexp, Regex, ASCII puke(!).
+They are 'A way to expres a set of strings'. 
 Regular Expressions are one of the most powerful way of using programming languages </div>
 
 They can be used to 'scrub' website to extract links, informations, titles..
@@ -125,7 +127,17 @@ for i in pattern2:
     print(i,end='')
     
     
+### In HTML5
+
+Regex can be used in HTML5 for form validation with the pattern attribute.
+
+<input name = 'zip' pattern = "\d{5}" /> 
     
+    
+### In the command line
+
+ 
+
 ### Resources 
 
 - The excellent [Regex Playground](https://leaverou.github.io/regexplained/) of Lea Verou 
