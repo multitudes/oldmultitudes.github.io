@@ -8,14 +8,15 @@ published: true
 ---
 <div class="message">
 Many people use different names to refer to Regular Expressions, such as Regexp, Regex, ASCII puke(!).
-Regular Expressions are one of the most powerful way of using programming languages and I will give here a brief introduction </div>
+Regular Expressions are one of the most powerful way of using programming languages and I will give here a brief introduction. </div>
+
+### Intro
+
 Regex are a way to expres a set of strings. They can be used to 'scrub' website to extract links, informations, titles.. They are just simply a series of codes that you use to define exactly what text you are looking for. And text can be numbers letters punctuation etc.
 
 This code is used to match patterns. lets see an example. I want to find all numbers, one to five digit long followed by a space and the words "Hello World". 
 
-For example:
-
-`12345 Hello World.`
+For example: `12345 Hello World.` would be defined by `\d{1,5}\s\w+\s\w+\.`
 
 We define the pattern with the following syntax. The slash is delimiting the start of a regular expression.
 
@@ -43,8 +44,7 @@ We now put all this together:
 
 `\d{1,5}\s\w+\s\w+\.`
 
-
-So lets see a bit of theory now.
+### a bit of theory now.
 
 `\d`   is any number (digit)
 
