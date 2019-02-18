@@ -138,6 +138,8 @@ print(pattern.group())
 # To find all occurrences there is the method findall
 # lets print all the letters and only the letters in our text:
 
+strToSearch = ""
+
 for line in text:
     strToSearch += text
     
