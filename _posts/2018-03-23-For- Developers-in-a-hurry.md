@@ -110,7 +110,22 @@ published: false
 {% endhighlight %}
 The post will be unvisible until this will be changed to `published`, or removed.
 
-## How to do a pull request.
+## MathJax support 
+
+To get MathJax support, add the lines to your theme layouts:
+
+{% highlight html %}
+<!-- Mathjax Support -->
+<script type="text/javascript" async
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+{% endhighlight %}
+
+either just before the `</head>` tag in your theme file, or at the end of the file if it contains no `</head>`.
+
+As for my site, you can find the above lines in /_includes/head.html.
+
+## Bonus: How to do a pull request.
 
 We found some bugs and some outdated code. We will do a pull request.
 Go to the repository. In thia example I will go to the Hyde[Hyde](https://github.com/poole/hyde) theme
