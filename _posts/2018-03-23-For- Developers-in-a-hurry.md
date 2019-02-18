@@ -17,24 +17,22 @@ I am working on a macBook with High Sierra and I use a terminal. Windows users m
 Why Jekyll? I wanted a blog which is customisable, and quick to get started. And Jekyll is free. It has also support for syntax highlighting which is great for coders and a number of other advantages, like supporting markdown which I love. It is such a perfect markup language for writing on the web.
 oh, another inspiration for this blog has been [daring fireball](https://daringfireball.net), he invented markdown by the way... but lets get started with [GitHub Pages](https://pages.github.com)! 
 
-### step 1
-
+### Create a GitHub account
 You need to create an account with GitHub. Git is one essential tool for developers so if you dont have an account yet head over to [GitHub](https://github.com) com and create an account.
-
-### step 2
 
 Create an empty repository with the same name as your github profile handle, (for ex, mine is "multitudes.github.io" ) and keep it on master. Clone or download the new repo to your mac or pc. It will be empty but with a hidden file .git which is the file keeping track of your versions.
 
-### step 3
+### Jekyll
 
 Github natively support the [Jekyll](http://jekyllrb.com) plattform and will host one static website for you at no cost. Jekyll has templates and themes. you can see here some [examples](https://jekyllrb.com/showcase/).
 
 Clone or download the theme to your computer. Copy all the files minus the `.git` hidden file to your previously downloaded repo.
 If you don’t see hidden files and directories, or those that begin with a `.`, press `Command` `+` `SHIFT` `+` `.` (the last one is a dot)
 
-### step 4
+### Push
 
 Now it is the time to push the changes to your github account.
+
 {% highlight bash %}
 
 cd multitudes.github.io  # Go to your folder in terminal
@@ -47,9 +45,9 @@ git push -u origin master           # push your changes to GitHub
 
 Go to your page and check the result. You should see the template with the default theme for .
 
-### step 5
+### Troubleshoot CSS
 
-We will need to troubleshoot. I choose the Hyde and Poole [Hyde and Poole](https://github.com/poole/hyde) theme because frankly I wanted something like the fastai website and it looks similar and quite simple.
+I choose the Hyde and Poole [Hyde and Poole](https://github.com/poole/hyde) theme because frankly I wanted something like the fastai website and it looks similar and quite simple.
 
 However this theme is already a few years old and doesnt work out of the box anymore. No worries, only a few changes were necessary.
 
@@ -70,12 +68,10 @@ Replace the all instances of `{% raw %}{{ base_url }}{% endraw %}` in the `head.
 This is because of an issue caused by a git hub upgrade that broke this theme a while ago. 
 [From this page](https://github.com/poole/hyde/issues/213) look at the third post from the top.
 
-## step 6
-
 push the changes done locally on your github account. for this 
 open your terminal and repeat as in step 4
 
-## step 7 
+## Links and Pagination check
 
 Need to check that the links are working. We Look at the folders posts.
 The Jekyll pages are auto generated from those files. There is a certain format we need to keep. The title has to start with the date, followed by the name.. like this example:
@@ -93,15 +89,15 @@ We add pictures with
 push the changes and see your first post on your new website!!
 
 
-## step 8 
+## Customize 
 
 This theme is customisable however the optional color schemes as described in the documentation did not work for me. I think it is best to just modify the CSS files and add some HTML in the template. Fonts can be modified easily for instance I changed the font of the main title and the blog to the system fonts.  
 
-## step 9
+## Optional but recommended
 
-Optional. You can set up a development environment for Jekyll on your computer. The necessary files and downloads are on their website, however expect to spend some time debugging various issues. I prefer to edit my post and push them to github an see the results there. 
+Optional. You can set up a development environment for Jekyll on your computer. The necessary files and downloads are on their website, however expect to spend some time debugging various issues. It is just fine to edit posts and push them to github an see the results there, but it can a bit risky, because the results will be immediately for all to see. 
 
-## step 10 
+## Published posts and drafts 
 
 keep the draft of the post in the same folder, just add unpublished to the header above as follows:
 
