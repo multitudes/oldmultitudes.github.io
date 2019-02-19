@@ -77,6 +77,7 @@ It is better not to spend too much time on the theory, the practical side of AI 
 * [Hands-On Machine Learning with Scikit-Learn and TensorFlow](http://shop.oreilly.com/product/0636920052289.do) by Aurélien Géron 
 * [Deep Learning](https://www.deeplearningbook.org) by Ian Goodfellow 
 Very math centric, a copy is in html version on the website. Would not recommend unless you have very solid basis in math.
+- An important [report](https://maliciousaireport.com) about ethics and AI
 
 This book: 
 * Wes McKinney's [Python for Data Analysis, 2nd ed.](http://wesmckinney.com/pages/book.html) is also great for learning about data analysis with Python and Pandas and is a recommended reading from Jeremy Howard.
@@ -86,7 +87,8 @@ This book:
 - The [Sara Hooker's blog](https://www.sarahooker.me/) and [this article](https://medium.com/@sarahooker/slow-learning-d9463f6a800b) for Medium
 - This blog by [Christine mcleavey](http://christinemcleavey.com/clara-a-neural-net-music-generator/) is quite impressive
 - [OpenAI](https://openai.com/)
-- This is impressive and a very good post about ciber-security: [Splunk](https://www.splunk.com/blog/2017/04/18/deep-learning-with-splunk-and-tensorflow-for-security-catching-the-fraudster-in-neural-networks-with-behavioral-biometrics.html#)
+- [Approximately Correct](http://approximatelycorrect.com/2019/02/17/openai-trains-language-model-mass-hysteria-ensues/)
+- This is impressive and a very good post about ciber-security: [Splunk](https://www.splunk.com/blog/2017/04/18/deep-learning-with-splunk-and-tensorflow-for-security-catching-the-fraudster-in-neural-networks-with-behavioral-biometrics.html#) 
 - I quite like the Notebooks of [Peter Norvig](http://nbviewer.jupyter.org/url/norvig.com/ipython/ProbabilityParadox.ipynb)
 and like [this one](http://norvig.com/ipython/)
 - In her blog [Hiromi Suenaga](https://medium.com/@hiromi_suenaga/machine-learning-1-lesson-12-6c2512e005a3) wrote down notes from Fastai machine learning lessons. Good if you are starting from the old course of 2018.

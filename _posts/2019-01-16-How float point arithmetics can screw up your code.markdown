@@ -9,15 +9,15 @@ published: false
 <div class="message">
  </div>
 
-### 
+### Accuracy of Floating Point Arithmetic
 
-Accuracy
-Floating Point Arithmetic
 To understand accuracy, we first need to look at how computers (which are finite and discrete) store numbers (which are infinite and continuous)
-Exercise
+
+Exercise:
+This example is taken from page 107 of *Numerical Methods*, by Greenbaum and Chartier.
+
 Take a moment to look at the function $f$ below.  Before you try running it, write on paper what the output would be of $x_1 = f(\frac{1}{10})$.  Now, (still on paper) plug that back into $f$ and calculate $x_2 = f(x_1)$.  Keep going for 10 iterations.
 
-This example is taken from page 107 of *Numerical Methods*, by Greenbaum and Chartier.
 
 {% highlight python %}
 
@@ -60,8 +60,10 @@ Here is a floating point error that cost Intel $475 million:
 
 ### Sources 
 
-- For references, see [Chapter 1](https://perso.ens-lyon.fr/jean-michel.muller/chapitre1.pdf) (which is free) of the [Handbook of Floating-Point Arithmetic](http://www.springer.com/gp/book/9780817647049).  Yes, there is an entire 16 chapter book on floating point!
-- [What you never wanted to know about floating point but will be forced to find out](http://www.volkerschatz.com/science/float.html)
+- [*Numerical Methods*](https://press.princeton.edu/titles/9763.html), by Greenbaum and Chartier
+- [Numerical Linear algebra](https://people.maths.ox.ac.uk/trefethen/text.html), by Lloyd N. Trefethen and David Bau, III
+- [*Handbook of Floating-Point Arithmetic*](http://www.springer.com/gp/book/9780817647049). The [Chapter 1](https://perso.ens-lyon.fr/jean-michel.muller/chapitre1.pdf) is free. 
+- This blog post [What you never wanted to know about floating point but will be forced to find out](http://www.volkerschatz.com/science/float.html)
 
 
 That's it for now. If I missed something let me know in the comments! 
