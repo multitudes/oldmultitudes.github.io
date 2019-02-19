@@ -44,9 +44,7 @@ I would still watch the courses but would recommend to start with:
 * [Coursera: Deep Learning specialisation](https://www.coursera.org/specializations/deep-learning)
 
 In this specialisation in 5 in 5 coursecourses he uses Python and Jupyter notebooks for the assignments and it goes really indeep about forward and back-propagation. Great for your intuition. Not always easy. Some assignments are available for auditors. Probably pay for the course is good value for money, even if you are not interested in the certificates, the assignments are great value to learn.
-As a curiosity the seminal course by 
-* [Geoffrey Hinton "Neural Networks for Machine Learning" on Coursera](https://www.youtube.com/watch?v=OVwEeSsSCHE&t=0s&index=2&list=PLLssT5z_DsK_gyrQ_biidwvPYCRNGI3iv) 
-
+As a curiosity the seminal course by [Geoffrey Hinton, "Neural Networks for Machine Learning" on Coursera](https://www.youtube.com/watch?v=OVwEeSsSCHE&t=0s&index=2&list=PLLssT5z_DsK_gyrQ_biidwvPYCRNGI3iv) 
 is not offered anymore but still to watch on youtube. 
 
 ## Stanford CS231n
@@ -94,6 +92,9 @@ and like [this one](http://norvig.com/ipython/)
 - In her blog [Hiromi Suenaga](https://medium.com/@hiromi_suenaga/machine-learning-1-lesson-12-6c2512e005a3) wrote down notes from Fastai machine learning lessons. Good if you are starting from the old course of 2018.
 - [Olah's Blog](http://colah.github.io)
 and [distill.pub](https://distill.pub/2018/building-blocks/)
+
+And if this was not enough for you, head to another incredibly detailed list published on Kaggle 
+:[Awesome Deep Learning Basics and Resources](https://www.kaggle.com/arunkumarramanan/awesome-deep-learning-basics-and-resources) by Arunkumar V Ramanan
 
 That's it for now. If I missed something let me know in the comments! 
 
