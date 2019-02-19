@@ -45,10 +45,24 @@ Two Limitations of computer representations of numbers:
 The reason we need to care about accuracy, is because computers can't store infinitely accurate numbers.  It's possible to create calculations that give very wrong answers (particularly when repeating an operation many times, since each operation could multiply the error).
 
 
+**Machine Epsilon**
 
-   
+Half the distance between 1 and the next larger number. This can vary by computer.  IEEE standards for double precision specify $$ \varepsilon_{machine} = 2^{-53} \approx 1.11 \times 10^{-16}$$
 
-### Resources 
+### Expensive Errors
+
+The below examples are from Greenbaum & Chartier.
+European Space Agency spent 10 years and $7 billion on the Ariane 5 Rocket.
+What can happen when you try to fit a 64 bit number into a 16 bit space (integer overflow):
+
+Here is a floating point error that cost Intel $475 million:
+[1994 NYTimes article about Intel Pentium Error](http://www.nytimes.com/1994/11/24/business/company-news-flaw-undermines-accuracy-of-pentium-chips.html)
+
+### Sources 
+
+- For references, see [Chapter 1](https://perso.ens-lyon.fr/jean-michel.muller/chapitre1.pdf) (which is free) of the [Handbook of Floating-Point Arithmetic](http://www.springer.com/gp/book/9780817647049).  Yes, there is an entire 16 chapter book on floating point!
+- [What you never wanted to know about floating point but will be forced to find out](http://www.volkerschatz.com/science/float.html)
+
 
 That's it for now. If I missed something let me know in the comments! 
 
