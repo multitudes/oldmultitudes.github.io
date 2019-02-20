@@ -10,7 +10,7 @@ published: true
 
  </div>
 
-[e to the pi minus pi](https://imgs.xkcd.com/comics/e_to_the_pi_minus_pi.png)
+![e to the pi minus pi](https://imgs.xkcd.com/comics/e_to_the_pi_minus_pi.png)
 
 ## Accuracy of Floating Point Arithmetic
 
