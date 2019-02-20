@@ -11,7 +11,7 @@ published: true
  </div> -->
 
 ![e to the pi minus pi](https://imgs.xkcd.com/comics/e_to_the_pi_minus_pi.png)
-<cite>[xkcd](https://xkcd.com/217/)</cite>
+courtesy of <cite>[xkcd](https://xkcd.com/217/)</cite>
 ## Accuracy of Floating Point Arithmetic
 
 The fact that floating-point numbers cannot precisely represent all real numbers, and that floating-point operations cannot precisely represent true arithmetic operations, leads to many surprising situations. This is related to the finite precision with which computers generally represent numbers.
@@ -99,9 +99,9 @@ Here is a floating point error that cost Intel $475 million:
 ### Sources 
 
 - [*Numerical Methods*](https://press.princeton.edu/titles/9763.html), by Greenbaum and Chartier
-- [Numerical Linear algebra](https://people.maths.ox.ac.uk/trefethen/text.html), by Lloyd N. Trefethen and David Bau, III
+- [*Numerical Linear algebra*](https://people.maths.ox.ac.uk/trefethen/text.html), by Lloyd N. Trefethen and David Bau, III
 - [*Handbook of Floating-Point Arithmetic*](http://www.springer.com/gp/book/9780817647049). The [Chapter 1](https://perso.ens-lyon.fr/jean-michel.muller/chapitre1.pdf) is free. 
-- This blog post [What you never wanted to know about floating point but will be forced to find out](http://www.volkerschatz.com/science/float.html)
+- This blog post [*What you never wanted to know about floating point but will be forced to find out*](http://www.volkerschatz.com/science/float.html)
 
 
 That's it for now. If I missed something let me know in the comments! 
