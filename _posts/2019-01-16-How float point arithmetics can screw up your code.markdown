@@ -6,12 +6,12 @@ categories: programming
 comments: true
 published: true
 ---
-<div class="message">
+<!-- <div class="message">
 
- </div>
+ </div> -->
 
 ![e to the pi minus pi](https://imgs.xkcd.com/comics/e_to_the_pi_minus_pi.png)
-
+<cite>[xkcd](https://xkcd.com/217/)</cite>
 ## Accuracy of Floating Point Arithmetic
 
 The fact that floating-point numbers cannot precisely represent all real numbers, and that floating-point operations cannot precisely represent true arithmetic operations, leads to many surprising situations. This is related to the finite precision with which computers generally represent numbers.
