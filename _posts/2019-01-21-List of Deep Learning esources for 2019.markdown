@@ -49,7 +49,7 @@ is not offered anymore but still to watch on youtube.
 
 ## Stanford CS231n
 
-The [CS231n: Convolutional Neural Networks for Visual Recognition](http://cs231n.stanford.edu) course at Stanford is quite popular and on the link above the 2017 videos are on youtube. 
+The [CS231n: Convolutional Neural Networks for Visual Recognition](http://cs231n.stanford.edu) course at Stanford is quite popular. The 2017 [videos](https://www.youtube.com/playlist?list=PL3FW7Lu3i5JvHM8ljYj-zLfQRF3EO8sYv) are on youtube. 
 
 It is good to watch but assignments and resource websites are already a bit outdated. Great material though, waiting to watch the 2018 videos when they become available.
 
