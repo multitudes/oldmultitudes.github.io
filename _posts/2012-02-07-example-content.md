@@ -21,7 +21,11 @@ Etiam porta **sem malesuada magna** mollis euismod. Cras mattis consectetur puru
 Exercise:
 This example is taken from page 107 of *Numerical Methods*, by Greenbaum and Chartier.
 
-Take a moment to look at the function $$f$$ below.  Before you try running it, write on paper what the output would be of $x_1 = f(\frac{1}{10})$.  Now, (still on paper) plug that back into $f$ and calculate $x_2 = f(x_1)$.  Keep going for 10 iterations.
+Take a moment to look at the function $$f$$ below.  Before you try running it, write on paper what the output would be of 
+
+$$x_1 = f(\frac{1}{10})$$ 
+
+Now, (still on paper) plug that back into $$f$$ and calculate $$x_2 = f(x_1)$$.  Keep going for 10 iterations.
 
 
 {% highlight python %}
