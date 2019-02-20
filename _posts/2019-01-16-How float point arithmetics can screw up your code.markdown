@@ -36,6 +36,8 @@ def f(x):
 
 We probably managed to get this results:
 
+`0.1`,`0.2`,`0.4`,`0.8`,`0.2`,`0.4`,`0.8`,`0.2`,`0.4`,`etc`
+
 {% highlight python %}
 x = 1/10
 for i in range(80):
