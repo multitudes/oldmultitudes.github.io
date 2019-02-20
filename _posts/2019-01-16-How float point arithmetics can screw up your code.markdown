@@ -12,7 +12,7 @@ published: true
 
 ## Accuracy of Floating Point Arithmetic
 
-To understand accuracy, we first need to look at how computers (which are finite and discrete) store numbers (which are infinite and continuous)
+The fact that floating-point numbers cannot precisely represent all real numbers, and that floating-point operations cannot precisely represent true arithmetic operations, leads to many surprising situations. This is related to the finite precision with which computers generally represent numbers.
 
 Exercise:
 This example is taken from page 107 of *Numerical Methods*, by Greenbaum and Chartier.
@@ -34,13 +34,24 @@ def f(x):
 
 {% endhighlight %}
 
+We probably managed to get this results:
 
-
+{% highlight python %}
 x = 1/10
 for i in range(80):
     print(x)
     x = f(x)
+    
+{% endhighlight %}    
+
+and we get this instead!
+
+
+
 What went wrong?
+
+To understand accuracy, we first need to look at how computers (which are finite and discrete) store numbers (which are infinite and continuous)
+
 
 #### Problem: math is continuous & infinite, but computers are discrete & finite
 
