@@ -7,7 +7,7 @@ comments: true
 published: true
 ---
 <div class="message">
-![](https://imgs.xkcd.com/comics/e_to_the_pi_minus_pi.png)
+[e to the pi minus pi](https://imgs.xkcd.com/comics/e_to_the_pi_minus_pi.png)
  </div>
 
 ## Accuracy of Floating Point Arithmetic
