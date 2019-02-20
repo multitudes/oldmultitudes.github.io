@@ -16,6 +16,30 @@ Cum sociis natoque penatibus et magnis <a href="#">dis parturient montes</a>, na
 
 Etiam porta **sem malesuada magna** mollis euismod. Cras mattis consectetur purus sit amet fermentum. Aenean lacinia bibendum nulla sed consectetur.
 
+## test latex
+
+Exercise:
+This example is taken from page 107 of *Numerical Methods*, by Greenbaum and Chartier.
+
+Take a moment to look at the function $f$ below.  Before you try running it, write on paper what the output would be of $x_1 = f(\frac{1}{10})$.  Now, (still on paper) plug that back into $f$ and calculate $x_2 = f(x_1)$.  Keep going for 10 iterations.
+
+
+{% highlight python %}
+
+def f(x):
+    if x <= 1/2:
+        return 2 * x
+    if x > 1/2:
+        return 2*x - 1
+
+{% endhighlight %}
+
+
+**Machine Epsilon**
+
+Half the distance between 1 and the next larger number. This can vary by computer.  IEEE standards for double precision specify $$ \varepsilon_{machine} = 2^{-53} \approx 1.11 \times 10^{-16}$$
+
+
 ## Inline HTML elements
 
 HTML defines a long list of available inline tags, a complete list of which can be found on the [Mozilla Developer Network](https://developer.mozilla.org/en-US/docs/Web/HTML/Element).
