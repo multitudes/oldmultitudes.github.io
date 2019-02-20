@@ -72,8 +72,9 @@ Half the distance between 1 and the next larger number. This can vary by compute
 ### Expensive Errors
 
 The below examples are from Greenbaum & Chartier.
-European Space Agency spent 10 years and $7 billion on the Ariane 5 Rocket.
-What can happen when you try to fit a 64 bit number into a 16 bit space (integer overflow):
+
+The European Space Agency spent 10 years and $7 billion on the Ariane 5 Rocket.
+This is what can happen when you try to fit a 64 bit number into a 16 bit space (integer overflow):
 
 Here is a floating point error that cost Intel $475 million:
 [1994 NYTimes article about Intel Pentium Error](http://www.nytimes.com/1994/11/24/business/company-news-flaw-undermines-accuracy-of-pentium-chips.html)
