@@ -6,16 +6,17 @@
     <img style=" margin-top: 1rem; margin-left: auto; border: 0.2rem solid rgba(f,f,f,.2); margin-right: auto; height:200px ;padding: 0px;border-radius:50%" class="hidden" src="https://multitudes.github.io/assets/img/laurentcyclist_color.jpg" alt="Laurent Brusa profile picture" >
     </a>
      
-      <h1 style ="text-shadow: 0.1rem 0.1rem 0.3rem rgba(0,0,0,0.2); text-align: center;" >
+     <!-- h1 text-shadow: 0.1rem 0.1rem 0.3rem rgba(0,0,0,0.2); -->
+      <h1 style ="text-align: center;" >
         <a href="{{ '/' | relative_url }}">
           {{ site.title }}
         </a>
       </h1>
       
     </div>
-
-    <nav class="sidebar-nav" style="text-shadow: 0.05rem 0.05rem 0.2rem rgba(0,0,0,0.2); text-align: center;" >
-     <p style = "color: white"class="lead hidden">{{ site.description }}</p>
+    <!-- removed text shadow text-shadow: 0.05rem 0.05rem 0.2rem rgba(0,0,0,0.2); and p style = "color: white" -->
+    <nav class="sidebar-nav" style="text-align: center;" >
+     <p class="lead hidden">{{ site.description }}</p>
       <a class="sidebar-nav-item{% if page.url == site.baseurl %} active{% endif %}" href="{{ '/' | relative_url }}">Home</a>
 
       {% comment %}
@@ -42,6 +43,7 @@
     
     
   </div>
-<footer style = "text-shadow: 0.02rem 0.02rem 0.1rem rgba(0,0,0,0.3); text-align: center;font-size: 15px" class="hidden">&copy; {{ site.time | date: '%Y' }}. All rights reserved.</footer>
+<!--   removed text-shadow: 0.02rem 0.02rem 0.1rem rgba(0,0,0,0.3) -->
+<footer style = " text-align: center;font-size: 15px" class="hidden">&copy; {{ site.time | date: '%Y' }}. All rights reserved.</footer>
 
 </div>
