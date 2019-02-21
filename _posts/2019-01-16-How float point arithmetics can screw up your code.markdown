@@ -53,7 +53,8 @@ for i in range(80):
     
 {% endhighlight %}    
 
-and we get this instead!
+What would you expect? a loop of the values we have on paper for around 80 lines on screen..?
+Unfortunatly we get quickly this instead!
 
 `0.1`
 `0.2`
@@ -68,7 +69,7 @@ and we get this instead!
 `1.0`
 `1.0`
 `1.0`
-
+`...`
 
 
 What went wrong?
