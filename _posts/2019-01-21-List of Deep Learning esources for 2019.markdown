@@ -76,7 +76,7 @@ It is better not to spend too much time on the theory, the practical side of AI 
 * [Deep Learning](https://www.deeplearningbook.org) by Ian Goodfellow 
 Very math centric, a copy is in html version on the website. Would not recommend unless you have very solid basis in math.
 - An important [report](https://maliciousaireport.com) about ethics and AI
-
+- A free online book :[Neural networks and deep learning](http://neuralnetworksanddeeplearning.com/index.html)
 This book: 
 * Wes McKinney's [Python for Data Analysis, 2nd ed.](http://wesmckinney.com/pages/book.html) is also great for learning about data analysis with Python and Pandas and is a recommended reading from Jeremy Howard.
 
@@ -84,6 +84,7 @@ This book:
 
 - The [Sara Hooker's blog](https://www.sarahooker.me/) and [this article](https://medium.com/@sarahooker/slow-learning-d9463f6a800b) for Medium
 - This blog by [Christine mcleavey](http://christinemcleavey.com/clara-a-neural-net-music-generator/) is quite impressive
+- [Michael Nielsen](http://michaelnielsen.org)
 - [OpenAI](https://openai.com/)
 - [Approximately Correct](http://approximatelycorrect.com/2019/02/17/openai-trains-language-model-mass-hysteria-ensues/)
 - This is impressive and a very good post about ciber-security: [Splunk](https://www.splunk.com/blog/2017/04/18/deep-learning-with-splunk-and-tensorflow-for-security-catching-the-fraudster-in-neural-networks-with-behavioral-biometrics.html#) 
