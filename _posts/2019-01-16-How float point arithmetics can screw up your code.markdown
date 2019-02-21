@@ -23,7 +23,9 @@ Take a moment to look at the function $$f$$ below.  Before you try running it, w
 
 $$x_1 = f(\frac{1}{10})$$ 
 
-Now, (still on paper) plug that back into $$f$$ and calculate $$x_2 = f(x_1)$$.  Keep going for 10 iterations.
+Now, (still on paper) plug that back into $$f$$ and calculate 
+$$x_2 = f(x_1)$$.  
+Keep going for 10 iterations.
 
 
 {% highlight python %}
