@@ -71,6 +71,21 @@ Unfortunatly we get quickly this instead!
 `1.0`
 `...`
 
+{% highlight C %}
+#...
+#include<stdio.h>
+
+int main(void)
+{
+    float x = 2;
+    float y = 10;
+    printf("x/y = %.50f\n",x/y);
+}
+
+{% endhighlight %} 
+
+The output will be unfortunately:
+`x/y = 0.20000000298023223876953125000000000000000000000000`
 
 What went wrong?
 
