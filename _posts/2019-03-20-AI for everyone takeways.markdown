@@ -71,11 +71,11 @@ The Regression problem and Classification are the most common solved problems in
 #Deep Learning and Neural Networks ##What is deep learning? Deep Learning uses a neural network, sometimes called an artificial neural network. the terms neural network and deep learning are used interchangeably and they mean essentially the same thing. The Deep in deep Neural Networks refers to how deep are the layers of our model. What a neural network does is takes the inputs and then output B, which is our predicted value example: 
 price of a house given the number of bedrooms, size, etc. Ex demand and price. Price goes up and demand goes down. This a very simple neuro-network. ￼ 
 
-![image](/img/AI4Everyonepics/PastedGraphic1.jpg)
+![image](/assets/img/AI4Everyonepics/PastedGraphic1.jpg)
 
 Imagine the neuron as a Lego brick and stack more of them together mapping an (input) to b (output)
 
-￼![image](/img/AI4Everyonepics/PastedGraphic2.jpg)￼
+￼![image](/assets/img/AI4Everyonepics/PastedGraphic2.jpg)￼
 
 Neural networks are much bigger in the thousands of nodes and figure for themselves the function inside, affordability and awareness and quality, given they are large enough.
 
@@ -167,13 +167,13 @@ Reinforcement Learning Uses a “Reward Signal” to tell AI when it is doing we
 
 GANs : (Generative Adversarial Networks Synthesize new images from scratch. The image below is of an individual who does not exist.
 
-![image](/img/AI4Everyonepics/PastedGraphic3.jpg)
+![image](/assets/img/AI4Everyonepics/PastedGraphic3.jpg)
 
 ￼Knowledge Graphs For example what we get in search results:
 
-￼![image](/img/AI4Everyonepics/PastedGraphic4.jpg) ￼
+￼![image](/assets/img/AI4Everyonepics/PastedGraphic4.jpg) ￼
 
-AI and Society <> AI and Ethics
+AI and Society - AI and Ethics
 
 AI and hype The optimistic hype: Sentient / super intelligent Ai killer Robots coming soon The pessimistic version is: AI cannot do everything so after recognising this, many industries will stop researching and a new AI winter is coming. The correct view is between the two. AI cannot do everything but will transform industries.
 Limitations of AI AI has performance limitations. If we give biased data to our model we get biased data back! Sometimes is difficult to explain what is happening behind the scenes
@@ -181,8 +181,8 @@ Bias Bias matters. Examples of it are hiring tools that discriminated against wo
 Adversarial attacks As in the picture below The so-called adversarial attack on AI are a real problem for security. Minor transformation in pixel value cause the AI to misinterpret a picture even it looks the same for a human
 Attacks Minor transformation in pixels value cause the AI to misinterpret a picture even it looks same for a human ￼
 
-![image](/img/AI4Everyonepics/PastedGraphic5.jpg) 
-![image](/img/AI4Everyonepics/PastedGraphic5.jpg) 
+![image](/assets/img/AI4Everyonepics/PastedGraphic5.jpg) 
+![image](/assets/img/AI4Everyonepics/PastedGraphic5.jpg) 
 
 
 Adversarial defences
