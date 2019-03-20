@@ -12,19 +12,21 @@ explicitly programmed.
     <cite>Arthur Samuel (1959) </cite>
 </div>
 
+![image](/assets/img/AI4Everyonepics/PastedGraphic0.jpg)
+
 This post wants to give a very high-level bird view of AI. I put together a series of annotation inspired by watching AI for everyone, a non-technical series of videos about AI on Coursera by Andrew Ng. After attending this course I am amazed how he could manage to do really an accessible course about AI without going in deep in technical details. He managed quite a feat indeed and the course is very easy to follow.
 For me, the most interesting part has been the week where he talks about ethics and AI. Realistically, there will be a long fight ahead of us, comparable to what we had in the past (an d still today) with fraud and spam emails. Security in AI is becoming an important topic.
 
-## What is AI? 
+### What is AI? 
 
 AI is a system of tools to make computers act intelligently.
 
-## The main AI tools are
+### The main AI tools    
 
 Machine Learning and data science
 Deep Learning and Neural Networks (the subset of machine learning)
 
-## The rise of AI 
+### The rise of AI 
 
 The rise of AI has been largely driven by machine learning, ML for short. The most common type is called supervised learning. The idea of supervised learning where a model trains itself to learn input to output mappings on a training set of data has been around for many decades, but it’s really taken off in the last few years. Thanks to the rise of the Internet and the rise of computers, the amount of data you have access to has really grown. To increase the performance you need to have a lot of data, not only this. Only data is not enough. With more data, you need to be able to train a larger neural network. So, the rise of fast computers with graphics processing units or GPUs has recently facilitated the spread of AI.
 
