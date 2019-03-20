@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "AI for Everyone - a Takeaway"
-date:   2017-03-20 10:41:47 +0100
+date:   2019-03-20 10:41:47 +0100
 categories: AI, games
 comments: true
 published: true
@@ -17,7 +17,7 @@ this increases the odds that everyone will be in a better position, even as jobs
 
 ![image](/assets/img/AI4Everyonepics/PastedGraphic-2.png)
 
-This post wants to give a very high-level bird view of AI. I put together a series of annotation inspired by watching AI for everyone, a non-technical series of videos about AI on Coursera by Andrew Ng. After attending this course I am amazed how he could manage to do really an accessible course about AI without going in deep in technical details. He managed quite a feat indeed and the course is very easy to follow.
+This post wants to give a very high-level bird view of AI. I put together a series of annotation inspired by watching ["AI for everyone"](https://www.coursera.org/learn/ai-for-everyone), a non-technical series of videos about AI on Coursera by Andrew Ng. After attending this course I am amazed how he could manage to do really an accessible course about AI without going in deep in technical details. He managed quite a feat indeed and the course is very easy to follow.
 For me, the most interesting part has been the week where he talks about ethics and AI. Realistically, there will be a long fight ahead of us, comparable to what we had in the past (and still today) with fraud and spam emails. Security in AI is becoming an important topic.
 
 ## What is AI? 
