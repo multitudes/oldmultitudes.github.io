@@ -12,21 +12,8 @@ explicitly programmed.
     <cite>Arthur Samuel (1959) </cite>
 </div>
 
-<div class="message">
-The old model of education where you go to college for four years and then cost for
-the remaining 40, that just does not work anymore into these rapidly changing world. 
-Through governments, companies and individuals realizing that all of us need to keep on learning, 
-this increases the odds that everyone will be in a better position, even as jobs may go away.
-<cite>Andrew NG (2019) </cite>
-</div>
-
-Machine learning is the field of study that gives computers the ability to learn without being explicitly programmed. Arthur Samuel (1959)
-The old model of education where you go to college for four years and then cost for the remaining 40, that just does not work anymore into this rapidly changing world. Through governments, companies and individuals realizing that all of us need to keep on learning, this increases the odds that everyone will be in a better position, even as jobs may go away. Andrew NG (2019)
-This post will be a very high-level bird view of AI. After attending the new Coursera “AI for Everyone” course by Andrew NG, I am amazed how he could manage to do really an accessible course about AI without going in deep in technical details. He managed quite a feat indeed and the course is very easy to follow.
-
-For me, the most interesting part has been the week where he talks about ethics and AI. Realistically, there will be a long fight ahead of us, comparable to what we had with fraud and spam emails. Security in AI is getting an important topic.
-
-I put together a series of annotation inspired by watching AI for everyone, a non-technical series of Videos about AI on Coursera by Andrew Ng.
+This post wants to give a very high-level bird view of AI. I put together a series of annotation inspired by watching AI for everyone, a non-technical series of videos about AI on Coursera by Andrew Ng. After attending this course I am amazed how he could manage to do really an accessible course about AI without going in deep in technical details. He managed quite a feat indeed and the course is very easy to follow.
+For me, the most interesting part has been the week where he talks about ethics and AI. Realistically, there will be a long fight ahead of us, comparable to what we had in the past (an d still today) with fraud and spam emails. Security in AI is becoming an important topic.
 
 ## What is AI? 
 
@@ -201,6 +188,14 @@ Attacks Minor transformation in pixels value cause the AI to misinterpret a pict
 ## AI, developing economies and jobs
 
 Some economies never had the evolution from PC, desktop computer to mobile, but they did “leapfrog” from nothing in term of infrastructures to mobile payments and online education for instance. AI will impact jobs worldwide. On an optimistic prediction by 2030, we will have 400-800 mil jobs lost, and 555-890 mil jobs created. So there is apparently no reason to panic just yet!
+
+<div class="message">
+The old model of education where you go to college for four years and then work for
+the remaining 40, that just does not work anymore into these rapidly changing world. 
+Through governments, companies and individuals realizing that all of us need to keep on learning, 
+this increases the odds that everyone will be in a better position, even as jobs may go away.
+<cite>Andrew NG (2019) </cite>
+</div>
 
 That's it for now. If I missed something let me know in the comments! 
 
