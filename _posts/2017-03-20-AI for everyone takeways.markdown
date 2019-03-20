@@ -19,11 +19,9 @@ this increases the odds that everyone will be in a better position, even as jobs
 This post wants to give a very high-level bird view of AI. I put together a series of annotation inspired by watching AI for everyone, a non-technical series of videos about AI on Coursera by Andrew Ng. After attending this course I am amazed how he could manage to do really an accessible course about AI without going in deep in technical details. He managed quite a feat indeed and the course is very easy to follow.
 For me, the most interesting part has been the week where he talks about ethics and AI. Realistically, there will be a long fight ahead of us, comparable to what we had in the past (and still today) with fraud and spam emails. Security in AI is becoming an important topic.
 
-### What is AI? 
+## What is AI? 
 
 AI is a system of tools to make computers act intelligently.
-
-### The main AI tools    
 
 The main AI tools are Machine Learning and Data Science. 
 Deep Learning and Neural Networks are subset of machine learning. 
@@ -66,9 +64,12 @@ explicitly programmed.
 
 ![image](/assets/img/AI4Everyonepics/PastedGraphic0.jpg)
 
-Arthur Samuel was one of the pioneers of machine learning, who was famous for building a checkers-playing program. They could play checkers, even better than he himself, the inventor could play the game. So, a machine learning project will often result in a piece of software that runs, that outputs B given A. In contrast, data science is the size of extracting knowledge and insights from data. So, the output of a data science project is often a slide deck, the PowerPoint presentation that summarizes conclusions for executives to take business actions.
+Arthur Samuel was one of the pioneers of machine learning, who was famous for building a checkers-playing program. 
+They could play checkers, even better than he himself, the inventor could play the game. So, a machine learning project will often result in a piece of software that runs, that outputs B given A. 
+In contrast, data science is the size of extracting knowledge and insights from data. So, the output of a data science project is often a slide deck, the PowerPoint presentation that summarizes conclusions for executives to take business actions.
 
-The Regression problem and Classification are the most common solved problems in Machine Learning today. Regression we want our model to look at an example of our data and predict a number or more specifically a floating point number. For a classification problem, we want our model to look at an example of our data and tell us which class this example is. Incidentally, logistic regression is a classification algorithm!
+The Regression problem and Classification are the most common solved problems in Machine Learning today. Regression we want our model to look at an example of our data and predict a number or more specifically a floating point number. 
+For a classification problem, we want our model to look at an example of our data and tell us which class this example is. Incidentally, logistic regression is a classification algorithm!
 
 ## Deep Learning and Neural Networks 
 ### What is deep learning? 
