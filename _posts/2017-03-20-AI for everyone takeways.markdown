@@ -7,12 +7,13 @@ comments: true
 published: true
 ---
 <div class="message">
-Machine learning is the field of study that gives computers the ability to learn without being
-explicitly programmed. 
-    <cite>Arthur Samuel (1959) </cite>
+The old model of education where you go to college for four years and then work for
+the remaining 40, that just does not work anymore into these rapidly changing world. 
+Through governments, companies and individuals realizing that all of us need to keep on learning, 
+this increases the odds that everyone will be in a better position, even as jobs may go away.
+<cite>Andrew NG (2019) </cite>
 </div>
-
-![image](/assets/img/AI4Everyonepics/PastedGraphic0.jpg)
+![image](/assets/img/AI4Everyonepics/PastedGraphic-2.png)
 
 This post wants to give a very high-level bird view of AI. I put together a series of annotation inspired by watching AI for everyone, a non-technical series of videos about AI on Coursera by Andrew Ng. After attending this course I am amazed how he could manage to do really an accessible course about AI without going in deep in technical details. He managed quite a feat indeed and the course is very easy to follow.
 For me, the most interesting part has been the week where he talks about ethics and AI. Realistically, there will be a long fight ahead of us, comparable to what we had in the past (an d still today) with fraud and spam emails. Security in AI is becoming an important topic.
@@ -30,7 +31,7 @@ Deep Learning and Neural Networks (the subset of machine learning)
 
 The rise of AI has been largely driven by machine learning, ML for short. The most common type is called supervised learning. The idea of supervised learning where a model trains itself to learn input to output mappings on a training set of data has been around for many decades, but it’s really taken off in the last few years. Thanks to the rise of the Internet and the rise of computers, the amount of data you have access to has really grown. To increase the performance you need to have a lot of data, not only this. Only data is not enough. With more data, you need to be able to train a larger neural network. So, the rise of fast computers with graphics processing units or GPUs has recently facilitated the spread of AI.
 
-Examples of models trained with supervised learning are
+Examples of models trained with supervised learning are:
 
 spam filters.
 speech recognition.
@@ -51,13 +52,23 @@ There are structured and unstructured data. An example of unstructured data is p
 
 The importance of data can be misunderstood. More data is not always an advantage. It is important that the relevant data is collected, so it is recommended to experiment with data before to spend too much time collecting it, to find out that it is not helping to train our model. Data can be messy as well, with missing values or a mix of different types, and we will have to decide how to deal with this.
 
+### What is ML
 
+<div class="message">
+Machine learning is the field of study that gives computers the ability to learn without being
+explicitly programmed. 
+    <cite>Arthur Samuel (1959) </cite>
+</div>
+
+![image](/assets/img/AI4Everyonepics/PastedGraphic0.jpg)
 
 Arthur Samuel was one of the pioneers of machine learning, who was famous for building a checkers-playing program. They could play checkers, even better than he himself, the inventor could play the game. So, a machine learning project will often result in a piece of software that runs, that outputs B given A. In contrast, data science is the size of extracting knowledge and insights from data. So, the output of a data science project is often a slide deck, the PowerPoint presentation that summarizes conclusions for executives to take business actions.
 
 The Regression problem and Classification are the most common solved problems in Machine Learning today. Regression we want our model to look at an example of our data and predict a number or more specifically a floating point number. For a classification problem, we want our model to look at an example of our data and tell us which class this example is. Incidentally, logistic regression is a classification algorithm!
 
-#Deep Learning and Neural Networks ##What is deep learning? Deep Learning uses a neural network, sometimes called an artificial neural network. the terms neural network and deep learning are used interchangeably and they mean essentially the same thing. The Deep in deep Neural Networks refers to how deep are the layers of our model. What a neural network does is takes the inputs and then output B, which is our predicted value example: 
+## Deep Learning and Neural Networks 
+### What is deep learning? 
+Deep Learning uses a neural network, sometimes called an artificial neural network. the terms neural network and deep learning are used interchangeably and they mean essentially the same thing. The Deep in deep Neural Networks refers to how deep are the layers of our model. What a neural network does is takes the inputs and then output B, which is our predicted value example: 
 price of a house given the number of bedrooms, size, etc. Ex demand and price. Price goes up and demand goes down. This a very simple neuro-network. ￼ 
 
 ![image](/assets/img/AI4Everyonepics/PastedGraphic1.jpg)
@@ -191,13 +202,7 @@ Attacks Minor transformation in pixels value cause the AI to misinterpret a pict
 
 Some economies never had the evolution from PC, desktop computer to mobile, but they did “leapfrog” from nothing in term of infrastructures to mobile payments and online education for instance. AI will impact jobs worldwide. On an optimistic prediction by 2030, we will have 400-800 mil jobs lost, and 555-890 mil jobs created. So there is apparently no reason to panic just yet!
 
-<div class="message">
-The old model of education where you go to college for four years and then work for
-the remaining 40, that just does not work anymore into these rapidly changing world. 
-Through governments, companies and individuals realizing that all of us need to keep on learning, 
-this increases the odds that everyone will be in a better position, even as jobs may go away.
-<cite>Andrew NG (2019) </cite>
-</div>
+
 
 That's it for now. If I missed something let me know in the comments! 
 
