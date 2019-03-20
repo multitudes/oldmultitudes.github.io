@@ -56,12 +56,14 @@ Data can be messy as well, with missing values or a mix of different types, and 
 
 ### What is ML
 
+<!-- 
 <div class="message">
-Machine learning is the field of study that gives computers the ability to learn without being
+ -->
+> Machine learning is the field of study that gives computers the ability to learn without being
 explicitly programmed. 
     <cite>Arthur Samuel (1959) </cite>
-</div>
-
+<!-- </div>
+ -->
 ![image](/assets/img/AI4Everyonepics/PastedGraphic0.jpg)
 
 Arthur Samuel was one of the pioneers of machine learning, who was famous for building a checkers-playing program. 
@@ -111,20 +113,15 @@ As common use for ML is the visual inspection on the final product
 Data Science wants to optimise the recruiting process. ML can screen resumes Data science: Marketing A/B testing is common in Websites .two version of the same version and sees which one is performing more ML: website Recommendation product recommendation Agriculture. Data science: Data on soil weather condition. Crop analytics. ML: Precision weed killing?
 
 ## What AI can do? 
+<!-- 
 Think more about automating tasks instead of automating jobs. 
 You can make progress even without more data. Big data is great when you can get it, but it is sometimes overhyped.
-
 Technical diligence (doable with AI systems? How much data need? Engineering timeline) vs business diligence (valuable for business . Lower cost, increase revenue, launch new product)
-
 Also ethical diligence. Make sure humanity is better off with your project
-
 ML projects can be "in house" or outsourced. DS more commonly in house
-
 Keywords Acceptance criteria. A measure of the min accuracy for a project
-
 Training set (validation set ) and test set
-
-Ex smart speaker Trigger word recognition Speech recognition Intent recognition Execute
+Ex smart speaker Trigger word recognition Speech recognition Intent recognition Execute -->
 
 ## Example of job roles in AI
 
@@ -209,7 +206,7 @@ As in the picture below The so-called adversarial attack on AI are a real proble
 Minor transformation in pixel value cause the AI to misinterpret a picture even it looks the same for a human￼
 
 ![image](/assets/img/AI4Everyonepics/PastedGraphic5.jpg) 
-![image](/assets/img/AI4Everyonepics/PastedGraphic5.jpg) 
+![image](/assets/img/AI4Everyonepics/PastedGraphic6.jpg) 
 
 
 ## Adversarial defences
@@ -232,6 +229,8 @@ Some economies never had the evolution from PC, desktop computer to mobile, but 
 
 
 That's it for now. If I missed something let me know in the comments! 
+
+All pictures courtesy of coursera, licenced for non commercial use.
 
 ￼
 ￼
