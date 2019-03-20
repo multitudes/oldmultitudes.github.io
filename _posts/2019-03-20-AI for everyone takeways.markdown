@@ -7,10 +7,7 @@ comments: true
 published: true
 ---
 <div class="message">
-The old model of education where you go to college for four years and then work for
-the remaining 40, that just does not work anymore into these rapidly changing world. 
-Through governments, companies and individuals realizing that all of us need to keep on learning, 
-this increases the odds that everyone will be in a better position, even as jobs may go away.
+The old model of education where you go to college for four years and then work for the remaining 40,  just does not work anymore into this rapidly changing world. Through governments, companies and individuals realizing that all of us need to keep on learning, this increases the odds that everyone will be in a better position, even as jobs may go away.
 <br>
 <cite>Andrew NG (2019) </cite>
 </div>
