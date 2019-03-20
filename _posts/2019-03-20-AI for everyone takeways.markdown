@@ -142,7 +142,9 @@ Develop an AI strategy
 Leverage AI to create an advantage specific to your industry sector.
 Design strategy aligned with the “Virtuous Cycle of AI”: a better product > brings more users > brings more data > brings a better product etc
 
-### Computer Vision can be divided in:
+### Computer Vision
+
+Computer Vision can be subdivided in:
 
 #### Image Classification/Object recognition and Face recognition
 - Object detection
