@@ -26,32 +26,35 @@ AI is a system of tools to make computers act intelligently.
 ### The main AI tools    
 
 The main AI tools are Machine Learning and Data Science. 
-Deep Learning and Neural Networks are subset of machine learning 
+Deep Learning and Neural Networks are subset of machine learning. 
 
 ### The rise of AI 
 
 The rise of AI has been largely driven by machine learning, ML for short. The most common type is called supervised learning. The idea of supervised learning where a model trains itself to learn input to output mappings on a training set of data has been around for many decades, but it’s really taken off in the last few years. Thanks to the rise of the Internet and the rise of computers, the amount of data you have access to has really grown. To increase the performance you need to have a lot of data, not only this. Only data is not enough. With more data, you need to be able to train a larger neural network. So, the rise of fast computers with graphics processing units or GPUs has recently facilitated the spread of AI.
 
 Examples of models trained with supervised learning are:
-
-spam filters.
-speech recognition.
-machine translation.
-online advertising, like ‘will you click on this ad or not?’
-a self-driving car, avoid the other cars and obstacles.
-In manufacturing: computer vision can use AI to find a defect in the finished product
+- Spam filters.
+- Speech recognition.
+- Machine translation.
+- Online advertising, (‘will you click on this ad or not?’)
+- A self-driving car,(avoid the other cars and obstacles).
+- In manufacturing (computer vision can use AI to find a defect in the finished product)
 
 ## What is Data?
 
-There are structured and unstructured data. An example of unstructured data is pictures, text, audio. When I collect pictures I need to label them to create a dataset and be able to train a model to predict the label of still unseen pictures. Structured data is organised like a spreadsheet with data divided into columns. One of the columns in the training dataset will be the value my model is being trained to predict.
+There are structured and unstructured data. An example of unstructured data is pictures, text, audio.
+When I collect pictures I need to label them to create a dataset and be able to train a model to predict the label of still unseen pictures. 
+Structured data is organised like a spreadsheet with data divided into columns. One of the columns in the training dataset will be the value my model is being trained to predict.
 
 ## How do I acquire data?
 
 - Manual Labeling (ex pictures)
 - Observing and recording behaviours, of a machine, website users etc
-- download from web or partners
+- Download from web or partners
 
-The importance of data can be misunderstood. More data is not always an advantage. It is important that the relevant data is collected, so it is recommended to experiment with data before to spend too much time collecting it, to find out that it is not helping to train our model. Data can be messy as well, with missing values or a mix of different types, and we will have to decide how to deal with this.
+The importance of data can be misunderstood. More data is not always an advantage. 
+It is important that the relevant data is collected, so it is recommended to experiment with data before to spend too much time collecting it, to find out that it is not helping to train our model.
+Data can be messy as well, with missing values or a mix of different types, and we will have to decide how to deal with this.
 
 ### What is ML
 
