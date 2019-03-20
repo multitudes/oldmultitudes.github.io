@@ -4,7 +4,7 @@ title:  "AI for Everyone - a Takeaway"
 date:   2019-03-20 10:41:47 +0100
 categories: AI, games
 comments: true
-published: true
+published: false
 ---
 <div class="message">
 machine learning is: the field of study that gives computers the ability to learn without being
