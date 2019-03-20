@@ -96,7 +96,7 @@ The rise of AI can create inflated expectations. It is important to help people 
 When we see an image of a face we recognise eyes and other traits of the person. What does a computer see? The computer sees just a grid of pixel brightness values. In a colour picture that pixel would correspond to three values of intensity of Red Green and Blue The job of the neural network is to take in input these values and output the name of the person in the picture
 So if the picture is 1000 x 1000 pixels, the inputs of my neural network would be of 1000000 nodes. If it is a colour picture of 3000000. For picture recognition convolutional NN is used where the first block of neutrons learn to recognise edges and lines, then the second learn how to put them together in details form the picture and the last layers learn to map this to a person.
 
-## Workflows
+## Workflows in your company
 Key steps are:
 - collect data
 - train model
@@ -111,33 +111,30 @@ As common use for ML is the visual inspection on the final product
 
 Data Science wants to optimise the recruiting process. ML can screen resumes Data science: Marketing A/B testing is common in Websites .two version of the same version and sees which one is performing more ML: website Recommendation product recommendation Agriculture. Data science: Data on soil weather condition. Crop analytics. ML: Precision weed killing?
 
-## What AI can do? 
-<!-- 
-Think more about automating tasks instead of automating jobs. 
-You can make progress even without more data. Big data is great when you can get it, but it is sometimes overhyped.
-Technical diligence (doable with AI systems? How much data need? Engineering timeline) vs business diligence (valuable for business . Lower cost, increase revenue, launch new product)
-Also ethical diligence. Make sure humanity is better off with your project
-ML projects can be "in house" or outsourced. DS more commonly in house
-Keywords Acceptance criteria. A measure of the min accuracy for a project
-Training set (validation set ) and test set
-Ex smart speaker Trigger word recognition Speech recognition Intent recognition Execute -->
+## What can AI do? 
+
+AI can be used for automating tasks instead of automating jobs. 
+You can make progress even without more data. Big data is great when you can get it, but it is sometimes overhyped. 
+When analysing your project ask yourself about **Technical diligence** (IS this project doable with AI systems? How much data will I need? What is the engineering timeline? ) vs **Business diligence** (Is this valuable for business? Does it bring a lower cost, will increase revenue, launch a new product?)
+Also think about **Ethical diligence**. Make sure the humanity is better off with your AI project.
+ML projects can be "in house" or outsourced. Data Science projects are more commonly "in house".
 
 ## Example of job roles in AI
 
-Software Engineer -> ensure the reliability of the ML application As applied ML Scientist:
-Machine Learning Engineer ->
+Software Engineer -> ensure the reliability of the ML application 
+As applied ML Scientist:
+Machine Learning Engineer -> creates and tests models
 Machine Learning Researcher -> extend the state of the art in ML
 
 ## The AI Transformation playbook for a company :
-Execute pilot projects to gain momentum
-Build an in-house AI Team
-Provide broad AI training
-Develop an AI strategy
-Develop internal and external communication
-Develop an AI strategy
-
-Leverage AI to create an advantage specific to your industry sector.
-Design strategy aligned with the “Virtuous Cycle of AI”: a better product > brings more users > brings more data > brings a better product etc
+- Execute pilot projects to gain momentum
+- Build an in-house AI Team
+- Provide broad AI training
+- Develop an AI strategy
+- Develop internal and external communication
+- Develop an AI strategy
+- Leverage AI to create an advantage specific to your industry sector.
+- Design strategy aligned with the “Virtuous Cycle of AI”: a better product > brings more users > brings more data > brings a better product etc
 
 ### Computer Vision
 
