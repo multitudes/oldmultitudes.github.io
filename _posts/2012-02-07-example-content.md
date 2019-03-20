@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Example content
-date:   2012-02-07
+date:   2018-02-07
 ---
 
 
