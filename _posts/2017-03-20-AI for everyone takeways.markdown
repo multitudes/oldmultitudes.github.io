@@ -13,10 +13,11 @@ Through governments, companies and individuals realizing that all of us need to 
 this increases the odds that everyone will be in a better position, even as jobs may go away.
 <cite>Andrew NG (2019) </cite>
 </div>
+
 ![image](/assets/img/AI4Everyonepics/PastedGraphic-2.png)
 
 This post wants to give a very high-level bird view of AI. I put together a series of annotation inspired by watching AI for everyone, a non-technical series of videos about AI on Coursera by Andrew Ng. After attending this course I am amazed how he could manage to do really an accessible course about AI without going in deep in technical details. He managed quite a feat indeed and the course is very easy to follow.
-For me, the most interesting part has been the week where he talks about ethics and AI. Realistically, there will be a long fight ahead of us, comparable to what we had in the past (an d still today) with fraud and spam emails. Security in AI is becoming an important topic.
+For me, the most interesting part has been the week where he talks about ethics and AI. Realistically, there will be a long fight ahead of us, comparable to what we had in the past (and still today) with fraud and spam emails. Security in AI is becoming an important topic.
 
 ### What is AI? 
 
@@ -24,8 +25,8 @@ AI is a system of tools to make computers act intelligently.
 
 ### The main AI tools    
 
-Machine Learning and data science
-Deep Learning and Neural Networks (the subset of machine learning)
+The main AI tools are Machine Learning and Data Science. 
+Deep Learning and Neural Networks are subset of machine learning 
 
 ### The rise of AI 
 
