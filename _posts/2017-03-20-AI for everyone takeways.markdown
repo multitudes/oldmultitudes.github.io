@@ -1,10 +1,10 @@
 ---
 layout: post
 title:  "AI for Everyone - a Takeaway"
-date:   2019-03-20 10:41:47 +0100
+date:   2017-03-20 10:41:47 +0100
 categories: AI, games
 comments: true
-published: false
+published: true
 ---
 <div class="message">
 Machine learning is the field of study that gives computers the ability to learn without being
@@ -185,7 +185,8 @@ Attacks Minor transformation in pixels value cause the AI to misinterpret a pict
 ![image](/assets/img/AI4Everyonepics/PastedGraphic5.jpg) 
 
 
-Adversarial defences
+## Adversarial defences
+
 - Defences do exist but incur monetary cost.
 - Similar to spam vs anti-spam we might be in an arms race for some applications
 
@@ -199,7 +200,9 @@ Adversarial defences
 
 ## AI, developing economies and jobs
 
-Some economies never had the evolution from PC, desktop computer to mobile, but they did “leapfrog” from nothing in term of infrastructures to mobile payments and online education for instance. AI will impact jobs worldwide. On an optimistic prediction by 2030, we will have 400-800 mil jobs lost, and 555-890 mil jobs created.
+Some economies never had the evolution from PC, desktop computer to mobile, but they did “leapfrog” from nothing in term of infrastructures to mobile payments and online education for instance. AI will impact jobs worldwide. On an optimistic prediction by 2030, we will have 400-800 mil jobs lost, and 555-890 mil jobs created. So there is apparently no reason to panic just yet!
+
+That's it for now. If I missed something let me know in the comments! 
 
 ￼
 ￼
