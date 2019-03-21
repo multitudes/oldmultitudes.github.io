@@ -7,7 +7,7 @@ comments: true
 published: true
 ---
 <div class="message">
-The old model of education where you go to college for four years and then work for the remaining 40,  just does not work anymore into this rapidly changing world. Through governments, companies and individuals realizing that all of us need to keep on learning, this increases the odds that everyone will be in a better position, even as jobs may go away.
+The old model of education where you go to college for 4 years and then work for the remaining 40 years,  just does not work anymore into this rapidly changing world. Through governments, companies and individuals realizing that all of us need to keep on learning, this increases the odds that everyone will be in a better position, even as jobs may go away.
 <br>
 <cite>Andrew NG (2019) </cite>
 </div>
@@ -19,10 +19,15 @@ For me, the most interesting part has been the week where he talks about ethics 
 
 ## What is AI? 
 
-AI is a system of tools to make computers act intelligently.
-
+**AI** is a system of tools to make computers act intelligently.
 The main AI tools are Machine Learning and Data Science. 
-Deep Learning and Neural Networks are subset of machine learning. 
+**Data Science** is a relatively recent buzzword (since the last 20 years or so) but really it is very close or synonimous with statistics, which has been a widespread predictive tool since the 19th Century.   
+Machine Learning has been around since computer have been developed in the 50's at least and it is, in my eyes at least, an attempt to create an intelligent machine. Alan Turing wrote already 1950 a seminal paper on the subject ["Computing machinery and intelligence"](https://www.csee.umbc.edu/courses/471/papers/turing.pdf).
+Deep Learning and Neural Networks are considered subsets of Machine Learning and are more recent.
+The "Deep" in "Deep Learning" just relates to the fact that Neural Networks can be many layer deep.
+Deep Learning can be very resources intensive and even if this algorithm was known since the 70's, it could gain traction only in the last 10-15 years due to advances in hardware and availability of big data. 
+See also the first AI winter 1974–1980 and the second 1987-1993. From [Wikipedia](https://en.wikipedia.org/wiki/History_of_artificial_intelligence)
+> AI researchers had failed to appreciate the difficulty of the problems they faced. Their tremendous optimism had raised expectations impossibly high, and when the promised results failed to materialize, funding for AI disappeared. At the same time, the field of connectionism (or neural nets) was shut down almost completely for 10 years by Marvin Minsky's devastating criticism of perceptrons...
 
 ### The rise of AI 
 
@@ -115,7 +120,8 @@ Data Science wants to optimise the recruiting process. ML can screen resumes Dat
 
 AI can be used for automating tasks instead of automating jobs. 
 You can make progress even without more data. Big data is great when you can get it, but it is sometimes overhyped. 
-When analysing your project ask yourself about **Technical diligence** (IS this project doable with AI systems? How much data will I need? What is the engineering timeline? ) vs **Business diligence** (Is this valuable for business? Does it bring a lower cost, will increase revenue, launch a new product?)
+
+When analysing your project ask yourself about **Technical diligence** (IS this project doable with AI systems? How much data will I need? What is the engineering timeline? ) vs **Business diligence** (Is this valuable for business? Does it bring a lower cost, will increase revenue, launch a new product?).
 Also think about **Ethical diligence**. Make sure the humanity is better off with your AI project.
 ML projects can be "in house" or outsourced. Data Science projects are more commonly "in house".
 
@@ -178,7 +184,9 @@ Synthesize new images from scratch. The image below is of an individual who does
 
 ![image](/assets/img/AI4Everyonepics/PastedGraphic3.jpg)
 
-￼#### Knowledge Graphs For example what we get in search results:
+￼
+#### Knowledge Graphs For example what we get in search results:
+
 
 ￼![image](/assets/img/AI4Everyonepics/PastedGraphic4.jpg) ￼
 
