@@ -90,7 +90,7 @@ This allows to check whether one number is a multiple of another instead of usin
 
 There is a new method `compactMapValues()`
 
-### a new count() method
+### A new count() method
 
 `count(where:)` method will perform the equivalent of a filter() and count in a single pass.
 
