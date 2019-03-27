@@ -63,7 +63,7 @@ let Eliane = #"My Mother's age is : \#(age)."#
 
 and regular expressions are more readable:
 
-{% highlight %}
+{% highlight swift %}
 let regex = #"\\[A-Z]+[A-Za-z]+\.[a-z]+"#
 {% endhighlight %}
 
