@@ -40,7 +40,9 @@ Luckily I am using an iMac at school with Mojave so I could experiment a bit. So
 > ABI is the Application Binary Interface, the specification to which independently compiled binary entities must conform to be linked together and executed.
 
 It is how the compiler builds an application and how parameters are passed to functions and where the return value is placed for return, plus how exceptions propagate. 
+
 ABI stability means locking down the ABI for future compiler versions.
+
 An advantage of ABI stability is that the language would keep evolving but the changes to the ABI from that point on would be additive and the code was written from this point on would be compatible with the newer versions of the language.
 
 ### A new Result type
@@ -61,7 +63,7 @@ let Eliane = #"My Mother's age is : \#(age)."#
 
 and regular expressions are more readable:
 
-{% highlight swift %}
+{% highlight %}
 let regex = #"\\[A-Z]+[A-Za-z]+\.[a-z]+"#
 {% endhighlight %}
 
