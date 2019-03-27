@@ -13,14 +13,21 @@ published: true
 
 ![image](/assets/img/whatsnewinswift5.jpg)
 
-The new version of the Swift operating system has just been released this Monday (25th March 19) and include quite a few new features and some of them quite advanced.
+The new version of the Swift operating system has just been released this Monday (25th March 19) and include quite a few new features with some of them quite advanced.
 
-I just started this month learning Swift so I am quite new. I was following the excellent course by Paul Hudson together with the 100 days Swift Challenge and I was happy to hear that he already made the code Swift 5 proof! Amazing. Love this guy! And if you are new to Swift like me check out this beta app as well. Quite cool and Swift 5 compatible, has to be installed through [testflight](https://testflight.apple.com/join/ROxI9xSR). 
+I just started this month learning Swift so I am quite new. 
+I was following the excellent course by Paul Hudson together with the 100 days Swift Challenge and I was happy to hear that he already made the code Swift 5 proof! 
+Amazing. Love this guy! 
+And if you are new to Swift like me check out this beta app "unwrap" as well.
+Quite cool and Swift 5 compatible, has to be installed through [testflight](https://testflight.apple.com/join/ROxI9xSR). 
 
 
 ![image](/assets/img/hundreddaysofswift5.png)
 
-However the [playground](https://github.com/twostraws/whats-new-in-swift-5-0) he released with the new features cannot be run on my MacBookPro anymore. I was using a maxed out 2010 MBP with High Sierra installed, fast SSD and full capacity RAM and I was hoping to keep working on it for another year or so. Unfortunately, the new version of Swift has to be run under macOS Mojave. Probably it is time to update! If you have any suggestion about the best machine to develop for iOS then pls let me know in the comments. 
+However the [playground](https://github.com/twostraws/whats-new-in-swift-5-0) he released with the new features cannot be run on my MacBookPro anymore. 
+I was using a maxed out 2010 MBP with High Sierra installed, fast SSD and full capacity RAM and I was hoping to keep working on it for another year or so. 
+Unfortunately, the new version of Swift has to be run under macOS Mojave. 
+Probably it is time to update! If you have any suggestion about the best machine to develop for iOS then pls let me know in the comments. 
 I have been reading this review by Marco Armenti about the new [Mac Mini](https://marco.org/2018/11/06/mac-mini-2018-review) and really I am tempted to go for the middle option, with the i5 processor and 256 GB SSD. 
 Sounds like a good value for money. Especially it is portable and quite as powerful as the new MBP.
  
