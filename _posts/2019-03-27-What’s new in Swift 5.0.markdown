@@ -17,7 +17,7 @@ The new version of the Swift operating system has just been released this monday
 
 I just started this month learning Swift so I am quite new. I was following the excellent course []() by Paul Hudson together with the 100 days Swift Challenge and I was happy to hear that he already made the code Swift 5 proof! Amazing. Love this guy! 
 And if you are new to Swift like me check out this beta app as well. Quite cool and Swift 5 compatible, has to be installed through testflight. 
-https://t.co/6kCV0AdrWG
+[https://t.co/6kCV0AdrWG]
 
 ![image](/assets/img/hundreddaysofswift5.png)
 
