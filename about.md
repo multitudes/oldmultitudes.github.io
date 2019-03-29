@@ -10,7 +10,7 @@ title: About
 
 Hi, I am Laurent. 
 
-I am looking for an internship as a software developer starting on April 22nd 2019 for 3-6 months. I am passionate about sound and music applications, natural language application, education and deep learning applied to computer vision and recursive networks for language applications.
+I am looking for an internship as a software developer starting on April 23nd 2019 for 6 months. I am passionate about sound and music applications, natural language application, education and deep learning applied to computer vision and recursive networks for language applications.
 
 My preferred languages include C, C++, full stack, front and back end with PHP, JS, and JQuery. I also love Python and started to get into Machine and Deep Learning since the summer of 2018. thanks to the great online courses offered by Jeremy Howard of [fast.ai](https://course.fast.ai). I work on Macs and I am at ease with a Linux terminal.
 
