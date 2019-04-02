@@ -19,7 +19,7 @@ Swift 5.1 s still under development but the beta has interesting new features.
 - The biggest feature is module stability, which allows us to use third-party libraries without worrying which version of the Swift compiler they were built with (resolves differences at compile time).
 - Expands Swift’s use of Self
 - Creating uninitialized arrays. A new initializer for arrays that doesn’t pre-fill values with a default
-- A Math library coming to Swift similar to what we have in python Javascript etc
+- A Math library is coming to Swift similar to what we have in python Javascript etc
 
 #### Swift 5.0 is out.
 
@@ -105,6 +105,11 @@ There is a new method `compactMapValues()`
 ### A new count() method
 
 `count(where:)` method will perform the equivalent of a filter() and count in a single pass.
+
+### If you are in for a bit of fun 
+
+Check out this (RoughSwift)[https://github.com/onmyway133/RoughSwift].
+Create hand-drawn, sketchy, comic shape in Swift.
 
 
 
