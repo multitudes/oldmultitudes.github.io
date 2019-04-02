@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "What’s new in Swift 5.0"
+title:  "What’s new in Swift 5.0 - update 5.1 released in beta"
 date:   2019-03-27 10:41:47 +0100
 categories: Swift, iOS
 comments: true
@@ -12,6 +12,16 @@ published: true
 </div>
 
 ![image](/assets/img/whatsnewinswift5.jpg)
+
+#### Update
+Swift 5.1 s still under development but the beta has interesting new features.
+
+- The biggest feature is module stability, which allows us to use third-party libraries without worrying which version of the Swift compiler they were built with (resolves differences at compile time).
+- Expands Swift’s use of Self
+- Creating uninitialized arrays. A new initializer for arrays that doesn’t pre-fill values with a default
+- A Math library coming to Swift similar to what we have in python Javascript etc
+
+#### Swift 5.0 is out.
 
 The new version of the Swift operating system has just been released this Monday (25th March 19) and include quite a few new features with some of them quite advanced.
 
