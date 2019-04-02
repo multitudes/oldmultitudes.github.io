@@ -108,7 +108,7 @@ There is a new method `compactMapValues()`
 
 ### If you are in for a bit of fun 
 
-Check out this (RoughSwift)[https://github.com/onmyway133/RoughSwift].
+Check out this [RoughSwift](https://github.com/onmyway133/RoughSwift).
 Create hand-drawn, sketchy, comic shape in Swift.
 
 
