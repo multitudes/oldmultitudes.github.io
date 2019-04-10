@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Music for Games - About Generative and Adaptive music"
-date:   2010-04-09 10:41:47 +0100
+date:   2019-04-09 10:41:47 +0100
 categories: Music for Games, Generative music, Adaptive music
 comments: true
 published: true
