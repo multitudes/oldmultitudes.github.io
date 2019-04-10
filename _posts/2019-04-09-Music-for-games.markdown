@@ -7,9 +7,8 @@ comments: true
 published: true
 ---
 <div class="message">
-<br>
- "Stop thinking about art works as objects, and start thinking about them as triggers for experiences" 
-<cite>Brian Eno</cite>
+"Stop thinking about art works as objects, and start thinking about them as triggers for experiences" 
+<br><cite>Brian Eno</cite>
 </div>
 
 ![image](/assets/img/idalab-meetup.jpg)
