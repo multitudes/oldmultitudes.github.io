@@ -143,6 +143,5 @@ That's it for now. If I missed something let me know in the comments!
 [Will Wright and Brian Eno - Spore Creature Demo](https://www.youtube.com/watch?v=8PXiNNXUUF8)
 [Bloom](http://www.generativemusic.com/bloom.html)
 [Comparison of audio synthesis environments](https://en.wikipedia.org/wiki/Comparison_of_audio_synthesis_environments)
-<br>
+
 <hr>
-<br>
