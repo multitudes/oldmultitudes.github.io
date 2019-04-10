@@ -12,11 +12,24 @@ published: true
 <cite>Brian Eno</cite>
 </div>
 
-![image](/assets/img/)
+![image](/assets/img/idalab-meetup.jpg)
 
 ### The Melodrive Meetup at Adalab 
 Last week I attended a Meetup with the founder of [Melodrive](https://melodrive.com) and I learned a lot about music for games. Not only the meetup and the presentation about adaptive music in videogames by Valerio Velardo has been very entertaining (he even played Eric Satie on a real Piano in the room to explain his point of how complex the task of teaching a machine about music would be).
 He did a great job in the Melodrive project. Before and after going to the meetup I actually researched a bit about generative and adaptive music for games. I want to share some of my research in this blog post.
+
+### Melodrive
+
+Melodrive is a startup based in Berlin and specialized in AI, audio, music technology and video games. They created the Melodrive Indie, a plugin for Unity that automatically generates music for video games in realtime. 
+Artificial intelligence is the buzzword but really Melodrive is using Symbolic AI, which is not the AI of Big Neural Networks we all know. 
+In Symbolic AI there is a fair amount of work involved in making the computer to behave as an intelligent creature and expert musician. Indeed the computer is pre programmed in Music Theory and uses a randomized seed to create new tracks on the fly. Still the computer does not know about Music as we hear it. 
+All the constraints in the system are man made and it is not a small task. 
+However as far as I understood the system is not learning more from the game as it progresses.
+Music is such a difficult topic actually. To make a computer produce music we like, or that it is suitable to our emotions, we would need lots of labelled data, and this is hard to get. Not only this but how do you label this data? Not easy , since everyone of us has different ideas about music they like, what kind of music they perceive as inspiring and so on.
+A very interesting idea is to make music adaptive to the gameplay. To do this on unity you first define a few things.See also the tutorials on [youtube](https://www.youtube.com/watch?v=fQeoPf9ivL4) for a quick overview.
+First of all there are the concepts of "Valence" and "Arousal". With a cartesial coordinates in a 2 dimensional space we can define a state of emotion with a vector. The valence defines the positive or negative emotion. So Arousal defines the intensity of the emotion, tender or strong. Neutral for instance will have the coordinates "zero, zero" in the two dimensional space.
+With this knowledge we use this in our Unity code accordingly. Example, the amount of arousal can be proportional to the distance from our character to a dangerous situation. We can have a sad battle versus a happy one! I think this is quite an interesting concept.
+With Melodrive you kinda choose the style of music being played in your game or application. This has to be coded in Unity. Melodrive is a free download and quite an interesting possibility to have generative music in your game. 
 
 ### Nintendo
 
@@ -33,19 +46,6 @@ Unlike CDs and film soundtracks, game music is special because it changes in rea
 <cite> Koji Kondo - Nintendo legendary Mario and Zelda composer </cite>
 </div>
 
-
-### Melodrive
-
-Melodrive is a startup based in Berlin and specialized in AI, audio, music technology and video games. They created the Melodrive Indie, a plugin for Unity that automatically generates music for video games in realtime. 
-Artificial intelligence is the buzzword but really Melodrive is using Symbolic AI, which is not the AI of Big Neural Networks we all know. 
-In Symbolic AI there is a fair amount of work involved in making the computer to behave as an intelligent creature and expert musician. Indeed the computer is pre programmed in Music Theory and uses a randomized seed to create new tracks on the fly. Still the computer does not know about Music as we hear it. 
-All the constraints in the system are man made and it is not a small task. 
-However as far as I understood the system is not learning more from the game as it progresses.
-Music is such a difficult topic actually. To make a computer produce music we like, or that it is suitable to our emotions, we would need lots of labelled data, and this is hard to get. Not only this but how do you label this data? Not easy , since everyone of us has different ideas about music they like, what kind of music they perceive as inspiring and so on.
-A very interesting idea is to make music adaptive to the gameplay. To do this on unity you first define a few things.See also the tutorials on [youtube](https://www.youtube.com/watch?v=fQeoPf9ivL4) for a quick overview.
-First of all there are the concepts of "Valence" and "Arousal". With a cartesial coordinates in a 2 dimensional space we can define a state of emotion with a vector. The valence defines the positive or negative emotion. So Arousal defines the intensity of the emotion, tender or strong. Neutral for instance will have the coordinates "zero, zero" in the two dimensional space.
-With this knowledge we use this in our Unity code accordingly. Example, the amount of arousal can be proportional to the distance from our character to a dangerous situation. We can have a sad battle versus a happy one! I think this is quite an interesting concept.
-With Melodrive you kinda choose the style of music being played in your game or application. This has to be coded in Unity. Melodrive is a free download and quite an interesting possibility to have generative music in your game. 
 
 ### Spore and Brian Eno
 
