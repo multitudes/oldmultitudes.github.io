@@ -15,7 +15,7 @@ published: true
 ![image](/assets/img/idalab-meetup.jpg)
 
 ### The Melodrive Meetup at Adalab 
-Last week I attended a Meetup with the founder of [Melodrive](https://melodrive.com) and I learned a lot about music for games. Not only the meetup and the presentation about adaptive music in videogames by Valerio Velardo has been very entertaining (he even played Eric Satie on a real Piano in the room to explain his point of how complex the task of teaching a machine about music would be).
+Last week I attended a Meetup with the founder of [Melodrive](https://melodrive.com) at [Adalab](https://ada.com/team/) and I learned a lot about music for games. Not only the meetup and the presentation about adaptive music in videogames by Valerio Velardo has been very entertaining (he even played Eric Satie on a real Piano in the room to explain his point of how complex the task of teaching a machine about music would be).
 He did a great job in the Melodrive project. Before and after going to the meetup I actually researched a bit about generative and adaptive music for games. I want to share some of my research in this blog post.
 
 ### Melodrive
