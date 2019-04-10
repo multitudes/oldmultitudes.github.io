@@ -84,7 +84,7 @@ He developed an app for the iPhone and iPod Touch together in 2008 developed wit
 > Pure data is an open source visual programming language for multimedia that runs on anything from personal computers to embedded devices (ie Raspberry Pi) and smartphones (via libpd, DroidParty (Android), and PdParty (iOS). It is a major branch of the family of patcher programming languages known as Max (Max/FTS, ISPW Max, Max/MSP, etc), originally developed by Miller Puckette at IRCAM.
 <br><cite>Pure Data website</cite>
 
-![Pure Data Patch example](https://pbs.twimg.com/media/CrD0c94UAAAKiIs.png)
+![image](/assets/img/puredata.png)
 
 The sounds of the Spore's soundtrack are created with Pure data.
 I am honestly impressed by the sounds created by the Pure Data application. 
