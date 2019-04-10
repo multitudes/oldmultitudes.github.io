@@ -66,6 +66,8 @@ That's why the music in Mario speeds up when you're about to run out of time. We
 
 ### Spore and Brian Eno
 
+![image](/assets/img/spore.jpg)
+
 Speaking about music in videogames we should mention Spore.
 
 > Spore is a 2008 life simulation real-time strategy developed by Maxis and designed by Will Wright, and was released for Microsoft Windows and Mac OS X.
