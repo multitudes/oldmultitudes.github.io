@@ -44,7 +44,7 @@ This has to be coded in Unity. Melodrive is a free download and quite an interes
 
 ### Nintendo
 
-Do you recognize this?
+Do you recognize this melody? Even without knowing how to read music, chances are that you will! 
 
 ![image](/assets/img/nintendo-score.jpg)
 
