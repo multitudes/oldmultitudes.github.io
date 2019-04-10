@@ -12,7 +12,7 @@ published: true
 <cite>Brian Eno</cite>
 </div>
 
-![image](/assets/img/idalab-meetup-Berlin.jpg)
+![image](/assets/img/idalab-meetup.jpg)
 
 ### The Melodrive Meetup at Adalab 
 Last week I attended a Meetup with the founder of [Melodrive](https://melodrive.com) at [Adalab](https://ada.com/team/) and I learned a lot about music for games. Not only the meetup and the presentation about adaptive music in videogames by Valerio Velardo has been very entertaining (he even played Eric Satie on a real Piano in the room to explain his point of how complex the task of teaching a machine about music would be).
