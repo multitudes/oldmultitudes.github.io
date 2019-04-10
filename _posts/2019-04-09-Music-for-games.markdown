@@ -43,16 +43,17 @@ There is a lot of thinking and designing involved. Making music that always soun
 > Ask Nintendo sound composer Koji Kondo what his favorite game-biz memory is, and the answer comes pretty quickly. "A lot of people remember how Paul McCartney invited Shigeru Miyamoto to a concert when he played in Japan," he said in a Famitsu interview this week, "but Miyamoto actually brought me along to that so he could introduce me as the 'Mario music guy.' Paul and his wife Linda responded by singing the melody to me -- 'Oh, the da da dah da da dah dah guy!' I'd always been a fan of the Beatles, so the fact that they immediately recalled the melody was a really proud moment for me."
 Unlike CDs and film soundtracks, game music is special because it changes in realtime," he commented. "The sound needs to work with the game. That's why the music in Mario speeds up when you're about to run out of time. We didn't have enough space in the first game to create a whole new tune for that situation, so we just sped up the tempo instead.
 <div>
-<cite> Koji Kondo - Nintendo legendary Mario and Zelda composer </cite>
+<cite>Koji Kondo - Nintendo legendary Mario and Zelda composer </cite>
 </div>
 
 
 ### Spore and Brian Eno
 
 Speaking about music in videogames we should mention Spore.
+
 > Spore is a 2008 life simulation real-time strategy developed by Maxis and designed by Will Wright, and was released for Microsoft Windows and Mac OS X.
 development of a species from its beginnings as a microscopic organism, through development as an intelligent and social creature, to interstellar exploration as a spacefaring culture.
-<cite>Wikipedia</cite>
+<cite>From Wikipedia</cite>
 
 It is a brilliant example of adaptive music generation. The music changes all the time depending of the stages of the game and Brian Eno created the generative music together with Peter Chilvers.
 Now, for me having Brian Eno collaborating for the music in this game is a very big deal.
@@ -72,7 +73,7 @@ I am honestly impressed by the sounds created by the Pure Data application. Very
 
 Making ambient and minimal ambient and generative music is possibile in the browser too.
 The Web Audio API is widely supported in browser and allows generative music to be created in your browser. I think this is quite exciting.
- I came across to this project of [Alex Bainter](https://generative.fm) which I quite liked. I did enjoy his blog post as well :[Introduction to Generative Music](https://medium.com/@metalex9/introduction-to-generative-music-91e00e4dba11).
+I came across to this project of [Alex Bainter](https://generative.fm) which I quite liked. I did enjoy his blog post as well :[Introduction to Generative Music](https://medium.com/@metalex9/introduction-to-generative-music-91e00e4dba11).
 
 I see here a lot of potential and inspiration to use generative and adaptive music in a variety of situation, and this has been quite a big introduction for me in such a short time and hope to take it further, especially now getting more into iphone and iOS development.
 
@@ -87,6 +88,7 @@ That's it for now. If I missed something let me know in the comments!
 
 
 sources:
+
 [IGN - How Mario Maker Mixes Music With Level Creation](https://www.ign.com/articles/2014/12/08/how-mario-maker-mixes-music-with-level-creation)
 [Chatting with Koji Kondo - Nintendo Minute](https://www.youtube.com/watch?v=3WsP4lnFq9w&t=3m25s)
 [Koji Kondo on the Nintendo approach to game soundtracks.](https://web.archive.org/web/20150929062439/http://www.1up.com/news/mario-music)
@@ -108,3 +110,4 @@ sources:
 [Will Wright and Brian Eno - Spore Creature Demo](https://www.youtube.com/watch?v=8PXiNNXUUF8)
 [Bloom](http://www.generativemusic.com/bloom.html)
 [Comparison of audio synthesis environments](https://en.wikipedia.org/wiki/Comparison_of_audio_synthesis_environments)
+<br>
