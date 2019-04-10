@@ -22,21 +22,21 @@ I want to share some of my research in this blog post.
 ### Melodrive
 
 Melodrive is a startup based in Berlin and specialized in AI, audio, music technology and video games. 
-They created the Melodrive Indie, a plugin for Unity that automatically generates music for video games in realtime. 
+They created the Melodrive Indie, a plugin for Unity that automatically generates music for video games in real-time. 
 Artificial intelligence is the buzzword but really Melodrive is using Symbolic AI, which is not the AI of Big Neural Networks we all know. 
 In Symbolic AI there is a fair amount of work involved in making the computer to behave as an intelligent creature and expert musician. 
-Indeed the computer is pre programmed in Music Theory and uses a randomized seed to create new tracks on the fly. Still the computer does not know about Music as we hear it. 
-All the constraints in the system are man made and it is not a small task. 
+Indeed the computer is pre-programmed in Music Theory and uses a randomized seed to create new tracks on the fly. Still, the computer does not know about Music as we hear it. 
+All the constraints in the system are man-made and it is not a small task. 
 However as far as I understood the system is not learning more from the game as it progresses.
 Music is such a difficult topic actually. 
-To make a computer produce music we like, or that it is suitable to our emotions, we would need lots of labelled data, and this is hard to get. 
-Not only this but how do you label this data? Not easy , since everyone of us has different ideas about music they like, what kind of music they perceive as inspiring and so on.
+To make a computer produce music we like, or that it is suitable for our emotions, we would need lots of labelled data, and this is hard to get. 
+Not only this but how do you label this data? Not easy, since every one of us has different ideas about the music they like, what kind of music they perceive as inspiring and so on.
 A very interesting idea is to make music adaptive to the gameplay. 
-To do this on unity you first define a few things.See also the tutorials on [youtube](https://www.youtube.com/watch?v=fQeoPf9ivL4) for a quick overview.
-First of all there are the concepts of "Valence" and "Arousal". 
-With a cartesial coordinates in a 2 dimensional space we can define a state of emotion with a vector. The valence defines the positive or negative emotion. 
-So Arousal defines the intensity of the emotion, tender or strong. Neutral for instance will have the coordinates "zero, zero" in the two dimensional space.
-With this knowledge we use this in our Unity code accordingly. 
+To do this on unity you first define a few things. See also the tutorials on [youtube](https://www.youtube.com/watch?v=fQeoPf9ivL4) for a quick overview.
+First of all, there are the concepts of "Valence" and "Arousal". 
+With cartesian coordinates in a 2-dimensional space, we can define a state of emotion with a vector. The valence defines positive or negative emotion. 
+So Arousal defines the intensity of the emotion, tender or strong. Neutral for instance will have the coordinates "zero, zero" in the two-dimensional space.
+With this knowledge, we use this in our Unity code accordingly. 
 Example, the amount of arousal can be proportional to the distance from our character to a dangerous situation. We can have a sad battle versus a happy one! 
 I think this is quite an interesting concept.
 With Melodrive you kinda choose the style of music being played in your game or application. 
@@ -44,25 +44,24 @@ This has to be coded in Unity. Melodrive is a free download and quite an interes
 
 ### Nintendo
 
-Nintendo has been is one of my favorite platform for gaming and they always had killer soundtracks.
+Nintendo has been one of my favourite platform for gaming and they always had killer soundtracks.
 They are in my eyes also the pioneers of adaptive music for videogames already in the very beginnings.
-I looked up a few interviews with the legendary Koji Kondo. I just wonder which software they used for these soundtrack though. 
-There is a lot of thinking and designing involved. Making music that always sound fresh is not easy!
+I looked up a few interviews with the legendary Koji Kondo. I just wonder which software they used for these soundtracks though. 
+There is a lot of thinking and designing involved. Making music that always sounds fresh is not easy!
 
 > We also want to make sure that players,[...] don’t get tired of the music. 
 We have all the different tracks – the base track, the piano, the drums – which we try to do some interesting things with using our recent technology. 
 Whether it’s lowering or increasing volume, or bringing them in and out of these separate tracks, we always want to make sure the music sounds fresh and new so the players never get tired of hearing it.
 
-> Ask Nintendo sound composer Koji Kondo what his favorite game-biz memory is, and the answer comes pretty quickly. 
+> Ask Nintendo sound composer Koji Kondo what his favourite game-biz memory is, and the answer comes pretty quickly. 
 "A lot of people remember how Paul McCartney invited Shigeru Miyamoto to a concert when he played in Japan," he said in a Famitsu interview this week, "but Miyamoto actually brought me along to that so he could introduce me as the 'Mario music guy.' 
 Paul and his wife Linda responded by singing the melody to me -- 'Oh, the da da dah da da dah dah guy!' 
 I'd always been a fan of the Beatles, so the fact that they immediately recalled the melody was a really proud moment for me."
-Unlike CDs and film soundtracks, game music is special because it changes in realtime," he commented. "The sound needs to work with the game. 
+Unlike CDs and film soundtracks, game music is special because it changes in real-time," he commented. "The sound needs to work with the game. 
 That's why the music in Mario speeds up when you're about to run out of time. We didn't have enough space in the first game to create a whole new tune for that situation, so we just sped up the tempo instead.
 <div>
 <cite>Koji Kondo - Nintendo legendary Mario and Zelda composer </cite>
 </div>
-
 
 ### Spore and Brian Eno
 
@@ -70,16 +69,19 @@ That's why the music in Mario speeds up when you're about to run out of time. We
 
 Speaking about music in videogames we should mention Spore.
 
-> Spore is a 2008 life simulation real-time strategy developed by Maxis and designed by Will Wright, and was released for Microsoft Windows and Mac OS X.
+> Spore is a 2008 life simulation real-time strategy developed by Maxis and designed by Will Wright and was released for Microsoft Windows and Mac OS X.
 development of a species from its beginnings as a microscopic organism, through development as an intelligent and social creature, to interstellar exploration as a spacefaring culture.
 <br><cite>From Wikipedia</cite>
 
 It is a brilliant example of adaptive music generation. 
-The music changes all the time depending of the stages of the game and Brian Eno created the generative music together with Peter Chilvers.
+The music changes all the time depending on the stages of the game and Brian Eno created the generative music together with Peter Chilvers.
 Now, for me having Brian Eno collaborating for the music in this game is a very big deal.
 I have been a long time fan of his ambient music, especially "Apollo" and "Music for Airports".
 Generative music is a term which has been created by Brian Eno, to describe music that is ever-different and changing, and that is created by a system.
 He developed an app for the iPhone and iPod Touch together in 2008 developed with Peter Chilvers: [Bloom](http://www.generativemusic.com/bloom.html)
+
+
+
 
 ### Pure Data
 
@@ -91,16 +93,17 @@ He developed an app for the iPhone and iPod Touch together in 2008 developed wit
 The sounds of the Spore's soundtrack are created with Pure data.
 I am honestly impressed by the sounds created by the Pure Data application. 
 Very beautiful. 
-There is only the danger to be tied artistically to a particular this sound which will be immediately recognizable to listener who know it already. 
-Personally I love it, but dont have experiance with the package at the moment so I cannot say more about it.
+There is only the danger to be tied artistically to a particular this sound which will be immediately recognizable to a listener who know it already. 
+Personally, I love it but don't have experience with the package at the moment so I cannot say more about it.
 
 ### Generative Music in your Browser. The Web Audio Platform
 
-Making ambient and minimal ambient and generative music is possibile in the browser too.
-The Web Audio API is widely supported in browser and allows generative music to be created in your browser. I think this is quite exciting.
-I came across to this project of [Alex Bainter](https://generative.fm) which I quite liked. I did enjoy his blog post as well :[Introduction to Generative Music](https://medium.com/@metalex9/introduction-to-generative-music-91e00e4dba11).
+Making ambient and minimal ambient and generative music is possible in the browser too.
+The Web Audio API is widely supported in the browser and allows generative music to be created in your browser. I think this is quite exciting.
+I came across to this project of [Alex Bainter](https://generative.fm) which I quite liked. I did enjoy his blog post as well as:
+[Introduction to Generative Music](https://medium.com/@metalex9/introduction-to-generative-music-91e00e4dba11).
 
-I see here a lot of potential and inspiration to use generative and adaptive music in a variety of situation, and this has been quite a big introduction for me in such a short time and hope to take it further, especially now getting more into iphone and iOS development.
+I see here a lot of potential and inspiration to use generative and adaptive music in a variety of situation, and this has been quite a big introduction for me in such a short time and hope to take it further, especially now getting more into iPhone and iOS development.
 
 <!-- 
 The Drake equation is a probabilistic argument used to estimate the number of active, communicative extraterrestrial civilizations in the Milky Way galaxy.
