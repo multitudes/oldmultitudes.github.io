@@ -123,17 +123,24 @@ That's it for now. If I missed something let me know in the comments!
 ### Sources:
 
 [IGN - How Mario Maker Mixes Music With Level Creation](https://www.ign.com/articles/2014/12/08/how-mario-maker-mixes-music-with-level-creation)
+
 [Chatting with Koji Kondo - Nintendo Minute](https://www.youtube.com/watch?v=3WsP4lnFq9w&t=3m25s)
+
 [Koji Kondo on the Nintendo approach to game soundtracks.](https://web.archive.org/web/20150929062439/http://www.1up.com/news/mario-music)
 [wiki - Koji kondo](https://en.wikipedia.org/wiki/Koji_Kondo)
+
 [David Wise](http://davidwise.co.uk)
+
 [A Composer's Guide to Game Music](https://mitpress.mit.edu/books/composers-guide-game-music)
 
 [Spore, birth of a game](https://www.ted.com/talks/will_wright_makes_toys_that_make_worlds?language=en)
+
 [Drake's Equation](https://en.wikipedia.org/wiki/Drake_equation)
+
 [Spore's Development](https://en.wikipedia.org/wiki/Development_of_Spore)
 
 [Generative.fm](https://generative.fm/about)
+
 [Learning Web Audio by Recreating The Works of Steve Reich and Brian Eno](https://teropa.info/blog/2016/07/28/javascript-systems-music.html)
 
 [Pure Data](https://en.wikipedia.org/wiki/Pure_Data)
@@ -141,7 +148,9 @@ That's it for now. If I missed something let me know in the comments!
 [Brian Eno, with Wright on Spore and Generative Systems, Sound, and Paintings](http://cdm.link/2007/06/brian-eno-with-wright-on-spore-and-generative-systems-sound-and-paintings/)
 
 [Will Wright and Brian Eno - Spore Creature Demo](https://www.youtube.com/watch?v=8PXiNNXUUF8)
+
 [Bloom](http://www.generativemusic.com/bloom.html)
+
 [Comparison of audio synthesis environments](https://en.wikipedia.org/wiki/Comparison_of_audio_synthesis_environments)
 
 <hr>
