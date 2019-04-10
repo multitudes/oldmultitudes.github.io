@@ -144,3 +144,5 @@ That's it for now. If I missed something let me know in the comments!
 [Bloom](http://www.generativemusic.com/bloom.html)
 [Comparison of audio synthesis environments](https://en.wikipedia.org/wiki/Comparison_of_audio_synthesis_environments)
 <br>
+<hr>
+<br>
