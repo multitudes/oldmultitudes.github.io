@@ -44,6 +44,10 @@ This has to be coded in Unity. Melodrive is a free download and quite an interes
 
 ### Nintendo
 
+Do you recognize this?
+
+![image](/assets/img/nintendo-score.jpg)
+
 Nintendo has been one of my favourite platform for gaming and they always had killer soundtracks.
 They are in my eyes also the pioneers of adaptive music for videogames already in the very beginnings.
 I looked up a few interviews with the legendary Koji Kondo. I just wonder which software they used for these soundtracks though. 
@@ -89,6 +93,7 @@ He developed an app for the iPhone and iPod Touch together in 2008 developed wit
 <br><cite>Pure Data website</cite>
 
 ![image](/assets/img/puredata.png)
+
 
 The sounds of the Spore's soundtrack are created with Pure data.
 I am honestly impressed by the sounds created by the Pure Data application. 
