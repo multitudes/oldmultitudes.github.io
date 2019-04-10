@@ -8,14 +8,14 @@ published: true
 ---
 <div class="message">
 <br>
-
-<cite> </cite>
+ "Stop thinking about art works as objects, and start thinking about them as triggers for experiences" 
+<cite>Brian Eno</cite>
 </div>
 
 ![image](/assets/img/)
 
 ### The Melodrive Meetup at Adalab 
-Last week I attended a Meetup with the founder of (Melodrive)[https://melodrive.com] and I learned a lot about music for games. Not only the meetup and the presentation about adaptive music in videogames by Valerio Velardo has been very entertaining (he even played Eric Satie on a real Piano in the room to explain his point of how complex the task of teaching a machine about music would be).
+Last week I attended a Meetup with the founder of [Melodrive](https://melodrive.com) and I learned a lot about music for games. Not only the meetup and the presentation about adaptive music in videogames by Valerio Velardo has been very entertaining (he even played Eric Satie on a real Piano in the room to explain his point of how complex the task of teaching a machine about music would be).
 He did a great job in the Melodrive project. Before and after going to the meetup I actually researched a bit about generative and adaptive music for games. I want to share some of my research in this blog post.
 
 ### Nintendo
@@ -80,7 +80,7 @@ I see here a lot of potential and inspiration to use generative and adaptive mus
 The Drake equation is a probabilistic argument used to estimate the number of active, communicative extraterrestrial civilizations in the Milky Way galaxy.
  -->
 
-PS Check this too [Aisatsana by Aphex Twin](https://www.youtube.com/watch?v=bj30yfuXKy4)
+PS Check this too! Great music: [Aisatsana by Aphex Twin](https://www.youtube.com/watch?v=bj30yfuXKy4)
 
 That's it for now. If I missed something let me know in the comments! 
 
@@ -98,13 +98,13 @@ sources:
 [Drake's Equation](https://en.wikipedia.org/wiki/Drake_equation)
 [Spore's Development](https://en.wikipedia.org/wiki/Development_of_Spore)
 
-(Generative.fm)[https://generative.fm/about]
-(Learning Web Audio by Recreating The Works of Steve Reich and Brian Eno)[https://teropa.info/blog/2016/07/28/javascript-systems-music.html]
+[Generative.fm](https://generative.fm/about)
+[Learning Web Audio by Recreating The Works of Steve Reich and Brian Eno](https://teropa.info/blog/2016/07/28/javascript-systems-music.html)
 
-(Pure Data)[https://en.wikipedia.org/wiki/Pure_Data]
+[Pure Data](https://en.wikipedia.org/wiki/Pure_Data)
 
-(Brian Eno, with Wright on Spore and Generative Systems, Sound, and Paintings)[http://cdm.link/2007/06/brian-eno-with-wright-on-spore-and-generative-systems-sound-and-paintings/]
+[Brian Eno, with Wright on Spore and Generative Systems, Sound, and Paintings](http://cdm.link/2007/06/brian-eno-with-wright-on-spore-and-generative-systems-sound-and-paintings/)
 
-(Will Wright and Brian Eno - Spore Creature Demo)[https://www.youtube.com/watch?v=8PXiNNXUUF8]
+[Will Wright and Brian Eno - Spore Creature Demo](https://www.youtube.com/watch?v=8PXiNNXUUF8)
 [Bloom](http://www.generativemusic.com/bloom.html)
-(Comparison of audio synthesis environments)[https://en.wikipedia.org/wiki/Comparison_of_audio_synthesis_environments]
+[Comparison of audio synthesis environments](https://en.wikipedia.org/wiki/Comparison_of_audio_synthesis_environments)
