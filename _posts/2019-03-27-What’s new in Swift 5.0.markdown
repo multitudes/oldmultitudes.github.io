@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "What’s new in Swift 5.0 - update 5.1 released in beta"
+title:  "What’s new in Swift 5.0 - (updated)"
 date:   2019-03-27 10:41:47 +0100
 categories: Swift, iOS
 comments: true
@@ -13,8 +13,9 @@ published: true
 
 ![image](/assets/img/whatsnewinswift5.jpg)
 
-#### Update
-Swift 5.1 s still under development but the beta has interesting new features.
+#### Update: Swift 5.1 beta released
+
+Swift 5.1 is still under development but the beta has interesting new features.
 
 - The biggest feature is module stability, which allows us to use third-party libraries without worrying which version of the Swift compiler they were built with (resolves differences at compile time).
 - Expands Swift’s use of Self
