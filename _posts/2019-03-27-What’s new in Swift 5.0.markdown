@@ -13,9 +13,9 @@ published: true
 
 ![image](/assets/img/whatsnewinswift5.jpg)
 
-#### Update: Swift 5.1 beta released
+#### Update: 
 
-Swift 5.1 is still under development but the beta has interesting new features.
+Swift 5.1 beta released! Swift 5.1 is still under development but the beta has interesting new features.
 
 - The biggest feature is module stability, which allows us to use third-party libraries without worrying which version of the Swift compiler they were built with (resolves differences at compile time).
 - Expands Swift’s use of Self
