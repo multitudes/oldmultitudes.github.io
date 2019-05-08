@@ -13,7 +13,7 @@ title: About
 
 
 <a href="https://multitudes.github.io/">
-    <img style="float: left; margin-top: 1rem; border: 0.2rem solid white; height:180px ;padding: 0px;border-radius:50%" src="https://multitudes.github.io/assets/img/laurent.jpg" alt="Laurent Brusa profile picture" >
+    <img style="float: left; margin-top: 1rem; margin-right: 1rem; border: 0.2rem solid white; height:180px ;padding: 0px;border-radius:50%" src="https://multitudes.github.io/assets/img/laurent.jpg" alt="Laurent Brusa profile picture" >
     </a>
 Hi, I am Laurent. 
 <br>
