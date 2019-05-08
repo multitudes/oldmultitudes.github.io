@@ -51,7 +51,7 @@ In this tutorial I will show how to create an simple AR application for your iPh
 
 ARKit is a framework so it needs to be imported into a Unity to create AR apps. 
 
-Go to this link, download the [ARKit 2.0 installer](https://bitbucket.org/Unity-Technologies/unity-arkit-plugin/downloads/) and open it in Unity.
+Go to this link, and download the [ARKit 2.0 installer](https://bitbucket.org/Unity-Technologies/unity-arkit-plugin/downloads/).
 
 ![image](/assets/img/ARKittutorialscreenshots/13.32.57.png)
 
@@ -59,8 +59,11 @@ The image detection feature was introduced already in ARKit 1.5 but did not trac
 Now in ARkit 2.0, you can track the position of image targets as well.
 If you move the image target any overlay that you have on that image target, whether it's a model or a video, will move along with the image.
 
+#### Open Unity
 Let's open the unzipped downloaded folder with Unity Hub. I am using Unity 2018.3.11
+
 ![image](/assets/img/ARKittutorialscreenshots/13.58.25.png)
+
 ![image](/assets/img/ARKittutorialscreenshots/13.32.41.png)
 
 Open the folder UnityARKitPlugin and the Examples folder. In the screenshots, your Unity might look different. Look for the assets folder in your Project Tab.
@@ -143,7 +146,8 @@ If you click play you should see the three videos playing
 
 Now drag the parent folder from the hierarchy to the assets and automatically a prefab will be created
 
-Let's build the project in Unity:
+#### Build the project in Unity
+
 - go to file build settings, 
 - switch to the iOS platform 
 - click on add open scenes 
@@ -151,7 +155,9 @@ Let's build the project in Unity:
 
 This will create an Xcode build.
 
-Open it in Xcode and go to images in the assets folder.
+#### Open the build in Xcode
+
+Open the Unity project build in Xcode and go to images in the assets folder.
 Go to resources and click on your image. Change the size to cm and the dimension of our physical image.
 Select your team in General, and make sure that the deployment target is 12.0  
 Choose the device and run and install the app.
