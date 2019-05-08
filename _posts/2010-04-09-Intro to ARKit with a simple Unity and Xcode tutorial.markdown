@@ -167,8 +167,7 @@ Choose the device and run and install the app.
 
 This tutorial has been inspired by the excellent Video tutorial by [Parth Anand](https://youtu.be/POIYPIJtgtM)
 
-[About ARKit 11 - 26 July 2017](https://www.theverge.com/tldr/2017/7/26/16035376/arkit-augmented-reality-a-ha-take-on-me-video-trixi-studios)
-
+About [ARKit](https://www.theverge.com/tldr/2017/7/26/16035376/arkit-augmented-reality-a-ha-take-on-me-video-trixi-studios) - The Verge (July 2017)
 
 Use of ARKit and Procreate App for iPad
 [https://twitter.com/jaromvogel](https://twitter.com/jaromvogel/status/1125401258494324736)
