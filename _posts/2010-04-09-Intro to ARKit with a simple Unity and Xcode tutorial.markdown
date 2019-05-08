@@ -14,8 +14,8 @@ published: true
 </div>
 
 ![image](/assets/img/louis-maniquet-684906-unsplash.jpg)
-<br><cite>Photo by Louis Maniquet on Unsplash</cite>
-
+<cite>Photo by Louis Maniquet on Unsplash</cite>
+<br>
 ### Intro - What is ARKit.
 ARKit is the Augmented Reality Framework for Apple devices.
 (And a village in Kyrgyzstan according to GoogleMaps!)
