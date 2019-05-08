@@ -84,48 +84,58 @@ In my case, the image is called earth.
 ![image](/assets/img/ARKittutorialscreenshots/14.12.49.png)
 
 Right-click in the hierarchy and select “Create Empty”. You get a Game  Object folder. Rename it to “parent”.
-Screen Shot 2019-05-07 at 14.14.21.png
+
+![image](/assets/img/ARKittutorialscreenshots/14.14.21.png)
+
 Right-click again in the Hierarchy tab and select 3D object and Plane
-Screen Shot 2019-05-07 at 14.16.13.png
+![image](/assets/img/ARKittutorialscreenshots/14.16.13.png)
+
 Looks like this
-Screen Shot 2019-05-07 at 14.17.01.png
+![image](/assets/img/ARKittutorialscreenshots/14.17.01.png)
+
 Reset the position for Plane and parent to 0
-Screen Shot 2019-05-07 at 14.17.54.png
+![image](/assets/img/ARKittutorialscreenshots/14.17.54.png)
+
 Measure the actual real dimension of your image an input it in the scale property
 Remember they are in meter, so the x will be ex 0.0109 and the z 0.006138
-Screen Shot 2019-05-07 at 14.20.32.png
+![image](/assets/img/ARKittutorialscreenshots/14.20.32.png)
+
 In the ReferenceImages folder right click and create a material for the card and name it image
-Screen Shot 2019-05-07 at 14.25.55.png
+![image](/assets/img/ARKittutorialscreenshots/14.25.55.png)
+
 In the inspector go to legacy shader/ diffuse
-Screen Shot 2019-05-07 at 14.28.05.png
+![image](/assets/img/ARKittutorialscreenshots/14.28.05.png)
+
 Click in the right square texture.. select the image from the popup window
-Screen Shot 2019-05-07 at 14.30.49.png
+![image](/assets/img/ARKittutorialscreenshots/14.30.49.png)
+
 And from the scroll down UI/ default
-Screen Shot 2019-05-07 at 14.32.07.png
+![image](/assets/img/ARKittutorialscreenshots/14.32.07.png)
 
 Now drag the material called image to the image in the hierarchy.
-Screen Shot 2019-05-07 at 14.32.51.png
+![image](/assets/img/ARKittutorialscreenshots/14.32.51.png)
+
 
 This is how it looks like for me. You can rotate or change things in the inspector if you need...
-Screen Shot 2019-05-07 at 14.34.33.png
+![image](/assets/img/ARKittutorialscreenshots/14.34.33.png)
 
 Drag the image inside the parent
-Screen Shot 2019-05-07 at 14.45.06
+![image](/assets/img/ARKittutorialscreenshots/14.45.06.png)
 
 And duplicate this. It is command-D on the Mac to duplicate.
 They will be one on top of the other so click in the Scene and drag them to where you need them.
-Screen Shot 2019-05-07 at 14.47.23.png
+![image](/assets/img/ARKittutorialscreenshots/14.47.23.png)
 
 It will look like this now
-Screen Shot 2019-05-07 at 14.50.14.png
+![image](/assets/img/ARKittutorialscreenshots/14.50.14.png)
 
-The first will be our trigger image
-
+The first will be our trigger image.
 And then there would be the three videos which will play and
 move along with the image.
 Let's attach three videos to these three new planes.
 Rename them as "1", "2", "3" for instance. 
-Screen Shot 2019-05-07 at 14.54.08.png
+![image](/assets/img/ARKittutorialscreenshots/14.54.08.png)
+
 and drag the three videos to the ReferenceImages folder.
 And then one by one from the folder to the three just creates planes 1,2, and 3
 
@@ -133,17 +143,18 @@ If you click play you should see the three videos playing
 
 Now drag the parent folder from the hierarchy to the assets and automatically a prefab will be created
 
+Let's build the project in Unity:
+- go to file build settings, 
+- switch to the iOS platform 
+- click on add open scenes 
+- build and save.
 
-
-let's run the project
-go to file build settings, switch to the
-iOS platform and then click on add open scenes. Now build and save.
 This will create an Xcode build.
-Open it in Xcode. Go to images in the assets folder.
-resources and click on your image.
-Change the size to cm and the dimension of our physical image.
+
+Open it in Xcode and go to images in the assets folder.
+Go to resources and click on your image. Change the size to cm and the dimension of our physical image.
 Select your team in General, and make sure that the deployment target is 12.0  
-Choose the device and rn the app.
+Choose the device and run and install the app.
 
 
 ### sources
@@ -160,12 +171,12 @@ https://twitter.com/madewitharkit
 
 #### Apps
 
-The Ikea App has been one of the first demos for ARKit 
-gaming will be another big market
 
 The App Store offers a curated section to highlight the best AR experiences. Just tap on Apps and scroll down to Top Categories. AR Apps is at the top.
 
-This is the official app page for developer
-https://developer.apple.com/arkit/
+The [Ikea](https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=1&cad=rja&uact=8&ved=2ahUKEwiF-4O75IviAhUwMewKHRIxAHMQFjAAegQIAhAB&url=https%3A%2F%2Fitunes.apple.com%2Fus%2Fapp%2Fikea-place%2Fid1279244498%3Fmt%3D8&usg=AOvVaw0JuWZkNMjTuCTziRMISM9K) App has been one of the first demos for ARKit.
+
+And this is the official apple page for ARKit developers:
+[https://developer.apple.com/arkit/](https://developer.apple.com/arkit/)
 
 <hr>
