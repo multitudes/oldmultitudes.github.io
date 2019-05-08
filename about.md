@@ -10,11 +10,13 @@ title: About
 
 <!-- ![image](/assets/img/) -->
 
-Hi, I am Laurent. 
+
 
 <a href="https://multitudes.github.io/">
     <img style="float: left; margin-top: 1rem; border: 0.2rem solid white; height:180px ;padding: 0px;border-radius:50%" src="https://multitudes.github.io/assets/img/laurent.jpg" alt="Laurent Brusa profile picture" >
     </a>
+Hi, I am Laurent. 
+<br>
 
 I am passionate about developing for iOS, about sound and music applications, natural language application, education and deep learning applied to computer vision and recursive networks for language applications.
 
