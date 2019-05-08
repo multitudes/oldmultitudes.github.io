@@ -12,7 +12,7 @@ published: true
 "For the world to be interesting, you have to be manipulating it all the time" 
 <br><cite>Brian Eno</cite>
 </div>
-
+<hr>
 ![image](/assets/img/louis-maniquet-684906-unsplash.jpg)
 <cite>Photo by Louis Maniquet on Unsplash</cite>
 <br>
