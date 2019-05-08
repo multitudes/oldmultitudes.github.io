@@ -36,23 +36,34 @@ At WWDC 2018 Apple announced a host of improvements that are coming to version 2
 
 The first of these improvements is USDZ (Universal Scene Description), a new file format developed by Apple and Disney’s Pixar for ARKit to make it easier to create and share augmented reality content. The new format will be supported natively by Adobe’s Creative Cloud suite of software to allow for compatibility with common programs like Photoshop.
 
-###How does ARKit measure the distance
+#### How does ARKit measure the distance?
 No magic is required. An iPhone’s motion sensors let it approximate with surprising accuracy how much the device is moved or tilted.
-
-ARKit may not be able to judge the layout of a room with a single, perfectly still view of a scene. But it can instantly re-analyse that same scene when your hand movements cause the phone to tilt by, say, two degrees.
-
-This communication between the motion sensors and the camera
+ARKit may not be able to judge the layout of a room with a single, perfectly still view of a scene. But it can instantly re-analyse that same scene when your hand movements cause the phone to tilt by a few degrees.
+This communication between the motion sensors and the camera makes it possible to get a fairly accurate 3D representation of the surroundings.
 
 ### ARKit 2.0 image tracking feature
 
-in this tutorial, we are going to build a
-simple AR app in Unity using ARKit 2.0 image tracking feature
+In this tutorial, we are going to build a simple AR app in Unity using ARKit 2.0 image tracking feature
 
 We Need:
-iOS 12 or later on our device
-Xcode 10 or later on our Mac
+- iOS 12 or later on our device
+- Xcode 10 or later on our Mac
 
-### Install ARKit 2.0
+### Create your first ARKit application.
+
+To create AR apps there are 3 main frameworks to choose from:
+
+– The Unity Engine 
+- The Unreal Engine
+- Xcode
+
+In this tutorial I will show how to create an simple AR application for your iPhone or iPad in Unity and Xcode.
+For this you would need a picture both in digital format and printed (to be recognized by your iOS device).
+Three small mp4 videos in size of max 24Mb. 
+
+#### Install ARKit 2.0
+
+ARKit is a framework so it needs to be imported into a Unity to create AR apps. 
 
 Go to this link, download the ARKit 2.0 installer and open it in Unity.
 https://bitbucket.org/Unity-Technologies/unity-arkit-plugin/downloads/
