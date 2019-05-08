@@ -14,7 +14,7 @@ published: true
 </div>
 
 ![image](/assets/img/louis-maniquet-684906-unsplash.jpg)
-<a style="background-color:black;color:white;text-decoration:none;padding:4px 6px;font-family:-apple-system, BlinkMacSystemFont, &quot;San Francisco&quot;, &quot;Helvetica Neue&quot;, Helvetica, Ubuntu, Roboto, Noto, &quot;Segoe UI&quot;, Arial, sans-serif;font-size:12px;font-weight:bold;line-height:1.2;display:inline-block;border-radius:3px" href="https://unsplash.com/@louis_mna?utm_medium=referral&amp;utm_campaign=photographer-credit&amp;utm_content=creditBadge" target="_blank" rel="noopener noreferrer" title="Download free do whatever you want high-resolution photos from Louis Maniquet"><span style="display:inline-block;padding:2px 3px"><svg xmlns="http://www.w3.org/2000/svg" style="height:12px;width:auto;position:relative;vertical-align:middle;top:-2px;fill:white" viewBox="0 0 32 32"><title>unsplash-logo</title><path d="M10 9V0h12v9H10zm12 5h10v18H0V14h10v9h12v-9z"></path></svg></span><span style="display:inline-block;padding:2px 3px">Louis Maniquet</span></a>
+<br><cite>Photo by Louis Maniquet on Unsplash</cite>
 
 ### Intro - What is ARKit.
 ARKit is the Augmented Reality Framework for Apple devices.
@@ -22,29 +22,25 @@ ARKit is the Augmented Reality Framework for Apple devices.
 
 Google has been working on devices that overlay information and images on top of the real world for years, first with its Google Glass headset, then with Google Tango
 
-Niantic's Pokemon Go app took the world by storm in 2016 by placing its popular cartoon characters in real life.
-Pokemon Go works by overlaying two-dimensional images on top of real, three-dimensional scenes. ARKit apps put three-dimensional images in your world using what's called visual inertial odometry
+Niantic's Pokemon Go app took the world by storm in 2016 by placing its popular cartoon characters in real life.Pokemon Go works by overlaying two-dimensional images on top of real, three-dimensional scenes. 
 
-But Apple has made it possible to augment reality without investing in pricey new hardware, and its AR apps make Pokemon look like child's play.
+Devices augment reality by placing virtual objects in your physical world, typically by using your phone's camera. 
 
-Devices augment reality by placing virtual objects in your physical world, typically by using your phone's camera
-ARKit is what Apple calls it's set of software development tools to enable developers to build augmented-reality apps for iOS
-Who can use ARKit apps?
-Anyone using an iOS device that runs on Apple's A9, A10 or A11 Bionic processors
+ARKit is a framework by Apple which to enable developers to create Augmented Reality Apps for iPhone & iPad. It was introduced along with iOS 11 during WWDC 2017 
+Anyone using an iOS device that runs on Apple's A9 to A12 Bionic processors (& running iOS 11 or above) can use ARKit apps.
+ARKit apps put three-dimensional images in your world using what's called visual inertial odometry
 
+It’s the Apple alternative to Google Project Tango but puts fewer demands on the hardware. Project Tango requires a special camera array with dual cameras and an IR transmitter. This lets it make a rough 3D model of a room on the fly, and track motion with almost unnerving accuracy. 
 
-ARKit is a framework by Apple which is used to create Augmented Reality Apps for iPhone & iPad. It was introduced along with iOS 11 during WWDC 2017 
+ARKit doesn’t require this. Instead, it recognises planes, like your floor. Then it uses the phone’s camera and its motion detectors to track movement as the iPhone is moved and tilted.
 
-It’s the Apple alternative to Google Project Tango but puts fewer demands on the hardware. Project Tango requires a special camera array with dual cameras and an IR transmitter. This lets it make a rough 3D model of a room on the fly, and track motion with almost unnerving accuracy.RKit doesn’t require this. Instead, it recognises planes, like your floor. Then it uses the phone’s camera and its motion detectors to track movement as the iPhone is moved and tilted.
-
-ARKit uses the device camera & sensors (gyroscope & accelerometers) to understand & map the surrounding environment as the device is moved
+ARKit uses the device camera & sensors (gyroscope & accelerometers) to understand & map the surrounding environment as the device is moved.
 
 3D models – they are built using 3D modelling software like blender, Maya, 3ds max etc.)
 
-ARKit. Therefore, you would need a device having A9 chipset or above & running iOS 11 or above. In short, iPhone 6s, iPhone 7, 8, 10 and above are supported by ARKit.
+ARKit is a framework so it needs to be imported into a game engine to create AR apps. There are 3 main options to choose from – Unity Engine, Unreal Engine & Xcode
 
-ARKit is just a framework so it needs to be imported into a game engine to create AR apps. There are 3 main options to choose from – Unity Engine, Unreal Engine & Xcode
-
+In this tutorial I will show how to create an 
 What’s new in ARKit 2.0?
 
 At WWDC 2018 Apple announced a host of improvements that are coming to version 2.0 of ARKit.
