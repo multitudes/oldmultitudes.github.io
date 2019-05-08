@@ -43,7 +43,7 @@ We will need:
 
 To create AR apps there are 3 main frameworks to choose from:
 
-– The Unity Engine 
+- The Unity Engine 
 - The Unreal Engine
 - Xcode
 
