@@ -51,9 +51,11 @@ In this tutorial I will show how to create an simple AR application for your iPh
 
 ARKit is a framework so it needs to be imported into a Unity to create AR apps. 
 
-Go to this link, download the ARKit 2.0 installer and open it in Unity.
-https://bitbucket.org/Unity-Technologies/unity-arkit-plugin/downloads/
-Screen Shot 2019-05-07 at 13.32.57.png
+Go to this link, download the [ARKit 2.0 installer](https://bitbucket.org/Unity-Technologies/unity-arkit-plugin/downloads/) and open it in Unity.
+
+
+![image](/assets/img/ARKittutorialscreenshots/13.32.57.png)
+
 the image detection feature was introduced in ARKit 1.5
 but with the image detection, you can just scan the image target and trigger an AR
 experience but you would not track that image. 
