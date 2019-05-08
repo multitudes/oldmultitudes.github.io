@@ -66,7 +66,9 @@ Let's open the unzipped downloaded folder with Unity Hub. I am using Unity 2018.
 
 ![image](/assets/img/ARKittutorialscreenshots/13.58.25.png)
 
-![image](/assets/img/ARKittutorialscreenshots/13.32.41.png)
+Click on "Upgrade":
+
+![image](/assets/img/ARKittutorialscreenshots/13.58.41.png)
 
 Open the folder UnityARKitPlugin and the Examples folder. In the screenshots, your Unity might look different. Look for the assets folder in your Project Tab.
 
