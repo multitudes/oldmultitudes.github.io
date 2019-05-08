@@ -17,35 +17,23 @@ published: true
 <cite>Photo by Louis Maniquet on Unsplash</cite>
 <br>
 ### Intro - What is ARKit.
-ARKit is the Augmented Reality Framework for Apple devices.
-(And a village in Kyrgyzstan according to GoogleMaps!)
-
-ARKit is a framework by Apple which to enable developers to create Augmented Reality Apps for iPhone & iPad. It was introduced along with iOS 11 during WWDC 2017. 
+ARKit is the Augmented Reality Framework for Apple devices which enables developers to create Augmented Reality Apps for iPhone & iPad. It was introduced along with iOS 11 during WWDC 2017. 
 Anyone using an iOS device that runs on Apple's A9 to A12 Bionic processors (& running iOS 11 or above) can use ARKit apps.
 ARKit apps put three-dimensional images in your world using what's called visual inertial odometry
-
-It’s the Apple alternative to Google Project Tango but puts fewer demands on the hardware. Project Tango requires a special camera array with dual cameras and an IR transmitter. This lets it make a rough 3D model of a room on the fly, and track motion with almost unnerving accuracy. 
-
-ARKit doesn’t require this. Instead, it recognises planes, like your floor. Then it uses the phone’s camera and its motion detectors to track movement as the iPhone is moved and tilted.
-
-ARKit uses the device camera & sensors (gyroscope & accelerometers) to understand & map the surrounding environment as the device is moved.
-
-#### What’s new in ARKit 2.0?
-
-At WWDC 2018 Apple announced a host of improvements that are coming to version 2.0 of ARKit.
-
-The first of these improvements is USDZ (Universal Scene Description), a new file format developed by Apple and Disney’s Pixar for ARKit to make it easier to create and share augmented reality content. The new format will be supported natively by Adobe’s Creative Cloud suite of software to allow for compatibility with common programs like Photoshop.
-
-#### How does ARKit measure the distance?
-No magic is required. An iPhone’s motion sensors let it approximate with surprising accuracy how much the device is moved or tilted.
+It’s the Apple alternative to Google Project Tango but puts fewer demands on the hardware. Project Tango required a special camera array with dual cameras and an IR transmitter to get a rough 3D model of a room on the fly.
+ARKit doesn’t require this. Instead, it recognises planes, like your floor. Then it uses the iPhone’s camera and its motion detectors to track the movement as the iPhone is moved and tilted.
 ARKit may not be able to judge the layout of a room with a single, perfectly still view of a scene. But it can instantly re-analyse that same scene when your hand movements cause the phone to tilt by a few degrees.
 This communication between the motion sensors and the camera makes it possible to get a fairly accurate 3D representation of the surroundings.
 
+
 ### ARKit 2.0 image tracking feature
+
+The current version is ARKit 2.0 and a new version of ARKit should be out soon, at WWDC 2019 at the latest.
 
 In this tutorial, we are going to build a simple AR app in Unity using ARKit 2.0 image tracking feature
 
-We Need:
+We will need:
+
 - iOS 12 or later on our device
 - Xcode 10 or later on our Mac
 
@@ -57,9 +45,7 @@ To create AR apps there are 3 main frameworks to choose from:
 - The Unreal Engine
 - Xcode
 
-In this tutorial I will show how to create an simple AR application for your iPhone or iPad in Unity and Xcode.
-For this you would need a picture both in digital format and printed (to be recognized by your iOS device).
-Three small mp4 videos in size of max 24Mb. 
+In this tutorial I will show how to create an simple AR application for your iPhone or iPad in Unity and Xcode. For this you would need a picture both in digital format and printed (to be recognized by your iOS device). And three small mp4 videos in size of max 24Mb. 
 
 #### Install ARKit 2.0
 
