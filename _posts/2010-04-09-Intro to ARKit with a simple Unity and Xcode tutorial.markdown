@@ -53,30 +53,36 @@ ARKit is a framework so it needs to be imported into a Unity to create AR apps.
 
 Go to this link, download the [ARKit 2.0 installer](https://bitbucket.org/Unity-Technologies/unity-arkit-plugin/downloads/) and open it in Unity.
 
-
 ![image](/assets/img/ARKittutorialscreenshots/13.32.57.png)
 
-the image detection feature was introduced in ARKit 1.5
-but with the image detection, you can just scan the image target and trigger an AR
-experience but you would not track that image. 
+The image detection feature was introduced already in ARKit 1.5 but did not track the image, it would just trigger the AR experience. 
 Now in ARkit 2.0, you can track the position of image targets as well.
 If you move the image target any overlay that you have on that image target, whether it's a model or a video, will move along with the image.
 
 Let's open the unzipped downloaded folder with Unity Hub. I am using Unity 2018.3.11
-Screen Shot 2019-05-07 at 13.58.25.png
-Screen Shot 2019-05-07 at 13.58.41.png
+![image](/assets/img/ARKittutorialscreenshots/13.58.25.png)
+![image](/assets/img/ARKittutorialscreenshots/13.32.41.png)
+
 Open the folder UnityARKitPlugin and the Examples folder. In the screenshots, your Unity might look different. Look for the assets folder in your Project Tab.
 
 Open the folder ARKit1.5 and the UnityARImageAnchor
 
 Drag the image you want to use as an image-trigger in the ReferenceImages folder:
-Screen Shot 2019-05-07 at 14.05.40.png
+
+![image](/assets/img/ARKittutorialscreenshots/14.05.40.png)
+
 Now go up once in the Folder Hierarchy and click on UnityLogoReferenceImage which is part of the Unity demo. We gonna change the trigger image. 
-Screen Shot 2019-05-07 at 14.10.02.png
+
+![image](/assets/img/ARKittutorialscreenshots/14.10.02.png)
+
 Drag and drop your image from the ReferenceImages folder to the Image Texture field in the Inspector.
-Screen Shot 2019-05-07 at 14.10.09.png
+
+![image](/assets/img/ARKittutorialscreenshots/14.10.09.png)
+
 In my case, the image is called earth.
-Screen Shot 2019-05-07 at 14.12.49.png
+
+![image](/assets/img/ARKittutorialscreenshots/14.12.49.png)
+
 Right-click in the hierarchy and select “Create Empty”. You get a Game  Object folder. Rename it to “parent”.
 Screen Shot 2019-05-07 at 14.14.21.png
 Right-click again in the Hierarchy tab and select 3D object and Plane
