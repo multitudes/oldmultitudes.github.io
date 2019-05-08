@@ -8,7 +8,13 @@ title: About
   > Learning another language is like becoming another person -- <cite>Haruki Murakami</cite>
 <!-- ![laurent](/assets/img/about.jpg){:class="profile_img"} -->
 
+![image](/assets/img/)
+
 Hi, I am Laurent. 
+
+<a href="https://multitudes.github.io/">
+    <img style=" margin-top: 1rem; margin-left: auto; border: 0.2rem solid white; margin-right: auto; height:180px ;padding: 0px;border-radius:50%" class="hidden" src="https://multitudes.github.io/assets/img/laurent.jpg" alt="Laurent Brusa profile picture" >
+    </a>
 
 I am passionate about developing for iOS, about sound and music applications, natural language application, education and deep learning applied to computer vision and recursive networks for language applications.
 
