@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Intro to ARKit with a simple Unity and Xcode tutorial"
-date:   2010-04-09
+date:   2018-04-20
 categories: iOS, developer
 comments: true
 published: true
@@ -157,20 +157,20 @@ Select your team in General, and make sure that the deployment target is 12.0
 Choose the device and run and install the app.
 
 
-### sources
-About ARKit 11 - 26 July 2017
-https://www.theverge.com/tldr/2017/7/26/16035376/arkit-augmented-reality-a-ha-take-on-me-video-trixi-studios
+### Sources and links:
 
-Use of ARKit
-https://twitter.com/jaromvogel/status/1125401258494324736
+This tutorial has been inspired by the excellent Video tutorial by [Parth Anand](https://youtu.be/POIYPIJtgtM)
+
+[About ARKit 11 - 26 July 2017](https://www.theverge.com/tldr/2017/7/26/16035376/arkit-augmented-reality-a-ha-take-on-me-video-trixi-studios)
+
+
+Use of ARKit and Procreate App for iPad
+[https://twitter.com/jaromvogel](https://twitter.com/jaromvogel/status/1125401258494324736)
 
 I’ve seen a bunch of ARKit demos that made me think “That’s very cool”. This was the first one that made me think “That’s very useful”
+[https://twitter.com/madewitharkit](https://twitter.com/madewitharkit)
 
-https://twitter.com/madewitharkit
-
-
-#### Apps
-
+#### AR Apps for the iPhone / iPad
 
 The App Store offers a curated section to highlight the best AR experiences. Just tap on Apps and scroll down to Top Categories. AR Apps is at the top.
 
