@@ -19,6 +19,7 @@ published: true
 <cite>Photo by Louis Maniquet on Unsplash</cite>
 <br>
 ### Intro - What is ARKit.
+
 ARKit is the Augmented Reality Framework for Apple devices which enables developers to create Augmented Reality Apps for iPhone & iPad. It was introduced along with iOS 11 during WWDC 2017. 
 Anyone using an iOS device that runs on Apple's A9 to A12 Bionic processors (& running iOS 11 or above) can use ARKit apps.
 ARKit apps put three-dimensional images in your world using what's called visual inertial odometry
@@ -62,7 +63,7 @@ Now in ARkit 2.0, you can track the position of image targets as well.
 If you move the image target any overlay that you have on that image target, whether it's a model or a video, will move along with the image.
 
 #### Open Unity
-Let's open the unzipped downloaded folder with Unity Hub. I am using Unity 2018.3.11
+Let's open the unzipped downloaded folder with Unity Hub. I am using [Unity 2018.2.0f2](https://unity3d.com/get-unity/download/archive)
 
 ![image](/assets/img/ARKittutorialscreenshots/13.58.25.png)
 
@@ -143,16 +144,20 @@ Let's attach three videos to these three new planes.
 Rename them as "1", "2", "3" for instance. 
 ![image](/assets/img/ARKittutorialscreenshots/14.54.08.png)
 
+
 and drag the three videos to the ReferenceImages folder.
 And then one by one from the folder to the three just creates planes 1,2, and 3
 
 If you click play you should see the three videos playing
 
-Now drag the parent folder from the hierarchy to the assets and automatically a prefab will be created
+Now drag the parent folder from the hierarchy to the assets and automatically a prefab will be created but not necessary
 
 #### Build the project in Unity
 
-- go to file build settings, 
+- 
+- go to file -> build settings, 
+- You want to edit your bundle id if not already done. click on "Player Settings" in the "Build Settings" window ( bottom left). It will open a new window and the "Bundle Id" will be under "Other Settings"
+      ![image](/assets/img/ARKittutorialscreenshots/211.43.18.png)
 - switch to the iOS platform 
 - click on add open scenes 
 - build and save.
