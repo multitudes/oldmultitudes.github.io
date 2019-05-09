@@ -73,9 +73,11 @@ Click on "Upgrade":
 
 Open the folder UnityARKitPlugin and the Examples folder. In the screenshots, your Unity might look different. Look for the assets folder in your Project Tab.
 
-Open the folder ARKit1.5 and the UnityARImageAnchor
+Open the folder ARKit1.5 and the UnityARImageAnchor.
+In this folder double click on the `UnityARImageAnchor` scene. The Scene will open in the hierarchy panel and screen.
 
-Drag the image you want to use as an image-trigger in the ReferenceImages folder:
+Open the 'ReferenceImages' folder
+Drag the image you want to use as an image-trigger in the `ReferenceImages` folder:
 
 ![image](/assets/img/ARKittutorialscreenshots/14.05.40.png)
 
