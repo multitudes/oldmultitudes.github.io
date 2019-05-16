@@ -155,7 +155,11 @@ And then one by one from the folder to the three planes 1,2, and 3 you just crea
 
 If you click play you should see the three videos playing
 
-Now drag the parent folder from the hierarchy to the assets and automatically a prefab will be created (this is extra and not necessary in this tutorial. Prefab are convenient whe you keep working on the project later on)
+Now drag the parent folder from the hierarchy to the assets and automatically a prefab will be created.
+
+Delete the parent folder from the hierarchy.
+
+Select "GenerateImageAnchorCube" in the hierarchy. You need to drag the prefab we just created to the "prefab to generate" field of "GenerateImageAnchorCube"  in the inspector view.
 
 #### Build the project in Unity
 
