@@ -18,16 +18,17 @@ published: true
 ![image](/assets/img/louis-maniquet-684906-unsplash.jpg)
 <cite>Photo by Louis Maniquet on Unsplash</cite>
 <br>
-### Intro - What is ARKit.
+### Intro to the Apple Augmented Reality framework ARKit
 
 ARKit is the Augmented Reality Framework for Apple devices which enables developers to create Augmented Reality Apps for iPhone & iPad. It was introduced along with iOS 11 during WWDC 2017. 
 Anyone using an iOS device that runs on Apple's A9 to A12 Bionic processors (& running iOS 11 or above) can use ARKit apps.
-ARKit apps put three-dimensional images in your world using what's called visual inertial odometry.
 
-It’s the Apple alternative to Google Project Tango but puts fewer demands on the hardware. Project Tango required a special camera array with dual cameras and an IR transmitter to get a rough 3D model of a room on the fly.
+#### How World Tracking Works
 
-ARKit maps the real world and the environment using the iPhone’s camera and its motion detectors to track the movement as the iPhone is moved and tilted.
-This communication between the motion sensors and the camera makes it possible to get a fairly accurate 3D representation of the surroundings.
+To create a correspondence between real and virtual spaces, ARKit uses a technique called visual-inertial odometry. This process combines information from the iOS device’s motion sensing hardware with computer vision analysis of the scene visible to the device’s camera. ARKit recognizes notable features in the scene image, tracks differences in the positions of those features across video frames, and compares that information with motion sensing data. The result is a high-precision model of the device’s position and motion.
+
+World tracking is an inexact science. This process can often produce impressive accuracy, leading to realistic AR experiences. However, it relies on details of the device’s physical environment that are not always consistent or are difficult to measure in real time without some degree of error.
+
 
 ### ARKit 2.0 image tracking feature
 
