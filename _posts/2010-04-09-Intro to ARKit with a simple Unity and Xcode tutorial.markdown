@@ -22,38 +22,33 @@ published: true
 
 ARKit is the Augmented Reality Framework for Apple devices which enables developers to create Augmented Reality Apps for iPhone & iPad. It was introduced along with iOS 11 during WWDC 2017. 
 Anyone using an iOS device that runs on Apple's A9 to A12 Bionic processors (& running iOS 11 or above) can use ARKit apps.
+The current version is ARKit 2.0 and a new version of ARKit should be out soon, and an updated is awaited at the WWDC 2019.
+
 
 #### How World Tracking Works
 
 To create a correspondence between real and virtual spaces, ARKit uses a technique called visual-inertial odometry. This process combines information from the iOS device’s motion sensing hardware with computer vision analysis of the scene visible to the device’s camera. ARKit recognizes notable features in the scene image, tracks differences in the positions of those features across video frames, and compares that information with motion sensing data. The result is a high-precision model of the device’s position and motion.
 
-World tracking is an inexact science. This process can often produce impressive accuracy, leading to realistic AR experiences. However, it relies on details of the device’s physical environment that are not always consistent or are difficult to measure in real time without some degree of error.
+This process can often produce impressive accuracy, leading to realistic AR experiences. However, it relies on details of the device’s physical environment that are not always consistent or are difficult to measure in real time without some degree of error.
 
 
-### ARKit 2.0 image tracking feature
-
-The current version is ARKit 2.0 and a new version of ARKit should be out soon, at WWDC 2019 at the latest.
-
-In this tutorial, we are going to build a simple AR app in Unity using ARKit 2.0 image tracking feature
-
-We will need:
-
-- iOS 12 or later on our device
-- Xcode 10 or later on our Mac
 
 ### Create your first ARKit application.
 
-To create AR apps there are 3 main frameworks to choose from:
 
-- The Unity Engine 
-- The Unreal Engine
-- Xcode
+In this tutorial, we are going to build a simple AR app in Unity using ARKit 2.0 image tracking feature
 
-In this tutorial I will show how to create an simple AR application for your iPhone or iPad in Unity and Xcode. For this you would need a picture both in digital format and printed (to be recognized by your iOS device). And three small mp4 videos in size of max 24Mb. 
+Pre-Requisites are:
 
-#### Install ARKit 2.0
+- iOS 12 or later on our device
+- Xcode 10 or later on our Mac (free download from the App Store)
+- The Unity Engine (the free version is fine) 
 
-ARKit needs to be imported into a Unity. 
+In this tutorial I will show how to create an simple AR application for your iPhone or iPad in Unity and Xcode. For this you would need a picture both in digital format and printed (to be recognized by your iOS device). And three small mp4 videos in size of max 24Mb each. 
+
+#### Install ARKit
+
+ARKit needs to be imported into Unity. 
 
 Go to this link:
 
