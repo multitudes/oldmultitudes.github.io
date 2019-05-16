@@ -22,12 +22,12 @@ published: true
 
 ARKit is the Augmented Reality Framework for Apple devices which enables developers to create Augmented Reality Apps for iPhone & iPad. It was introduced along with iOS 11 during WWDC 2017. 
 Anyone using an iOS device that runs on Apple's A9 to A12 Bionic processors (& running iOS 11 or above) can use ARKit apps.
-ARKit apps put three-dimensional images in your world using what's called visual inertial odometry
-It’s the Apple alternative to Google Project Tango but puts fewer demands on the hardware. Project Tango required a special camera array with dual cameras and an IR transmitter to get a rough 3D model of a room on the fly.
-ARKit doesn’t require this. Instead, it recognises planes, like your floor. Then it uses the iPhone’s camera and its motion detectors to track the movement as the iPhone is moved and tilted.
-ARKit may not be able to judge the layout of a room with a single, perfectly still view of a scene. But it can instantly re-analyse that same scene when your hand movements cause the phone to tilt by a few degrees.
-This communication between the motion sensors and the camera makes it possible to get a fairly accurate 3D representation of the surroundings.
+ARKit apps put three-dimensional images in your world using what's called visual inertial odometry.
 
+It’s the Apple alternative to Google Project Tango but puts fewer demands on the hardware. Project Tango required a special camera array with dual cameras and an IR transmitter to get a rough 3D model of a room on the fly.
+
+ARKit maps the real world and the environment using the iPhone’s camera and its motion detectors to track the movement as the iPhone is moved and tilted.
+This communication between the motion sensors and the camera makes it possible to get a fairly accurate 3D representation of the surroundings.
 
 ### ARKit 2.0 image tracking feature
 
@@ -52,9 +52,13 @@ In this tutorial I will show how to create an simple AR application for your iPh
 
 #### Install ARKit 2.0
 
-ARKit is a framework so it needs to be imported into a Unity to create AR apps. 
+ARKit needs to be imported into a Unity. 
 
-Go to this link, and download the [ARKit 2.0 installer](https://bitbucket.org/Unity-Technologies/unity-arkit-plugin/downloads/).
+Go to this link:
+
+[https://bitbucket.org/Unity-Technologies/unity-arkit-plugin/downloads/](https://bitbucket.org/Unity-Technologies/unity-arkit-plugin/downloads/)
+
+and download the ARKit 2.0 installer.
 
 ![image](/assets/img/ARKittutorialscreenshots/13.32.57.png)
 
