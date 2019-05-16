@@ -22,7 +22,7 @@ published: true
 
 ARKit is the Augmented Reality Framework for Apple devices which enables developers to create Augmented Reality Apps for iPhone & iPad. It was introduced along with iOS 11 during WWDC 2017. 
 Anyone using an iOS device that runs on Apple's A9 to A12 Bionic processors (& running iOS 11 or above) can use ARKit apps.
-The current version is ARKit 2.0 and a new version of ARKit should be out soon, and an updated is awaited at the WWDC 2019.
+The current version is ARKit 2.0 and a new version of ARKit should be out soon, and an update is awaited at the WWDC 2019.
 
 
 #### How World Tracking Works
@@ -58,12 +58,11 @@ and download the ARKit 2.0 installer.
 
 ![image](/assets/img/ARKittutorialscreenshots/13.32.57.png)
 
-The image detection feature was introduced already in ARKit 1.5 but did not track the image, it would just trigger the AR experience. 
-Now in ARkit 2.0, you can track the position of image targets as well.
+The image detection feature was introduced already in ARKit 1.5 but did not track the image, it would just trigger the AR experience. Now in ARkit 2.0, you can track the position of image targets as well.
 If you move the image target any overlay that you have on that image target, whether it's a model or a video, will move along with the image.
 
 #### Open Unity
-Let's open the unzipped downloaded folder with Unity Hub. I am using [Unity 2018.2.0f2](https://unity3d.com/get-unity/download/archive)
+Let's open the unzipped downloaded folder with Unity Hub. I am using [Unity 2018.3.11f1](https://unity3d.com/get-unity/download/archive)
 
 ![image](/assets/img/ARKittutorialscreenshots/13.58.25.png)
 
@@ -100,8 +99,11 @@ Right-click in the hierarchy and select “Create Empty”. You get a Game  Obje
 Right-click again in the Hierarchy tab and select 3D object and Plane
 ![image](/assets/img/ARKittutorialscreenshots/14.16.13.png)
 
-Looks like this
+
+Looks like this.
 ![image](/assets/img/ARKittutorialscreenshots/14.17.01.png)
+
+Rename Plane to image in the hierarchy
 
 Reset the position for Plane and parent to 0
 ![image](/assets/img/ARKittutorialscreenshots/14.17.54.png)
@@ -125,6 +127,7 @@ And from the scroll down UI/ default
 Now drag the material called image to the image in the hierarchy.
 ![image](/assets/img/ARKittutorialscreenshots/14.32.51.png)
 
+The image selected as image trigger will be visible in the scene on the plane.
 
 This is how it looks like for me. You can rotate or change things in the inspector if you need...
 ![image](/assets/img/ARKittutorialscreenshots/14.34.33.png)
@@ -148,15 +151,14 @@ Rename them as "1", "2", "3" for instance.
 
 
 and drag the three videos to the ReferenceImages folder.
-And then one by one from the folder to the three just creates planes 1,2, and 3
+And then one by one from the folder to the three planes 1,2, and 3 you just created.
 
 If you click play you should see the three videos playing
 
-Now drag the parent folder from the hierarchy to the assets and automatically a prefab will be created but not necessary
+Now drag the parent folder from the hierarchy to the assets and automatically a prefab will be created (this is extra and not necessary in this tutorial. Prefab are convenient whe you keep working on the project later on)
 
 #### Build the project in Unity
 
-- 
 - go to file -> build settings, 
 - You want to edit your bundle id if not already done. click on "Player Settings" in the "Build Settings" window ( bottom left). It will open a new window and the "Bundle Id" will be under "Other Settings"
       ![image](/assets/img/ARKittutorialscreenshots/211.43.18.png)
