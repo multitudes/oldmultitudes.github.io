@@ -21,20 +21,25 @@ C# is a programming language that's been around since 2001.
 It's one of the programming languages included in Microsoft's .NET framework, and is the preferred language to use when we write scripts in the Unity game engine. 
 
 When we learn a new language, like English or C#, we need to learn both the syntax and the semantics of that language. 
-The syntax is about the structure of statements in a computer language. 
 
+The syntax is about the structure of statements in a computer language. 
 When to open a bracket, where to put the semicolons etc.
 
 Semantics, on the other hand, relates to the meaning of the sentences (or instructions) we build. For example, the English sentence "The large blue fox jumped over the moon" is grammatically correct, but it doesn't really make sense. 
-
 Similarly, we can also create C# statements that are syntactically correct but don't really make sense.
 
 The first step is to type our program in using either an editor (like Microsoft Notepad) or an Integrated Development Environment (IDE) (like Visual Studio Community 2015). 
-Because IDEs are so much more powerful than basic editors.
-Programming languages fall into two classes for this step: interpreted languages and compiled languages. In interpreted languages, an interpreter converts the program one statement at a time and the CPU executes the instructions as they're converted. This can be very helpful as you're developing your program, but it can also be fairly slow because you're doing the conversion while you run your program. In compiled languages, a compiler converts the entire program to the machine instructions; you can then have the CPU run those instructions.
-So is C# a compiled language or an interpreted language? Well, it's actually both! That's one of the characteristics that makes C# such a powerful programming language. When we compile our C# programs, the compiler doesn't actually generate machine instructions; instead, it generates something called Common Intermediate Language (CIL). The CIL, which you can think of as .NET instructions, isn't specific to any particular CPU, which makes the CIL portable to any machine. When it's time to actually run the program, the CIL is interpreted into machine instructions by the .NET Common Language Runtime (CLR). This hybrid approach gives C# great portability.
-We start with our C# program or our C# source code, and we run a compiler on it. The compiler is a piece of software that converts that C# source code into what's called Common Intermediate Language. After we have our Common Intermediate Language when it is time to actually run the code somewhere, the dot net Common Language Runtime takes that CIL or Common Intermediate Language and turns it into the actual machine instructions that will run on the chip on that particular computer it's running on.
 
+Programming languages fall into two classes for this step: interpreted languages and compiled languages. 
+In interpreted languages, an interpreter converts the program one statement at a time and the CPU executes the instructions as they're converted. This can be very helpful as you're developing your program, but it can also be fairly slow because you're doing the conversion while you run your program. 
+In compiled languages, a compiler converts the entire program to the machine instructions; you can then have the CPU run those instructions.
+So is C# a compiled language or an interpreted language? Well, it's actually both! That's one of the characteristics that makes C# such a powerful programming language. 
+When we compile our C# programs, the compiler doesn't actually generate machine instructions; instead, it generates something called Common Intermediate Language (CIL). 
+The CIL, which you can think of as .NET instructions, isn't specific to any particular CPU, which makes the CIL portable to any machine. 
+When it's time to actually run the program, the CIL is interpreted into machine instructions by the .NET Common Language Runtime (CLR). This hybrid approach gives C# great portability.
+We start with our C# program or our C# source code, and we run a compiler on it. 
+The compiler is a piece of software that converts that C# source code into what's called Common Intermediate Language. 
+After we have our Common Intermediate Language when it is time to actually run the code somewhere, the dot net Common Language Runtime takes that CIL or Common Intermediate Language and turns it into the actual machine instructions that will run on the chip on that particular computer it's running on.
 
 The first thing we see in the application class is the place where we say we'll be using other namespaces and classes. Namespaces and classes are collections of useful C# code that someone else has already written
 
