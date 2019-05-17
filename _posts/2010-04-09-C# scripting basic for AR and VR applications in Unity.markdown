@@ -108,7 +108,6 @@ The constant to use is Math.PI
 
 
 
-{% endhighlight %}
 
 
 NPC (Non-player character. In video games, this usually means a character controlled by the computer via algorithmic, predetermined or responsive behavior, but not necessarily true artificial intelligence.)
