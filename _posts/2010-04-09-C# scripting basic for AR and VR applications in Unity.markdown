@@ -4,7 +4,7 @@ title:  "Scripting in C# for AR and VR applications in Unity"
 date:   2010-04-09
 categories: iOS, developer
 comments: true
-published: true
+published: false
 ---
 
 
@@ -31,7 +31,9 @@ Similarly, we can also create C# statements that are syntactically correct but d
 The first step is to type our program in using either an editor (like Microsoft Notepad) or an Integrated Development Environment (IDE) (like Visual Studio Community 2015). 
 
 Programming languages fall into two classes for this step: interpreted languages and compiled languages. 
-In interpreted languages, an interpreter converts the program one statement at a time and the CPU executes the instructions as they're converted. This can be very helpful as you're developing your program, but it can also be fairly slow because you're doing the conversion while you run your program. 
+In interpreted languages, an interpreter converts the program one statement at a time and the CPU executes the instructions as they're converted. 
+This can be very helpful as you're developing your program, but it can also be fairly slow because you're doing the conversion while you run your program. 
+
 In compiled languages, a compiler converts the entire program to the machine instructions; you can then have the CPU run those instructions.
 So is C# a compiled language or an interpreted language? Well, it's actually both! That's one of the characteristics that makes C# such a powerful programming language. 
 When we compile our C# programs, the compiler doesn't actually generate machine instructions; instead, it generates something called Common Intermediate Language (CIL). 
