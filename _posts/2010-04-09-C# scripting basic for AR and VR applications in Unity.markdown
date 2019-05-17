@@ -64,7 +64,11 @@ using System;
 
 All the application classes we write will have a method called Main. The Main method is the main entry point for the application; when we run our program”
 
+{% highlight csharp %}
+
 static void Main(string[] args)
+
+{% endhighlight %}
 
 We'll talk about the words in front of Main (static and void) as we need them. The part that says (string[] args) lets people use something called "command-line arguments.”
 
@@ -72,21 +76,31 @@ We'll talk about the words in front of Main (static and void) as we need them. T
 
 In c# just declaring a variable of a simple type allocates memory.
 
-We declare a variable by putting a data type first, so that the compiler knows how to interpret the ones and zeros, and knows how much memory to allocate for this particular variable. And then we put the variable name, so that we as programmers can refer to that memory location by name rather than by memory address. Optionally, we can also give the the variable a value when we declare that, and we'll see that when we start talking about integers in the following lecture. Okay. So, what about constants? Well, constants work essentially the same way except that we provide a data type. First, we provide a keyword const, then we provide the data type of the constant, then we provide its name, and then we have to give it a value. We don't optionally give constant values, we have to give them values when we declare them.
+We declare a variable by putting a data type first, so that the compiler knows how to interpret the ones and zeros, and knows how much memory to allocate for this particular variable. And then we put the variable name, so that we as programmers can refer to that memory location by name rather than by memory address. Optionally, we can also give the the variable a value when we declare that, and we'll see that when we start talking about integers in the following lecture. 
+So, what about constants? Well, constants work essentially the same way except that we provide a data type. First, we provide a keyword const, then we provide the data type of the constant, then we provide its name, and then we have to give it a value. We don't optionally give constant values, we have to give them values when we declare them.
 
-integers or whole numbers, are those numbers that have no fractional or decimal part
+##### Integers
 
-in C# for whole numbers, byte, short, int and long So byte uses 8 bits, and short uses 16. Int uses 32, and long uses 64
+Integers or whole numbers, are those numbers that have no fractional or decimal part
 
-Before we end this lecture, I want to make the distinction between value types and reference types. So we talked about data types and that the bit get interpreted in a particular way based on the data type we've declared a variable at that memory location to be. For value types, like bytes, short, int and long. The bits at that memory location are in fact interpreted as an integer, a whole number.
+In C# there are byte, short, int and long.
+Byte uses 8 bits, and short uses 16. Int uses 32, and long uses 64
 
-For reference types, which we'll talk about in the next module, those bits are interpreted as something different. They're interpreted as a memory address. So, we don't have to worry about that for now, but I wanted to, since this is the first opportunity I've had, I wanted to mention the difference between value type and reference types and certainly the numeric types in C#, our value types.
+There is a distinction between value types and reference types. 
+The bit get interpreted in a particular way based on the data type we've declared a variable at that memory location to be. For value types, like bytes, short, int and long, the bits at that memory location are in fact interpreted as an integer, a whole number.
+
+For reference types, those bits are interpreted as something different. They're interpreted as a memory address. 
+This is the difference between value type and reference types and certainly the numeric types in C#, our value types.
+
+##### Floats
 
 So real numbers are those numbers that have a decimal point. And we actually have a problem as we try to represent real numbers in a computer because real numbers are in what's called the continuous domain. There are an infinite number of real numbers between zero and one, for example, and we know though that two to the b equal n. And so given a limited number of bits, we can only represent a finite number for n, so it's actually impossible for us to represent the whole range of infinite real numbers in a computer. So we actually have to do our representation in something called the discrete domain, not the continuous domain, and this discrete domain is what we use zeros and ones to represent things in. So we can represent lots of real numbers but we can't represent all real numbers. And what that leads to is some inaccuracy in the numbers that we can represent. 
-to represent these real numbers we use something called floating numbers and that's just the way we represent real numbers in a computer. And the two data types we'll commonly use our float and double. And in fact, in game development in our unity game development, we're regularly going to just use float just as we regularly use int even though we have a number of different integer data types we can use,
 
+To represent these real numbers we use something called floating numbers and that's just the way we represent real numbers in a computer. And the two data types we'll commonly use are float and double. And in fact, in game development in our unity game development, we're regularly going to just use float just as we regularly use int even though we have a number of different integer data types we can use
 
-Math class. Static because I call the methods from the class name. Ex Math.cos
+##### Math class. 
+
+Static because I call the methods from the class name. Ex Math.cos
 It returns a double. We provide a double as parameter. But wait.. it is an angle in radiant !
 
 (float)Math.cos(45)  		// wrong we need radiants.

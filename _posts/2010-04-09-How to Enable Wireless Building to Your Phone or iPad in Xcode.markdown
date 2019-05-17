@@ -10,11 +10,11 @@ published: true
 ## This is a draft
 
 <div class="message">
-"Stop thinking about art works as objects, and start thinking about them as triggers for experiences" 
+"" 
 <br><cite>Brian Eno</cite>
 </div>
 
-![image](/assets/img/idalab-meetup.jpg)
+![image](/assets/img/.jpg)
 
 ### text
 ![image](/assets/img/)

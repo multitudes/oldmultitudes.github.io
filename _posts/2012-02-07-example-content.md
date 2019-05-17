@@ -27,6 +27,7 @@ $$x_1 = f(\frac{1}{10})$$
 
 Now, (still on paper) plug that back into $$f$$ and calculate $$x_2 = f(x_1)$$.  Keep going for 10 iterations.
 
+Check (https://frankindev.com/2017/03/18/syntax-highlight-with-rouge-in-jekyll/)
 
 {% highlight python %}
 
