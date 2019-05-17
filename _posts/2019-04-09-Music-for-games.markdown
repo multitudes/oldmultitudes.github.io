@@ -98,7 +98,7 @@ He developed an app for the iPhone and iPod Touch together in 2008 developed wit
 The sounds of the Spore's soundtrack are created with Pure data.
 I am honestly impressed by the sounds created by the Pure Data application. 
 Very beautiful. 
-There is only the danger to be tied artistically to a particular this sound which will be immediately recognizable to a listener who know it already. 
+There is only the danger to be tied artistically to a particular sound which will be immediately recognizable to a listener who knows it already. 
 Personally, I love it but don't have experience with the package at the moment so I cannot say more about it.
 
 ### Generative Music in your Browser. The Web Audio Platform
