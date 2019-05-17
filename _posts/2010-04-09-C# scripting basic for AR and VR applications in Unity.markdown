@@ -49,7 +49,6 @@ using System;
 #### Comments in C# work with xml tags:
 
 {% highlight csharp %}
-
 /// <summary>
 /// A class to print a rain message
 /// </summary>
@@ -57,7 +56,6 @@ using System;
 // line comment
 /* or another comment over more than one line 
 */
-
 {% endhighlight %}
 
 
@@ -65,9 +63,7 @@ using System;
 All the application classes we write will have a method called Main. The Main method is the main entry point for the application; when we run our program”
 
 {% highlight csharp %}
-
 static void Main(string[] args)
-
 {% endhighlight %}
 
 We'll talk about the words in front of Main (static and void) as we need them. The part that says (string[] args) lets people use something called "command-line arguments.”
@@ -100,7 +96,7 @@ To represent these real numbers we use something called floating numbers and tha
 
 ##### Math class. 
 
-Static because I call the methods from the class name. Ex Math.cos
+It is a static class because I call the methods from the class name. Ex Math.cos
 It returns a double. We provide a double as parameter. But wait.. it is an angle in radiant !
 
 (float)Math.cos(45)  		// wrong we need radiants.
