@@ -16,15 +16,19 @@ published: true
 ![image](/assets/img/CSharpScriptingPost.jpg)
 
 ### Introduction to C# Programming and Unity
-
+ 
 C# is a programming language that's been around since 2001.
+It's one of the programming languages included in Microsoft's .NET framework, and is the preferred language to use when we write scripts in the Unity game engine. 
 
-It's one of the programming languages included in Microsoft's .NET framework, and is the preferred language to use when we write scripts in the Unity game engine.
 When we learn a new language, like English or C#, we need to learn both the syntax and the semantics of that language. 
 The syntax is about the structure of statements in a computer language. 
+
 When to open a bracket, where to put the semicolons etc.
+
 Semantics, on the other hand, relates to the meaning of the sentences (or instructions) we build. For example, the English sentence "The large blue fox jumped over the moon" is grammatically correct, but it doesn't really make sense. 
+
 Similarly, we can also create C# statements that are syntactically correct but don't really make sense.
+
 The first step is to type our program in using either an editor (like Microsoft Notepad) or an Integrated Development Environment (IDE) (like Visual Studio Community 2015). 
 Because IDEs are so much more powerful than basic editors.
 Programming languages fall into two classes for this step: interpreted languages and compiled languages. In interpreted languages, an interpreter converts the program one statement at a time and the CPU executes the instructions as they're converted. This can be very helpful as you're developing your program, but it can also be fairly slow because you're doing the conversion while you run your program. In compiled languages, a compiler converts the entire program to the machine instructions; you can then have the CPU run those instructions.
