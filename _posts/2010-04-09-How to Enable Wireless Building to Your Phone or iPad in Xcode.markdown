@@ -1,18 +1,11 @@
 ---
 layout: post
-title:  "How to Enable Wireless Building to Your Phone or iPad in Xcode"
+title:  "How to Enable Wireless Building in Xcode"
 date:   2010-04-09
 categories: iOS, developer
 comments: true
 published: true
 ---
-
-## This is a draft
-
-<div class="message">
-"" 
-<br><cite></cite>
-</div>
 
 Many folks dont know or forgot about this interesting feature of Xcode: Wireless Building on device.
 
@@ -32,7 +25,7 @@ Click on it and you will see the following window opening. There is nothing insi
 
 ![image](/assets/img/XcodeWirelessSync/1.png)
 
-The reason is that for the first sync you will need a cable. So connect the device and try again.  
+The reason is this is that, for the first sync you will need a cable. So connect the device and try again.  
 This time you will see the device showing up!  
 
 ![image](/assets/img/XcodeWirelessSync/3.png)
