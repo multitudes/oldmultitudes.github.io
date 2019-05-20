@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "How to Enable Wireless Building in Xcode"
-date:   2010-04-09
+date:   2019-04-09
 categories: iOS, developer
 comments: true
 published: true
