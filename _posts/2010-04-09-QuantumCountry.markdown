@@ -15,8 +15,8 @@ published: true
 
 ![image](/assets/img/CSharpScriptingPost.jpg)
 
-
-(This are my own notes about the "Quantum Country" article written by Matushek and Nielsen, see sources).
+This is a draft.  
+(This are my own notes about the "Quantum Country" article written by Matushek and Nielsen, see sources).  
 Here on Earth, the principal originator of computers was the English mathematician Alan Turing. In his paper  “On Computable Numbers, with an Application to the Entscheidungsproblem” (published in 1936), he was attacking a problem about the nature of mathematics posed by the German mathematician David Hilbert in 1928.
 Hilbert’s problem asked whether a general algorithm exists, which a mathematician can follow which would let them figure out whether any given mathematical statement is provable.
 Attacking Hilbert’s problem forced Turing to precise exactly what was meant by an algorithm. 
