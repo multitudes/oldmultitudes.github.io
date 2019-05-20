@@ -14,7 +14,9 @@ published: true
 <br><cite></cite>
 </div>
 
-Many folks dont know or forgot about this interesting feature of Xcode: Wireless Building on device.  
+Many folks dont know or forgot about this interesting feature of Xcode: Wireless Building on device.
+
+
 No need for cables, or better said, you will need a cable still just once to set up the wireless syncing.   
 I am using an iPad with a new Mac Mini set up as headless server (without monitor which is being accessed via a MacBook Pro on the same local network).  
 Using Xcode on the Mac Mini is helping me to make use of faster compiling speeds because of his i7 latest generation "Coffee Lake" Intel processor but I would need to connect my device to the Mini which is in another room.   
@@ -31,11 +33,11 @@ Click on it and you will see the following window opening. There is nothing insi
 ![image](/assets/img/XcodeWirelessSync/1.png)
 
 The reason is that for the first sync you will need a cable. So connect the device and try again.  
-This time you will see the device showing up.  
+This time you will see the device showing up!  
 
 ![image](/assets/img/XcodeWirelessSync/3.png)
 
-You need to tick the box `Connect Via Network` like this  
+You need to tick the box `Connect via network` like this:  
 
 ![image](/assets/img/XcodeWirelessSync/4.png)
 
