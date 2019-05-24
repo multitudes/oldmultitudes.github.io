@@ -44,8 +44,11 @@ After exporting the path `export PATH=$PATH:/Users/laurenceb/bin`, it's best to 
 If you don’t see hidden files and directories, or those that begin with a `.`, press `Command` `+` `SHIFT` `+` `.`
 
 ### Create a script file and make it executable
+
 Go to your bin folder located in `/Users/laurenceb`.
+
 {% highlight bash %}
+
 cd bin
 touch hello-world  # Create a file called hello-world 
 # Open the file in your code editor of choice ex nano
@@ -54,13 +57,16 @@ nano hello-world
 #!/bin/bash
 # followed by
 echo Hello, World!
+
 {% endhighlight %}
 
 A bash script must always begin with `#!/bin/bash` to signify that the script should run with bash as opposed to any other shell. This is called a “shebang”. heck which bash interpreter you have in your terminal:
 A bash script must always begin with `#!/bin/bash` to signify that the script should run with bash as opposed to any other shell. This is called a “shebang”. 
 
 {% highlight bash %}
+
 which bash
+
 {% endhighlight %}
 
 As is tradition, we’ll make a “Hello, World!” example to get this working.
@@ -181,6 +187,29 @@ done
 ### Git Deploy Example Script
 
 A bash script can use any commands you can use on the command line. An example of a script you might make for yourself is the one below, where the user is prompted for a git commit message and the process of adding, committing, and pushing to origin is all done with a single command.
+
+Check git is installed on your mac! 
+
+{% highlight bash %}
+git --version
+{% endhighlight %}
+
+If it is not 'command not found' is returning then install Xcode from the App Store.
+In XCode, install `Command Line Tools: > Preferences > Downloads > Command Line Tools`
+
+I assume you have a GitHub account already set up. Go to your repository on GitHub and you will see a button: `Clone or Download`. There you will have the option to select `HTTPS` or `SSH`. Choose `HTTPS` and get the URL. For more infos see this link: [cloning a repository](https://help.github.com/en/articles/cloning-a-repository).
+
+Choose where you want to have that folder on your hard disk. I used my home directory.
+
+
+{% highlight bash %}
+cd ~            # go to the home folder
+# This will clone the repo to your hard disk
+git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY
+{% endhighlight %}
+
+Make then this script in the bin directory
+
 {% highlight bash %}
 #!/bin/bash
 read -r -p 'Commit message: ' desc  # prompt user for commit message
@@ -194,7 +223,20 @@ The read command:
 -p prompt	output the string PROMPT without a trailing newline before
 enter `man read` in terminal to see more!
 
-Then just run the command `push_git` in terminal
+Again you will need to give the correct permissions:
+
+{% highlight bash %}
+chmod u+x hello-world
+{% endhighlight %}
+
+Restart the terminal with `source .bash.profile`
+or open a new window
+
+{% highlight bash %}
+source ~/.bash_profile 
+{% endhighlight %}
+
+Then just run the command `push_git` in terminal.
 
 ![push_git](/assets/img/push_git.png)
 
