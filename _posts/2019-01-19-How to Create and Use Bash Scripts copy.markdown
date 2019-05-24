@@ -10,7 +10,8 @@ Bash is a Unix shell, which is a command line interface (CLI) for interacting wi
 </div>
 
 This is meant to be a short guide to getting started with making your first script, and learning some basic bash syntax.
-Bash is available by default on Linux and macOS operating systems.
+Bash is available by default on Linux and macOS operating systems.  
+scroll to the bottom to see how to integrate a bash script with GitHub.
 
 This guide is for macOS. I’ll be using `/Users/laurenceb` for all examples, but it will be `/Users/your_username` for you.
 
@@ -19,7 +20,8 @@ Now on your mac open the Terminal.
 In this tutorial, we’re going to create a bash script that can be run from any directory on the computer.
 
 ### Create a bin directory.
-The first step is to create a bin directory. bin is the standard naming convention of a subdirectory that contains executable programs. bin stands for binary. `/bin` is a location for binary files which are programs and commands. note its not the only location where binary files can be stored
+
+The first step is to create a bin directory if not already existing. `bin` is the standard naming convention of a subdirectory that contains executable programs (bin stands for binary). `/bin` is a location for binary files which are programs and commands. note its not the only location where binary files can be stored
 
 Navigate to your home directory `~` (which is a shortcut for current user home directory, or `/Users/laurenceb`). Typing `pwd` will confirm your location.
 Create bin in that folder, or wherever you want your bash scripts to live.
@@ -30,6 +32,7 @@ mkdir bin # this creates /Users/laurenceb/bin
 {% endhighlight %}
 
 ### Export your bin directory to the PATH.
+
 Open `.bash_profile`, which will be located at `/Users/laurenceb/.bash_profile`, and add this line to the file. If `.bash_profile` doesn’t exist, create it.
 
 {% highlight bash %}
