@@ -199,7 +199,7 @@ In XCode, install `Command Line Tools: > Preferences > Downloads > Command Line 
 
 I assume you have a GitHub account already set up. Go to your repository on GitHub and you will see a button: `Clone or Download`. There you will have the option to select `HTTPS` or `SSH`. Choose `HTTPS` and get the URL. For more infos see this link: [cloning a repository](https://help.github.com/en/articles/cloning-a-repository).
 
-You might need to configure GitHub on your computer however need not be the same as your account. It will not be used to login but just to add a signatures to your commits:
+You might need to configure git on your computer, however the global username and email as below in the git config command, need not be the same as your account. It will not be used to login but just to add a signatures to your commits:
 You can change the name that is associated with your Git commits using the git config command. The new name you set will be visible in any future commits you push to GitHub from the command line. If you'd like to keep your real name private, you can use any text as your Git username.
 Changing the name associated with your Git commits using git config will only affect future commits and will not change the name used for past commits.
 
