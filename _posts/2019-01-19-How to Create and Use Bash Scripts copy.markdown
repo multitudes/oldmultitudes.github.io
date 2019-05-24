@@ -208,7 +208,7 @@ cd ~            # go to the home folder
 git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY
 {% endhighlight %}
 
-Make then this script in the bin directory
+Make then this script in the bin directory as save it as `push_git` or another name you like
 
 {% highlight bash %}
 #!/bin/bash
@@ -226,7 +226,7 @@ enter `man read` in terminal to see more!
 Again you will need to give the correct permissions:
 
 {% highlight bash %}
-chmod u+x hello-world
+chmod u+x push_git
 {% endhighlight %}
 
 Restart the terminal with `source .bash.profile`
