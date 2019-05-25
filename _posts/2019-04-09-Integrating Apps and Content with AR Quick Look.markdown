@@ -149,42 +149,38 @@ When we're creating our models, there are six things we need to get right:
 We need to set the model's placement, we need to set its physical size to be correct in AR, we need to create any animation we want for our model, add its contact shadow, modify its appearance, and then add any transparency that our model needs.  
 Once these six things are done, we can optimize and export our models for use in AR Quick Look.  
 
-Placement
-Physical size
-Animation
-Contact shadow
-Appearance
-Transparency
-
-
-- placement:  
+###### placement:  
 The object should face toward the camera, toward positive z.  
 The base of the object should sit on the ground plane, the plane where y = 0.  
 We should put its natural pivot point at the origin.  
 
 ![image](/assets/img/AR-QL-Pictures/Screenshot4.jpg)
 
- When you're thinking how to position your objects for this optimal recognition, think how you would place that object if you put it on a shelf or in a display cabinet.  
- Now, this profile really matters.
- Not only is it what people will see when your object first loads in our Quick Look, but it's also the profile that's used for the object's thumbnail, and these two deliberately match when the thumbnail is in files or in messages.  
-  So, we get that seamless transition between the two.  
-  The second thing we want to set up for our model is its physical size.  
-  (not all objects have a natural size.)  
+When you're thinking how to position your objects for this optimal recognition, think how you would place that object if you put it on a shelf or in a display cabinet.  
+Now, this profile really matters.
+Not only is it what people will see when your object first loads in our Quick Look, but it's also the profile that's used for the object's thumbnail, and these two deliberately match when the thumbnail is in files or in messages.  
+So, we get that seamless transition between the two.  
 
-Animations:  
+###### Physical size
+
+The second thing we want to set up for our model is its physical size.  
+(not all objects have a natural size.)  
+
+###### Animations.   
 We recommend you use where it helps to bring that object to life with an idle animation that makes it feel more like it's in the world.  Note that animations always loop, and the animations you could create can use skeletal and/or transform animation to bring them to life.
 
+###### Contact shadow
 Another thing that really brings your models to life in the world is that contact shadow.  
 Now, note here that AR Quick Look provides the contact shadow for you.  
 This means that it can turn the shadow on and off as you transition between modes.  
 It also means it can apply ambient lighting conditions to the shadow as the lighting changes around you.  
 Because of this, don't bake a contact shadow into the models you provide.
 If you do, you'll end up with two shadows.  
-
 Note also that the first frame of any animation is used to create the shadow for a model, and sometimes this means it's important to choose the right first frame.  
 
-The model's appearance:  
-AR Quick Look uses a Physically Based Rendering, or PBR shader, and this gives us six things that we can modify about our model's appearance to make it feel more real in the world.  
+###### Appearance
+
+AR Quick Look uses a `Physically Based Rendering`, or `PBR shader`, and this gives us another six things that we can modify about our model's appearance to make it feel more real in the world.  
 
 - Albedo (base color). This is the base color of the model, its underlying color.  
 - Metallic (conductor or insulator). It is indicating which parts of the model are metallic. This changes whether they are a conductor or an insulator, which changes how they interact with the physics of light in the real world.  
@@ -194,6 +190,7 @@ AR Quick Look uses a Physically Based Rendering, or PBR shader, and this gives u
 - Emissive (emits light). And if our model emits lights, we can provide an emissive texture for things like a TV screen or a computer monitor.  
 
 
+###### Transparency
 
 
   
