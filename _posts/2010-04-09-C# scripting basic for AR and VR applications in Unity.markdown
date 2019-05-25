@@ -56,22 +56,9 @@ To enable this, AR Quick Look supports `usdz`, which is a new file format for mo
 `usdz` packages all these models and textures into a single file for efficient delivery of 3D content without having to work with reference files.  
 It's based on Pixar's open-source `Universal Scene Description` format, or short, `USD`.  
 
-
-
 You can integrate AR Quick Look in two different mediums, in an application or in websites in Safari.  
 
-
-
-{% highlight html %}
-
-{% endhighlight %}
-
-
-
-#### How to convert 3D models into the usdz format using the new usdz Converter tool in Xcode 10.
-
-
-#### Quick Look API
+##### Quick Look API
 
 Let's get started with applications and how the Quick Look API is used to provide an AR experience.  
 Quick Look about previewing documents like Keynotes, PDFs, images, and now 3D model files like usdz.  
@@ -81,6 +68,12 @@ Lets see the code:
 
 We have a `ViewController` with a grid of thumbnails for various 3D models.  
 When someone taps on one of these thumbnails, I want to show a Quick Look preview of the model for that thumbnail.  
+
+With all that configured, we're ready to present our preview controller, and so it's going to animate and scale up from the view that was tapped.  
+In order to preview and present documents, we need to instantiate a QLPreviewController.  
+It's part of the Quick Look framework.  
+Let's take a look at the protocol for a dataSource.  
+
 I create a `QLPreviewController`.
 
 {% highlight swift %}
@@ -106,21 +99,45 @@ _ controller: QLPreviewController, previewItemAt index: Int) -> QLPreviewItem {
 }
 {% endhighlight %}
 
-With all that configured, we're ready to present our preview controller, and so it's going to animate and scale up from the view that was tapped.  
-In order to preview and present documents, we need to instantiate a QLPreviewController.  
-It's part of the Quick Look framework.  
-Let's take a look at the protocol for a dataSource.  
+AR Quick Look is intended to be presented full screen.
+
+{% highlight swift %}
+
+func previewController(_ controller: QLPreviewController, transitionViewFor item: QLPreviewItem) -> UIView? {
+// Provide the starting view for a seamless zoom transition to the viewer
+return self.startingZoomView
+}
+
+{% endhighlight %}
+
+And for an overall better experience, I recommend using a UI button as the view and setting the thumbnail as the button's image.  
+That way, you get visual feedback whenever the view is tapped with the button highlight, and this is extremely important so that the user knows that some action is about to happen.  
+If possible, I suggest the final or UIView to have a square frame, to have the best seamless transition.  
+AR Quick Look nicely handles the transition from this view to the full screen viewer on presentation and dismissal, creating this effect where the model just magically appears.  
+
+##### In Safari
+
+Starting in iOS 12, Safari has built-in support for previewing usdz files in AR.  
+By hosting usdz files on your website, you got a way of delivering previews of 3D objects.  
+
+For better integration of AR on my web content, I'll use the new HTML markup:
+By following this markup, you have badge rendered on the image in the top right-hand corner, and this is useful and there to tell you that our system viewer can preview my object in AR.  
+
+The requirement is an a elements with rel=ar, and this tells WebKit that this is AR content.  
+You then provide the link to the location of the usdz file.  
+
+{% highlight html %}
+
+<a rel="ar" href="model.usdz">
+    <img src="model-preview.jpg">
+</a>
+
+{% endhighlight %}
 
 
-
-
-
-
+#### How to convert 3D models into the usdz format using the new usdz Converter tool in Xcode 10.
 
 ### Human Interface Guidelines
-
-
-
 
 From the [Apple Developer pages:](https://developer.apple.com/design/human-interface-guidelines/ios/system-capabilities/augmented-reality/)
 
