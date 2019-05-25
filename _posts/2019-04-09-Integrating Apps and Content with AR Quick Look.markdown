@@ -182,19 +182,28 @@ Note also that the first frame of any animation is used to create the shadow for
 
 AR Quick Look uses a `Physically Based Rendering`, or `PBR shader`, and this gives us another six things that we can modify about our model's appearance to make it feel more real in the world.  
 
-- Albedo (base color). This is the base color of the model, its underlying color.  
-- Metallic (conductor or insulator). It is indicating which parts of the model are metallic. This changes whether they are a conductor or an insulator, which changes how they interact with the physics of light in the real world.  
-- Roughness (rough or shiny). We could also specify which parts of our model are rough or shiny by providing a roughness texture.  
-- Normal (surface details). We can add in a `normal map`. This creates the illusion of depth and variances within the surfaces, the model's surface, without changing the underlying mesh.  
-- Ambient occlusion (internal shadows) We can add an ambient occlusion texture to specify where the model casts shadows on itself in the crevices and nooks and crannies of the model.  
-- Emissive (emits light). And if our model emits lights, we can provide an emissive texture for things like a TV screen or a computer monitor.  
+- Albedo (base color). This is the base color of the model, its underlying color. Should be RGB, or RBGA, if you're also providing transparency 
+- Metallic (conductor or insulator). It is indicating which parts of the model are metallic. This changes whether they are a conductor or an insulator, which changes how they interact with the physics of light in the real world. (should be Greyscale)  
+- Roughness (rough or shiny). We could also specify which parts of our model are rough or shiny by providing a roughness texture.(should be Greyscale)  
+- Normal (surface details). We can add in a `normal map`. This creates the illusion of depth and variances within the surfaces, the model's surface, without changing the underlying mesh.(Should be RGB)  
+- Ambient occlusion (internal shadows) We can add an ambient occlusion texture to specify where the model casts shadows on itself in the crevices and nooks and crannies of the model.(should be Greyscale)  
+- Emissive (emits light). And if our model emits lights, we can provide an emissive texture for things like a TV screen or a computer monitor.(Should be RGB)  
+
+The textures should be square. They should be powers of 2 squared. So, 2048, 1024, 512 pixels, so on.  
+
+Optimize and test your models for high-memory devices iPhone 7 Plus, iPhone 8 Plus, iPhone X iPad Pro 12.9”.  
+AR Quick Look will dynamically downsample textures for other devices when needed.  
+Meshes and animations are not modified.  
 
 
 ###### Transparency
 
+We can also make parts of our models transparent.  
+This is useful for making objects made out of partly glass, for example.  
+If you do this, be sure to use a separate material for the transparent and non-transparent parts of your model to ensure they render correctly.  
+You do this by providing an albedo texture that has the transparency in its alpha channel.  
+Note that transparency is really intended for see-through parts of the model, not for creating cutouts like a leaf edge or a butterfly wing.  
 
-  
-  
 
 #### USDZ
 
@@ -209,6 +218,41 @@ It's based on Pixar's open-source `Universal Scene Description` format, or short
 
 #### How to convert 3D models into the usdz format using the new usdz Converter tool in Xcode 10.
 
+This is a command line tool that will convert existing 3D models to usdz format.  
+It ships inside Xcode 10, and in addition to creating usdz files, you could also use it to map PBR textures to the meshes and submeshes inside those existing models.  
+It takes three input formats: OBJ files, Alembic files, or existing USD files, either USDA or USDC, the ASCII and binary versions of USD.
+
+We call the tool with `xcrun` because it ships inside Xcode.  
+We pass in the name of the model we want to convert, an OBJ file in this case, and the file name of the usdz we want to have the other end.  
+To map PBR textures to the meshes they're in, we use the -g option, followed by the name of one of the groups, a mesh or a submesh that we want to map them to, and then we can provide any number of these textures for that particular group.  
+You can pass in the -v option for verbose output.  
+This will print the names of the groups that we find in the model plus useful other information about the conversion process.  
+
+{% highlight swift %}
+// Call usdz_converter with xcrun.
+xcrun usdz_converter RetroTV.obj RetroTV.usdz
+ 
+// PBR textures can be applied to groups (meshes and submeshes) with the -g option.
+xcrun usdz_converter RetroTV.obj RetroTV.usdz
+ -g RetroTVMesh
+ -color_map RetroTV_Albedo.png
+ -metallic_map RetroTV_Metallic.png
+ -roughness_map RetroTV_Roughness.png
+ -normal_map RetroTV_Normal.png
+ -ao_map RetroTV_AmbientOcclusion.png
+ -emissive_map RetroTV_Emissive.png
+
+// Use the -v option to print out group names and other verbose information during conversion.
+xcrun usdz_converter RetroTV.obj RetroTV.usdz -v
+
+{% endhighlight %}
+ 
+###### Let's look inside a usdz file.
+In essence, these are uncompressed zip archives. The first file is always a usdc file.  
+This contains the model's mesh, its animation, if it has some, and any material definitions it needs.  
+And then, the remainder of the files in the archive are any textures, any images, like the ones we saw earlier on.   
+This is an open format and Pixar have published the direct specification for usdz.   
+ 
 ### Human Interface Guidelines
 
 From the [Apple Developer pages:](https://developer.apple.com/design/human-interface-guidelines/ios/system-capabilities/augmented-reality/)
@@ -237,6 +281,8 @@ https://developer.apple.com/videos/play/wwdc2018/603/
 https://forums.developer.apple.com/thread/104042
 
 https://developer.apple.com/videos/play/wwdc2018/237/
+
+https://developer.apple.com/videos/play/wwdc2018/805/
 
 <hr>
 
