@@ -145,6 +145,8 @@ Or working with the picture element:
 
 ### Creating 3D Models for AR Quick Look
 
+![image](/assets/img/AR-QL-Pictures/Screenshot5.jpg)
+
 When we're creating our models, there are six things we need to get right:  
 We need to set the model's placement, we need to set its physical size to be correct in AR, we need to create any animation we want for our model, add its contact shadow, modify its appearance, and then add any transparency that our model needs.  
 Once these six things are done, we can optimize and export our models for use in AR Quick Look.  
