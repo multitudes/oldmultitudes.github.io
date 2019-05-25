@@ -42,6 +42,7 @@ Now you get audible feedback for when my Model is off screen and back on screen.
 
 AR Quick Look is integrated into the files app, mail, messages, notes, news, and Safari.
 
+![image](/assets/img/AR-QL-Pictures/Screenshot2.png)
 
 
 
