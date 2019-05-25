@@ -151,7 +151,7 @@ When we're creating our models, there are six things we need to get right:
 We need to set the model's placement, we need to set its physical size to be correct in AR, we need to create any animation we want for our model, add its contact shadow, modify its appearance, and then add any transparency that our model needs.  
 Once these six things are done, we can optimize and export our models for use in AR Quick Look.  
 
-###### placement:  
+###### Placement:  
 The object should face toward the camera, toward positive z.  
 The base of the object should sit on the ground plane, the plane where y = 0.  
 We should put its natural pivot point at the origin.  
@@ -207,7 +207,7 @@ You do this by providing an albedo texture that has the transparency in its alph
 Note that transparency is really intended for see-through parts of the model, not for creating cutouts like a leaf edge or a butterfly wing.  
 
 
-#### USDZ
+### The USDZ format
 
 ![image](/assets/img/AR-QL-Pictures/ARKit-Badge.pdf)
 
