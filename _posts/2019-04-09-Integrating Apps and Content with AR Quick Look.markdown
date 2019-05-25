@@ -148,7 +148,7 @@ Or working with the picture element:
 
 {% endhighlight %}
 
-`usdz` content must be served with the correct media type, and so make sure that the `MIME` type is set for these files.[1]  
+`usdz` content must be served with the correct media type, and so make sure that the `MIME` type is set for these files.[^1]  
 
 `AddType model/vnd.pixar.usd .usdz`  
 `AddType model/usd usdz`  
@@ -189,7 +189,7 @@ From the [Apple Developer pages:](https://developer.apple.com/design/human-inter
 ### Notes
 
 
-[1] What are MIME types?
+[^1] What are MIME types?
 
 MIME types describe the media type of content either in email or served by web servers or web applications and are intended to help guide a web browser in how the content is to be processed and displayed. Examples of MIME types are:  
 - text/html for normal web pages  
