@@ -42,7 +42,28 @@ Now you get audible feedback for when my Model is off screen and back on screen.
 
 AR Quick Look is integrated into the files app, mail, messages, notes, news, and Safari.
 
-![image](/assets/img/AR-QL-Pictures/Screenshot2.png)
+![image](/assets/img/AR-QL-Pictures/Screenshot2.jpg)
+
+#### USDZ
+
+Sharing a 3D model between all these apps requires the models to be bundled up in a single sharable file.  
+
+To enable this, AR Quick Look supports usdz, which is a new file format for mobile distribution of 3D models.
+usdz packages all these models and textures into a single file for efficient delivery of 3D content without having to work with reference files.  
+It's based on Pixar's open-source `Universal Scene Description` format, or short, `USD`.  
+
+You can integrate AR Quick Look in two different mediums.
+The first, in an application or in websites in Safari.  
+
+#### Quick Look API
+
+Let's get started with applications and how the Quick Look API is used to provide an AR experience.  
+Quick Look about previewing documents like Keynotes, PDFs, images, and now 3D model files like usdz.  
+Security is handled for you where the contents of the usdz file is safely read to present a preview for you.  
+
+
+
+
 
 
 
