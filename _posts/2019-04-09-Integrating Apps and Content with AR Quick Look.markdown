@@ -196,8 +196,7 @@ MIME types describe the media type of content either in email or served by web s
 - text/css for Cascading Style Sheets  
 - text/javascript for scripts
 To define a new MIME type you should add the following line in a file named `.htaccess` in the folder where the files for your website reside:
-ex
-`AddType TYPE .extension`
+ex: `AddType TYPE .extension`
 
 ### Sources:
 
