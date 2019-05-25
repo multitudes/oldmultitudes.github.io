@@ -1,166 +1,134 @@
 ---
 layout: post
-title:  "Integrating Apps and Content with AR Quick Look"
+title:  "Scripting in C# for AR and VR applications in Unity"
 date:   2010-04-09
 categories: iOS, developer
 comments: true
-published: true
+published: false
 ---
 
 
 <div class="message">
-"With iOS 12, ARKit includes a built-in viewer for displaying and sharing high-quality 3D content using Pixar's usdz file format. " 
-<br><cite>Apple Developer Website - Keynote WWDC 2018</cite>
+"To code is 1% inspiration, 99% iteration" 
+<br><cite>Freely taken from Thomas Edison</cite>
 </div>
 
-![image](/assets/img/AR-QL-Pictures/Screenshot1.png)
+![image](/assets/img/CSharpScriptingPost.jpg)
 
-### ARKit 
-
-ARKit, Apple's augmented reality (AR) technology, delivers immersive, engaging experiences that seamlessly blend virtual objects with the real world. In AR apps, the device's camera presents a live, onscreen view of the physical world. Three-dimensional virtual objects are superimposed over this view, creating the illusion that they actually exist. The user can reorient their device to explore the objects from different angles and, if appropriate for the experience, interact with objects using gestures and movement.
-
-AR is becoming the tool to see what objects look like in the world. And it is really easy to integrate. AR Quick Look is built in and deeply integrated into the OS to allow previewing from any application and websites, it is available in iOS 12 on ARKit compatible devices and only object mode on non-ARKit supported devices. AR Quick Look handles setting up the AR experience like plane detection, object placement, gesture manipulations, and creating contact shadows.  
-
-It's really easy to adopt and integrate the viewer into a website and application and it could be as simple as embedding a usdz file if your application already supports and uses Quick Look.
-
-AR Quick Look was designed to enrich any application on the OS with AR content with a simpler way to adopt AR previewing for consistent viewing experience.
-
-For a demo go to the [AR Gallery](https://developer.apple.com/arkit/gallery/) and look for thumbnails with the AR badge stamp at the top right-hand corner, and that's there to tell you that there's an AR experience behind this.  
-
-
-So, you can really pan around and see the model from various different angles.
-We can pinch to size an object and make it look a lot larger and really see the fine details that went into this model.  
+### Introduction to C# Programming and Unity
  
-And just like a photo, you can double tap on the model to recess the position and the size.  
-We're matching the color intensity and the temperature that's reported by ARKit from the world, and we're using that with our lighting setup.  
+C# is a programming language that's been around since 2001.
+It's one of the programming languages included in Microsoft's .NET framework, and is the preferred language to use when we write scripts in the Unity game engine. 
 
-#### Accessibility - VoiceOver
+When we learn a new language, like English or C#, we need to learn both the syntax and the semantics of that language. 
 
-Now you get audible feedback for when my Model is off screen and back on screen.
+The syntax is about the structure of statements in a computer language. 
+When to open a bracket, where to put the semicolons etc.
 
-#### Integration in First Part Apps  
+Semantics, on the other hand, relates to the meaning of the sentences (or instructions) we build. For example, the English sentence "The large blue fox jumped over the moon" is grammatically correct, but it doesn't really make sense. 
+Similarly, we can also create C# statements that are syntactically correct but don't really make sense.
 
-AR Quick Look is integrated into the files app, mail, messages, notes, news, and Safari.
+The first step is to type our program in using either an editor (like Microsoft Notepad) or an Integrated Development Environment (IDE) (like Visual Studio Community 2015). 
 
-![image](/assets/img/AR-QL-Pictures/Screenshot2.jpg)
+Programming languages fall into two classes for this step: interpreted languages and compiled languages. 
+In interpreted languages, an interpreter converts the program one statement at a time and the CPU executes the instructions as they're converted. 
+This can be very helpful as you're developing your program, but it can also be fairly slow because you're doing the conversion while you run your program. 
 
-#### Quick Look
+In compiled languages, a compiler converts the entire program to the machine instructions; you can then have the CPU run those instructions.
+So is C# a compiled language or an interpreted language? Well, it's actually both! That's one of the characteristics that makes C# such a powerful programming language. 
+When we compile our C# programs, the compiler doesn't actually generate machine instructions; instead, it generates something called Common Intermediate Language (CIL). 
+The CIL, which you can think of as .NET instructions, isn't specific to any particular CPU, which makes the CIL portable to any machine. 
+When it's time to actually run the program, the CIL is interpreted into machine instructions by the .NET Common Language Runtime (CLR). This hybrid approach gives C# great portability.
+We start with our C# program or our C# source code, and we run a compiler on it. 
+The compiler is a piece of software that converts that C# source code into what's called Common Intermediate Language. 
+After we have our Common Intermediate Language when it is time to actually run the code somewhere, the dot net Common Language Runtime takes that CIL or Common Intermediate Language and turns it into the actual machine instructions that will run on the chip on that particular computer it's running on.
 
-#### USDZ
+The first thing we see in the application class is the place where we say we'll be using other namespaces and classes. Namespaces and classes are collections of useful C# code that someone else has already written
 
-![image](/assets/img/AR-QL-Pictures/ARKit-Badge.pdf)
+One example is a class that will generate random numbers for us. That class (called, surprisingly enough, Random) is found in the System namespace, so when we need it, we'll include the following line in our program:
 
-Sharing a 3D model between all these apps requires the models to be bundled up in a single sharable file.  
+This tells the compiler that you want access to the classes in the System namespace.
 
-To enable this, AR Quick Look supports `usdz`, which is a new file format for mobile distribution of 3D models.  
-`usdz` packages all these models and textures into a single file for efficient delivery of 3D content without having to work with reference files.  
-It's based on Pixar's open-source `Universal Scene Description` format, or short, `USD`.  
+{% highlight csharp %}
 
-You can integrate AR Quick Look in two different mediums, in an application or in websites in Safari.  
-
-##### Quick Look API
-
-Let's get started with applications and how the Quick Look API is used to provide an AR experience.  
-Quick Look about previewing documents like Keynotes, PDFs, images, and now 3D model files like usdz.  
-Security is handled for you where the contents of the usdz file is safely read to present a preview for you.  
-
-Lets see the code:
-
-We have a `ViewController` with a grid of thumbnails for various 3D models.  
-When someone taps on one of these thumbnails, I want to show a Quick Look preview of the model for that thumbnail.  
-
-With all that configured, we're ready to present our preview controller, and so it's going to animate and scale up from the view that was tapped.  
-In order to preview and present documents, we need to instantiate a QLPreviewController.  
-It's part of the Quick Look framework.  
-Let's take a look at the protocol for a dataSource.  
-
-I create a `QLPreviewController`.
-
-{% highlight swift %}
-
-func preview(_ sender: Any) {
-    let previewController = QLPreviewController() 
-    previewController.dataSource = self
-    previewController.delegate = self
-    // Present viewer modally
-    present(previewController, animated: true, completion: nil)
-}
-
-func numberOfPreviewItems(in controller: QLPreviewController) -> Int { 
-    // Viewer supports previewing a single 3D object
-    return 1 
-}
- 
-func previewController(
-_ controller: QLPreviewController, previewItemAt index: Int) -> QLPreviewItem {
-    // Return the file URL to the .usdz file
-    let fileUrl = Bundle.main.url(forResource: “radar_aardvark”, withExtension: “usdz”)! 
-    return fileUrl as QLPreviewItem
-}
-{% endhighlight %}
-
-AR Quick Look is intended to be presented full screen.
-
-{% highlight swift %}
-
-func previewController(_ controller: QLPreviewController, transitionViewFor item: QLPreviewItem) -> UIView? {
-// Provide the starting view for a seamless zoom transition to the viewer
-return self.startingZoomView
-}
-
-{% endhighlight %}
-
-And for an overall better experience, I recommend using a UI button as the view and setting the thumbnail as the button's image.  
-That way, you get visual feedback whenever the view is tapped with the button highlight, and this is extremely important so that the user knows that some action is about to happen.  
-If possible, I suggest the final or UIView to have a square frame, to have the best seamless transition.  
-AR Quick Look nicely handles the transition from this view to the full screen viewer on presentation and dismissal, creating this effect where the model just magically appears.  
-
-##### In Safari
-
-Starting in iOS 12, Safari has built-in support for previewing usdz files in AR.  
-By hosting usdz files on your website, you got a way of delivering previews of 3D objects.  
-
-For better integration of AR on my web content, I'll use the new HTML markup:
-By following this markup, you have badge rendered on the image in the top right-hand corner, and this is useful and there to tell you that our system viewer can preview my object in AR.  
-
-The requirement is an a elements with rel=ar, and this tells WebKit that this is AR content.  
-You then provide the link to the location of the usdz file.  
-
-{% highlight html %}
-
-<a rel="ar" href="model.usdz">
-    <img src="model-preview.jpg">
-</a>
+using System;
 
 {% endhighlight %}
 
 
-#### How to convert 3D models into the usdz format using the new usdz Converter tool in Xcode 10.
-
-### Human Interface Guidelines
-
-From the [Apple Developer pages:](https://developer.apple.com/design/human-interface-guidelines/ios/system-capabilities/augmented-reality/)
-
-- Use the entire display. Avoid cluttering the screen with controls and information that diminish the immersive experience.  
-- Create convincing illusions when placing realistic objects.design detailed 3D assets with lifelike textures. Use the information ARKit provides to position objects on detected real-world surfaces, scale objects properly, reflect environmental lighting conditions on virtual objects, cast top-down diffuse object shadows on real-world surfaces, and update visuals as the camera's position changes. Make sure your app updates the scene 60 times per second so objects don’t appear to jump or flicker.  
-- Consider how virtual objects with reflective surfaces show the environment.  
-- Anticipate that people will use your app in environments that aren’t optimal for AR. People may open your app in a location where there isn't much room to move around or there aren't large, flat surface areas.  
-- Be mindful of the user's comfort. Holding a device at a certain distance or angle for a prolonged period can be fatiguing. 
-- Favor indirect controls that enable one-handed use of your app. Controls in screen space are easier to target and less likely to require users to adjust how they’re holding their device. Make controls large enough to easily and accurately target with one finger and use translucency to occlude as little of the underlying scene as possible.  
-- If your app encourages user motion, introduce it gradually.  
-- Be mindful of the user's safety.
-- Use audio and haptic feedback to enhance the immersive experience.   
-- Wherever possible, provide hints in context. Placing a three-dimensional rotation indicator around an object, for example, is more intuitive than presenting text-based instructions in an overlay.  
-- Consider guiding people toward offscreen virtual objects.  
-- If you must display instructional text, use approachable terminology.   
-- Make important text readable. Display text used for labels, annotations, and instructions as if it is attached to the phone screen rather than in the virtual space. The text should face the user and be shown at the same size regardless of the distance of the labeled object.  
-- Consider displaying additional information in screen space.
-- Indicate when initialization and surface detection is in progress and involve the user.  
 
 
 
 
 
+#### Comments in C# work with xml tags:
+
+{% highlight csharp %}
+/// <summary>
+/// A class to print a rain message
+/// </summary>
+
+// line comment
+/* or another comment over more than one line 
+*/
+{% endhighlight %}
+
+
+
+All the application classes we write will have a method called Main. The Main method is the main entry point for the application; when we run our program”
+
+{% highlight csharp %}
+static void Main(string[] args)
+{% endhighlight %}
+
+We'll talk about the words in front of Main (static and void) as we need them. The part that says (string[] args) lets people use something called "command-line arguments.”
+
+#### Variables
+
+In c# just declaring a variable of a simple type allocates memory.
+
+We declare a variable by putting a data type first, so that the compiler knows how to interpret the ones and zeros, and knows how much memory to allocate for this particular variable. And then we put the variable name, so that we as programmers can refer to that memory location by name rather than by memory address. Optionally, we can also give the the variable a value when we declare that, and we'll see that when we start talking about integers in the following lecture. 
+So, what about constants? Well, constants work essentially the same way except that we provide a data type. First, we provide a keyword const, then we provide the data type of the constant, then we provide its name, and then we have to give it a value. We don't optionally give constant values, we have to give them values when we declare them.
+
+##### Integers
+
+Integers or whole numbers, are those numbers that have no fractional or decimal part
+
+In C# there are byte, short, int and long.
+Byte uses 8 bits, and short uses 16. Int uses 32, and long uses 64
+
+There is a distinction between value types and reference types. 
+The bit get interpreted in a particular way based on the data type we've declared a variable at that memory location to be. For value types, like bytes, short, int and long, the bits at that memory location are in fact interpreted as an integer, a whole number.
+
+For reference types, those bits are interpreted as something different. They're interpreted as a memory address. 
+This is the difference between value type and reference types and certainly the numeric types in C#, our value types.
+
+##### Floats
+
+So real numbers are those numbers that have a decimal point. And we actually have a problem as we try to represent real numbers in a computer because real numbers are in what's called the continuous domain. There are an infinite number of real numbers between zero and one, for example, and we know though that two to the b equal n. And so given a limited number of bits, we can only represent a finite number for n, so it's actually impossible for us to represent the whole range of infinite real numbers in a computer. So we actually have to do our representation in something called the discrete domain, not the continuous domain, and this discrete domain is what we use zeros and ones to represent things in. So we can represent lots of real numbers but we can't represent all real numbers. And what that leads to is some inaccuracy in the numbers that we can represent. 
+
+To represent these real numbers we use something called floating numbers and that's just the way we represent real numbers in a computer. And the two data types we'll commonly use are float and double. And in fact, in game development in our unity game development, we're regularly going to just use float just as we regularly use int even though we have a number of different integer data types we can use
+
+##### Math class. 
+
+It is a static class because I call the methods from the class name. Ex Math.cos
+It returns a double. We provide a double as parameter. But wait.. it is an angle in radiant !
+
+(float)Math.cos(45)  		// wrong we need radiants.
+360 degrees = 2 pi radiants.
+Pi/180 = radiants
+
+The constant to use is Math.PI 
+45 * Math.PI / 180
+
+
+
+
+
+NPC (Non-player character. In video games, this usually means a character controlled by the computer via algorithmic, predetermined or responsive behavior, but not necessarily true artificial intelligence.)
+
+CIL: Common Intermediate Language  
+Common is included in the name because all the .NET languages (VB, C#, etc.) are compiled to CIL.
 
 
 
@@ -170,10 +138,12 @@ From the [Apple Developer pages:](https://developer.apple.com/design/human-inter
 
 ### Sources:
 
-https://developer.apple.com/videos/play/wwdc2018/603/
+arctangent 
+Math.Atan2(Double, Double) Method
+https://www.mathsisfun.com/algebra/trig-inverse-sin-cos-tan.html
 
-https://forums.developer.apple.com/thread/104042
+https://docs.microsoft.com/en-us/dotnet/api/system.math?redirectedfrom=MSDN&view=netframework-4.8
 
-https://developer.apple.com/videos/play/wwdc2018/237/
+[]()
 
 <hr>
