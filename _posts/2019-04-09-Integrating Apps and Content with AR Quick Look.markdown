@@ -186,18 +186,6 @@ From the [Apple Developer pages:](https://developer.apple.com/design/human-inter
 
 
 
-### Notes
-
-
-[^1]: What are MIME types?
-MIME types describe the media type of content either in email or served by web servers or web applications and are intended to help guide a web browser in how the content is to be processed and displayed. Examples of MIME types are:  
-- text/html for normal web pages  
-- text/plain for plain text  
-- text/css for Cascading Style Sheets  
-- text/javascript for scripts
-To define a new MIME type you should add the following line in a file named `.htaccess` in the folder where the files for your website reside:
-ex: `AddType TYPE .extension`
-
 ### Sources:
 
 https://developer.apple.com/videos/play/wwdc2018/603/
@@ -207,3 +195,13 @@ https://forums.developer.apple.com/thread/104042
 https://developer.apple.com/videos/play/wwdc2018/237/
 
 <hr>
+
+### Notes
+[^1]: What are MIME types?
+MIME types describe the media type of content either in email or served by web servers or web applications and are intended to help guide a web browser in how the content is to be processed and displayed. Examples of MIME types are:  
+- text/html for normal web pages  
+- text/plain for plain text  
+- text/css for Cascading Style Sheets  
+- text/javascript for scripts
+To define a new MIME type you should add the following line in a file named `.htaccess` in the folder where the files for your website reside:
+ex: `AddType TYPE .extension`
