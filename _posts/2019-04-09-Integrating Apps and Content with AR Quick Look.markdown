@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Integrating Apps and Content with AR Quick Look"
+title:  "ARKit - Integrating Apps and Content with AR Quick Look"
 date:   2010-04-09
 categories: iOS, developer
 comments: true
@@ -13,7 +13,7 @@ published: true
 <br><cite>Apple Developer Website - Keynote WWDC 2018</cite>
 </div>
 
-![image](/assets/img/AR-QL-Pictures/Screenshot1.png)
+<!-- ![image](/assets/img/AR-QL-Pictures/Screenshot1.png) -->
 
 <a rel="ar" href="/assets/img/AR-QL-Pictures/retrotv.usdz">
     <img src="/assets/img/AR-QL-Pictures/Screenshot5.jpg">
