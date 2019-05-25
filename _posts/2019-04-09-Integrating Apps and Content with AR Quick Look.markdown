@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "ARKit - Integrating Apps and Content with AR Quick Look"
-date:   2018-05-23
+date:   2019-05-23
 categories: iOS, developer
 comments: true
 published: true
