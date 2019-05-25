@@ -46,16 +46,6 @@ AR Quick Look is integrated into the files app, mail, messages, notes, news, and
 
 #### Quick Look
 
-#### USDZ
-
-![image](/assets/img/AR-QL-Pictures/ARKit-Badge.pdf)
-
-Sharing a 3D model between all these apps requires the models to be bundled up in a single sharable file.  
-
-To enable this, AR Quick Look supports `usdz`, which is a new file format for mobile distribution of 3D models.  
-`usdz` packages all these models and textures into a single file for efficient delivery of 3D content without having to work with reference files.  
-It's based on Pixar's open-source `Universal Scene Description` format, or short, `USD`.  
-
 You can integrate AR Quick Look in two different mediums, in an application or in websites in Safari.  
 
 ##### Quick Look API
@@ -153,6 +143,47 @@ Or working with the picture element:
 `AddType model/vnd.pixar.usd .usdz`  
 `AddType model/usd usdz`  
 
+### Creating 3D Models for AR Quick Look
+
+When we're creating our models, there are six things we need to get right:  
+We need to set the model's placement, we need to set its physical size to be correct in AR, we need to create any animation we want for our model, add its contact shadow, modify its appearance, and then add any transparency that our model needs.  
+Once these six things are done, we can optimize and export our models for use in AR Quick Look.  
+- placement:  
+The object should face toward the camera, toward positive z.  
+The base of the object should sit on the ground plane, the plane where y = 0.  
+We should put its natural pivot point at the origin.  
+
+( x is red, y green and z blue?)
+
+ When you're thinking how to position your objects for this optimal recognition, think how you would place that object if you put it on a shelf or in a display cabinet.  
+ Now, this profile really matters.
+ Not only is it what people will see when your object first loads in our Quick Look, but it's also the profile that's used for the object's thumbnail, and these two deliberately match when the thumbnail is in files or in messages.  
+  So, we get that seamless transition between the two.  
+  The second thing we want to set up for our model is its physical size.  
+  (not all objects have a natural size.)  
+
+Animations:  
+We recommend you use where it helps to bring that object to life with an idle animation that makes it feel more like it's in the world.  Note that animations always loop, and the animations you could create can use skeletal and/or transform animation to bring them to life.
+
+Another thing that really brings your models to life in the world is that contact shadow.  
+Now, note here that AR Quick Look provides the contact shadow for you.  
+This means that it can turn the shadow on and off as you transition between modes.  
+It also means it can apply ambient lighting conditions to the shadow as the lighting changes around you.  
+Because of this, don't bake a contact shadow into the models you provide.
+If you do, you'll end up with two shadows.  
+
+  
+  
+
+#### USDZ
+
+![image](/assets/img/AR-QL-Pictures/ARKit-Badge.pdf)
+
+Sharing a 3D model between all these apps requires the models to be bundled up in a single sharable file.  
+
+To enable this, AR Quick Look supports `usdz`, which is a new file format for mobile distribution of 3D models.  
+`usdz` packages all these models and textures into a single file for efficient delivery of 3D content without having to work with reference files.  
+It's based on Pixar's open-source `Universal Scene Description` format, or short, `USD`.  
 
 
 #### How to convert 3D models into the usdz format using the new usdz Converter tool in Xcode 10.
@@ -176,14 +207,6 @@ From the [Apple Developer pages:](https://developer.apple.com/design/human-inter
 - Make important text readable. Display text used for labels, annotations, and instructions as if it is attached to the phone screen rather than in the virtual space. The text should face the user and be shown at the same size regardless of the distance of the labeled object.  
 - Consider displaying additional information in screen space.
 - Indicate when initialization and surface detection is in progress and involve the user.  
-
-
-
-
-
-
-
-
 
 
 ### Sources:
