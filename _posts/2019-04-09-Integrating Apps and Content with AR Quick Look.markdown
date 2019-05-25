@@ -15,6 +15,10 @@ published: true
 
 ![image](/assets/img/AR-QL-Pictures/Screenshot1.png)
 
+<a rel="ar" href="/assets/img/AR-QL-Pictures/retrotv.usdz">
+    <img src="/assets/img/AR-QL-Pictures/Screenshot5.jpg">
+</a>
+
 ### ARKit 
 
 ARKit, Apple's augmented reality (AR) technology, delivers immersive, engaging experiences that seamlessly blend virtual objects with the real world. In AR apps, the device's camera presents a live, onscreen view of the physical world. Three-dimensional virtual objects are superimposed over this view, creating the illusion that they actually exist. The user can reorient their device to explore the objects from different angles and, if appropriate for the experience, interact with objects using gestures and movement.
@@ -225,6 +229,14 @@ It ships inside Xcode 10, and in addition to creating usdz files, you could also
 It takes three input formats: OBJ files, Alembic files, or existing USD files, either USDA or USDC, the ASCII and binary versions of USD.
 
 We call the tool with `xcrun` because it ships inside Xcode.  
+
+If you get this error message:
+`xcrun: error: unable to find utility "usdz_converter", not a developer tool or in PATH`
+then you need to open Xcode preferences and select the commandline tools from location as below
+
+![image](/assets/img/AR-QL-Pictures/Screenshot6.jpg)
+
+
 We pass in the name of the model we want to convert, an OBJ file in this case, and the file name of the usdz we want to have the other end.  
 To map PBR textures to the meshes they're in, we use the -g option, followed by the name of one of the groups, a mesh or a submesh that we want to map them to, and then we can provide any number of these textures for that particular group.  
 You can pass in the -v option for verbose output.  
