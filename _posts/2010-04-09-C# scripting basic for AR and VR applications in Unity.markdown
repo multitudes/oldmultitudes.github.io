@@ -44,16 +44,32 @@ AR Quick Look is integrated into the files app, mail, messages, notes, news, and
 
 ![image](/assets/img/AR-QL-Pictures/Screenshot2.jpg)
 
+#### Quick Look
+
 #### USDZ
+
+![image](/assets/img/AR-QL-Pictures/ARKit-Badge.pdf)
 
 Sharing a 3D model between all these apps requires the models to be bundled up in a single sharable file.  
 
-To enable this, AR Quick Look supports usdz, which is a new file format for mobile distribution of 3D models.
-usdz packages all these models and textures into a single file for efficient delivery of 3D content without having to work with reference files.  
+To enable this, AR Quick Look supports `usdz`, which is a new file format for mobile distribution of 3D models.  
+`usdz` packages all these models and textures into a single file for efficient delivery of 3D content without having to work with reference files.  
 It's based on Pixar's open-source `Universal Scene Description` format, or short, `USD`.  
 
-You can integrate AR Quick Look in two different mediums.
-The first, in an application or in websites in Safari.  
+
+
+You can integrate AR Quick Look in two different mediums, in an application or in websites in Safari.  
+
+
+
+{% highlight html %}
+
+{% endhighlight %}
+
+
+
+#### How to convert 3D models into the usdz format using the new usdz Converter tool in Xcode 10.
+
 
 #### Quick Look API
 
@@ -61,6 +77,39 @@ Let's get started with applications and how the Quick Look API is used to provid
 Quick Look about previewing documents like Keynotes, PDFs, images, and now 3D model files like usdz.  
 Security is handled for you where the contents of the usdz file is safely read to present a preview for you.  
 
+Lets see the code:
+
+We have a `ViewController` with a grid of thumbnails for various 3D models.  
+When someone taps on one of these thumbnails, I want to show a Quick Look preview of the model for that thumbnail.  
+I create a `QLPreviewController`.
+
+{% highlight swift %}
+
+func preview(_ sender: Any) {
+    let previewController = QLPreviewController() 
+    previewController.dataSource = self
+    previewController.delegate = self
+    // Present viewer modally
+    present(previewController, animated: true, completion: nil)
+}
+
+func numberOfPreviewItems(in controller: QLPreviewController) -> Int { 
+    // Viewer supports previewing a single 3D object
+    return 1 
+}
+ 
+func previewController(
+_ controller: QLPreviewController, previewItemAt index: Int) -> QLPreviewItem {
+    // Return the file URL to the .usdz file
+    let fileUrl = Bundle.main.url(forResource: “radar_aardvark”, withExtension: “usdz”)! 
+    return fileUrl as QLPreviewItem
+}
+{% endhighlight %}
+
+With all that configured, we're ready to present our preview controller, and so it's going to animate and scale up from the view that was tapped.  
+In order to preview and present documents, we need to instantiate a QLPreviewController.  
+It's part of the Quick Look framework.  
+Let's take a look at the protocol for a dataSource.  
 
 
 
@@ -70,7 +119,7 @@ Security is handled for you where the contents of the usdz file is safely read t
 
 ### Human Interface Guidelines
 
-![image](/assets/img/AR-QL-Pictures/ARKit-Badge.pdf)
+
 
 
 From the [Apple Developer pages:](https://developer.apple.com/design/human-interface-guidelines/ios/system-capabilities/augmented-reality/)
@@ -97,9 +146,7 @@ From the [Apple Developer pages:](https://developer.apple.com/design/human-inter
 
 
 
-{% highlight csharp %}
 
-{% endhighlight %}
 
 
 
@@ -107,5 +154,9 @@ From the [Apple Developer pages:](https://developer.apple.com/design/human-inter
 ### Sources:
 
 https://developer.apple.com/videos/play/wwdc2018/603/
+
+https://forums.developer.apple.com/thread/104042
+
+https://developer.apple.com/videos/play/wwdc2018/237/
 
 <hr>
