@@ -15,7 +15,7 @@ published: true
 
 ![image](/assets/img/AR-QL-Pictures/Screenshot1.png)
 
-### 
+### ARKit 
 
 ARKit, Apple's augmented reality (AR) technology, delivers immersive, engaging experiences that seamlessly blend virtual objects with the real world. In AR apps, the device's camera presents a live, onscreen view of the physical world. Three-dimensional virtual objects are superimposed over this view, creating the illusion that they actually exist. The user can reorient their device to explore the objects from different angles and, if appropriate for the experience, interact with objects using gestures and movement.
 
@@ -34,22 +34,22 @@ We can pinch to size an object and make it look a lot larger and really see the 
 And just like a photo, you can double tap on the model to recess the position and the size.  
 We're matching the color intensity and the temperature that's reported by ARKit from the world, and we're using that with our lighting setup.  
 
-#### Accessibility
-
-##### VoiceOver
+#### Accessibility - VoiceOver
 
 Now you get audible feedback for when my Model is off screen and back on screen.
 
 #### Integration in First Part Apps  
 
-AR Quick Look integrated into the files app, but that's one of six first party apps to have adopted and integrate the viewer.  
+AR Quick Look is integrated into the files app, mail, messages, notes, news, and Safari.
 
-The others are mail, messages, notes, news, and Safari.
 
 
 
 
 ### Human Interface Guidelines
+
+![image](/assets/img/AR-QL-Pictures/ARKit-Badge.pdf)
+
 
 From the [Apple Developer pages:](https://developer.apple.com/design/human-interface-guidelines/ios/system-capabilities/augmented-reality/)
 
@@ -84,5 +84,6 @@ From the [Apple Developer pages:](https://developer.apple.com/design/human-inter
 
 ### Sources:
 
+https://developer.apple.com/videos/play/wwdc2018/603/
 
 <hr>
