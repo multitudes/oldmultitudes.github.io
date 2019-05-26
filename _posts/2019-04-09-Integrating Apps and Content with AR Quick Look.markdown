@@ -43,7 +43,11 @@ AR Quick Look is integrated into the files app, mail, messages, notes, news, and
 
 ## Quick Look
 
+
 You can integrate AR Quick Look in two different mediums, in an application or in websites in Safari.  
+
+
+
 
 ### Quick Look API
 
@@ -204,9 +208,9 @@ You do this by providing an albedo texture that has the transparency in its alph
 Note that transparency is really intended for see-through parts of the model, not for creating cutouts like a leaf edge or a butterfly wing.  
 
 
-### The USDZ format
+### The USDZ format 
 
-![image](/assets/img/AR-QL-Pictures/ARKit-Badge.pdf)
+<!--![image](/assets/img/AR-QL-Pictures/ARKit-Badge.pdf)-->
 
 Sharing a 3D model between all these apps requires the models to be bundled up in a single sharable file.  
 
@@ -254,7 +258,7 @@ xcrun usdz_converter RetroTV.obj RetroTV.usdz -v
 
 {% endhighlight %}
  
-###### Let's look inside a usdz file.
+#### Let's look inside a usdz file.
 In essence, these are uncompressed zip archives. The first file is always a usdc file.  
 This contains the model's mesh, its animation, if it has some, and any material definitions it needs.  
 And then, the remainder of the files in the archive are any textures, any images, like the ones we saw earlier on.   
