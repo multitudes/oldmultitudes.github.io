@@ -161,10 +161,9 @@ Or working with the picture element:
 ![image](/assets/img/AR-QL-Pictures/Screenshot7.jpg)
 
 When we're creating our models, there are six things we need to get right:  
-We need to set the model's placement, we need to set its physical size to be correct in AR, we need to create any animation we want for our model, add its contact shadow, modify its appearance, and then add any transparency that our model needs.  
-Once these six things are done, we can optimize and export our models for use in AR Quick Look.  
 
-###### Placement:  
+
+###### Placement  
 The object should face toward the camera, toward positive z.  
 The base of the object should sit on the ground plane, the plane where y = 0.  
 We should put its natural pivot point at the origin.  
@@ -181,7 +180,7 @@ So, we get that seamless transition between the two.
 The second thing we want to set up for our model is its physical size.  
 (not all objects have a natural size.)  
 
-###### Animations.   
+###### Animations     
 We recommend you use where it helps to bring that object to life with an idle animation that makes it feel more like it's in the world.  Note that animations always loop, and the animations you could create can use skeletal and/or transform animation to bring them to life.
 
 ###### Contact shadow
@@ -193,16 +192,16 @@ Because of this, don't bake a contact shadow into the models you provide.
 If you do, you'll end up with two shadows.  
 Note also that the first frame of any animation is used to create the shadow for a model, and sometimes this means it's important to choose the right first frame.  
 
-###### Appearance
+###### Appearance  
 
 AR Quick Look uses a `Physically Based Rendering`, or `PBR shader`, and this gives us another six things that we can modify about our model's appearance to make it feel more real in the world.  
 
-- Albedo (base color). This is the base color of the model, its underlying color. Should be RGB, or RBGA, if you're also providing transparency 
-- Metallic (conductor or insulator). It is indicating which parts of the model are metallic. This changes whether they are a conductor or an insulator, which changes how they interact with the physics of light in the real world. (should be Greyscale)  
-- Roughness (rough or shiny). We could also specify which parts of our model are rough or shiny by providing a roughness texture.(should be Greyscale)  
-- Normal (surface details). We can add in a `normal map`. This creates the illusion of depth and variances within the surfaces, the model's surface, without changing the underlying mesh.(Should be RGB)  
-- Ambient occlusion (internal shadows) We can add an ambient occlusion texture to specify where the model casts shadows on itself in the crevices and nooks and crannies of the model.(should be Greyscale)  
-- Emissive (emits light). And if our model emits lights, we can provide an emissive texture for things like a TV screen or a computer monitor.(Should be RGB)  
+- **Albedo** (base color). This is the base color of the model, its underlying color. Should be RGB, or RBGA, if you're also providing transparency 
+- **Metallic** (conductor or insulator). It is indicating which parts of the model are metallic. This changes whether they are a conductor or an insulator, which changes how they interact with the physics of light in the real world. (should be Greyscale)  
+- **Roughness** (rough or shiny). We could also specify which parts of our model are rough or shiny by providing a roughness texture.(should be Greyscale)  
+- **Normal** (surface details). We can add in a `normal map`. This creates the illusion of depth and variances within the surfaces, the model's surface, without changing the underlying mesh.(Should be RGB)  
+- **Ambient occlusion** (internal shadows) We can add an ambient occlusion texture to specify where the model casts shadows on itself in the crevices and nooks and crannies of the model.(should be Greyscale)  
+- **Emissive** (emits light). And if our model emits lights, we can provide an emissive texture for things like a TV screen or a computer monitor.(Should be RGB)  
 
 The textures should be square. They should be powers of 2 squared. So, 2048, 1024, 512 pixels, so on.  
 
@@ -305,7 +304,7 @@ https://forums.developer.apple.com/thread/104042
 
 [Quick Look Previews from the Ground Up - developer.apple.com](https://developer.apple.com/videos/play/wwdc2018/237/)
 
-https://developer.apple.com/videos/play/wwdc2018/805/
+[Creating Great AR Experiences](https://developer.apple.com/videos/play/wwdc2018/805/)
 
 <hr>
 
