@@ -269,11 +269,12 @@ xcrun usdz_converter RetroTV.obj RetroTV.usdz -v
 
 {% endhighlight %}
  
-#### Let's look inside a usdz file.
-In essence, these are uncompressed zip archives. The first file is always a usdc file.  
-This contains the model's mesh, its animation, if it has some, and any material definitions it needs.  
-And then, the remainder of the files in the archive are any textures, any images, like the ones we saw earlier on.   
-This is an open format and Pixar have published the direct specification for usdz.   
+#### Let's look inside a usdz file  
+
+In essence, these are uncompressed zip archives. 
+Change the extension to .zip and unzip the file. The folder contains several files, the `usdc` file (USD binary) and the model's mesh, its animation, if it has some, and any material definitions it needs.  
+And then, the remainder of the files in the archive are any textures, any images.   
+This is an open format and (Pixar have published the direct specification for usdz)[https://graphics.pixar.com/usd/docs/Usdz-File-Format-Specification.html].   
  
 ### Human Interface Guidelines
 
