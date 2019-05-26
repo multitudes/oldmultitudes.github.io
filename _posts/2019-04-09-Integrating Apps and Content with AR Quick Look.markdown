@@ -25,34 +25,27 @@ ARKit, Apple's augmented reality (AR) technology, delivers immersive, engaging e
 
 AR is becoming the tool to see what objects look like in the world. And it is really easy to integrate. AR Quick Look is built in and deeply integrated into the OS to allow previewing from any application and websites, it is available in iOS 12 on ARKit compatible devices and only object mode on non-ARKit supported devices. AR Quick Look handles setting up the AR experience like plane detection, object placement, gesture manipulations, and creating contact shadows.  
 
-It's really easy to adopt and integrate the viewer into a website and application and it could be as simple as embedding a usdz file if your application already supports and uses Quick Look.
+It's really easy to adopt and integrate the viewer into a website and application and it could be as simple as embedding a `usdz` file if your application already supports and uses `Quick Look`.
+`AR Quick Look` was designed to enrich any application on the OS with AR content with a simpler way to adopt AR previewing for consistent viewing experience.
 
-AR Quick Look was designed to enrich any application on the OS with AR content with a simpler way to adopt AR previewing for consistent viewing experience.
-
-For a demo go to the [AR Gallery](https://developer.apple.com/arkit/gallery/) and look for thumbnails with the AR badge stamp at the top right-hand corner, and that's there to tell you that there's an AR experience behind this.  
+For a demo go to the [AR Gallery](https://developer.apple.com/arkit/gallery/) and look for thumbnails with the AR badge stamp at the top right-hand corner, that's there to tell you that there's an AR experience behind this.  
 
 
 So, you can really pan around and see the model from various different angles.
-We can pinch to size an object and make it look a lot larger and really see the fine details that went into this model.  
- 
-And just like a photo, you can double tap on the model to recess the position and the size.  
+We can pinch to size an object and make it look a lot larger and really see the fine details that went into this model. And just like a photo, you can double tap on the model to recess the position and the size.  
 We're matching the color intensity and the temperature that's reported by ARKit from the world, and we're using that with our lighting setup.  
 
-#### Accessibility - VoiceOver
-
-Now you get audible feedback for when my Model is off screen and back on screen.
-
-#### Integration in First Part Apps  
+About Accessibility and VoiceOver: You can now get audible feedback for when the Model is off screen and back on screen.
 
 AR Quick Look is integrated into the files app, mail, messages, notes, news, and Safari.
 
 ![image](/assets/img/AR-QL-Pictures/Screenshot2.jpg)
 
-#### Quick Look
+## Quick Look
 
 You can integrate AR Quick Look in two different mediums, in an application or in websites in Safari.  
 
-##### Quick Look API
+### Quick Look API
 
 Let's get started with applications and how the Quick Look API is used to provide an AR experience.  
 Quick Look about previewing documents like Keynotes, PDFs, images, and now 3D model files like usdz.  
