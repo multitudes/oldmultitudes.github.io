@@ -39,11 +39,22 @@ About Accessibility and VoiceOver: You can now get audible feedback for when the
 
 AR Quick Look is integrated into the files app, mail, messages, notes, news, and Safari.
 
-![image](/assets/img/AR-QL-Pictures/Screenshot2.jpg)
+<!--![image](/assets/img/AR-QL-Pictures/Screenshot2.jpg)-->
 
 ## Quick Look
 
-
+What's Quick Look? Quick Look is all about previewing documents, and more precisely, Quick Look is an iOS framework that provides multiple core features.  
+It allows you to preview documents of several commonly used file formats, to provide custom previews for files of your very own file format, and to provide thumbnails to the system for files of your own custom file format.  
+Quick Look comes with a sophisticated security model that keeps your application safe.  
+Let's take a look at the supported file types.  
+Media files such as images, audio files and videos, documents such as PDFs and office files, but also zip archives.  
+For each of the file types shown before we made sure that Quick Look provides the best possible preview on your mobile devices.
+For example, when previewing images you're able to zoom into the images conveniently.  
+You're also able to close Quick Look with a swipe down gesture.  
+In PDF documents you get a sidebar with thumbnails for easier navigation.  
+In spreadsheets you can switch through the individual pages of the document.  
+And in media files we show a scrubber that allows you to go back and forth and so on.  
+Quick Look about previewing documents like Keynotes, PDFs, images, and now 3D model files like usdz.  
 You can integrate AR Quick Look in two different mediums, in an application or in websites in Safari.  
 
 
@@ -52,7 +63,6 @@ You can integrate AR Quick Look in two different mediums, in an application or i
 ### Quick Look API
 
 Let's get started with applications and how the Quick Look API is used to provide an AR experience.  
-Quick Look about previewing documents like Keynotes, PDFs, images, and now 3D model files like usdz.  
 Security is handled for you where the contents of the usdz file is safely read to present a preview for you.  
 
 ##### Quick Look in your application
