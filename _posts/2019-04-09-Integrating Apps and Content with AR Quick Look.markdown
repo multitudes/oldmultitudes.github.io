@@ -301,13 +301,15 @@ From the [Apple Developer pages:](https://developer.apple.com/design/human-inter
 
 [Integrating Apps and Content with AR Quick Look - developer.apple.com](https://developer.apple.com/videos/play/wwdc2018/603/)
 
-https://forums.developer.apple.com/thread/104042
+[Issues when converting USDZ in Command Line](https://forums.developer.apple.com/thread/104042)
 
 [Quick Look Previews from the Ground Up - developer.apple.com](https://developer.apple.com/videos/play/wwdc2018/237/)
 
-[Creating Great AR Experiences](https://developer.apple.com/videos/play/wwdc2018/805/)
+[Creating Great AR Experiences - developer.apple.com](https://developer.apple.com/videos/play/wwdc2018/805/)
 
 [Pixar specifications for usdz](https://graphics.pixar.com/usd/docs/Usdz-File-Format-Specification.html)
+
+[QLPreviewController - developer.apple.com ](https://developer.apple.com/documentation/quicklook/qlpreviewcontroller)
 
 <hr>
 
