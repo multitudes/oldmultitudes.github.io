@@ -291,7 +291,7 @@ https://developer.apple.com/videos/play/wwdc2018/603/
 
 https://forums.developer.apple.com/thread/104042
 
-https://developer.apple.com/videos/play/wwdc2018/237/
+[Quick Look Previews from the Ground Up - developer.apple.com](https://developer.apple.com/videos/play/wwdc2018/237/)
 
 https://developer.apple.com/videos/play/wwdc2018/805/
 
