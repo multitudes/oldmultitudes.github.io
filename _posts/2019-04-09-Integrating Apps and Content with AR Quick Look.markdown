@@ -274,7 +274,7 @@ xcrun usdz_converter RetroTV.obj RetroTV.usdz -v
 In essence, these are uncompressed zip archives. 
 Change the extension to .zip and unzip the file. The folder contains several files, the **usdc** file (USD binary) and the model's mesh, its animation, if it has some, and any material definitions it needs.  
 And then, the remainder of the files in the archive are any textures, any images.   
-This is an open format and (Pixar have published the direct specification for usdz)[https://graphics.pixar.com/usd/docs/Usdz-File-Format-Specification.html].   
+This is an open format and [Pixar have published the direct specification for usdz](https://graphics.pixar.com/usd/docs/Usdz-File-Format-Specification.html).   
  
 ### Human Interface Guidelines
 
@@ -306,6 +306,8 @@ https://forums.developer.apple.com/thread/104042
 [Quick Look Previews from the Ground Up - developer.apple.com](https://developer.apple.com/videos/play/wwdc2018/237/)
 
 [Creating Great AR Experiences](https://developer.apple.com/videos/play/wwdc2018/805/)
+
+[Pixar specifications for usdz](https://graphics.pixar.com/usd/docs/Usdz-File-Format-Specification.html)
 
 <hr>
 
