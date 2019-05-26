@@ -55,7 +55,9 @@ Let's get started with applications and how the Quick Look API is used to provid
 Quick Look about previewing documents like Keynotes, PDFs, images, and now 3D model files like usdz.  
 Security is handled for you where the contents of the usdz file is safely read to present a preview for you.  
 
-Lets see the code:
+##### Quick Look in your application
+
+Lets see the code.
 
 We have a `ViewController` with a grid of thumbnails for various 3D models.  
 When someone taps on one of these thumbnails, I want to show a Quick Look preview of the model for that thumbnail.  
@@ -287,7 +289,7 @@ From the [Apple Developer pages:](https://developer.apple.com/design/human-inter
 
 ### Sources:
 
-https://developer.apple.com/videos/play/wwdc2018/603/
+[Integrating Apps and Content with AR Quick Look - developer.apple.com](https://developer.apple.com/videos/play/wwdc2018/603/)
 
 https://forums.developer.apple.com/thread/104042
 
