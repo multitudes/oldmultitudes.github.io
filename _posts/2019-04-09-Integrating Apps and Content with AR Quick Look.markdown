@@ -19,7 +19,7 @@ published: true
     <img src="/assets/img/AR-QL-Pictures/Screenshot5.jpg">
 </a>
 
-### ARKit 
+
 
 ARKit, Apple's augmented reality (AR) technology, delivers immersive, engaging experiences that seamlessly blend virtual objects with the real world. In AR apps, the device's camera presents a live, onscreen view of the physical world. Three-dimensional virtual objects are superimposed over this view, creating the illusion that they actually exist. The user can reorient their device to explore the objects from different angles and, if appropriate for the experience, interact with objects using gestures and movement.
 
