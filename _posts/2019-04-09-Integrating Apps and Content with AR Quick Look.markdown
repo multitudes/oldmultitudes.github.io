@@ -104,14 +104,14 @@ _ controller: QLPreviewController, previewItemAt index: Int) -> QLPreviewItem {
 
 AR Quick Look is intended to be presented full screen.
 
-{% highlight swift %}
+``` swift
 
 func previewController(_ controller: QLPreviewController, transitionViewFor item: QLPreviewItem) -> UIView? {
 // Provide the starting view for a seamless zoom transition to the viewer
 return self.startingZoomView
 }
 
-{% endhighlight %}
+```
 
 And for an overall better experience, I recommend using a UI button as the view and setting the thumbnail as the button's image.  
 That way, you get visual feedback whenever the view is tapped with the button highlight, and this is extremely important so that the user knows that some action is about to happen.  
@@ -129,19 +129,18 @@ By following this markup, you have badge rendered on the image in the top right-
 The requirement is an a elements with rel=ar, and this tells WebKit that this is AR content.  
 You then provide the link to the location of the usdz file.  
 
-{% highlight html %}
+``` html
 
 <a rel="ar" href="model.usdz">
     <img src="model-preview.jpg">
 </a>
 
-{% endhighlight %}
+```
 
 Or working with the picture element:
 
+``` swift
 
-{% highlight html %}
- 
 <a rel="ar" href="model.usdz">
     <picture>
         <source srcset=“wide-image.png”
@@ -149,12 +148,13 @@ Or working with the picture element:
     </picture>
 </a>
 
-{% endhighlight %}
+```
 
 **usdz** content must be served with the correct media type, and so make sure that the **MIME** type is set for these files.[^1]  
-
-`AddType model/vnd.pixar.usd .usdz`  
-`AddType model/usd usdz`  
+```
+AddType model/vnd.pixar.usd .usdz
+AddType model/usd usdz 
+```
 
 ### Creating 3D Models for AR Quick Look
 
@@ -250,7 +250,7 @@ To map PBR textures to the meshes they're in, we use the -g option, followed by 
 You can pass in the -v option for verbose output.  
 This will print the names of the groups that we find in the model plus useful other information about the conversion process.  
 
-{% highlight swift %}
+``` swift
 // Call usdz_converter with xcrun.
 xcrun usdz_converter RetroTV.obj RetroTV.usdz
  
@@ -267,8 +267,8 @@ xcrun usdz_converter RetroTV.obj RetroTV.usdz
 // Use the -v option to print out group names and other verbose information during conversion.
 xcrun usdz_converter RetroTV.obj RetroTV.usdz -v
 
-{% endhighlight %}
- 
+```
+
 #### Let's look inside a usdz file  
 
 In essence, these are uncompressed zip archives. 
