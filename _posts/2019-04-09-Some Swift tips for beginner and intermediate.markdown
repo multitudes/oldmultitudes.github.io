@@ -23,8 +23,29 @@ Next, add an Organization Name. You can invent your own company name, use your r
 
 The Bundle Identifier combines the names you entered in the Organization Identifier and the Product Name fields, and it is created automatically.
 
-
 Swift is what’s known as a type-safe language, which means that every variable must be of one specific type
+
+Open Playgrounds to practice your code. Open Xcode and do shift alt command N
+command shift Y shows the console window below.
+Check playgrounds for ipad too!
+
+
+When you create a variable and give it an initial value the computer is actually smart enough to figure out the data type, most of the time. This is called type inference!
+
+Casting is a way to temporarily transform the data type of a variable or constant.
+
+This is the syntax
+
+let intNumber = 2
+var doubleNumber = Double(intNumber)
+
+In Swift, the spaces around an operator are important, and both variables need to have the same type! 
+
+Foundation framework! 
+
+import Foundation // put it on the top of the playground
+
+> The Foundation framework provides a base layer of functionality for apps and frameworks, including data storage and persistence, text processing, date and time calculations, sorting and filtering, and networking
 
 ### Multi-line strings
 
