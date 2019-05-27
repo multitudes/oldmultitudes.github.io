@@ -9,13 +9,20 @@ published: false
 
 
 <div class="message">
-"With iOS 12, ARKit includes a built-in viewer for displaying and sharing high-quality 3D content using Pixar's usdz file format. " 
-<br><cite>Paul Hudson</cite>
+"iOS and macOS programs have long been written in a language called Objective-C. In the summer of 2014, Apple introduced a new and exciting language for writing apps called Swift" 
+<br><cite></cite>
 </div>
 
 <a rel="ar" href="/assets/img/AR-QL-Pictures/retrotv.usdz">
     <img src="/assets/img/AR-QL-Pictures/Screenshot5.jpg">
 </a>
+
+SDK is the iOS Software Development Kit. Xcode is a code editor known as an integrated development environment (IDE).  
+The iOS SDK is a suite of prebuilt programming libraries that help you write apps quickly and in a way that Apple expects. A programming library is a collection of related software modules that you can use in your programs. 
+Next, add an Organization Name. You can invent your own company name, use your real name, or choose anything else you want. The Organization Identifier needs to be a unique name, so it’s common to format this like a backward website address.
+
+The Bundle Identifier combines the names you entered in the Organization Identifier and the Product Name fields, and it is created automatically.
+
 
 Swift is what’s known as a type-safe language, which means that every variable must be of one specific type
 
@@ -85,6 +92,75 @@ You can access items in a tuple using numerical positions or by naming them
 Tuples are created by placing multiple items into parentheses, like this:
 
 var name = (first: "Taylor", last: "Swift")
+You then access items using numerical positions starting from 0:
+name.0
+Or you can access items using their names:
+name.first
+
+If you need a specific, fixed collection of related values where each item has a precise position or name, you should use a tuple:
+If you need a collection of values that must be unique or you need to be able to check whether a specific item is in there extremely quickly, you should use a set:
+If you need a collection of values that can contain duplicates, or the order of your items matters, you should use an array:
+Dictionaries are collections of values just like arrays, but rather than storing things with an integer position you can access them using anything you want.
+
+When using type annotations, dictionaries are written in brackets with a colon between your identifier and value types. For example, [String: Double] and [String: String].
+
+### Dictionary default values
+
+let favoriteIceCream = [
+    "Paul": "Chocolate",
+    "Sophie": "Vanilla"
+]
+favoriteIceCream["Charlotte", default: "Unknown"]
+
+### Creating empty collections
+Arrays, sets, and dictionaries are called collections
+
+var teams = [String: String]()
+
+var results = [Int]()
+
+The exception is creating an empty set, which is done differently:
+var words = Set<String>()
+var numbers = Set<Int>()
+Swift has special syntax only for dictionaries and arrays; other types must use angle bracket syntax like sets.
+
+### Enumerations
+
+enum Result {
+    case success
+    case failure
+}
+And now when we use it we must choose one of those two values:
+
+let result4 = Result.failure
+
+### Enum associated values
+
+Enum raw values
+If you want, you can assign one or more cases a specific value, and Swift will generate the rest. It’s not very natural for us to think of Earth as the second planet, so you could write this:
+
+enum Planet: Int {
+    case mercury = 1
+    case venus
+    case earth
+    case mars
+}
+Now Swift will assign 1 to mercury and count upwards from there, meaning that earth is now the third planet.
+
+### Operator overloading
+For example, + sums integers But + also joins strings and even arrays
+
+### The ternary operator
+Swift has a rarely used operator called the ternary operator.
+let firstCard = 11
+let secondCard = 10
+print(firstCard == secondCard ? "Cards are the same" : "Cards are different")
+
+### Switch statements
+Swift gives us two ways of making ranges: the ..< and ... operators. The half-open range operator, ..<, creates ranges up to but excluding the final value, and the closed range operator, ..., creates ranges up to and including the final value.
+the default case must be there to ensure all possible values are covered.
+
+### 
 
 ### Sources:
 
