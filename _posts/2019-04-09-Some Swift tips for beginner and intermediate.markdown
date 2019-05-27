@@ -35,10 +35,10 @@ When you create a variable and give it an initial value the computer is actually
 Casting is a way to temporarily transform the data type of a variable or constant.
 
 This is the syntax
-
+``` swift
 let intNumber = 2
 var doubleNumber = Double(intNumber)
-
+```
 In Swift, the spaces around an operator are important, and both variables need to have the same type! 
 
 Foundation framework! 
@@ -46,6 +46,31 @@ Foundation framework!
 import Foundation // put it on the top of the playground
 
 > The Foundation framework provides a base layer of functionality for apps and frameworks, including data storage and persistence, text processing, date and time calculations, sorting and filtering, and networking
+
+### Optionals
+Optionals are variables that can either have a value or no value at all. Swift is different from many programming languages because normal constants and variables must have a value. This makes Swift a safe language because it prevents your code from failing when a variable is expected to have a value but one hasn’t yet been set.
+However, there will be times when you need to create a variable but don’t have a value for it yet. In these cases, you can use an optional.
+We didn’t assign an initial value to futureTeacher, so its default value is the special value nil, which means it doesn’t yet have a value.
+You can’t set a regular variable to nil. This is a special characteristic of optionals.
+#### UNWRAPPING OPTIONALS
+Optionals make your code safer because they force you to plan for a situation in which they have no value. But this also means they require a little more work to use
+#### Forced Unwrapping
+One way to unwrap an optional is through forced unwrapping. Use forced unwrapping when you know that an optional has a value and you want the computer to access that value directly. You do this by entering an ! after the optional name. If you force-unwrap an optional and it has a nil value, your program will crash.
+
+#### Optional Binding
+with 'if let' ..
+
+#### Implicitly Unwrapped 
+rather than unwrap the optional every time you use it, you can declare it as an implicitly unwrapped optional. This tells the computer that the variable is an optional but will always have a value. An implicitly unwrapped optional, therefore, does not need to be unwrapped every time you use it; it’s automatically unwrapped for you. Instead of creating the optional with a ? after the data type like a regular optional, you create an implicitly unwrapped optional by typing an ! after the data type.
+
+You might be wondering when you would ever use these implicitly unwrapped optionals. A common use is when you write an app with a storyboard. When you want to connect variables in your code to objects in the storyboard, you make them implicitly unwrapped optionals. You’ll see these come up in Chapter 10 while you’re creating the Birthday Tracker app. These variables need to be optional (because the storyboard requires it), but they will always have a value (since they are connected to the storyboard, the storyboard will always give them a value before you use them).
+Other than in this special case, you shouldn’t be using implicitly unwrapped optionals very often. They aren’t as safe
+
+#### nil coalescing
+When the optional has a value, the value will be used as usual, but when the optional is nil, the nil coalescing operator will use the default value instead.
+
+#### arrays and dic
+There is a big difference, however, in how Swift returns the values from a dictionary. When you access a value at an index of an array, you are simply given the value. When you access a value with a key in a dictionary, you are given an optional.
 
 ### Multi-line strings
 
@@ -135,14 +160,16 @@ favoriteIceCream["Charlotte", default: "Unknown"]
 
 ### Creating empty collections
 Arrays, sets, and dictionaries are called collections
-
+```
 var teams = [String: String]()
 
 var results = [Int]()
-
+```
 The exception is creating an empty set, which is done differently:
+```
 var words = Set<String>()
 var numbers = Set<Int>()
+```
 Swift has special syntax only for dictionaries and arrays; other types must use angle bracket syntax like sets.
 
 ### Enumerations
@@ -159,13 +186,14 @@ let result4 = Result.failure
 
 Enum raw values
 If you want, you can assign one or more cases a specific value, and Swift will generate the rest. It’s not very natural for us to think of Earth as the second planet, so you could write this:
-
+```
 enum Planet: Int {
     case mercury = 1
     case venus
     case earth
     case mars
 }
+```
 Now Swift will assign 1 to mercury and count upwards from there, meaning that earth is now the third planet.
 
 ### Operator overloading
@@ -173,15 +201,76 @@ For example, + sums integers But + also joins strings and even arrays
 
 ### The ternary operator
 Swift has a rarely used operator called the ternary operator.
+```
 let firstCard = 11
 let secondCard = 10
 print(firstCard == secondCard ? "Cards are the same" : "Cards are different")
+```
 
 ### Switch statements
 Swift gives us two ways of making ranges: the ..< and ... operators. The half-open range operator, ..<, creates ranges up to but excluding the final value, and the closed range operator, ..., creates ranges up to and including the final value.
 the default case must be there to ensure all possible values are covered.
 
-### 
+
+
+DAY 5
+FUNCTIONS
+Functions let us wrap up pieces of code so they can be used in lots of places. We can send data into functions to customize how they work, and get back data that tells us the result that was calculated.
+
+Believe it or not, function calls used to be really slow. Steve Johnson, the author of many early coding tools for the Unix operating system, said this:
+
+“Dennis Ritchie (the creator of the C programming language) encouraged modularity by telling all and sundry that function calls were really, really cheap in C. Everybody started writing small functions and modularizing. Years later we found out that function calls were still expensive, and our code was often spending 50% of its time just calling them. Dennis had lied to us! But it was too late; we were all hooked...”
+
+Swift lets us provide two names for each parameter: one to be used externally when calling the function, and one to be used internally inside the function. This is as simple as writing two names, separated by a space.
+
+To demonstrate this, here’s a function that uses two names for its string parameter:
+```
+func sayHello(to name: String) {
+    print("Hello, \(name)!")
+}
+```
+The parameter is called to name, which means externally it’s called to, but internally it’s called name. This gives variables a sensible name inside the function, but means calling the function reads naturally:
+```
+sayHello(to: "Taylor")
+```
+You might have noticed that we don’t actually send any parameter names when we call print() – we say print("Hello") rather than print(message: "Hello").
+
+You can get this same behavior in your own functions by using an underscore, _The print() function prints something to the screen, but always adds a new line to the end of whatever you printed, so that multiple calls to print() don’t all appear on the same line.print() has a terminator parameter that uses new line as its default value.
+
+Variadic functions
+
+they accept any number of parameters of the same type. The print() function is actually variadic: if you pass lots of parameters, they are all printed on one line with spaces between them:
+print("Haters", "gonna", "hate")
+
+You can make any parameter variadic by writing ... after its type
+
+``` swift
+func square(numbers: Int...) {...}
+...
+square(numbers: 1, 2, 3, 4, 5)
+```
+throwing functions
+
+### playing around
+
+``` swift
+var int = Int.random(in: 1..<100)
+var anInt = 0xa
+Int.Magnitude(int)
+abs(anInt)
+
+var sign = anInt.signum()
+print(sign)
+anInt.nonzeroBitCount
+Int.max
+var pie = 3.1415312
+
+pie.significand
+pie.exponent
+var last = Double.pi.ulp
+```
+
+
 
 ### Sources:
 
