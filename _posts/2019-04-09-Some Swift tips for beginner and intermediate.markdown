@@ -185,7 +185,7 @@ the default case must be there to ensure all possible values are covered.
 
 ### Sources:
 
-[Integrating Apps and Content with AR Quick Look - developer.apple.com](https://developer.apple.com/videos/play/wwdc2018/603/)
+[Playground tips](https://fluffy.es/xcode-playground-tips/)
 <hr>
 
 [^1]: What?
