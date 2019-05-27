@@ -13,9 +13,9 @@ published: false
 <br><cite></cite>
 </div>
 
-<a rel="ar" href="/assets/img/AR-QL-Pictures/retrotv.usdz">
+<!-- <a rel="ar" href="/assets/img/AR-QL-Pictures/retrotv.usdz">
     <img src="/assets/img/AR-QL-Pictures/Screenshot5.jpg">
-</a>
+</a> -->
 
 SDK is the iOS Software Development Kit. Xcode is a code editor known as an integrated development environment (IDE).  
 The iOS SDK is a suite of prebuilt programming libraries that help you write apps quickly and in a way that Apple expects. A programming library is a collection of related software modules that you can use in your programs. 

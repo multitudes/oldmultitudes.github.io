@@ -79,7 +79,7 @@ Let's take a look at the protocol for a dataSource.
 
 I create a **QLPreviewController**.
 
-{% highlight swift %}
+``` swift
 
 func preview(_ sender: Any) {
     let previewController = QLPreviewController() 
@@ -100,7 +100,7 @@ _ controller: QLPreviewController, previewItemAt index: Int) -> QLPreviewItem {
     let fileUrl = Bundle.main.url(forResource: “radar_aardvark”, withExtension: “usdz”)! 
     return fileUrl as QLPreviewItem
 }
-{% endhighlight %}
+```
 
 AR Quick Look is intended to be presented full screen.
 
