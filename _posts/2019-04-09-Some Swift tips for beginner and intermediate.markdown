@@ -74,36 +74,35 @@ There is a big difference, however, in how Swift returns the values from a dicti
 
 ### Multi-line strings
 
-{% highlight swift %}
-
 /* Standard Swift strings use double quotes, but you can’t include line breaks in there.
-If you want multi-line strings you need slightly different syntax: start and end with three double quote marks, like this: */
-
+If you want multi-line strings you need slightly different syntax: start and end with three double quote marks, like this: 
+``` swift
 var str1 = """
 This goes
 over multiple
 lines
 """
-/*Swift is very particular about how you write those quote marks: the opening and closing triple must be on their own line, but that opening and closing line breaks won’t be included in your final string.
+```
+Swift is very particular about how you write those quote marks: the opening and closing triple must be on their own line, but that opening and closing line breaks won’t be included in your final string.
 
 If you only want multi-line strings to format your code neatly, and you don’t want those line breaks to actually be in your string, end each line with a \, like this:
-*/
+``` swift
+
 var str2 = """
 This goes \
 over multiple \
 lines
 """ 
-
-{% endhighlight %}
-
+```
 ### String interpolation
 
- Swift also has a feature called string interpolation – the ability to place variables inside your strings to make them more useful.
+Swift also has a feature called string interpolation – the ability to place variables inside your strings to make them more useful.
 
 You can place any type of variable inside your string – all you have to do is write a backslash, \, followed by your variable name in parentheses. For example:
-
+``` swift
 var score = 85
 var str = "Your score was \(score)"
+```
 As you’ll see later on, string interpolation isn’t just limited to placing variables – you can actually run code inside there.
 
 ### Constants
@@ -112,37 +111,38 @@ The let keyword creates constants, which are values that can be set once and nev
 
 ### Type annotations
 If you want you can be explicit about the type of your data rather than relying on Swift’s type inference, like this:
-
+``` swift
 let album: String = "Reputation"
 let year: Int = 1989
 let height: Double = 1.78
 let taylorRocks: Bool = true
-
+```
 ### COMPLEX DATA TYPES
 Arrays are collections of values that are stored as a single value
 Sets are collections of values just like arrays, except they have two differences:  
 Items aren’t stored in any order; they are stored in what is effectively a random order.  
 No item can appear twice in a set; all items must be unique.  
 You can create sets directly from arrays, like this:
-
+``` swift
 let colors = Set(["red", "green", "blue"])
+```
 If you try to insert a duplicate item into a set, the duplicates get ignored. For example:
-
+``` swift
 let colors2 = Set(["red", "green", "blue", "red", "blue"])
-
+```
 Tuples allow you to store several values together in a single value. That might sound like arrays, but tuples are different:
 
 You can’t add or remove items from a tuple; they are fixed in size.
 You can’t change the type of items in a tuple; they always have the same types they were created with.
 You can access items in a tuple using numerical positions or by naming them
 Tuples are created by placing multiple items into parentheses, like this:
-
+``` swift
 var name = (first: "Taylor", last: "Swift")
-You then access items using numerical positions starting from 0:
+// You then access items using numerical positions starting from 0:
 name.0
-Or you can access items using their names:
+// Or you can access items using their names:
 name.first
-
+```
 If you need a specific, fixed collection of related values where each item has a precise position or name, you should use a tuple:
 If you need a collection of values that must be unique or you need to be able to check whether a specific item is in there extremely quickly, you should use a set:
 If you need a collection of values that can contain duplicates, or the order of your items matters, you should use an array:
@@ -151,13 +151,13 @@ Dictionaries are collections of values just like arrays, but rather than storing
 When using type annotations, dictionaries are written in brackets with a colon between your identifier and value types. For example, [String: Double] and [String: String].
 
 ### Dictionary default values
-
+``` swift
 let favoriteIceCream = [
     "Paul": "Chocolate",
     "Sophie": "Vanilla"
 ]
 favoriteIceCream["Charlotte", default: "Unknown"]
-
+```
 ### Creating empty collections
 Arrays, sets, and dictionaries are called collections
 ```
@@ -173,20 +173,21 @@ var numbers = Set<Int>()
 Swift has special syntax only for dictionaries and arrays; other types must use angle bracket syntax like sets.
 
 ### Enumerations
-
+``` swift
 enum Result {
     case success
     case failure
 }
+```
 And now when we use it we must choose one of those two values:
-
+``` swift
 let result4 = Result.failure
-
+```
 ### Enum associated values
 
 Enum raw values
 If you want, you can assign one or more cases a specific value, and Swift will generate the rest. It’s not very natural for us to think of Earth as the second planet, so you could write this:
-```
+``` swift
 enum Planet: Int {
     case mercury = 1
     case venus
@@ -201,7 +202,7 @@ For example, + sums integers But + also joins strings and even arrays
 
 ### The ternary operator
 Swift has a rarely used operator called the ternary operator.
-```
+``` swift
 let firstCard = 11
 let secondCard = 10
 print(firstCard == secondCard ? "Cards are the same" : "Cards are different")
@@ -249,7 +250,312 @@ func square(numbers: Int...) {...}
 ...
 square(numbers: 1, 2, 3, 4, 5)
 ```
-throwing functions
+#### throwing functions
+
+Sometimes functions fail because they have bad input, or because something went wrong internally. Swift lets us throw errors from functions by marking them as throws before their return type, then using the throw keyword when something goes wrong.
+
+First we need to define an enum that describes the errors we can throw. These must always be based on Swift’s existing Error type. We’re going to write a function that checks whether a password is good, so we’ll throw an error if the user tries an obvious password:
+``` swift
+enum PasswordError: Error {
+    case obvious
+}
+```
+Now we’ll write a checkPassword() function that will throw that error if something goes wrong. This means using the throws keyword before the function’s return value, then using throw PasswordError.obvious if their password is “password”.
+
+Here’s that in Swift:
+``` swift
+func checkPassword(_ password: String) throws -> Bool {
+    if password == "password" {
+        throw PasswordError.obvious
+    }
+
+    return true
+}
+```
+
+you need to call these functions using three new keywords: do starts a section of code that might cause problems, try is used before every function that might throw an error, and catch lets you handle errors gracefully.
+
+If any errors are thrown inside the do block, execution immediately jumps to the catch block. Let’s try calling checkPassword() with a parameter that throws an error:
+``` swift
+do {
+    try checkPassword("password")
+    print("That password is good!")
+} catch {
+    print("You can't use that password.")
+}
+```
+#### inout parameters
+
+you can pass in one or more parameters as inout, which means they can be changed inside your function, and those changes reflect in the original value outside the function.
+
+For example, if you want to double a number in place – i.e., change the value directly rather than returning a new one – you might write a function like this:
+
+``` swift
+func doubleInPlace(number: inout Int) {
+    number *= 2
+}
+```
+You also need to pass the parameter to doubleInPlace using an ampersand, &, before its name, which is an explicit recognition that you’re aware it is being used as inout.
+
+In code, you’d write this:
+``` swift
+var myNum = 10 
+doubleInPlace(number: &myNum)
+```
+
+#### CLOSURES
+
+Swift lets us use functions just like any other type such as strings and integers. This means you can create a function and assign it to a variable, call that function using that variable, and even pass that function into other functions as parameters.
+
+``` swift
+let driving = {
+    print("I'm driving in my car")
+}
+```
+creates a function without a name, and assigns that function to driving
+
+You can now call driving() as if it were a regular function, like this:
+
+``` swift
+driving()
+```
+To make a closure accept parameters, list them inside parentheses just after the opening brace, then write in so that Swift knows the main body of the closure is starting.
+
+For example, we could make a closure that accepts a place name string as its only parameter like this:
+``` swift
+let driving = { (place: String) in
+    print("I'm going to \(place) in my car")
+}
+```
+One of the differences between functions and closures is that you don’t use parameter labels when running closures. So, to call driving() now we’d write this:
+``` swift
+driving("London")
+```
+
+Closures can also return values, and they are written similarly to parameters: you write them inside your closure, directly before the in keyword.
+
+``` swift
+let driving = { (place: String) in
+    print("I'm going to \(place) in my car")
+}
+```
+We want a closure that returns a string rather than printing the message directly, so we need to use -> String before in, then use return just like a normal function:
+``` swift
+let drivingWithReturn = { (place: String) -> String in
+    return "I'm going to \(place) in my car"
+}
+```
+We can now run that closure and print its return value:
+``` swift
+let message = drivingWithReturn("London")
+print(message)
+```
+
+Because closures can be used just like strings and integers, you can pass them into functions.
+
+First, here’s our basic driving() closure again
+``` swift
+let driving = {
+    print("I'm driving in my car")
+}
+```
+If we wanted to pass that closure into a function so it can be run inside that function, we would specify the parameter type as () -> Void. That means “accepts no parameters, and returns Void” – Swift’s way of saying “nothing”.
+
+So, we can write a travel() function that accepts different kinds of traveling actions, and prints a message before and after:
+``` swift
+func travel(action: () -> Void) {
+    print("I'm getting ready to go.")
+    action()
+    print("I arrived!")
+}
+``` swift
+We can now call that using our driving closure, like this:
+``` swift
+travel(action: driving)
+``` swift
+
+
+
+#### Trailing closure syntax
+
+If the last parameter to a function is a closure, Swift lets you use special syntax called trailing closure syntax. Rather than pass in your closure as a parameter, you pass it directly after the function inside braces.
+
+This is the function
+``` swift
+func travel(action: () -> Void) {
+    print("I'm getting ready to go.")
+    action()
+    print("I arrived!")
+}
+```
+
+now, instead of declaring a closure to pass in as parameter,
+wenn I call the function I add the {} and inside those I pass the closure which would be the closure parameter
+
+``` swift
+travel() {
+    print("I'm driving in my car")  // this is the closure which will be as parameter in travel
+}
+```
+
+this is why is called trailing
+
+and this is ok too!! calling the travel func without the ()
+``` swift
+travel {
+    print("I'm driving in my car")
+}
+```
+
+
+#### Using closures as parameters when they accept parameters
+
+This is where closures can start to be read a bit like line noise: a closure you pass into a function can also accept its own parameters.
+
+We’ve been using () -> Void to mean “accepts no parameters and returns nothing”, but you can go ahead and fill the () with the types of any parameters that your closure should accept.
+
+To demonstrate this, we can write a travel() function that accepts a closure as its only parameter, and that closure in turn accepts a string:
+``` swift
+func travel(action: (String) -> Void) {
+    print("I'm getting ready to go.")
+    action("London")
+    print("I arrived!")
+}
+```
+Now when we call travel() using trailing closure syntax, our closure code is required to accept a string:
+``` swift
+travel { (place: String) in
+    print("I'm going to \(place) in my car")
+}
+```
+
+#### Using closures as parameters when they return values
+
+We can write a travel() function that accepts a closure as its only parameter, and that closure in turn accepts a string and returns a string:
+``` swift
+func travel(action: (String) -> String) {
+    print("I'm getting ready to go.")
+    let description = action("London")
+    print(description)
+    print("I arrived!")
+}
+```
+Now when we call travel() using trailing closure syntax, our closure code is required to accept a string and return a string:
+``` swift
+travel { (place: String) -> String in
+    return "I'm going to \(place) in my car"
+}
+```
+### Genius - Shorthand parameter names
+
+However, Swift knows the parameter to that closure must be a string, so we can remove it:
+``` swift
+travel { place -> String in
+    return "I'm going to \(place) in my car"
+}
+```
+It also knows the closure must return a string, so we can remove that:
+``` swift
+travel { place in
+    return "I'm going to \(place) in my car"
+}
+```
+As the closure only has one line of code that must be the one that returns the value, so Swift lets us remove the return keyword too:
+``` swift
+travel { place in
+    "I'm going to \(place) in my car"
+}
+```
+Swift has a shorthand syntax that lets you go even shorter. Rather than writing place in we can let Swift provide automatic names for the closure’s parameters. These are named with a dollar sign, then a number counting from 0.
+``` swift
+travel {
+    "I'm going to \($0) in my car"
+}
+```
+and with two parameter to the closure
+``` swift
+func travel(action: (String, String) -> String ) {
+    print("hello")
+    let description = action("Berlin","London")
+    print(description)
+    print("and ciao")
+}
+travel {
+    "driving to \($0) and \($1)"
+}
+```
+or
+``` swift
+func travel(action: (String, Int) -> String) {
+    print("I'm getting ready to go.")
+    let description = action("London", 60)
+    print(description)
+    print("I arrived!")
+}
+We’re going to call that using a trailing closure and shorthand closure parameter names. Because this accepts two parameters, we’ll be getting both $0 and $1:
+
+travel {
+    "I'm going to \($0) at \($1) miles per hour."
+}
+```
+
+#### Returning closures from functions
+
+In the same way that you can pass a closure to a function, you can get closures returned from a function too.
+
+The syntax for this is a bit confusing at first, because it uses -> twice: once to specify your function’s return value, and a second time to specify your closure’s return value.
+
+To try this out, we’re going to write a travel() function that accepts no parameters, but returns a closure. The closure that gets returned must be called with a string, and will return nothing.
+
+Here’s how that looks in Swift:
+``` swift
+func travel() -> (String) -> Void {
+    return {
+        print("I'm going to \($0)")
+    }
+}
+```
+We can now call travel() to get back that closure, then call it as a function:
+``` swift
+let result = travel()
+result("London")
+```
+It’s technically allowable – although really not recommended! – to call the return value from travel() directly:
+``` swift
+let result2 = travel()("London")
+```
+
+If you use any external values inside your closure, Swift captures them – stores them alongside the closure, so they can be modified even if they don’t exist any more.
+
+Right now we have a travel() function that returns a closure, and the returned closure accepts a string as its only parameter and returns nothing:
+
+func travel() -> (String) -> Void {
+    return {
+        print("I'm going to \($0)")
+    }
+}
+We can call travel() to get back the closure, then call that closure freely:
+
+let result = travel()
+result("London")
+Closure capturing happens if we create values in travel() that get used inside the closure. For example, we might want to track how often the returned closure is called:
+
+func travel() -> (String) -> Void {
+    var counter = 1
+
+    return {
+        print("\(counter). I'm going to \($0)")
+        counter += 1
+    }
+}
+Even though that counter variable was created inside travel(), it gets captured by the closure so it will still remain alive for that closure.
+
+So, if we call result("London") multiple times, the counter will go up and up:
+
+result("London")
+result("London")
+result("London")
+
 
 ### playing around
 
@@ -269,7 +575,6 @@ pie.significand
 pie.exponent
 var last = Double.pi.ulp
 ```
-
 
 
 ### Sources:

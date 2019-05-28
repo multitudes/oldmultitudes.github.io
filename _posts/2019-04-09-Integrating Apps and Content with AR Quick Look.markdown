@@ -44,30 +44,26 @@ AR Quick Look is integrated into the files app, mail, messages, notes, news, and
 ## Quick Look
 
 What's Quick Look? Quick Look is all about previewing documents, and more precisely, Quick Look is an iOS framework that provides multiple core features.  
-It allows you to preview documents of several commonly used file formats, to provide custom previews for files of your very own file format, and to provide thumbnails to the system for files of your own custom file format.  
-Quick Look comes with a sophisticated security model that keeps your application safe.  
-Let's take a look at the supported file types.  
-Media files such as images, audio files and videos, documents such as PDFs and office files, but also zip archives.  
-For each of the file types shown before we made sure that Quick Look provides the best possible preview on your mobile devices.
-For example, when previewing images you're able to zoom into the images conveniently.  
-You're also able to close Quick Look with a swipe down gesture.  
-In PDF documents you get a sidebar with thumbnails for easier navigation.  
-In spreadsheets you can switch through the individual pages of the document.  
-And in media files we show a scrubber that allows you to go back and forth and so on.  
-Quick Look about previewing documents like Keynotes, PDFs, images, and now 3D model files like usdz.  
-You can integrate AR Quick Look in two different mediums, in an application or in websites in Safari.  
+
+It allows to preview documents of several commonly used file formats, and even to provide custom previews and thumbnails for files of your the developer's own file format.
+
+And Quick Look comes with a sophisticated security model that keeps the application safe.  
+
+For each of the file types Quick Look provides the best possible preview on the mobile devices. For example, when previewing images we are able to zoom into the images conveniently. We are also able to close Quick Look with a swipe down gesture.  
+
+Let's take a look at the supported file types. 
+- Media files such as images, audio files and videos, documents such as PDFs and office files, but also zip archives. 
+- in PDF documents we get a sidebar with thumbnails for easier navigation.  
+- In spreadsheets we can switch through the individual pages of the document.  
+- And in media files we have a scrubber that allows to go forward and rewind.
+- And usdz.  
 
 
+We can integrate AR Quick Look in two different mediums, in an application or in websites in Safari.  
 
-
-### Quick Look API
+##### Quick Look in Applications
 
 Let's get started with applications and how the Quick Look API is used to provide an AR experience.  
-Security is handled for you where the contents of the usdz file is safely read to present a preview for you.  
-
-##### Quick Look in your application
-
-Lets see the code.
 
 We have a **ViewController** with a grid of thumbnails for various 3D models.  
 When someone taps on one of these thumbnails, I want to show a Quick Look preview of the model for that thumbnail.  
@@ -234,7 +230,9 @@ It's based on Pixar's open-source **Universal Scene Description** format, or sho
 
 This is a command line tool that will convert existing 3D models to usdz format.  
 It ships inside Xcode 10, and in addition to creating usdz files, you could also use it to map PBR textures to the meshes and submeshes inside those existing models.  
-It takes three input formats: OBJ files, Alembic files, or existing USD files, either USDA or USDC, the ASCII and binary versions of USD.
+It takes three input formats: OBJ files, Alembic files, or existing USD files, either USDA or USDC, the ASCII and binary versions of USD.  
+For a still object you can use a Wavefront (.obj) file. For an animation you’ll use an Alembic (.abc) file.
+
 
 We call the tool with `xcrun` because it ships inside Xcode.  
 
@@ -275,6 +273,8 @@ In essence, these are uncompressed zip archives.
 Change the extension to .zip and unzip the file. The folder contains several files, the **usdc** file (USD binary) and the model's mesh, its animation, if it has some, and any material definitions it needs.  
 And then, the remainder of the files in the archive are any textures, any images.   
 This is an open format and [Pixar have published the direct specification for usdz](https://graphics.pixar.com/usd/docs/Usdz-File-Format-Specification.html).   
+ 
+ 
  
 ### Human Interface Guidelines
 
