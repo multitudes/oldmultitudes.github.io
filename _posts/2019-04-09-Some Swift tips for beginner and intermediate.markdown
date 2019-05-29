@@ -13,6 +13,8 @@ published: false
 <br><cite></cite>
 </div>
 
+Martin Fowler wrote, “any fool can write code that a computer can understand, but good programmers write code that humans can understand.”
+
 <!-- <a rel="ar" href="/assets/img/AR-QL-Pictures/retrotv.usdz">
     <img src="/assets/img/AR-QL-Pictures/Screenshot5.jpg">
 </a> -->
@@ -556,6 +558,292 @@ result("London")
 result("London")
 result("London")
 
+
+### struct
+
+Variables inside structs are called properties, so this is a struct with one property:
+``` swift
+struct Sport {
+    var name: String
+}
+ //That defines the type, so now we can create and use an instance of it:
+
+var tennis = Sport(name: "Tennis")
+print(tennis.name)
+tennis.name = "Lawn tennis"
+```
+We made both name and tennis variable, so we can change them just like regular variables
+
+
+These are called stored properties, because Swift has a different kind of property called a computed property – a property that runs code to figure out its value.
+
+We’re going to add another stored property to the Sport struct, then a computed property. Here’s how that looks:
+``` swift
+struct Sport {
+    var name: String
+    var isOlympicSport: Bool
+
+    var olympicStatus: String {
+        if isOlympicSport {
+            return "\(name) is an Olympic sport"
+        } else {
+            return "\(name) is not an Olympic sport"
+        }
+    }
+}
+```
+As you can see, olympicStatus looks like a regular String, but it returns different values depending on the other properties.
+
+Property observers let you run code before or after any property changes. To demonstrate this, we’ll write a Progress struct that tracks a task and a completion percentage:
+``` swift
+struct Progress {
+    var task: String
+    var amount: Int
+}
+//We can now create an instance of that struct and adjust its progress over time:
+
+var progress = Progress(task: "Loading data", amount: 0)
+progress.amount = 30
+progress.amount = 80
+progress.amount = 100
+What we want to happen is for Swift to print a message every time amount changes, and we can use a didSet property observer for that. This will run some code every time amount changes:
+
+struct Progress {
+    var task: String
+    var amount: Int {
+        didSet {
+            print("\(task) is now \(amount)% complete")
+        }
+    }
+}
+```
+
+### Classes
+At first, classes seem very similar to structs but they introduce a new, important, and complex feature called inheritance and important differences
+
+The first difference between classes and structs is that classes never come with a memberwise initializer. This means if you have properties in your class, you must always create your own initializer.
+``` swift
+
+// must have initializer!
+
+class Dog {
+    var name: String
+    var breed: String
+
+    init(name: String, breed: String) {
+        self.name = name
+        self.breed = breed
+    }
+}
+
+// Class inheritance. it inherits all the properties and methods of the original class, and can add its own on top.
+
+class Poodle: Dog {
+// ...
+}
+
+// However, we can also give Poodle its own initializer
+class Poodle: Dog {
+    init(name: String) {
+        super.init(name: name, breed: "Poodle")
+    }
+}
+
+// For safety reasons, Swift always makes you call super.init() from child classes – just in case the parent class does some important work when it’s created.
+// Child classes can replace parent methods with their own implementations – a process known as overriding
+
+//lets add the method to dog
+    func makeNoise() {
+        print("Woof!")
+    }
+    
+// If we create a new Poodle class that inherits from Dog, it will inherit the makeNoise() method. So, this will print “Woof!”:
+//Method overriding allows us to change the implementation of makeNoise() for the Poodle class.
+
+//Swift requires us to use override func rather than just func when overriding a method
+// in Poodle!
+override func makeNoise() {
+        print("Yip!")
+    }
+
+// sometimes you want to disallow other developers from building their own class based on yours.
+
+Swift gives us a final keyword just for this purpose: when you declare a class as being final, no other class can inherit from it.
+
+final class Dog {
+   // ...
+}
+
+// The third difference between classes and structs is how they are copied. When you copy a struct, both the original and the copy are different things – changing one won’t change the other. When you copy a class, both the original and the copy point to the same thing, so changing one does change the other.
+
+// The fourth difference between classes and structs is that classes can have deinitializers – code that gets run when an instance of a class is destroyed.
+
+// We’re going to create a few instances of the Person class inside a loop, because each time the loop goes around a new person will be created then destroyed:
+
+for _ in 1...3 {
+    let person = Person()
+    person.printGreeting()
+}
+
+deinit {
+    print("\(name) is no more!")
+}
+
+//The final difference between classes and structs is the way they deal with constants. If you have a constant struct with a variable property, that property can’t be changed because the struct itself is constant.
+
+//However, if you have a constant class with a variable property, that property can be changed
+
+//If you want to stop that from happening you need to make the property constant:
+
+```
+
+### PROTOCOLS AND EXTENSIONS
+
+Truly Swifty functionality: protocols and protocol-oriented programming (POP).
+
+POP does away with large, complex inheritance hierarchies, and replaces them with much smaller, simpler protocols that can be combined together. This really is the fulfillment of something Tony Hoare said many years ago: “inside every large program, there is a small program trying to get out.”
+Protocols are a way of describing what properties and methods something must have. You then tell Swift which types use that protocol – a process known as adopting or conforming to a protocol.
+
+For example, we can write a function that accepts something with an id property, but we don’t care precisely what type of data is used. We’ll start by creating an Identifiable protocol, which will require all conforming types to have an id string that can be read (“get”) or written (“set”):
+
+``` swift
+protocol Identifiable {
+    var id: String { get set }
+}
+
+// We can’t create instances of that protocol - it’s a description, not a type by itself. But we can create a struct that conforms to it:
+
+struct User: Identifiable {
+    var id: String
+}
+// Finally, we’ll write a displayID() function that accepts any Identifiable object:
+
+func displayID(thing: Identifiable) {
+    print("My ID is \(thing.id)")
+}
+
+```
+
+#### Protocol inheritance
+
+One protocol can inherit from another in a process known as protocol inheritance. Unlike with classes, you can inherit from multiple protocols at the same time before you add your own customizations on top
+
+```
+protocol Payable {
+    func calculateWages() -> Int
+}
+
+protocol NeedsTraining {
+    func study()
+}
+
+protocol HasVacation {
+    func takeVacation(days: Int)
+}
+
+//We can now create a single Employee protocol that brings them together in one protocol. 
+
+protocol Employee: Payable, NeedsTraining, HasVacation { }
+
+// ex
+func helloNewEmployee(employee : Employee ) {
+    print("hello there")
+}
+struct myEmployee: Employee {
+    func calculateWages() -> Int {return 10}
+    func study(){}
+    func takeVacation(days: Int){ }
+    
+}
+
+
+var carl = myEmployee()
+
+carl.calculateWages()
+helloNewEmployee(employee: carl)
+
+```
+### Extensions
+Extensions allow you to add methods to existing types, to make them do things they weren’t originally designed to do.
+For example, we could add an extension to the Int type so that it has a squared() method that returns the current number multiplied by itself:
+```
+extension Int {
+    func squared() -> Int {
+        return self * self
+    }
+}
+
+let number = 9
+
+number.squared()
+```
+Swift doesn’t let you add stored properties in extensions, so you must use computed properties instead. For example, we could add a new isEven computed property to integers that returns true if it holds an even number:
+```
+extension Int {
+    var isEven: Bool {
+        return self % 2 == 0
+    }
+}
+```
+
+### Protocol extensions
+
+Protocols let you describe what methods something should have, but don’t provide the code inside. Extensions let you provide the code inside your methods, but only affect one data type – you can’t add the method to lots of types at the same time.
+
+rather than extending a specific type like Int you extend a whole protocol so that all conforming types get your changes.
+
+For example, here is an array and a set containing some names:
+
+Swift’s arrays and sets both conform to a protocol called Collection, so we can write an extension to that protocol to add a summarize() method to print the collection neatly
+
+```
+let pythons = ["Eric", "Graham", "John", "Michael", "Terry", "Terry"]
+let beatles = Set(["John", "Paul", "George", "Ringo"])
+
+extension Collection {
+    func summarize() {
+        print("There are \(count) of us:")
+
+        for name in self {
+            print(name)
+        }
+    }
+}
+
+// Both Array and Set will now have that method, so we can try it out:
+
+pythons.summarize()
+beatles.summarize()
+
+```
+### Protocol-oriented programming
+
+Protocol extensions can provide default implementations for our own protocol methods. This makes it easy for types to conform to a protocol, and allows a technique called “protocol-oriented programming” – crafting your code around protocols and protocol extensions.
+
+First, here’s a protocol called Identifiable that requires any conforming type to have an id property and an identify() method:
+```
+protocol Identifiable {
+    var id: String { get set }
+    func identify()
+}
+```
+We could make every conforming type write their own identify() method, but protocol extensions allow us to provide a default:
+```
+extension Identifiable {
+    func identify() {
+        print("My ID is \(id).")
+    }
+}
+```
+Now when we create a type that conforms to Identifiable it gets identify() automatically:
+```
+struct User: Identifiable {
+    var id: String
+}
+
+let twostraws = User(id: "twostraws")
+twostraws.identify()
+```
 
 ### playing around
 
