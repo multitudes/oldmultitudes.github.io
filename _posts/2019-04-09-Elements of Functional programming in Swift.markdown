@@ -12,131 +12,170 @@ published: false
 "Any fool can write code that a computer can understand, but good programmers write code that humans can understand"
 <br><cite>Martin Fowler</cite>
 </div>
-
-in this talk I want to try and
-
-give you some real quick wins quick wins
-
-because sometimes you get words like
-
-monads and funk doors and applicative
-
-thrown around and it can seem very dry
-
-and very academic and not for you when
-
-it really is so this concept of quick
-
-wins I have shamelessly stolen from an
-
-ex Apple engineer called and EEMA to
-
-Shack and the idea is he talks about
-
-lightweight encounters you dip in get
-
-some quick wins and run away for it gets
-
-too hard.
+<div class="message">
+"Classes are about as welcome in functional code as a hedgehog in a hemophilia convention."
+<br><cite>Paul Hudson</cite>
+</div>
+<div class="message">
+"express what we want to achieve, rather than how this is implemented.
+<br><cite>Javier Soto</cite>
+</div>
 
 
-what makes good functional code one of
+What is functional programming?  
 
-them is we rely very strongly on
+We are used to Object Oriented Programming. One class blends state, functionality, inheritance, and more. We will see that functional programming can dramatically simplify your code. 
 
-immutability we like using constants
+### Five principles of functional programming
 
-everywhere and of course swift and
+- Functions are first-class data types. That means they can be created, copied, and passed around like integers and strings. 
+- Functions can be used as parameters to other functions. 
+- In order to allow our functions to be re-used in various ways, they should always return the same output when given specific input, and not cause any side effects. 
+- Because functions always return the same output for some given input, we should prefer to use immutable data types rather than using functions to change mutable variables. 
+- Because our functions don't cause side effects and variables are all immutable, we can reduce how much state we track in our program – and often eliminate it altogether.
 
-forces is for us you try and change a
+You should already know that functions are first-class data types in Swift – after all, you can copy closures and pass them around. So, that's one down. Next up, passing functions as parameters to other functions is also something you maybe have done already, such as calling sort() with a closure.  
 
-constant you get nothing at all
+You might come across the name "higher-order function", which is the name given to a function that accepts another function as a parameter.  
 
-we haven't compiled
+Where things get more a bit more complicated – but a lot more interesting – is when we write functions that always produce the same output for a given input. This means if you write a function lengthOfStrings() that accepts an array of strings and returns back an array of integers based on the length of each string, that function will return [6, 4, 5] when given ["Taylor", "Paul", "Adele"]. It doesn't matter what else has happened in your program, or how often the function has been called: the same input must return the same output.  
 
-good functional code avoids state at all
+A function that always returns the same result for a given input without causing side effects is often called a pure function. 
 
-those little properties you store away
+If a function does something like writing to disk, is that a side effect or in fact just the main point of the function?   
+Functional programmers should aspire to create pure functions.
 
-settings and so forth it might start
 
-like this but after a few months if not
 
-years what you normally get a much messy
+The lack of state can be tricky, because it's so deeply baked into object orientation. "State" is a series of values stored by your program, it includes caching things to increase performance, and also important things like user settings. The problem comes when this state gets used inside a function, because it means the function is no longer predictable.  
+Using the lengthOfStrings() example from earlier, consider what would happen if we had a boolean setting called returnLengthsAsBinary – the function that would always return [6, 4, 5] when given ["Taylor", "Paul, "Adele"] could now also return ['110', '10', '101'] depending on the value of something completely external. 
 
-situation so good functional code avoid
+When all five of these principles combine, you get a number of immediate, valuable benefits. 
 
-states you pass values into a function
+When you write functions that produce predictable output, you can write unit tests for them trivially. 
 
-change them inside the function and
 
-return new values you avoid external
+### The map() method
 
-stuff and of course this makes a code
+``` swift
+let names = ["Taylor", "Paul", "Adele"]
 
-significantly easier to test you know
+func lengthOfStrings(strings: [String]) -> [Int] {
+    var result = [Int]()
+    for string in strings {
+        result.append(string.characters.count)
+}
+    return result
+}
+```
 
-that function a will always return one
+That function takes an array of strings and returns an array of integers based on those strings. 
 
-two three for the same values every
+we can replace all that code with this:
 
-single time regardless of any properties
+``` swift
+func lengthOfStrings(strings: [String]) -> [Int] {
+    return strings.map { $0.characters.count }
+}
+```
 
-you might be using good functional code
+the functional version conveys significantly more meaning to the compiler
 
-is composable you write small functions
+the type signature hasn't changed.you can upgrade your code bit by bit rather than all at once.
+Another ex
+``` swift
 
+let fruits = ["Apple", "Cherry", "Orange", "Pineapple"]
+let upperFruits = fruits.map { $0.uppercased() }
+print(upperFruits)
+>>> ["APPLE", "CHERRY", "ORANGE", "PINEAPPLE"]
+
+// 
+let scores = [100, 80, 85]
+let formatted = scores.map { "Your score was \($0)" }
+print(formatted)
+>>> ["Your score was 100", "Your score was 80", "Your score was 85"]
+// 
+let scores = [100, 80, 85]
+let passOrFail = scores.map { $0 > 85 ? "Pass" : "Fail" }
+let position = [50, 60, 40]
+let averageResults = position.map { 45...55 ~= $0  ? "Within
+average" : "Outside average" }
+
+// with ternary operator
+let scores = [100, 80, 85]
+let passOrFail = scores.map { $0 > 85 ? "Pass" : "Fail" }
+let position = [50, 60, 40]
+let averageResults = position.map { 45...55 ~= $0  ? "Within
+average" : "Outside average" }
+
+
+```
+map() has that name because it specifies the mapping from one array to another. 
+
+### Optional map
+a value inside a container is exactly what optionals are. They are defined like this:
+
+``` swift
+enum Optional<Wrapped> {
+case None
+case Some(Wrapped)
+}
+
+let shortForm: Int? = Int("42")
+let longForm: Optional<Int> = Int("42")
+
+let number: Int? = Optional.some(42)
+let noNumber: Int? = Optional.none
+print(noNumber == nil)
+// Prints "true"
+```
+
+we can use map() on optionals too. The principle is identical: take value out of container, apply function, then place value back in the container again.
+
+
+===================
+
+one of them is immutability. 
+avoids states
+good functional code is composable 
+you write small functions
 that do one maybe two things then
-
 combine together to make bigger
+functions like Lego bricks. 
+good functional code allows
+us to express our intent clearly. it
+clarifies our intent.
 
-functions like Lego bricks but most
 
-importantly good functional code allows
+### map
 
-us to express our intent clearly it
+maps works great on collections and optionals
+Dumas said English is just French badly pronounced 
 
-clarifies our intent use your quote
+### Useful terms
 
-stolen from xavier soto from twitch he
+monads
+functors
+applicative 
+"lightweight encounters" - You dip in, get some quick wins and run away before it gets too hard.
 
-says it allows us to express what we
 
-want to achieve rather than how it's
 
-implemented smart man now enough intro
+### Sources:
+[Paul Hudson - Elements of Functional Programming](https://www.dotconferences.com/2018/01/paul-hudson-elements-of-functional-programming)
+[Teaching Swift at Scale - Paul Hudson](https://vimeo.com/291590798)
+[SwiftConf '18 - Paul Hudson: Mastering iOS Animation](https://www.youtube.com/watch?time_continue=41&v=_4McEnarqNc)
+[https://learntalks.com/tag/paul-hudson/](https://learntalks.com/tag/paul-hudson/)
 
-let's get to the code somethings map map
 
-works great on collections and optionals
 
-and we're starting easy collections okay
 
-where does it transform stuff values
+<hr>
 
-come in get transformed by a closure
+[^1]: What?
 
-rights and emitted as transformed values
 
-r example one two three four map can
-
-double that to be two four six eight
-
-nice and easy
-
-play some English words camping parking
-
-in weekend we can say hey map make that
-
-French
-
-as Kumar said English is just French
-
-badly pronounced map could even try and
-
-make olympic marseille it's a good
-
-football team but probably not now as an
 
 example imagine a function which accepts
 
@@ -702,34 +741,7 @@ values inside the function takes a work
 
 and that's okay so let's wrap up first
 
-up I hope you learn soon you I hope you
-
-impressed by my french suck it up you
-
-weren't you scared
-
-I did try and keep it as simple as
-
-possible quite as applicable as possible
-
-and thirdly I hope that tomorrow you can
-
-go back to your desk and apply what
-
-you've learned she just learned
-
-functional program look at happen she is
-
-right that could be you merci beaucoup
+up
 
 
-### Sources:
-[Paul Hudson - Elements of Functional Programming](https://www.dotconferences.com/2018/01/paul-hudson-elements-of-functional-programming)
-[Teaching Swift at Scale - Paul Hudson](https://vimeo.com/291590798)
-[SwiftConf '18 - Paul Hudson: Mastering iOS Animation](https://www.youtube.com/watch?time_continue=41&v=_4McEnarqNc)
-[https://learntalks.com/tag/paul-hudson/](https://learntalks.com/tag/paul-hudson/)
-
-
-<hr>
-
-[^1]: What?
+L'anglais n'est que du français mal prononcé." "English is just badly pronounced French." D'Artagnan Alexandre Dumas

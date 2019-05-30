@@ -51,8 +51,7 @@ import Foundation // put it on the top of the playground
 
 
 
-#### arrays and dic
-There is a big difference, however, in how Swift returns the values from a dictionary. When you access a value at an index of an array, you are simply given the value. When you access a value with a key in a dictionary, you are given an optional.
+
 
 ### Multi-line strings
 
@@ -130,9 +129,12 @@ If you need a collection of values that must be unique or you need to be able to
 If you need a collection of values that can contain duplicates, or the order of your items matters, you should use an array:
 Dictionaries are collections of values just like arrays, but rather than storing things with an integer position you can access them using anything you want.
 
+There is a big difference, however, in how Swift returns the values from a dictionary. When you access a value at an index of an array, you are simply given the value. When you access a value with a key in a dictionary, you are given an optional.
+Removing an item from a dictionary is quite simple; you do so by setting the value to nil. Because the values in dictionaries are returned as optionals, you don’t have to worry about nil causing any problems 
+
 When using type annotations, dictionaries are written in brackets with a colon between your identifier and value types. For example, [String: Double] and [String: String].
 
-### Dictionary default values
+#### Dictionary default values
 ``` swift
 let favoriteIceCream = [
     "Paul": "Chocolate",
@@ -140,7 +142,7 @@ let favoriteIceCream = [
 ]
 favoriteIceCream["Charlotte", default: "Unknown"]
 ```
-### Creating empty collections
+#### Creating empty collections
 Arrays, sets, and dictionaries are called collections
 ```
 var teams = [String: String]()
@@ -165,7 +167,7 @@ And now when we use it we must choose one of those two values:
 ``` swift
 let result4 = Result.failure
 ```
-### Enum associated values
+#### Enum associated values
 
 Enum raw values
 If you want, you can assign one or more cases a specific value, and Swift will generate the rest. It’s not very natural for us to think of Earth as the second planet, so you could write this:
@@ -844,12 +846,72 @@ However, there will be times when you need to create a variable but don’t have
 We didn’t assign an initial value to futureTeacher, so its default value is the special value nil, which means it doesn’t yet have a value.
 You can’t set a regular variable to nil. This is a special characteristic of optionals.
 
-```
+``` swift
 var age: Int? = nil
 // if we later learn that age, we can use it:
 age = 38
 ```
 
+#### Declaration
+``` swift
+enum Optional<Wrapped>
+```
+Overview
+You use the Optional type whenever you use optional values, even if you never type the word Optional. Swift’s type system usually shows the wrapped type’s name with a trailing question mark (?) instead of showing the full type name. For example, if a variable has the type Int?, that’s just another way of writing Optional<Int>. The shortened form is preferred for ease of reading and writing code.
+The types of shortForm and longForm in the following code sample are the same:
+``` swift
+let shortForm: Int? = Int("42")
+let longForm: Optional<Int> = Int("42")
+```
+The Optional type is an enumeration with two cases. Optional.none is equivalent to the nil literal. Optional.some(Wrapped) stores a wrapped value. For example:
+``` swift
+let number: Int? = Optional.some(42)
+let noNumber: Int? = Optional.none
+print(noNumber == nil)
+// Prints "true"
+```
+Another ex
+``` swift
+let i: Int? = 10
+let j = i.map { $0 * 2 }
+print(j)
+```
+the value 10 was taken out of its optional container, multiplied by 2, then placed back into an optional.
+
+If we wanted to print out a welcome message – but only if we got back a username – then optional map is perfect:
+
+``` swift
+var username: String? = fetchUsername(1989)
+let formattedUsername = username.map { "Welcome, \($0)!" } ??
+"Unknown user"
+print(formattedUsername)
+```
+
+#### Optionals are Enums
+Because Optionals are just Enums we can also work with them like Enums.
+
+##### Assigning
+``` swift
+// z is an optional
+var z: Int? = .Some(20)
+print(z ?? "sjdhf") // returns 20
+var z: Int? = .none
+print(z ?? "sjdhf") // returns sjdhf
+```  
+##### Using switch with Optionals
+``` swift
+let x: String? = "Hello Optional"
+switch x {
+case .some(let value): print("Value: \(value)")
+case .none: print("nothing stored inside the enum")
+}
+```
+##### Accessing an Optionals value using case let
+``` swift
+if case let .some(value) = x {
+print(value)
+}
+```
 #### UNWRAPPING OPTIONALS
 Optionals make your code safer because they force you to plan for a situation in which they have no value. But this also means they require a little more work to use
 What happens if we use name.count? A real string has a count property that stores how many letters it has, but this is nil – it’s empty memory, not a string, so it doesn’t have a count.
@@ -1046,6 +1108,9 @@ var last = Double.pi.ulp
 ### Sources:
 
 [Playground tips](https://fluffy.es/xcode-playground-tips/)
+[apple documentation](https://developer.apple.com/documentation/swift/optional)
+
+
 <hr>
 
 [^1]: What?

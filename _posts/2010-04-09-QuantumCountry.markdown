@@ -4,7 +4,7 @@ title:  "Quantum Country"
 date:   2010-04-09
 categories: iOS, developer
 comments: true
-published: true
+published: false
 ---
 
 
@@ -24,7 +24,7 @@ Hilbert’s problem asked whether a general algorithm exists, which a mathematic
 Attacking Hilbert’s problem forced Turing to precise exactly what was meant by an algorithm. 
 To do this, Turing described what we now call a Turing machine: a single, universal programmable computing device that Turing argued could perform any algorithm whatsoever. Turing’s machine became the gold standard: an algorithm was what we could perform on a Turing machine.
 David Deutsch suggested a deeper approach to the problem of defining what is meant by an algorithm.
-Algorithms have to be performed on some kind of physical system. It can be any system.
+Algorithms have to be performed on some kind of physical system. Is there a (single) universal computing device which can efficiently simulate any other physical system?
 Will aliens have computers? 
 In this sense, computers aren’t just human inventions. 
 They are a fundamental feature of the universe, the answer to a simple and profound question about how the universe works. 
@@ -135,7 +135,11 @@ These matrices are unitary, and so legitimate quantum gates.
 
 ### Sources:
 
+[Michael Nielsen course
+](https://www.youtube.com/watch?v=X2q1PuI2RFI)
+[Essence of linear algebra - 3Blue1Brown](https://www.youtube.com/playlist?list=PLZHQObOWTQDPD3MizzM2xVFitgF8hE_ab)
+[Video lectures of Professor Gilbert Strang](https://ocw.mit.edu/courses/mathematics/18-06-linear-algebra-spring-2010/video-lectures/)
 
-
+[Spaced-repetition testing ](http://augmentingcognition.com/ltm.html#Anki_analysis)
 
 <hr>
