@@ -157,8 +157,6 @@ by using forEach() you're making it clear you're not manipulating the contents o
 
 ### compactMap()
 
-'flatMap' is deprecated!
-Swift 4.1 ships with the (still in beta) Xcode 9.3 and brings more changes to the Swift language and the Swift standard library. Apple intends it as a source compatible upgrade to Swift 4.0 but I have hit one source code change that I am guessing will be widespread.
 
 Using flatMap on a sequence (like an Array) filtering anything that maps to nil is now deprecated and replaced by compactMap.
 
@@ -183,6 +181,7 @@ The optionals are gone and the nils are removed – perfect!
 Whereas map() will retain the optionality of the items it processes, compactMap() will strip it out. So, in the code below, mapResult is of type [String?] and compactMapResult is of type [String].
 
 ### Optional compact map
+
 We can use it to flatten the resulting array to remove the optionality and any invalid values. If you have an array of input items, and a transformation function that will return either a transformed item or nil if the transformation failed, this technique is ideal.
 
 ``` swift
@@ -202,6 +201,7 @@ print(files)
 That will load into an array the contents of someFile-1.txt, someFile-2.txt, and so on. Any file that don't exist will throw an exception, which try? converts into nil, and flatMap() will ignore – all with just one line of code!
 
 ### filter()
+
 The filter() method loops over every item in a collection, and passes it into a function that you write. If your function returns true for that item it will be included in a new array, which is the return value for filter().
 
 For example, the code below creates an array of the first 10 numbers in the Fibonacci sequence, then filters that array to include only items that are even:
@@ -247,7 +247,17 @@ print(goodScores)
 //["Adele": 90, "Paul": 100, "Taylor": 95]
 ```
 ### reduce()
+
 The reduce() function condenses an array into a single value by applying a function to every item.
+``` swift
+func reduce(initial: T, combine: (T, Int) throws -> T)
+// or
+
+func reduce(initial: String, combine: (String, Int) throws -> String)
+
+
+```
+Here T stay for type, could be any letter.
 
 Each time the function is called, you get passed the previous value from your function as well as the next item in your array. I've already used it a couple of times elsewhere in this book, using this example:
 ``` swift
@@ -262,21 +272,57 @@ let text = codes.reduce("", +)
 ```
 That will make result equal to 285 by adding 0, 100, 90, and 95. The 0 is the initial value, which is used the first time your function – in this case + is called
 
+The combine argument is a closure so you can also write reduce using the trailing closure syntax:
+``` swift
+let names = ["alan","brian","charlie"]
+let csv = names.reduce("===") {text, name in "\(text),\(name)"}
+// "===,alan,brian,charlie"
+```
+
+
+Another ex
+``` swift
+let result = scores.reduce("") { $0 + String($1) }
+print(result)
+```
+
+now try
+``` swift
+let names = ["Taylor", "Paul", "Adele"]
+// your code here
+print(count)
+```
+my code
+``` swift
+let names = ["Taylor", "Paul", "Adele"]
+let namesCharCount = names.map{ $0.count }
+let sumNames = namesCharCount.reduce(0, +)
+```
+or 
+
+``` swift
+let names = ["Taylor", "Paul", "Adele"]
+let count = names.reduce(0) { $0 + $1.count }
+print(count)
+
+```
+
+### Reducing to a boolean
+
+A common programming task is to check whether all items in array evaluate to true for a given condition.  
+
+``` swift
+let names = ["Taylor", "Paul", "Adele"]
+let longEnough = names.reduce(true) { $0 && $1.count > 4 }
+print(longEnough)
+```
+
+
 ``` swift
 
 
 
-
-
 ``` swift
-
-
-
-
-
-``` swift
-
-
 
 
 
@@ -284,15 +330,20 @@ That will make result equal to 285 by adding 0, 100, 90, and 95. The 0 is the in
 
 
 
+``` swift
+
 
 
 ``` swift
 
 
 
+``` swift
+
 
 
 ``` swift
+
 
 
 ===================
