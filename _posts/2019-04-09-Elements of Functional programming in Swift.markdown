@@ -32,6 +32,7 @@ published: true
 
 What is functional programming?  
 
+This is a blog post inspired by the excellent Swift course by Paul Hudson [Hacking with Swift](). 
 
 
 In Object Oriented Programming, a class blends state, functionality, inheritance, and more. We will see that functional programming can dramatically simplify your code. 
@@ -245,7 +246,12 @@ print(goodScores)
 ### reduce()
 The reduce() function condenses an array into a single value by applying a function to every item.
 
-
+Each time the function is called, you get passed the previous value from your function as well as the next item in your array. I've already used it a couple of times elsewhere in this book, using this example:
+``` swift
+let scores = [100, 90, 95]
+let result = scores.reduce(0, combine: +)
+```
+That will make result equal to 285 by adding 0, 100, 90, and 95. The 0 is the initial value, which is used the first time your function – in this case + is called
 
 ``` swift
 
