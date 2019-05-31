@@ -1109,7 +1109,7 @@ var last = Double.pi.ulp
 
 [Playground tips](https://fluffy.es/xcode-playground-tips/)
 [apple documentation](https://developer.apple.com/documentation/swift/optional)
-
+[Swift Playground and Markdown](http://www.thomashanning.com/xcode-markup-for-playgrounds/)
 
 <hr>
 

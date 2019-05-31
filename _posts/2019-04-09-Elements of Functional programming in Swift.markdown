@@ -20,6 +20,10 @@ published: false
 "express what we want to achieve, rather than how this is implemented.
 <br><cite>Javier Soto</cite>
 </div>
+<div class="message">
+"the only way to learn a new programming language is by writing programs in it."
+<br><cite>Dennis Ritchie</cite>
+</div>
 
 
 What is functional programming?  
