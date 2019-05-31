@@ -7,15 +7,18 @@ comments: true
 published: true
 ---
 
+<!--
 
 <div class="message">
 "Any fool can write code that a computer can understand, but good programmers write code that humans can understand"
 <br><cite>Martin Fowler</cite>
 </div>
+-->
 <div class="message">
 "Classes are about as welcome in functional code as a hedgehog in a hemophilia convention."
 <br><cite>Paul Hudson</cite>
 </div>
+<!--
 <div class="message">
 "express what we want to achieve, rather than how this is implemented.
 <br><cite>Javier Soto</cite>
@@ -24,11 +27,14 @@ published: true
 "the only way to learn a new programming language is by writing programs in it."
 <br><cite>Dennis Ritchie</cite>
 </div>
+-->
 
 
 What is functional programming?  
 
-We are used to Object Oriented Programming. One class blends state, functionality, inheritance, and more. We will see that functional programming can dramatically simplify your code. 
+
+
+In Object Oriented Programming, a class blends state, functionality, inheritance, and more. We will see that functional programming can dramatically simplify your code. 
 
 ### Five principles of functional programming
 
@@ -182,7 +188,7 @@ print(compactMapScores)
 ```
 
 Any throwing function can be used with try?, which translates it to a function that returns nil on failure.  
-```
+``` swift
 let files = (1...10).flatMap { try? String(contentsOfFile: "someFile-
 \($0).txt") }
 print(files)
@@ -194,6 +200,82 @@ That will load into an array the contents of someFile-1.txt, someFile-2.txt, and
 ### filter()
 The filter() method loops over every item in a collection, and passes it into a function that you write. If your function returns true for that item it will be included in a new array, which is the return value for filter().
 
+For example, the code below creates an array of the first 10 numbers in the Fibonacci sequence, then filters that array to include only items that are even:
+``` swift
+let fibonacciNumbers = [1, 1, 2, 3, 5, 8, 13, 21, 34, 55]
+let evenFibonacci = fibonacciNumbers.filter { $0 % 2 == 0 }
+// [2, 8, 34]
+```
+
+So, the code will run, and pass the number 1 into the closure, making 1 % 2 == 0, which is false. As a result, 1 will not be included in the result array. When it reaches true, that will be included because 2 % 2 == 0 is true.
+As with map(), the order items are filtered is out of our control – Swift is free to apply any optimizations it wants to make filtering go faster.
+
+
+
+``` swift
+let names = ["Michael Jackson", "Taylor Swift", "Michael Caine",
+"Adele Adkins", "Michael Jordan"]
+let result = names.filter { $0.hasPrefix("Michael") }
+//
+```
+
+
+``` swift
+let words = ["1989", "Fearless", "Red"]
+let input = "My favorite album is Fearless"
+let result2 = words.filter { input.contains($0) }
+```
+ If you want to strip nil but retain optionality, use filter() like this:
+
+``` swift
+let words: [String?] = ["1989", nil, "Fearless", nil, "Red"]
+let result = words.filter { $0 != nil }
+//[Optional("1989"), Optional("Fearless"), Optional("Red")]
+
+```
+filter() behaves curiously when presented with a dictionary: you get back an array of tuples containing the result,
+``` swift
+let scores = ["Paul": 100, "Taylor": 95, "Adele": 90, "Michael": 85,
+              "Justin": 60]
+let goodScores = scores.filter { $1 > 85 }
+print(goodScores)
+
+//["Adele": 90, "Paul": 100, "Taylor": 95]
+
+
+
+
+``` swift
+
+
+
+
+
+``` swift
+
+
+
+
+
+``` swift
+
+
+
+
+
+``` swift
+
+
+
+
+
+``` swift
+
+
+
+
+
+``` swift
 
 
 ===================
