@@ -158,6 +158,9 @@ by using forEach() you're making it clear you're not manipulating the contents o
 ### compactMap()
 
 'flatMap' is deprecated!
+Swift 4.1 ships with the (still in beta) Xcode 9.3 and brings more changes to the Swift language and the Swift standard library. Apple intends it as a source compatible upgrade to Swift 4.0 but I have hit one source code change that I am guessing will be widespread.
+
+Using flatMap on a sequence (like an Array) filtering anything that maps to nil is now deprecated and replaced by compactMap.
 
 The compactMap () function maps items in array A into array B using a function you provide, then flattens the results using concatenation which converts that array of arrays into a single array.
 
@@ -249,7 +252,13 @@ The reduce() function condenses an array into a single value by applying a funct
 Each time the function is called, you get passed the previous value from your function as well as the next item in your array. I've already used it a couple of times elsewhere in this book, using this example:
 ``` swift
 let scores = [100, 90, 95]
-let result = scores.reduce(0, combine: +)
+let result = scores.reduce(0, +)
+// 285
+// or
+
+let codes = ["abc","def","ghi"]
+let text = codes.reduce("", +)
+// "abcdefghi"
 ```
 That will make result equal to 285 by adding 0, 100, 90, and 95. The 0 is the initial value, which is used the first time your function – in this case + is called
 
@@ -316,7 +325,7 @@ applicative
 [Teaching Swift at Scale - Paul Hudson](https://vimeo.com/291590798)
 [SwiftConf '18 - Paul Hudson: Mastering iOS Animation](https://www.youtube.com/watch?time_continue=41&v=_4McEnarqNc)
 [https://learntalks.com/tag/paul-hudson/](https://learntalks.com/tag/paul-hudson/)
-
+[Use Your Loaf](https://useyourloaf.com)
 
 
 
