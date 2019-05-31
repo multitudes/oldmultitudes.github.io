@@ -1,10 +1,10 @@
 ---
 layout: post
 title:  "Elements of Functional programming in Swift"
-date:   2019-05-23
+date:   2010-05-23
 categories: iOS, developer
 comments: true
-published: false
+published: true
 ---
 
 
@@ -60,6 +60,8 @@ When you write functions that produce predictable output, you can write unit tes
 
 
 ### The map() method
+
+map() works great on collections and optionals
 
 ``` swift
 let names = ["Taylor", "Paul", "Adele"]
@@ -135,7 +137,63 @@ print(noNumber == nil)
 // Prints "true"
 ```
 
-we can use map() on optionals too. The principle is identical: take value out of container, apply function, then place value back in the container again.
+We can use map() on optionals too. The principle is identical: take value out of container, apply function, then place value back in the container again.
+
+### forEach
+
+also loops over an array and executes a function on each item. The difference lies in the return value: map() returns a new array of items, whereas forEach() returns nothing at all – it's just a functional way to loop over each item.
+by using forEach() you're making it clear you're not manipulating the contents of the array, which allows the Swift optimizer to do a better job.  
+
+``` swift
+["Taylor", "Paul", "Adele"].forEach { print($0) }
+```
+
+### compactMap()
+
+'flatMap' is deprecated!
+
+The compactMap () function maps items in array A into array B using a function you provide, then flattens the results using concatenation which converts that array of arrays into a single array.
+
+``` swift
+let albums: [String?] = ["Fearless", nil, "Speak Now", nil, "Red"]
+let result = albums.map { $0 }
+print(result)
+//[Optional("Fearless"), nil, Optional("Speak Now"), nil, Optional("Red")]
+
+```
+That's a lot of optionals, with some nils scattered through. Switching to compactMap() rather than map() can help:
+
+``` swift
+let result = albums.compactMap { $0 }
+print(result)
+// ["Fearless", "Speak Now", "Red"]
+```
+
+The optionals are gone and the nils are removed – perfect!  
+Whereas map() will retain the optionality of the items it processes, compactMap() will strip it out. So, in the code below, mapResult is of type [String?] and compactMapResult is of type [String].
+
+### Optional compact map
+We can use it to flatten the resulting array to remove the optionality and any invalid values. If you have an array of input items, and a transformation function that will return either a transformed item or nil if the transformation failed, this technique is ideal.
+
+``` swift
+let scores = ["100", "90", "Fish", "85"]
+let compactMapScores = scores.compactMap { Int($0) }
+print(compactMapScores)
+```
+
+Any throwing function can be used with try?, which translates it to a function that returns nil on failure.  
+```
+let files = (1...10).flatMap { try? String(contentsOfFile: "someFile-
+\($0).txt") }
+print(files)
+// returns []
+```
+
+That will load into an array the contents of someFile-1.txt, someFile-2.txt, and so on. Any file that don't exist will throw an exception, which try? converts into nil, and flatMap() will ignore – all with just one line of code!
+
+### filter()
+The filter() method loops over every item in a collection, and passes it into a function that you write. If your function returns true for that item it will be included in a new array, which is the return value for filter().
+
 
 
 ===================
@@ -152,9 +210,6 @@ us to express our intent clearly. it
 clarifies our intent.
 
 
-### map
-
-maps works great on collections and optionals
 Dumas said English is just French badly pronounced 
 
 ### Useful terms
@@ -717,35 +772,9 @@ reduce or whatever you want to do is a
 
 mental jump but it's worth it second up
 
-some hope to tell you Swift
+some hope to tell you 
 
-is not a functional language or a true
-
-functional language and the you know
-
-I've semantics it's functional its
-
-protocol oriented it's the clarity of
-
-its object-oriented it's good but one of
-
-the biggest ones is that state is
-
-comfortable we like storing things in
-
-properties right and then referring to
-
-them later on so getting away from that
-
-get into what you might call a pure
-
-function where you only refer to the
-
-values inside the function takes a work
-
-and that's okay so let's wrap up first
-
-up
+Swift is not a functional language or a true functional language.
 
 
 L'anglais n'est que du français mal prononcé." "English is just badly pronounced French." D'Artagnan Alexandre Dumas
