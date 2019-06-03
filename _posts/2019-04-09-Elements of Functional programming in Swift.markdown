@@ -30,9 +30,12 @@ published: true
 -->
 
 
+This is a blog post inspired by the excellent Swift course by Paul Hudson [Hacking with Swift](). 
+
+
 What is functional programming?  
 
-This is a blog post inspired by the excellent Swift course by Paul Hudson [Hacking with Swift](). 
+Functional programming (often abbreviated FP) is the process of building software by composing pure functions, avoiding shared state, mutable data, and side-effects.
 
 
 In Object Oriented Programming, a class blends state, functionality, inheritance, and more. We will see that functional programming can dramatically simplify your code. 
