@@ -324,7 +324,6 @@ print(longEnough)
 ``` swift
 
 
-
 ``` swift
 
 
@@ -348,7 +347,7 @@ print(longEnough)
 ``` swift
 
 
-
+```
 ===================
 
 one of them is immutability. 
