@@ -7,8 +7,8 @@ comments: true
 published: true
 ---
 
+# this is a draft
 <!--
-
 <div class="message">
 "Any fool can write code that a computer can understand, but good programmers write code that humans can understand"
 <br><cite>Martin Fowler</cite>
