@@ -29,6 +29,7 @@ published: true
 </div>
 -->
 
+![image](/assets/img/functional/functional.png) -->
 
 This is a blog post inspired by the excellent Swift course by Paul Hudson [Hacking with Swift](). 
 
