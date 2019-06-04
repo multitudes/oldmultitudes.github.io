@@ -208,13 +208,13 @@ the default case must be there to ensure all possible values are covered.
 
 
 
-DAY 5
-FUNCTIONS
+### FUNCTIONS
+
 Functions let us wrap up pieces of code so they can be used in lots of places. We can send data into functions to customize how they work, and get back data that tells us the result that was calculated.
 
 Believe it or not, function calls used to be really slow. Steve Johnson, the author of many early coding tools for the Unix operating system, said this:
 
-“Dennis Ritchie (the creator of the C programming language) encouraged modularity by telling all and sundry that function calls were really, really cheap in C. Everybody started writing small functions and modularizing. Years later we found out that function calls were still expensive, and our code was often spending 50% of its time just calling them. Dennis had lied to us! But it was too late; we were all hooked...”
+> “Dennis Ritchie (the creator of the C programming language) encouraged modularity by telling all and sundry that function calls were really, really cheap in C. Everybody started writing small functions and modularizing. Years later we found out that function calls were still expensive, and our code was often spending 50% of its time just calling them. Dennis had lied to us! But it was too late; we were all hooked...”
 
 Swift lets us provide two names for each parameter: one to be used externally when calling the function, and one to be used internally inside the function. This is as simple as writing two names, separated by a space.
 
@@ -232,7 +232,7 @@ You might have noticed that we don’t actually send any parameter names when we
 
 You can get this same behavior in your own functions by using an underscore, _The print() function prints something to the screen, but always adds a new line to the end of whatever you printed, so that multiple calls to print() don’t all appear on the same line.print() has a terminator parameter that uses new line as its default value.
 
-Variadic functions
+### Variadic functions
 
 they accept any number of parameters of the same type. The print() function is actually variadic: if you pass lots of parameters, they are all printed on one line with spaces between them:
 print("Haters", "gonna", "hate")
@@ -244,7 +244,7 @@ func square(numbers: Int...) {...}
 ...
 square(numbers: 1, 2, 3, 4, 5)
 ```
-#### throwing functions
+#### Throwing functions
 
 Sometimes functions fail because they have bad input, or because something went wrong internally. Swift lets us throw errors from functions by marking them as throws before their return type, then using the throw keyword when something goes wrong.
 
@@ -297,7 +297,7 @@ var myNum = 10
 doubleInPlace(number: &myNum)
 ```
 
-#### CLOSURES
+### CLOSURES
 
 Swift lets us use functions just like any other type such as strings and integers. This means you can create a function and assign it to a variable, call that function using that variable, and even pass that function into other functions as parameters.
 
@@ -362,12 +362,11 @@ func travel(action: () -> Void) {
     action()
     print("I arrived!")
 }
-``` swift
+```
 We can now call that using our driving closure, like this:
 ``` swift
 travel(action: driving)
-``` swift
-
+```
 
 
 #### Trailing closure syntax
@@ -375,6 +374,7 @@ travel(action: driving)
 If the last parameter to a function is a closure, Swift lets you use special syntax called trailing closure syntax. Rather than pass in your closure as a parameter, you pass it directly after the function inside braces.
 
 This is the function
+
 ``` swift
 func travel(action: () -> Void) {
     print("I'm getting ready to go.")
