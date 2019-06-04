@@ -219,20 +219,21 @@ Believe it or not, function calls used to be really slow. Steve Johnson, the aut
 Swift lets us provide two names for each parameter: one to be used externally when calling the function, and one to be used internally inside the function. This is as simple as writing two names, separated by a space.
 
 To demonstrate this, here’s a function that uses two names for its string parameter:
-```
+``` swift
 func sayHello(to name: String) {
     print("Hello, \(name)!")
 }
 ```
 The parameter is called to name, which means externally it’s called to, but internally it’s called name. This gives variables a sensible name inside the function, but means calling the function reads naturally:
-```
+``` swift
 sayHello(to: "Taylor")
 ```
 You might have noticed that we don’t actually send any parameter names when we call print() – we say print("Hello") rather than print(message: "Hello").
 
-You can get this same behavior in your own functions by using an underscore, _The print() function prints something to the screen, but always adds a new line to the end of whatever you printed, so that multiple calls to print() don’t all appear on the same line.print() has a terminator parameter that uses new line as its default value.
+You can get this same behavior in your own functions by using an underscore, `_`  
+The print() function prints something to the screen, but always adds a new line to the end of whatever you printed, so that multiple calls to print() don’t all appear on the same line.print() has a terminator parameter that uses new line as its default value.
 
-### Variadic functions
+#### Variadic functions
 
 they accept any number of parameters of the same type. The print() function is actually variadic: if you pass lots of parameters, they are all printed on one line with spaces between them:
 print("Haters", "gonna", "hate")
