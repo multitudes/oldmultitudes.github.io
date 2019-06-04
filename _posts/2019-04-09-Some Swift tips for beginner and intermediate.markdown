@@ -38,8 +38,10 @@ automatically.
 
 Swift is what’s known as a type-safe language, which means that every variable must be of one specific type  
 
-Open Playgrounds to practice your code. Open Xcode and do `shift` +`alt`+ `command`+ `N`
-`command` + `shift` `Y` shows the console window below.
+Open Playgrounds to practice your code. Open Xcode and do `shift` +`alt`+ `command`+ `N`  
+
+`command` + `shift` `Y` shows the console window below.  
+
 PS. Check playgrounds for ipad too!
 
 Put this line on the top of the playground
