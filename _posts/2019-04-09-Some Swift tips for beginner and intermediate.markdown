@@ -24,8 +24,8 @@ published: true
 SDK is the iOS Software Development Kit.  
 The iOS SDK is a suite of prebuilt programming libraries that help you write apps quickly and in a way that Apple expects. A programming library is a collection of related software modules that you can use in your programs.  
 Xcode is a code editor known as an integrated development environment (IDE).    
- 
- ### Settings
+
+### Settings
  
 The Organization Name.   
 You can invent your own company name, use your real name, or choose anything else you want.   
