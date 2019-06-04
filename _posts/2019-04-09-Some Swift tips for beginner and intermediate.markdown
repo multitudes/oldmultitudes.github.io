@@ -482,8 +482,10 @@ func travel(action: (String, Int) -> String) {
     print(description)
     print("I arrived!")
 }
+``` swift
 We’re going to call that using a trailing closure and shorthand closure parameter names. Because this accepts two parameters, we’ll be getting both $0 and $1:
-
+```
+``` swift
 travel {
     "I'm going to \($0) at \($1) miles per hour."
 }
@@ -518,18 +520,20 @@ let result2 = travel()("London")
 If you use any external values inside your closure, Swift captures them – stores them alongside the closure, so they can be modified even if they don’t exist any more.
 
 Right now we have a travel() function that returns a closure, and the returned closure accepts a string as its only parameter and returns nothing:
-
+``` swift
 func travel() -> (String) -> Void {
     return {
         print("I'm going to \($0)")
     }
 }
+```
 We can call travel() to get back the closure, then call that closure freely:
-
+``` swift
 let result = travel()
 result("London")
+```
 Closure capturing happens if we create values in travel() that get used inside the closure. For example, we might want to track how often the returned closure is called:
-
+``` swift
 func travel() -> (String) -> Void {
     var counter = 1
 
@@ -538,14 +542,15 @@ func travel() -> (String) -> Void {
         counter += 1
     }
 }
+```
 Even though that counter variable was created inside travel(), it gets captured by the closure so it will still remain alive for that closure.
 
 So, if we call result("London") multiple times, the counter will go up and up:
-
+``` swift
 result("London")
 result("London")
 result("London")
-
+```
 
 ### struct
 
