@@ -13,24 +13,42 @@ published: true
 <br><cite></cite>
 </div>
 
-Martin Fowler wrote, “any fool can write code that a computer can understand, but good programmers write code that humans can understand.”
+# This is a draft
 
 <!-- <a rel="ar" href="/assets/img/AR-QL-Pictures/retrotv.usdz">
     <img src="/assets/img/AR-QL-Pictures/Screenshot5.jpg">
 </a> -->
 
-SDK is the iOS Software Development Kit. Xcode is a code editor known as an integrated development environment (IDE).  
-The iOS SDK is a suite of prebuilt programming libraries that help you write apps quickly and in a way that Apple expects. A programming library is a collection of related software modules that you can use in your programs. 
-Next, add an Organization Name. You can invent your own company name, use your real name, or choose anything else you want. The Organization Identifier needs to be a unique name, so it’s common to format this like a backward website address.
+### About the Apple SDK
 
-The Bundle Identifier combines the names you entered in the Organization Identifier and the Product Name fields, and it is created automatically.
+SDK is the iOS Software Development Kit.  
+The iOS SDK is a suite of prebuilt programming libraries that help you write apps quickly and in a way that Apple expects. A programming library is a collection of related software modules that you can use in your programs.  
+Xcode is a code editor known as an integrated development environment (IDE).    
+ 
+ ### Settings
+ 
+The Organization Name.   
+You can invent your own company name, use your real name, or choose anything else you want.   
+The Organization Identifier needs to be a unique name, so it’s common to format this like a backward website address.
 
-Swift is what’s known as a type-safe language, which means that every variable must be of one specific type
+The Bundle Identifier combines the names you entered in the Organization Identifier and the Product Name fields, and it is created 
+automatically.
 
-Open Playgrounds to practice your code. Open Xcode and do shift alt command N
-command shift Y shows the console window below.
-Check playgrounds for ipad too!
+### Open the Swift playgrounds
 
+Swift is what’s known as a type-safe language, which means that every variable must be of one specific type  
+
+Open Playgrounds to practice your code. Open Xcode and do `shift` +`alt`+ `command`+ `N`
+`command` + `shift` `Y` shows the console window below.
+PS. Check playgrounds for ipad too!
+
+Put this line on the top of the playground
+```
+import Foundation  
+```
+> The Foundation framework provides a base layer of functionality for apps and frameworks, including data storage and persistence, text processing, date and time calculations, sorting and filtering, and networking
+
+### Casting
 
 When you create a variable and give it an initial value the computer is actually smart enough to figure out the data type, most of the time. This is called type inference!
 
@@ -42,16 +60,6 @@ let intNumber = 2
 var doubleNumber = Double(intNumber)
 ```
 In Swift, the spaces around an operator are important, and both variables need to have the same type! 
-
-Foundation framework! 
-
-import Foundation // put it on the top of the playground
-
-> The Foundation framework provides a base layer of functionality for apps and frameworks, including data storage and persistence, text processing, date and time calculations, sorting and filtering, and networking
-
-
-
-
 
 ### Multi-line strings
 
