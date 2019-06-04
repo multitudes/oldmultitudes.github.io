@@ -14,11 +14,14 @@ published: true
 </a> -->
 
 
+# This is a draft
 
-# Regex
 A regular expression (commonly known as a “regex”) is a string or a sequence of characters that specifies a pattern.
 
 
+Lets practice on a playground
+
+``` swift
 
 import UIKit
 
@@ -165,7 +168,7 @@ let episodeNumber = title22[episodeRange]
 }
 }
 
-
+```
 
 
 ### Sources:
