@@ -1,30 +1,24 @@
 ---
 layout: post
-title:  "Some Swift tips for beginner and intermediate"
-date:   2019-06-03
+title:  "Regex in Swift"
+date:   2010-06-03
 categories: iOS, developer
 comments: true
-published: false
+published: true
 ---
 
 
-<div class="message">
-"iOS and macOS programs have long been written in a language called Objective-C. In the summer of 2014, Apple introduced a new and exciting language for writing apps called Swift" 
-<br><cite></cite>
-</div>
-
-Martin Fowler wrote, “any fool can write code that a computer can understand, but good programmers write code that humans can understand.”
 
 <!-- <a rel="ar" href="/assets/img/AR-QL-Pictures/retrotv.usdz">
     <img src="/assets/img/AR-QL-Pictures/Screenshot5.jpg">
 </a> -->
 
 
-/*
+
 # Regex
 A regular expression (commonly known as a “regex”) is a string or a sequence of characters that specifies a pattern.
 
-*/
+
 
 import UIKit
 
