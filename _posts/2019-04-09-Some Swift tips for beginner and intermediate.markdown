@@ -339,6 +339,7 @@ We can now run that closure and print its return value:
 let message = drivingWithReturn("London")
 print(message)
 ```
+#### Closures as function parameters
 
 Because closures can be used just like strings and integers, you can pass them into functions.
 
