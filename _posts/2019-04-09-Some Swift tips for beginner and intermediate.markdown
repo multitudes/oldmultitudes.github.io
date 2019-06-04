@@ -14,6 +14,7 @@ published: true
 </div>
 
 # This is a draft
+## currently doing Paul Hudson course and needed a place to put down some notes
 
 <!-- <a rel="ar" href="/assets/img/AR-QL-Pictures/retrotv.usdz">
     <img src="/assets/img/AR-QL-Pictures/Screenshot5.jpg">
@@ -327,13 +328,6 @@ One of the differences between functions and closures is that you don’t use pa
 driving("London")
 ```
 
-Closures can also return values, and they are written similarly to parameters: you write them inside your closure, directly before the in keyword.
-
-``` swift
-let driving = { (place: String) in
-    print("I'm going to \(place) in my car")
-}
-```
 We want a closure that returns a string rather than printing the message directly, so we need to use -> String before in, then use return just like a normal function:
 ``` swift
 let drivingWithReturn = { (place: String) -> String in
