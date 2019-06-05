@@ -28,12 +28,11 @@ Xcode is a code editor known as an integrated development environment (IDE).
 
 ### Settings
  
-The Organization Name.   
-You can invent your own company name, use your real name, or choose anything else you want.   
-The Organization Identifier needs to be a unique name, so it’s common to format this like a backward website address.
+Some of the things Xcode will ask you:
+"Organization Identifier" is a unique identifier usually made up of your personal web site domain name in reverse, can be anything as long as it is unique 
+The "Organization Name", here you can invent your own company name, use your real name, or choose anything else you want.   
+The "Bundle Identifier" combines the names you entered in the Organization Identifier and the Product Name fields, and it is created automatically.  
 
-The Bundle Identifier combines the names you entered in the Organization Identifier and the Product Name fields, and it is created 
-automatically.
 
 ### Open the Swift playgrounds
 
