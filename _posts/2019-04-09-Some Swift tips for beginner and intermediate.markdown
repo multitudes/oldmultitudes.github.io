@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Some Swift tips for beginner and intermediate"
+title:  "Some Swift for beginner and intermediate"
 date:   2010-05-23
 categories: iOS, developer
 comments: true
@@ -28,17 +28,17 @@ Xcode is a code editor known as an integrated development environment (IDE).
 
 ### Settings
  
-Some of the things Xcode will ask you:
-"Organization Identifier" is a unique identifier usually made up of your personal web site domain name in reverse, can be anything as long as it is unique 
-The "Organization Name", here you can invent your own company name, use your real name, or choose anything else you want.   
-The "Bundle Identifier" combines the names you entered in the Organization Identifier and the Product Name fields, and it is created automatically.  
+Some of the things Xcode will ask you:  
+* "Organization Identifier" is a unique identifier usually made up of your personal web site domain name in reverse, can be anything as long as it is unique 
+* The "Organization Name", here you can invent your own company name, use your real name, or choose anything else you want.   
+* The "Bundle Identifier" combines the names you entered in the Organization Identifier and the Product Name fields, and it is created automatically.  
 
 
 ### Open the Swift playgrounds
 
 Swift is what’s known as a type-safe language, which means that every variable must be of one specific type  
 
-Open Playgrounds to practice your code. Open Xcode and do `shift` +`alt`+ `command`+ `N`  
+Open Playgrounds to practice your code. Open Xcode and do `shift` +`alt`+ `command`+ `N`  to create a new playground.
 
 `command` + `shift` `Y` shows the console window below.  
 
