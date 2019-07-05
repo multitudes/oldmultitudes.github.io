@@ -12,6 +12,8 @@ for my own enjoyment and learning
 
 # usdz  
 
+![image](/assets/img/USD/1.png)
+
 In 2018 Apple introduced AR QuickLook on iOS. It is the easiest and quickest way of displaying 3D content in your space and environment. Underneath these AR experiences is a file format called usdz which is deeply integrated into Apple apps and ios frameworks. It is possible to share 3D AR models with Messages, Mail, Notes, Safari, in the Finder with QuickLook and of course in 3rd Party applications. The technology behind usdz is usd which stands for Universal Scene Description.   
 It is a file Format developed by Pixar and has a C++ library with python bindings for authoring and deploy 3d content. The library can read and write usd files and contains a powerful composition engine and much more. The focus is on speed, scalability and collaboration.
 There are three file extensions associated with usd:
@@ -19,20 +21,17 @@ There are three file extensions associated with usd:
 - usdc, a binary version which is efficient as possible to read and write 
 - and usd,  which can be either plain text or binary.
 
-![image](/assets/img/USD/1.png)
-
 usdz is the distribution format for usd. it contains all the data of a 3D scene packed in a single file.  
-Optimized for sharing. supported on macOS and TVOS as well.   
-The anatomy: It is an uncompressed Zip archive where all the contained files are aligned to 64 Bytes boundaries for most efficient memory mapping.  
-there are two types of files in the archive, the scene description files in usda, usdc usd or even usdz for nested archives and a set of texture currently in png or jpeg format.  
+It is optimized for sharing. supported on macOS and TVOS as well.  
+It is an uncompressed Zip archive where all the contained files are aligned to 64 Bytes boundaries for most efficient memory mapping.  
+There are two types of files in the archive, the scene description files in usda, usdc usd or even usdz format for nested archives and a set of texture currently in png or jpeg format.  
 
-current file formats:   
-the most basic is obj, essentially a single 3d model, with limited material support and no animation.
+### The current file formats for 3D models
+
+The most basic is obj, essentially a single 3d model, with limited material support and no animation.
 Then there is a large group of more modern file formats like .gltf, .fbx, .abc that can support multiple models that can be laid out in a scene graph and support of material description and animation.
 
-usd support all of this and additionally is designated to be scalable and support collaboration.  
-
-usdz as archive package inherits most of these features.  
+usd support all of this and additionally is designated to be scalable and support collaboration and usdz as archive package inherits most of these features.  
 
 ![image](/assets/img/USD/2.png)
 
