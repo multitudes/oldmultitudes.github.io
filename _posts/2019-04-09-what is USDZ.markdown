@@ -191,11 +191,11 @@ This allows to decouple the workflows from each one allowing for collaborative e
 ![image](/assets/img/USD/11.png)
 
 
-### sources  
+## Sources  
 
 [WWDC Talk - Working with usd](https://developer.apple.com/videos/play/wwdc2019/602/)  
 
 [https://developer.apple.com/augmented-reality/quick-look/](https://developer.apple.com/augmented-reality/quick-look/)  
 
 [Download usdz tools](https://developer.apple.com/go/?id=python-usd-library)  
-
+<br>
