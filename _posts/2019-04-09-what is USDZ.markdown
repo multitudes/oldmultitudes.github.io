@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Working with usd"
-date:   2010-05-23
+date:   2019-06-23
 categories: iOS, developer
 comments: true
 published: true
@@ -10,8 +10,6 @@ published: true
 
 This is an extract of the Apple Developer Keynote's talk [Working with usd] (https://developer.apple.com/videos/play/wwdc2019/602/)
 for my own enjoyment and learning 
-
-![image](/assets/img/USD/11.png)
 
 # usdz  
 
@@ -179,6 +177,7 @@ Subdivision surfaces are efficient representation of curved surfaces. In contras
 Subdivision surfaces describe true surfaces. You can do dynamic tassellation based on the distance to the camera to find a good enough approximation with small polygons. Also great for animated contents.
 
 ![image](/assets/img/USD/10.png)
+
 Example of animoji or memoji, on the it is left rendered as polygonal surface, fairly coarse and great for memory footprint. On the right showing the final subdivided surface.
 
 The industry standard for subdivision surfaces is OpenSubdiv developed by pixar.
@@ -190,9 +189,14 @@ usd and OpenSubdiv work beautifully together.
 Powerful authoring tool enabling cooperation between artists. Instead to store duplicate data, usd stores them as reference and creates virtual object in the structure. Each object has its own object path so that you can go in and override some of its properties. You can remove subtrees and usd stores all those edits.
 This allows to decouple the workflows from each one allowing for collaborative editing and creation
 
+![image](/assets/img/USD/11.png)
 
 
-### sources
-[WWDC Talk - Working with usd](https://developer.apple.com/videos/play/wwdc2019/602/)
-[https://developer.apple.com/augmented-reality/quick-look/](https://developer.apple.com/augmented-reality/quick-look/)
-[Download usdz tools](https://developer.apple.com/go/?id=python-usd-library)
+### sources  
+
+[WWDC Talk - Working with usd](https://developer.apple.com/videos/play/wwdc2019/602/)  
+
+[https://developer.apple.com/augmented-reality/quick-look/](https://developer.apple.com/augmented-reality/quick-look/)  
+
+[Download usdz tools](https://developer.apple.com/go/?id=python-usd-library)  
+
