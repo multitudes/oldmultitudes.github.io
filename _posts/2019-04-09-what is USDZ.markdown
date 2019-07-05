@@ -6,9 +6,9 @@ categories: iOS, developer
 comments: true
 published: true
 ---
+# this is a draft
 
-
-## This is an extract of the Apple Developer Keynote's Talks about USD 
+This is an extract of the Apple Developer Keynote's Talk [Working with USD](https://developer.apple.com/videos/play/wwdc2019/602/)
 
 
 # USDZ
