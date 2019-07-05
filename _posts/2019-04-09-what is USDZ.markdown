@@ -38,7 +38,43 @@ converting and creating new ones.
 To convert obj gltf fbx or abc into usdz Apple introduced in 2019 a new command line tool. it also performs asset validation. Pythn based and plattform independent.
 
 USDZConvert 
-link!
+[Download usdz tools](https://developer.apple.com/go/?id=python-usd-library)
+
+
+``` python
+
+% usdzconvert esprit.gltf
+usdzconvert: converting file: esprit.gltf
+usdzconvert: converted usdz file: esprit.usdz
+usdARKitChecker: [Pass] esprit.usdz
+ % usdzconvert -h
+ [...]
+% usdzconvert esprit.obj -diffuseColor d.png -normal n.png -metallic m.png -roughness r.png
+[...]
+
+ 
+% usdzconvert esprit.gltf
+ usdzconvert: converting file: esprit.gltf
+ usdzconvert: converted usdz file: esprit.usdz
+ usdARKitChecker: [Pass] esprit.usdz
+ % usdzconvert -h
+ [...]
+% usdzconvert esprit.obj -diffuseColor d.png -normal n.png -metallic m.png -roughness r.png
+[...]
+
+% usdzconvert esprit.gltf
+usdzconvert: converting file: esprit.gltf
+usdzconvert: converted usdz file: esprit.usdz
+usdARKitChecker: [Pass] esprit.usdz
+ 
+ % usdzconvert -h
+ [...]
+% usdzconvert esprit.obj -diffuseColor d.png -normal n.png -metallic m.png -roughness r.png
+[...]
+
+```
+
+
 
 // picture
 
@@ -125,6 +161,10 @@ You can remove subtrees and usd stores all those edits
 lets see an example with macos quicklook rendering in finder a scene usd file
 
 This allows to decouple the workflows from another
-scene graph
-mesh data
-materials
+
+
+
+### sources
+[WWDC Talk - Working with USD](https://developer.apple.com/videos/play/wwdc2019/602/)
+[https://developer.apple.com/augmented-reality/quick-look/](https://developer.apple.com/augmented-reality/quick-look/)
+[Download usdz tools](https://developer.apple.com/go/?id=python-usd-library)
