@@ -171,29 +171,23 @@ The main node is defining the PBR attributes.
 The texture sampler is telling us which texture to use, like a mesh attribute reader for example for the texture coordinates.
 and the UV transform node scales or rotates the coordinates.
 
-## advantages of usd.
-Scalability for complex scenes and live composition and collaboration.
-
-### Scalability and subdivision surfaces
+## Scalability and subdivision surfaces
 
 ![image](/assets/img/USD/9.png)
 
 Subdivision surfaces are efficient representation of curved surfaces. In contrast polygonal surface description are an approximation of the real curved surface. This approximation depends of how close are you gonna be to the object.
-
-subdivision surfaces describes true surfaces. You can do dynamic tassellation based on the distance to the camera to find a good enough approx with small polygons. Also great for animated contents
+Subdivision surfaces describe true surfaces. You can do dynamic tassellation based on the distance to the camera to find a good enough approximation with small polygons. Also great for animated contents.
 
 ![image](/assets/img/USD/10.png)
-!pic animoji memoji
-on the left rendered as polygonal surface. fairly coarse great for memory footprint. on the right the final subdivided surface.
+Example of animoji or memoji, on the it is left rendered as polygonal surface, fairly coarse and great for memory footprint. On the right showing the final subdivided surface.
 
-industry standard for subdivision surfaces is OpenSubdiv developed by pixar.
-subdivision surfaces in SceneKit.
-
+The industry standard for subdivision surfaces is OpenSubdiv developed by pixar.
 usd and OpenSubdiv work beautifully together.
 
-## composition engine
 
-Powerful authoring tool enabling cooperation between artists.Instead to store duplicate data instead usd stores them as reference and creates virtual object in the structure and each has its own object path so that you can go in and override some of its properties. You can remove subtrees and usd stores all those edits.
+## Composition engine
+
+Powerful authoring tool enabling cooperation between artists. Instead to store duplicate data, usd stores them as reference and creates virtual object in the structure. Each object has its own object path so that you can go in and override some of its properties. You can remove subtrees and usd stores all those edits.
 This allows to decouple the workflows from each one allowing for collaborative editing and creation
 
 
