@@ -8,7 +8,8 @@ published: true
 ---
 # this is a draft
 
-This is an extract of the Apple Developer Keynote's Talk [Working with usd](https://developer.apple.com/videos/play/wwdc2019/602/)
+This is an extract of the Apple Developer Keynote's talk [Working with usd] (https://developer.apple.com/videos/play/wwdc2019/602/)
+for my own enjoyment and learning 
 
 ![image](/assets/img/USD/11.png)
 
