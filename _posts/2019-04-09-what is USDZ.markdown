@@ -81,9 +81,6 @@ usdARKitChecker: [Pass] esprit.usdz
 ```
 
 
-
-// picture
-
 You can provide rich material description directly from the command line.  
 usdzconvert is a part of a broader package which includes the precompiled binaries for macos and other things like he usd command line tool. usdcat, usdtree to see the structure of the usd file and usdchecker
 
@@ -122,8 +119,10 @@ Properties have the dot notation.
 ![image](/assets/img/USD/5.png)
 
 ### Scene Graph
-How to store scene data. A scene graph defines the object hierarchy. transforms on a parent also affect its children.
+How to store scene data. A scene graph defines the object hierarchy. Transforms on a parent also affect its children.
 Scene graph is easy to store with the usd nested structure. Some prims like materials dont belong to the scene graph.
+
+![image](/assets/img/USD/sceneGraph.png)
 
 ### Mesh data
 
