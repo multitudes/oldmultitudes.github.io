@@ -12,7 +12,6 @@ for my own enjoyment and learning
 
 ![image](/assets/img/arkit3/1.png)
 
-This is the third major release of ARKit which has been introduced in 2017.  
 ARKit provides three pillars of functionalities.
 
 ### Tracking  
@@ -128,6 +127,7 @@ This is made possible by advanced Machine Learning algorythms
 
 ### 2D Body Detection
 
+(draft)
 
 
 
