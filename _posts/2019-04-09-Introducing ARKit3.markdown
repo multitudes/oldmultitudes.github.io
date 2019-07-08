@@ -7,7 +7,7 @@ comments: true
 published: true
 ---
 
-This is an extract of the Apple Developer Keynote's talk [Working with usd](https://developer.apple.com/videos/play/wwdc2019/604/)
+This is an extract of the Apple Developer Keynote's talk [Introducing ARKit3](https://developer.apple.com/videos/play/wwdc2019/604/)
 for my own enjoyment and learning 
 
 ![image](/assets/img/arkit3/1.png)
