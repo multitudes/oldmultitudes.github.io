@@ -110,7 +110,13 @@ This will automatically set up a WorldTracking configuration thanks to realityKi
 
 ![image](/assets/img/arkit3/6.png)
 
+I want to implement a toggle that switches occlusion on and off with a simple tap.  
+We need always to check if the device supports FrameSemantic and gracefully handle that case.  
 
+![image](/assets/img/arkit3/7.png)
+
+And add the toggle function   
+![image](/assets/img/arkit3/8.png)
 
 ## Sources  
 
