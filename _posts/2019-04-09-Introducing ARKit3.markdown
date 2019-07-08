@@ -15,18 +15,18 @@ for my own enjoyment and learning
 This is the third major release of ARKit which has been introduced in 2017.  
 ARKit provides three pillars of functionalities.
 
-- Tracking  
+### Tracking  
 
 It determines where your device is respect to the environment, so that virtual content can be positioned and updated correctly in real time.  
 This creates the illusion that the virtual content is placed in the real world.  
 ARKit provides different tracking technologies such as worldtracking, facetracking and imagetracking.
 
--Scene understanding  
+### Scene understanding  
 
 This sits on top of tracking and with it you can identify surfaces, images and 3D Objects in the sceneand attach virtual content right on them.  
 Also learns about the lighting and texture to help make the content more realistic.
 
-- Rendering
+### Rendering
 
 Brings the 3D content to life.  
 There are three main renderers: SceneKit, SpriteKit, Metal ...  
@@ -101,6 +101,14 @@ open class ARFrame : NSObject, NSCopying {
 }
 
 ```
+
+Let's see an example of using the API.   
+In `viewDidLoad` you create an anchor entity looking for horizontal planes and adding it to a scene.  
+Then you retrieve the `url` of the model to load and load it using loadModelAsync in asynchronous model.  
+We add the entity as a child of our anchor and also add support for gestures.   
+This will automatically set up a WorldTracking configuration thanks to realityKit.
+
+![image](/assets/img/arkit3/6.png)
 
 
 
