@@ -83,62 +83,71 @@ We'll talk about the words in front of Main (static and void) as we need them. T
 In c# just declaring a variable of a simple type allocates memory.  
 
 We declare a variable by putting a data type first, so that the compiler knows how to interpret the ones and zeros, and knows how much memory to allocate for this particular variable.   And then we put the variable name, so that we as programmers can refer to that memory location by name rather than by memory address. Optionally, we can also give the the variable a value when we declare that, and we'll see that when we start talking about integers in the following lecture.  
-So, what about constants? Well, constants work essentially the same way except that we provide a data type. First, we provide a keyword const, then we provide the data type of the constant, then we provide its name, and then we have to give it a value. We don't optionally give constant values, we have to give them values when we declare them.
+
+### And constants
+
+So, what about constants?  
+Well, constants work essentially the same way except that we provide a data type.   
+First, we provide a keyword const, then we provide the data type of the constant, then we provide its name, and then we have to give it a value.  
+We don't optionally give constant values, we have to give them values when we declare them.
 
 ##### Integers
 
-Integers or whole numbers, are those numbers that have no fractional or decimal part
+Integers or whole numbers, are those numbers that have no fractional or decimal part.  
 
-In C# there are byte, short, int and long.
-Byte uses 8 bits, and short uses 16. Int uses 32, and long uses 64
+In C# there are byte, short, int and long.  
+Byte uses 8 bits, and short uses 16. Int uses 32, and long uses 64.  
 
-There is a distinction between value types and reference types. 
-The bit get interpreted in a particular way based on the data type we've declared a variable at that memory location to be. For value types, like bytes, short, int and long, the bits at that memory location are in fact interpreted as an integer, a whole number.
+There is a distinction between value types and reference types.  
+The bit get interpreted in a particular way based on the data type we've declared a variable at that memory location to be.   For value types, like bytes, short, int and long, the bits at that memory location are in fact interpreted as an integer, a whole number.  
 
-For reference types, those bits are interpreted as something different. They're interpreted as a memory address. 
-This is the difference between value type and reference types and certainly the numeric types in C#, our value types.
+For reference types, those bits are interpreted as something different. They're interpreted as a memory address.   
+This is the difference between value type and reference types and certainly the numeric types in C#, our value types.  
 
 ##### Floats
 
-So real numbers are those numbers that have a decimal point. And we actually have a problem as we try to represent real numbers in a computer because real numbers are in what's called the continuous domain. There are an infinite number of real numbers between zero and one, for example, and we know though that two to the b equal n. And so given a limited number of bits, we can only represent a finite number for n, so it's actually impossible for us to represent the whole range of infinite real numbers in a computer. So we actually have to do our representation in something called the discrete domain, not the continuous domain, and this discrete domain is what we use zeros and ones to represent things in. So we can represent lots of real numbers but we can't represent all real numbers. And what that leads to is some inaccuracy in the numbers that we can represent. 
+So real numbers are those numbers that have a decimal point. And we actually have a problem as we try to represent real numbers in a computer because real numbers are in what's called the continuous domain. 
+There are an infinite number of real numbers between zero and one, for example, and we know though that two to the b equal n.   
+And so given a limited number of bits, we can only represent a finite number for n, so it's actually impossible for us to represent the whole range of infinite real numbers in a computer. So we actually have to do our representation in something called the discrete domain, not the continuous domain, and this discrete domain is what we use zeros and ones to represent things in.  
+So we can represent lots of real numbers but we can't represent all real numbers.  
+And what that leads to is some inaccuracy in the numbers that we can represent.   
 
-To represent these real numbers we use something called floating numbers and that's just the way we represent real numbers in a computer. And the two data types we'll commonly use are float and double. And in fact, in game development in our unity game development, we're regularly going to just use float just as we regularly use int even though we have a number of different integer data types we can use
 
-##### Math class. 
+To represent these real numbers we use something called floating numbers and that's just the way we represent real numbers in a computer.  
+And the two data types we'll commonly use are float and double.  
+And in fact, in game development in our unity game development, we're regularly going to just use float just as we regularly use int even though we have a number of different integer data types we can use.
 
-It is a static class because I call the methods from the class name. Ex Math.cos
+##### Math class
+
+It is a static class because I call the methods from the class name. Ex Math.cos  
+
 It returns a double. We provide a double as parameter. But wait.. it is an angle in radiant !
-
+```
 (float)Math.cos(45)  		// wrong we need radiants.
 360 degrees = 2 pi radiants.
 Pi/180 = radiants
+```
 
-The constant to use is Math.PI 
+The constant to use is Math.PI   
+
+```
 45 * Math.PI / 180
+```
 
+####Keywords
 
+NPC (Non-player character. In video games, this usually means a character controlled by the computer via algorithmic, predetermined or responsive behavior, but not necessarily true artificial intelligence.)  
 
-
-
-NPC (Non-player character. In video games, this usually means a character controlled by the computer via algorithmic, predetermined or responsive behavior, but not necessarily true artificial intelligence.)
-
-CIL: Common Intermediate Language  
+CIL: Common Intermediate Language    
 Common is included in the name because all the .NET languages (VB, C#, etc.) are compiled to CIL.
-
-
-
-
 
 
 
 ### Sources:
 
-arctangent 
-Math.Atan2(Double, Double) Method
-https://www.mathsisfun.com/algebra/trig-inverse-sin-cos-tan.html
+[arctangent: Math.Atan2(Double, Double) Method](https://www.mathsisfun.com/algebra/trig-inverse-sin-cos-tan.html)
 
-https://docs.microsoft.com/en-us/dotnet/api/system.math?redirectedfrom=MSDN&view=netframework-4.8
+[](https://docs.microsoft.com/en-us/dotnet/api/system.math?redirectedfrom=MSDN&view=netframework-4.8)
 
-[]()
 
 <hr>
