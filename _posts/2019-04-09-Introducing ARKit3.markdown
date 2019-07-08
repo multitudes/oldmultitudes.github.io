@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Introducing ARKit3"
-date:   2019-06-23
+date:   2019-07-06
 categories: iOS, developer
 comments: true
 published: true
@@ -117,6 +117,19 @@ We need always to check if the device supports FrameSemantic and gracefully hand
 
 And add the toggle function   
 ![image](/assets/img/arkit3/8.png)
+
+## Motion Capture
+
+(Available on A12 and later)
+Tracks human body in 2D and 3D.   
+Provides skeleton representation and enables driving a virtual character in real time.
+
+This is made possible by advanced Machine Learning algorythms
+
+### 2D Body Detection
+
+
+
 
 ## Sources  
 
