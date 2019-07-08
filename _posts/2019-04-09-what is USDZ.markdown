@@ -112,8 +112,6 @@ The usd format is transparent and readable. Lets see an excerpt of an usda file.
 These prims contain properties that store actual data and there is a set of metadata attached to file level, prim level or property level. because of the nested tructure any object can be acceessed through an object path.
 Properties have the dot notation.
 
-![image](/assets/img/USD/5.png)
-
 ### Scene Graph
 How to store scene data. A scene graph defines the object hierarchy. Transforms on a parent also affect its children.
 Scene graph is easy to store with the usd nested structure. Some prims like materials dont belong to the scene graph.
