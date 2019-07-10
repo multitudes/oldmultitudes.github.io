@@ -279,8 +279,120 @@ func session(_ session: MCSession, didReceive data: Data, fromPeer peerID: MCPee
 }
 ```
 
+## AR Coaching UI
+
+When you create an AR Experience coaching is really important. You really want to guide your users, whether they are new or returning users. It is not trivial. During the process you need to react to some tracking events.
+This year we are embedding the guidance in the UIView and we call it AR coaching view.
+It is a built-in UI overlay you can directly embed in your applications. It guides users to good tracking experience. Provides a consistent design throughout applications.  Automaticly activates and deactivates.
+
+pic
+
+The setup is really simple.
+
+You need to add it as a child of any UI view, ideally of the ARView
+Then connect to the ARSession to the coaching view or connect the session provider outlet to of the coaching view to the session provider itself in case of a story board. Optionally you can specify coaching goals in source code set delegates and   disable some functionalities.
+
+``` swift
+
+coachingOverlay.goal = .horizontalPlane
+
+// React to activation and deactivation React to relocalization abort request
+protocol ARCoachingOverlayViewDelegate {
+    func coachingOverlayViewWillActivate(ARCoachingOverlayView)
+    func coachingOverlayViewDidDeactivate(ARCoachingOverlayView)
+    func coachingOverlayViewDidRequestSessionReset(ARCoachingOverlayView)
+}
+```
+This year we have activated and deactivated automatically based on device capabilities Can be explicitly disabled in render options
+
+ ## Face Tracking
+
+In ARKit one we enabled face tracking with the ability to track one face. In ARKit 3 we enabled the ability to track three faces concurrently. Also we enabled the ability to track when a face goes out of the screen and returns back giving it the same face ID again. The ID is persistent, but when you start a new session it will be reset.
+
+``` swift
+open class ARFaceTrackingConfiguration : ARConfiguration { 
+    open class var supportedNumberOfTrackedFaces: Int { get } 
+    open var maximumNumberOfTrackedFaces: Int
+}
+```
+
+## ARPositionalTrackingConfiguration
+
+This new tracking configuration is intended for tracking use cases. Maybe you did not need the camera backdrop to be rendered for example.  
+We can achieve a low power consumption with the ability to lower the  camera resolution and frame rate.
+
+## Improvements to the scene understanding
+
+Image detection and tracking has been around for some time now. We can now detect up to 100 images at the same time.
+We also give the ability to detect the size of the printed image for example and adjust the scale accordingly.
+At runtime we can detect the quality of an image you are passing to ARKit when you wanna create a new reference image.
+We made improvement to the image detection algorythms with machine learning. 
+In plane estimation with machine learning is more accurate even when feature points are not yet present!
+Last year we had five different classification, this year we added the ability to detect doors and windows.
+Plane estimation is really important to place contentsw in the world. 
+
+``` swift
+class ARPlaneAnchor : ARAnchor {
+    var classification: ARPlaneAnchor.Classification
+}
+enum ARPlaneAnchor.Classification { 
+    case wall
+    case floor 
+    case ceiling 
+    case table 
+    case seat
+    case door 
+    case window
+}
+```
+## Raycasting
+
+This year with the new raycasting api you can place your content more precisely. It supports every kind of surface alignment not only vertical and horizontal. Also you can track your raycast over time. As you move your device around in real time it can detect more information and place your object on top of the physical surface more accurately as the planes are evolving.
+
+Start by performing a raycast query. Three parameters. From where to perform the raycast. In the example from the screen center. Then what you want to allow in order to place the content, and the alignment which can be vertical horizontal or any.
+Then pass the query to the trackedRaycast method which has a call back which allows you to react to the result..
+and finally stop it when you are done.
+
+``` swift
+// Create a raycast query
+let query = arView.raycastQuery(from: screenCenter,
+                                allowing: .estimatedPlane,
+                                alignment: .any)
+// Perform the raycast
+let raycast = session.trackedRaycast(query) { results in
+    // Refine object position with raycast update
+    if let result = results.first {
+    object.transform = result.transform
+    }
+}
+// Stop tracking the raycast
+ raycast.stop()
+
+```
+
+## Visual Coherence Enhancements
+
+Depth of Field effect. The camera on the device always adjust to the environment so the content can now match the depth of field so the object blends perfectly in the environment.
+Additionally when you move the camera quickly the object get a motion blur.
+Two new API are HDREnvironmentalTextures and Camera Grain
+
+With HDR or high dynamic range you can capture those highlights that make your content more vibrant.
+Every camera produces some grain and in low light it can be a bit heavier. With this API we can apply those same grain patterns on your virtual contents so it does not stand out
+``` swift
+class ARWorldTrackingConfiguration {
+    var wantsHDREnvironmentTextures: Bool { get set }
+}
+class ARFrame {
+    var cameraGrainIntensity: Float { get }
+    var cameraGrainTexture: MTLTexture? { get } }
+```
 
 
+
+## Record and Replay
+
+To develop prototype an AR experience you can record an AR sequence with the reality composer app. 
+You can capture your environment, ARKit will save your sensor data in a movie file container so that you can take it with you and put it in xcode. Now the scheme setting in Xcode has a new seting which allows you to select that file. When that file is selected you can replay that experience. Ideal for prototyping   
 
 ## Sources  
 
