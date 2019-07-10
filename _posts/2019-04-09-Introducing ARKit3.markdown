@@ -135,12 +135,16 @@ session.run(configuration)
 ```
 let's have a look at the data you will getting back.
 
+![image](/assets/img/arkit3/9.png)
+
 Every ARFrame delivers an object of type ARBody2D in the dectected body property if a erson was detected.
 This object contains a 2D Skeleton ARSkeleton2D and it will provide you with all the joints landmarks in normalized image space.
-They are been returned in a flat hierarvhy in an array because this is more efficient for processing, but you also will be getting a skeleton definition and there you have all the information about how to interpret the skeleton data.  
+They are been returned in a flat hierarchy in an array because this is more efficient for processing, but you also will be getting a skeleton definition and there you have all the information about how to interpret the skeleton data.  
 In particular it contains information about the hierarchy of joints. Like the fact that the hand joint is a child of the elbow joint.
 
 ### 3D Motion capture
+
+![image](/assets/img/arkit3/10.png)
 
 Tracks a human body pose in 3D space and provides a 3D skeleton representation with scale estimation to let you determine the size of the person that is being tracked and it is anchored in world coordinates.
 We are introducing a new configuration called ARBodyTrackingConfiguration.
@@ -163,6 +167,7 @@ The yellow joints are the ones which will be delivered to the users with motion 
 The white ones are leaf joints, additionally available in the skeleton but these are not actively tracked. Labels are available and in the API you can query them by their particular name.
 
 One particular use case is animate a 3d character
+
 ### Animating 3D Characters
 
 You will need a rigged mesh. To do this in code with a realityKit API.
@@ -188,6 +193,7 @@ In this way the pose of the keleton will be applied to the model in real time
 
 ### Simultaneous Front and Back Camera
 
+![image](/assets/img/arkit3/11.png)
 
 Enables World Tracking with face data
 Enables Face Tracking with device orientation and position Supported on A12 and later
@@ -239,13 +245,16 @@ let transform = frame.camera.transform
 ```
 
 ## Collaborative Session
+
+![image](/assets/img/arkit3/12.png)
+
 Before in ARKit two you were able to create multiuser experiences but you had to save the map on one device and send it to another one in order for your user to jump to the same experience.
 Now with collaborative Session in ARKit 3 you are continuosly sharing the mapping information between multiple devices across the network. This allows to create Ad-hoc multi-user experiences and additionally to share ARAnchors on all devices. All those anchors are identifiable with sessions ID's on all devices
 At this point all coordinate systems are indipendent from each others even we share the information under the hood.
 
 In this example two user gather and share feature points in the world space. The two maps merge into each other and will form one map only. Additionally the other user will be shown as ArParticipantAnchor too which will allows you to detect when another user is in your environment. It is not limited to two user but you can have a large amount of users in one session.
 
-//pic
+
 To start in code:
 
 ``` swift
@@ -281,15 +290,15 @@ func session(_ session: MCSession, didReceive data: Data, fromPeer peerID: MCPee
 
 ## AR Coaching UI
 
-When you create an AR Experience coaching is really important. You really want to guide your users, whether they are new or returning users. It is not trivial. During the process you need to react to some tracking events.
-This year we are embedding the guidance in the UIView and we call it AR coaching view.
-It is a built-in UI overlay you can directly embed in your applications. It guides users to good tracking experience. Provides a consistent design throughout applications.  Automaticly activates and deactivates.
+![image](/assets/img/arkit3/13.png)
 
-pic
+When you create an AR Experience coaching is really important. You really want to guide your users, whether they are new or returning users. It is not trivial. During the process you need to react to some tracking events.  
+This year we are embedding the guidance in the UIView and we call it AR coaching view.  
+It is a built-in UI overlay you can directly embed in your applications. It guides users to good tracking experience. Provides a consistent design throughout applications.  Automaticly activates and deactivates.  
 
-The setup is really simple.
+The setup is really simple.  
 
-You need to add it as a child of any UI view, ideally of the ARView
+You need to add it as a child of any UI view, ideally of the ARView.  
 Then connect to the ARSession to the coaching view or connect the session provider outlet to of the coaching view to the session provider itself in case of a story board. Optionally you can specify coaching goals in source code set delegates and   disable some functionalities.
 
 ``` swift
@@ -303,9 +312,9 @@ protocol ARCoachingOverlayViewDelegate {
     func coachingOverlayViewDidRequestSessionReset(ARCoachingOverlayView)
 }
 ```
-This year we have activated and deactivated automatically based on device capabilities Can be explicitly disabled in render options
+This year we have activated and deactivated automatically based on device capabilities Can be explicitly disabled in render  options..
 
- ## Face Tracking
+## Face Tracking
 
 In ARKit one we enabled face tracking with the ability to track one face. In ARKit 3 we enabled the ability to track three faces concurrently. Also we enabled the ability to track when a face goes out of the screen and returns back giving it the same face ID again. The ID is persistent, but when you start a new session it will be reset.
 
@@ -322,6 +331,8 @@ This new tracking configuration is intended for tracking use cases. Maybe you di
 We can achieve a low power consumption with the ability to lower the  camera resolution and frame rate.
 
 ## Improvements to the scene understanding
+
+![image](/assets/img/arkit3/14.png)
 
 Image detection and tracking has been around for some time now. We can now detect up to 100 images at the same time.
 We also give the ability to detect the size of the printed image for example and adjust the scale accordingly.
@@ -372,12 +383,12 @@ let raycast = session.trackedRaycast(query) { results in
 
 ## Visual Coherence Enhancements
 
-Depth of Field effect. The camera on the device always adjust to the environment so the content can now match the depth of field so the object blends perfectly in the environment.
-Additionally when you move the camera quickly the object get a motion blur.
-Two new API are HDREnvironmentalTextures and Camera Grain
+Depth of Field effect. The camera on the device always adjust to the environment so the content can now match the depth of field so the object blends perfectly in the environment.  
+Additionally when you move the camera quickly the object get a motion blur. 
+Two new API are HDREnvironmentalTextures and Camera Grain.  
 
-With HDR or high dynamic range you can capture those highlights that make your content more vibrant.
-Every camera produces some grain and in low light it can be a bit heavier. With this API we can apply those same grain patterns on your virtual contents so it does not stand out
+With HDR or high dynamic range you can capture those highlights that make your content more vibrant.  
+Every camera produces some grain and in low light it can be a bit heavier. With this API we can apply those same grain patterns on your virtual contents so it does not stand out.  
 ``` swift
 class ARWorldTrackingConfiguration {
     var wantsHDREnvironmentTextures: Bool { get set }
