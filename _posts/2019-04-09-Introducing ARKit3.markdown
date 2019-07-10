@@ -120,14 +120,165 @@ And add the toggle function
 ## Motion Capture
 
 (Available on A12 and later)
-Tracks human body in 2D and 3D.   
-Provides skeleton representation and enables driving a virtual character in real time.
-
+Tracks human body in 2D and 3D.  
+You can track the body of a person and skeleton representation which can then be mapped to a virtual character in real time.
 This is made possible by advanced Machine Learning algorythms
 
 ### 2D Body Detection
+We have a new framesemntics option called .bodyDetection 
+This is supported on the WorldTrackingConfiguration and on the Image and Orientation tracking configuration
 
-(draft)
+``` swift
+let configuration = ARWorldTrackingConfiguration() 
+configuration.frameSemantics = .bodyDetection
+session.run(configuration)
+```
+let's have a look at the data you will getting back.
+
+Every ARFrame delivers an object of type ARBody2D in the dectected body property if a erson was detected.
+This object contains a 2D Skeleton ARSkeleton2D and it will provide you with all the joints landmarks in normalized image space.
+They are been returned in a flat hierarvhy in an array because this is more efficient for processing, but you also will be getting a skeleton definition and there you have all the information about how to interpret the skeleton data.  
+In particular it contains information about the hierarchy of joints. Like the fact that the hand joint is a child of the elbow joint.
+
+### 3D Motion capture
+
+Tracks a human body pose in 3D space and provides a 3D skeleton representation with scale estimation to let you determine the size of the person that is being tracked and it is anchored in world coordinates.
+We are introducing a new configuration called ARBodyTrackingConfiguration.
+The frame semantics is turned on by default in that configuration. In addition it trackes device position and orientation and selected worldtrcking features such as plane estimation or image detection.
+In code:
+``` swift
+if ARBodyTrackingConfiguration.isSupported {
+   let configuration = ARBodyTrackingConfiguration()
+session.run(configuration) }
+```
+When ARKit is running and detects a person it will detect a new type of anchor, an ARBodyAnchor. This will provided in the session anchor call back like other anchor types you know. It also has a transform with the position and orientation of the detected person in Worldcoordinates, in addition you get the scale factor and a reference to the 3d skeleton:
+``` swift
+open class ARBodyAnchor : ARAnchor {
+    open var transform: simd_float4x4 { get } 
+    open var estimatedScaleFactor: Float { get } 
+    open var skeleton: ARSkeleton3D { get }
+}
+```
+The yellow joints are the ones which will be delivered to the users with motion capture data. 
+The white ones are leaf joints, additionally available in the skeleton but these are not actively tracked. Labels are available and in the API you can query them by their particular name.
+
+One particular use case is animate a 3d character
+### Animating 3D Characters
+
+You will need a rigged mesh. To do this in code with a realityKit API.
+First you create an anchor entity of type body and add this anchor to the scene (1)
+Then load the model (2) and use the asynchronous loading API for that and in the completion handler you will be getting the boidy tracked entity that you just need to add to add as a child to our body anchor.
+In this way the pose of the keleton will be applied to the model in real time
+
+``` swift
+// Animating a 3D character with RealityKit
+
+    // Add body anchor (1)
+    let bodyAnchor = AnchorEntity(.body)
+    arView.scene.addAnchor(bodyAnchor)
+    
+    // Load rigged mesh (2)
+    Entity.loadBodyTrackedAsync(named: "robot").sink(receiveValue: { (character) in
+        
+        // Assign body anchor
+        bodyAnchor.addChild(character)
+ })
+
+```
+
+### Simultaneous Front and Back Camera
+
+
+Enables World Tracking with face data
+Enables Face Tracking with device orientation and position Supported on A12 and later
+
+ARKit lets you do Worldtracking on the back facing camera and face tracking with the true depth system on the front.
+You can build AR experiences using front and back camera at the same time. And face tracking experiences that make use of the device orientation and position.
+All this is supported on A12 and later.
+Example. We run world tracking with plane estimation and also we placed a face mesh on top of the plane and updating it in real time with facial expressions captured through the front camera.
+
+Lets see the api
+First we create a world tracking configuration. This will determines which camera stream will be displayed on the screen. This will be the backfacing camera.
+Now I am turning on the new face tracking enabled property and run the session.
+This will cause to receive face anchors and I can use any information from that anchor like face mesh and anchor transform etc.  
+Since we are working with world coordinates the user face transform will be placed behind the camera, so in order to visualize the face you will need to transform to a location somewhere in front of the camera.
+
+
+``` swift
+// Enable face tracking in world tracking configuration
+let configuration = ARWorldTrackingConfiguration()
+if configuration.supportsUserFaceTracking {
+}
+configuration.userFaceTrackingEnabled = true
+session.run(configuration)
+
+// Receive face data
+func session(_ session: ARSession, didAdd anchors: [ARAnchor]) {
+for anchor in anchors where anchor is ARFaceAnchor {
+}
+...
+}
+```
+
+Lets see the face tracking configuration. You create the configuration as always and set the worldTrackingEnabled to true. And then you can access in every frame, call back the transform of the current camera position and you can use this for whatever use case you have in mind.
+
+
+``` swift
+/ Enable world tracking in face tracking configuration
+let configuration = ARFaceTrackingConfiguration()
+if configuration.supportsWorldTracking {
+}
+configuration.worldTrackingEnabled = true
+session.run(configuration)
+
+// Access world position and orientation
+func session(_ session: ARSession, didUpdate frame: ARFrame) {
+let transform = frame.camera.transform
+...
+}
+```
+
+## Collaborative Session
+Before in ARKit two you were able to create multiuser experiences but you had to save the map on one device and send it to another one in order for your user to jump to the same experience.
+Now with collaborative Session in ARKit 3 you are continuosly sharing the mapping information between multiple devices across the network. This allows to create Ad-hoc multi-user experiences and additionally to share ARAnchors on all devices. All those anchors are identifiable with sessions ID's on all devices
+At this point all coordinate systems are indipendent from each others even we share the information under the hood.
+
+In this example two user gather and share feature points in the world space. The two maps merge into each other and will form one map only. Additionally the other user will be shown as ArParticipantAnchor too which will allows you to detect when another user is in your environment. It is not limited to two user but you can have a large amount of users in one session.
+
+//pic
+To start in code:
+
+``` swift
+// Enable a collaborative session with RealityKit
+ // Set up networking
+    setupMultipeerConnectivity()
+ // Initialize synchronization service
+    arView.scene.synchronizationService =
+    try? MultipeerConnectivityService(session: mcSession)
+// Create configuration and enable the collaboration mode
+    let configuration = ARWorldTrackingConfiguration()
+    configuration.isCollaborationEnabled = true
+    arView.session.run(configuration)
+
+```
+
+When the collaboration is enabled you will be have a new method on the delegate for you where you will be receiving some data. Upon receiving that data you need to broadcast on the network to other user. Upon reception of the data on all the devices you need to update the AR session so that it knows about the new data.  
+
+``` swift
+// Session callback when some collaboration data is available
+override func session(_ session: ARSession, didOutputCollaborationData data:
+ARSession.CollaborationData) {
+    // Send collaboration data to other participants
+    mcSession.send(data, toPeers: participantIds, with: .reliable)
+}
+// Multipeer Connectivity session delegate callback upon receiving data from peers
+func session(_ session: MCSession, didReceive data: Data, fromPeer peerID: MCPeerID) {
+    // Update the session with collaboration data received from another participant
+    let collaborationData = ARSession.CollaborationData(data)
+    session.update(from: collaborationData)
+}
+```
+
 
 
 
