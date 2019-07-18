@@ -342,7 +342,6 @@ print(longEnough)
 This will print `false`. It will check whether all elements of the array are more than 4 letters long.
 There's an obvious but unavoidable problem here, which is that if we're checking 1000 items and item 2 fails the test, we don't need to continue. With this functional approach all 1000 items will be checked, but with a regular for loop you can break as needed. This is a cost- benefit analysis you'll need to make. 
 
-This will print Taylor
 
 <!--
 
@@ -378,30 +377,17 @@ So: a functor is a data type that can be mapped over, and a monad is a functor t
 
 ===================
 
-### Useful terms
 
-monads  
-functors  
-applicative   
-"lightweight encounters" - You dip in, get some quick wins and run away before it gets too hard.  
+### Sources:  
 
-### Sources:
-[Paul Hudson - Elements of Functional Programming](https://www.dotconferences.com/2018/01/paul-hudson-elements-of-functional-programming)
-[Teaching Swift at Scale - Paul Hudson](https://vimeo.com/291590798)
-[SwiftConf '18 - Paul Hudson: Mastering iOS Animation](https://www.youtube.com/watch?time_continue=41&v=_4McEnarqNc)
-[https://learntalks.com/tag/paul-hudson/](https://learntalks.com/tag/paul-hudson/)
-[Use Your Loaf](https://useyourloaf.com)
+[Paul Hudson - Elements of Functional Programming](https://www.dotconferences.com/2018/01/paul-hudson-elements-of-functional-programming)  
+[Teaching Swift at Scale - Paul Hudson](https://vimeo.com/291590798)  
+[SwiftConf '18 - Paul Hudson: Mastering iOS Animation](https://www.youtube.com/watch?time_continue=41&v=_4McEnarqNc)  
+[https://learntalks.com/tag/paul-hudson/](https://learntalks.com/tag/paul-hudson/)  
+[Use Your Loaf](https://useyourloaf.com)  
 
 
 
 <hr>
 
-[^1]: What?
 
-
-
-
-Swift is not a functional language or a true functional language.
-
-
-L'anglais n'est que du français mal prononcé." "English is just badly pronounced French." D'Artagnan Alexandre Dumas
