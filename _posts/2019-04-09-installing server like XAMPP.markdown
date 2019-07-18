@@ -201,12 +201,12 @@ Mount the /opt/lampp directory from the "Volumes" tab of the stack manager and c
 Particularly of interest for a quick start is the htdocs which stands for “HyperTextDocuments”.  
 htdocs or www is the directory that the Apache web server looks for files to serve on your domain by default. This location can be changed to whatever value you want. All you have to do is point the Document Root to a different folder in your .conf file.
 
-![image](/assets/img/InstallingWebServer/5.png)
+![image](/assets/img/InstallingWebServer/4.png)
 
 Other important files: the htaccess. 
 `htaccess` (or hypertext access) are the files that provide options for website owners to control the server environment variables and other parameters to enhance functionality of their websites. These files can reside in any and every directory in the directory tree of the website and provide features to the directory and the files and folders inside it.
 
-![image](/assets/img/InstallingWebServer/4.png)
+![image](/assets/img/InstallingWebServer/5.png)
 
 #### Creating a new folder in htdocs
 
