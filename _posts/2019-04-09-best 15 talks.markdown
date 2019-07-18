@@ -6,9 +6,10 @@ categories: iOS, developer
 comments: true
 published: true
 ---
-
-
-# best WWDC videos according to Paul Hudson
+ 
+## This is still a draft!
+ 
+The 15 best WWDC videos according to Paul Hudson. This post will be updated when I watch them all :)
 
 ## 15 - Embracing Algorithms - Dave Abrahams 
 
@@ -177,6 +178,11 @@ related
 ## 8 - iOS Performance and Power Optimization with Instruments
 
 ## 7 - Building Better Apps with Value Types in Swift
+[WWDC2015](https://developer.apple.com/videos/play/wwdc2015/414/)     
+
+Related Videos  
+[https://developer.apple.com/videos/play/wwdc2016/419](Protocol and Value Oriented Programming in UIKit Apps)  
+
 ## 6 -  A Strategy for Great Work
 ## 5 - API Design for Cocoa and Cocoa Touch
 ## 4 - Improving Existing Apps with Modern Best Practices
@@ -186,30 +192,9 @@ related
 
 
 
-Related
 
 
-## Building Better Apps with Value Types in Swift
-[Building Better Apps with Value Types in Swift](https://developer.apple.com/videos/play/wwdc2015/414/)
+<!--That's it for now. If I missed something let me know in the comments! -->
 
-Related
-[Protocol and Value Oriented Programming in UIKit Apps](https://developer.apple.com/videos/play/wwdc2016/419)
+<hr>
 
-## API Design for Cocoa and Cocoa Touch
-
-## Improving Existing Apps with Modern Best Practices
-
-## Testing Tips & Tricks
-## Advanced NSOperations
-## Protocol-Oriented Programming in Swift
-
-
-## iOS Performance and Power Optimization with Instruments
-[WWDC11](https://developer.apple.com/videos/play/wwdc2011/312/)
-
-
-## Building Better Apps with Value Types in Swift
-[WWDC2015](https://developer.apple.com/videos/play/wwdc2015/414/)    
-
-Related Videos
-[https://developer.apple.com/videos/play/wwdc2016/419](Protocol and Value Oriented Programming in UIKit Apps)
