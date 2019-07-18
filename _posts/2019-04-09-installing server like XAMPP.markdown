@@ -174,24 +174,24 @@ XAMPP for OS X is a native installer for OS X. It installs Apache, PHP and other
 
 Install the app as usual and start in the control panel
 
-// picture 
+![image](/assets/img/InstallingWebServer/1.png)
 
 After a few seconds you will see the IP address of the server on the panel.
 
 To test everything works type in the IP address in a web browser and you will see the dashboard :
 
-// picture  
+![image](/assets/img/InstallingWebServer/2.png)
 
 And under network enable port forwarding (port 80 of the stack to port 8080 of the host system) over SSH.
 
-// picture
-
+![image](/assets/img/InstallingWebServer/3.png)
 
 then you will be able to type 
 http://localhost:8080
 and see the same welcome page
 
 #### About Apache
+
 Apache HTTP Server colloquially called Apache was named after a Native American Tribe Apache to respect its superior skills in warfare strategy. Build on C/C++ and XML it is cross-platform web server
 Most commonly used on UNIX, Apache is available for wide variety of platforms including FreeBSD, Linux, Windows, Mac OS, Novel Netware etc. In 2009, Apache became the first server to serve more than 100 million websites.
 
@@ -201,10 +201,12 @@ Mount the /opt/lampp directory from the "Volumes" tab of the stack manager and c
 Particularly of interest for a quick start is the htdocs which stands for “HyperTextDocuments”.  
 htdocs or www is the directory that the Apache web server looks for files to serve on your domain by default. This location can be changed to whatever value you want. All you have to do is point the Document Root to a different folder in your .conf file.
 
+![image](/assets/img/InstallingWebServer/5.png)
+
 Other important files: the htaccess. 
 `htaccess` (or hypertext access) are the files that provide options for website owners to control the server environment variables and other parameters to enhance functionality of their websites. These files can reside in any and every directory in the directory tree of the website and provide features to the directory and the files and folders inside it.
 
-//pic
+![image](/assets/img/InstallingWebServer/4.png)
 
 #### Creating a new folder in htdocs
 
@@ -248,5 +250,6 @@ now going to `http://192.168.64.3/myJSONfolder/` will  output the 'hello world' 
 Of course I will use this address to output my json files later on and start developing on my machine
 
 
+<hr>
 
 
