@@ -91,3 +91,15 @@ when you finish development of a feature and want to release it? Simple! You mer
 Switch to the Source Control navigator, right-click on the master branch and select Branch from “master”….
 
 ## .gitignore file
+
+did not work for me in Terminal!
+
+
+## Xcode and GitHub
+
+you need to add your GitHub credentials to Xcode. Open Xcode Preferences and select the Accounts tab. Press the + in the lower left corner and select GitHub as the account type. Xcode will prompt for your GitHub credentials
+In the Source Control navigator, right-click on the project name (GitUseExample) at the top of the left-hand pane and select Create “GitUseExample” Remote on GitHub….
+
+### sources
+
+https://www.raywenderlich.com/675-how-to-use-git-source-control-with-xcode-9
