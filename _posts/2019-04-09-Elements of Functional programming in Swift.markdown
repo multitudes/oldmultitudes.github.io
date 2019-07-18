@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Elements of Functional programming in Swift"
-date:   2010-05-23
+date:   2018-05-13
 categories: iOS, developer
 comments: true
 published: true
