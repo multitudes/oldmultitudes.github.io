@@ -7,28 +7,11 @@ comments: true
 published: true
 ---
 
-# this is a draft
-<!--
-<div class="message">
-"Any fool can write code that a computer can understand, but good programmers write code that humans can understand"
-<br><cite>Martin Fowler</cite>
-</div>
--->
 <div class="message">
 "Classes are about as welcome in functional code as a hedgehog in a hemophilia convention."
 <br><cite>Paul Hudson</cite>
 </div>
-<!--
-<div class="message">
-"express what we want to achieve, rather than how this is implemented.
-<br><cite>Javier Soto</cite>
-</div>
-<div class="message">
-"the only way to learn a new programming language is by writing programs in it."
-<br><cite>Dennis Ritchie</cite>
-</div>
--->
-
+ 
 ![image](/assets/img/functional/functional.png) 
 
 
@@ -39,10 +22,16 @@ What is functional programming?
 
 Functional programming (often abbreviated FP) is the process of building software by composing pure functions, avoiding shared state, mutable data, and side-effects.
 
+In this post you will have a lightweight encounter with words like functors, applicatives and monads. 
 
 In Object Oriented Programming, a class blends state, functionality, inheritance, and more. We will see that functional programming can dramatically simplify your code. 
 
 ### Five principles of functional programming
+ 
+What makes good functional code?
+Functional code relies very much on immutability. We like using constants everywhere. Of lourse swift enforces this for us with the use of `let` where possible.
+And avoiding states, you pass variables into a functions and you return new values indipendently of external parameters. 
+It is composable. You can write small functions that can be composed in bigger ones.
 
 - Functions are first-class data types. That means they can be created, copied, and passed around like integers and strings. 
 - Functions can be used as parameters to other functions. 
@@ -61,8 +50,6 @@ A function that always returns the same result for a given input without causing
 If a function does something like writing to disk, is that a side effect or in fact just the main point of the function?   
 Functional programmers should aspire to create pure functions.
 
-
-
 The lack of state can be tricky, because it's so deeply baked into object orientation. "State" is a series of values stored by your program, it includes caching things to increase performance, and also important things like user settings. The problem comes when this state gets used inside a function, because it means the function is no longer predictable.  
 Using the lengthOfStrings() example from earlier, consider what would happen if we had a boolean setting called returnLengthsAsBinary – the function that would always return [6, 4, 5] when given ["Taylor", "Paul, "Adele"] could now also return ['110', '10', '101'] depending on the value of something completely external. 
 
@@ -73,7 +60,13 @@ When you write functions that produce predictable output, you can write unit tes
 
 ### The map() method
 
-map() works great on collections and optionals
+map() works great on collections and optionals.
+It transforms stuff with closures.
+``` swift
+let numbers = [1,2,3,4]
+
+```
+
 
 ``` swift
 let names = ["Taylor", "Paul", "Adele"]
@@ -93,7 +86,7 @@ we can replace all that code with this:
 
 ``` swift
 func lengthOfStrings(strings: [String]) -> [Int] {
-    return strings.map { $0.characters.count }
+    return strings.map { $0.count }
 }
 ```
 
@@ -101,6 +94,24 @@ the functional version conveys significantly more meaning to the compiler
 
 the type signature hasn't changed.you can upgrade your code bit by bit rather than all at once.
 Another ex
+
+The map function will convert the whole array in one go you cannot bail out in the middle.
+For swift it looks like this internally (simplified)
+```
+func map<T>(_ transform:(Element) -> T) -> [T] {
+    var result = [T]()
+
+        for item in self {
+            result.append(transform(item))
+        }
+
+        return result
+    }
+
+```
+map transform some generic and return some array of generics. It is the same code we would have written, only that now can be optimized by Apple. 
+
+
 ``` swift
 
 let fruits = ["Apple", "Cherry", "Orange", "Pineapple"]
@@ -310,8 +321,15 @@ let names = ["Taylor", "Paul", "Adele"]
 let count = names.reduce(0) { $0 + $1.count }
 print(count)
 
-```
 
+```
+Find the longest name in the array:
+``` swift
+let names = ["Taylor", "Paul", "Adele"]
+let longest = names.reduce("") { $1.count >
+    $0.count ? $1 : $0 }
+print(longest)
+```
 ### Reducing to a boolean
 
 A common programming task is to check whether all items in array evaluate to true for a given condition.  
@@ -321,59 +339,51 @@ let names = ["Taylor", "Paul", "Adele"]
 let longEnough = names.reduce(true) { $0 && $1.count > 4 }
 print(longEnough)
 ```
+This will print `false`. It will check whether all elements of the array are more than 4 letters long.
+There's an obvious but unavoidable problem here, which is that if we're checking 1000 items and item 2 fails the test, we don't need to continue. With this functional approach all 1000 items will be checked, but with a regular for loop you can break as needed. This is a cost- benefit analysis you'll need to make. 
 
+This will print Taylor
 
-``` swift
+<!--
 
-
-``` swift
-
-
-
-``` swift
-
-
+### Reducing a multi-dimensional array
 
 ``` swift
-
-
-
-``` swift
-
-
-
-``` swift
-
-
-
-``` swift
-
 
 ```
+
+
+``` swift
+
+```
+
+### 
+###     sort()
+### Reverse sorting
+### Function composition
+### Functional building blocks
+### Lazy functions
+
+-->
+
+### Functors and monads
+
+
+A functor is a container that implements map(). It doesn't need to be called map(), but it does need to do the same thing: convert A into B by applying a transformation. We've been using lots of arrays and optionals, both of which are functors. map() is not the functor – array is the functor, because it implements map().  
+
+A monad is a functor that also implements flatMap(). Again, arrays and optionals are monads. The formal definition for monads in Haskell – commonly seen as the definitive reference – adds a few other rules, but when you're working with Swift just think about flatMap() and you're there.  
+
+So: a functor is a data type that can be mapped over, and a monad is a functor that also can be flatmapped over. That's it 
+
+
 ===================
-
-one of them is immutability. 
-avoids states
-good functional code is composable 
-you write small functions
-that do one maybe two things then
-combine together to make bigger
-functions like Lego bricks. 
-good functional code allows
-us to express our intent clearly. it
-clarifies our intent.
-
-
-Dumas said English is just French badly pronounced 
 
 ### Useful terms
 
-monads
-functors
-applicative 
-"lightweight encounters" - You dip in, get some quick wins and run away before it gets too hard.
-
-
+monads  
+functors  
+applicative   
+"lightweight encounters" - You dip in, get some quick wins and run away before it gets too hard.  
 
 ### Sources:
 [Paul Hudson - Elements of Functional Programming](https://www.dotconferences.com/2018/01/paul-hudson-elements-of-functional-programming)
