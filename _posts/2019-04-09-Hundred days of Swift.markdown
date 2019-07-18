@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "100 Days Of Swift"
-date:   2010-05-23
+date:   2010-05-22
 categories: iOS, developer
 comments: true
 published: true

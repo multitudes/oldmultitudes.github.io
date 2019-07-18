@@ -12,13 +12,17 @@ published: true
 ## Using the preinstalled Apache on Mojave
 
 Apple released the macOS Mojave 10.14 on 24th September 2018 and it includes Apache and PHP pre-installed.   
+This is maybe the easiest solution to get up and running quickly and painlessly. 
+I discovered that Xampp can be sometimes a bit temperamental and if something does not work straight away then it takes a long time to get it right.
+Apache is already preinstalled on Mojave. You only need to activate it!
 
-check the version of Apache in Terminal
+First of all check the version of Apache in Terminal
+
 ```
 httpd -v
 ```
 
-The commands are:
+The commands to start and stop Apache are:
 ```
 sudo apachectl start
 # to stop
@@ -35,22 +39,21 @@ In case you don't get to see the above output then run the following command to 
 sudo apachectl configtest
 ```
 
-### Document Root
+#### Document Root
 
 This is the location in the computer file system from where the files are accessed when we visit the localhost in a browser.
 Document Root is a directory where we put our website files.
 
-On Mac we have two document root. One is at the system level and the other is at the user level.
+On Mac we have two document root folders. One is at the system level and the other is at the user level.
 
 The system level document root in macOS Mojave is located in the following directory: `/Library/WebServer/Documents/`
-For the user level we can create a directory called Sites in user directory.
+but it is not recommended to use it because it requires extra privileges. Better to install and use the other one at the user level.   
+We create a directory called Sites in the user directory.
 
-Since I just want to do some tests I will use the System folder. Also I am the only user on this mac.
-Ops I see the problem.. Every change will ask me for my password!
 
-### create a new Sites folder
+#### create a new Sites folder
 
-in Terminal I do 
+in Terminal I will do 
 ```
 # to switch to the user home directory.
 cd 
@@ -62,7 +65,7 @@ mkdir Sites
 open . Sites
 
 ```
-Edit your php file as
+Create and edit a php file as
 ```
 <?php
 print("hello world");
@@ -71,7 +74,7 @@ print("hello world");
 Go again to the localhost on your computer or look up the ip address of your mac (tip alt-click on the wifi icon on your mac), and use this on your mobile devices or other mac on the network. Using VPN is also no problem, the devices recognize them themselves even in different VPN countries :)
 I dont know you but when it works it is a really nice feeling!
 
-### Creating username.conf file 
+#### Creating username.conf file 
 in Terminal check your username with `whoami`, then create a new conf file like this
 
 ```
@@ -97,7 +100,7 @@ You can check doing `ls -al` in terminal
 
 
 
-### Configuring the httpd.conf file
+#### Configuring the httpd.conf file
 
 Go to the apache2 folder:
 `cd /etc/apache2/`
@@ -123,7 +126,7 @@ DocumentRoot "/Users/YOUR_USERNAME/Sites/"
 
 ```
 
-## Configuring the httpd-userdir.conf file
+#### Configuring the httpd-userdir.conf file
 
 Go to `cd /etc/apache2/extra/`
 
@@ -136,13 +139,13 @@ Test in Terminal and ready!
 
 now going to the localhost will show nothing. We did not add anything yet!
 
-## PHP in Mojave
+#### PHP in Mojave
 
 Check the version with `php -v`
 go to ` cd /etc/apache2/`
-edit the config file httpd.conf:
-`nano sudo nano httpd.conf`
-uncomment the `LoadModule php7_module libexec/apache2/libphp7.so` to use php 7
+edit the config file httpd.conf:  
+`nano sudo nano httpd.conf`  
+Then uncomment the `LoadModule php7_module libexec/apache2/libphp7.so` to use php 7.  
 
 
 
@@ -165,7 +168,7 @@ rm -R xampp
 ```
 The new version would have a uninstall script however this worked for me
 
-### Downloading XAMPP
+#### Downloading XAMPP
 
 Go to the [apachefriends.org](https://www.apachefriends.org/download.html) website and download the latest version 64 bit for mac os. I took the version 7.3.7 with PHP 7.3.7.
 XAMPP for OS X is a native installer for OS X. It installs Apache, PHP and other XAMPP components directly on your OS X system, in the /Applications/XAMPP folder. It ships MariaDB instead of MySQL. The commands and tools are the same for both.
@@ -189,11 +192,11 @@ then you will be able to type
 http://localhost:8080
 and see the same welcome page
 
-## About Apache
+#### About Apache
 Apache HTTP Server colloquially called Apache was named after a Native American Tribe Apache to respect its superior skills in warfare strategy. Build on C/C++ and XML it is cross-platform web server
 Most commonly used on UNIX, Apache is available for wide variety of platforms including FreeBSD, Linux, Windows, Mac OS, Novel Netware etc. In 2009, Apache became the first server to serve more than 100 million websites.
 
-## Accessing the document root on the server
+#### Accessing the document root on the server
 
 Mount the /opt/lampp directory from the "Volumes" tab of the stack manager and click the "Explore" button to open the file manager.
 Particularly of interest for a quick start is the htdocs which stands for “HyperTextDocuments”.  
@@ -204,7 +207,7 @@ Other important files: the htaccess.
 
 //pic
 
-## Creating a new folder in htdocs
+#### Creating a new folder in htdocs
 
 When the server starts, it will look for the index.php file in the htdocs folder.
 This file looks currently like this:
