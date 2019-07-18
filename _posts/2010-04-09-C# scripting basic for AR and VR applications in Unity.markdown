@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Scripting in C# for AR and VR applications in Unity"
-date:   2010-04-09
+date:   2019-04-09
 categories: iOS, developer
 comments: true
 published: false

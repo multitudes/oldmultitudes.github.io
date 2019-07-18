@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Scripting in C# for AR and VR applications in Unity"
-date:   2019-06-19
+date:   2019-01-19
 categories: iOS, developer
 comments: true
 published: true
@@ -134,9 +134,9 @@ The constant to use is Math.PI
 45 * Math.PI / 180
 ```
 
-####Keywords
+#### Keywords
 
-NPC (Non-player character. In video games, this usually means a character controlled by the computer via algorithmic, predetermined or responsive behavior, but not necessarily true artificial intelligence.)  
+NPC (Non-player character. In video games, this usually means a character controlled by the computer via algorithmic, predetermined or responsive behavior, but not necessarily true artificial intelligence.)    
 
 CIL: Common Intermediate Language    
 Common is included in the name because all the .NET languages (VB, C#, etc.) are compiled to CIL.
@@ -145,9 +145,9 @@ Common is included in the name because all the .NET languages (VB, C#, etc.) are
 
 ### Sources:
 
-[arctangent: Math.Atan2(Double, Double) Method](https://www.mathsisfun.com/algebra/trig-inverse-sin-cos-tan.html)
+[arctangent: Math.Atan2(Double, Double) Method](https://www.mathsisfun.com/algebra/trig-inverse-sin-cos-tan.html)  
 
-[](https://docs.microsoft.com/en-us/dotnet/api/system.math?redirectedfrom=MSDN&view=netframework-4.8)
+[.Net math](https://docs.microsoft.com/en-us/dotnet/api/system.math?redirectedfrom=MSDN&view=netframework-4.8)
 
 
 <hr>
