@@ -14,10 +14,7 @@ published: true
 </div>
 
 # This is a draft
-
 ## currently doing Paul Hudson course and needed a place to put down some notes
-
-
 
 <!-- <a rel="ar" href="/assets/img/AR-QL-Pictures/retrotv.usdz">
     <img src="/assets/img/AR-QL-Pictures/Screenshot5.jpg">
@@ -1128,21 +1125,6 @@ var last = Double.pi.ulp
 [apple documentation](https://developer.apple.com/documentation/swift/optional)
 [Swift Playground and Markdown](http://www.thomashanning.com/xcode-markup-for-playgrounds/)
 
-This post is inspired from the 100 Days of Swift [days 1 to 12](https://www.hackingwithswift.com/100):
-
-- [Day 1](https://www.hackingwithswift.com/100/1) – variables, simple data types, and string interpolation
-> “the secret to getting ahead is getting started.” Mark Twain
-- Day 2 – arrays, dictionaries, sets, and enums
-- Day 3 – operators and conditions
-- Day 4 – loops, loops, and more loops
-Day 5 – functions, parameters, and errors
-Day 6 – closures part one
-Day 7 – closures part two
-Day 8 – structs, properties, and methods
-Day 9 – access control, static properties, and laziness
-Day 10 – classes and inheritance
-Day 11 – protocols, extensions, and protocol extensions
-Day 12 – optionals, unwrapping, and typecasting
 <hr>
 
 [^1]: What?
