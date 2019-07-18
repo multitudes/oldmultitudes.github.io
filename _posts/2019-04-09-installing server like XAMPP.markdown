@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Installing a server with XAMPP"
-date:   2010-05-23
+date:   2018-06-14
 categories: iOS, developer
 comments: true
 published: true
