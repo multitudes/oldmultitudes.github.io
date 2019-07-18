@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Installing a server with XAMPP"
+title:  "Installing a web server on Mojave for iOS development and testing"
 date:   2018-06-14
 categories: iOS, developer
 comments: true
