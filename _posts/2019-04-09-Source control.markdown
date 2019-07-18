@@ -93,8 +93,10 @@ Switch to the Source Control navigator, right-click on the master branch and sel
 ## .gitignore file
 
 did not work for me in Terminal!
-
-
+the command would be:
+``` bash
+$ git config --global alias.ignore '!gi() { curl -L -s https://www.gitignore.io/api/$@ ;}; gi'
+```
 ## Xcode and GitHub
 
 you need to add your GitHub credentials to Xcode. Open Xcode Preferences and select the Accounts tab. Press the + in the lower left corner and select GitHub as the account type. Xcode will prompt for your GitHub credentials
