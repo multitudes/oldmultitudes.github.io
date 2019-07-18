@@ -1,6 +1,17 @@
-# best WWDC videos according to Paul Hudson
+---
+layout: post
+title:  "15 of the best WWDC talks"
+date:   2010-05-10
+categories: iOS, developer
+comments: true
+published: true
+---
+ 
+ # draft
+ 
+The 15 best WWDC videos according to Paul Hudson. This post will be updated when I watch them all :)
 
-## Embracing Algorithms - Dave Abrahams 
+## 1 - Embracing Algorithms - Dave Abrahams 
 
 meet crusty!
 what is an Algorythm? 
@@ -28,8 +39,7 @@ shapes.removeAll(where: { $0.isSelected })
 }
 ```
 “No Raw Loops” - Sean Parent (a.k.a. “Crusty's cousin”), C++ Seasoning
-“If you want to improve the code quality in   your organization, replace all of your coding guidelines with one goal: 
- 
+“If you want to improve the code quality in your organization, replace all of your coding guidelines with one goal:
 No Raw Loops” •Sean Parent, C++ Seasoning
 Sean Parent, C++ Seasoning https://channel9.msdn.com/Events/GoingNative/2013/Cpp-Seasoning
 Alexander Stepanov and Paul McJones, Elements of Programming https://www.youtube.com/watch?v=Ih9gpJga4Vc
@@ -41,7 +51,7 @@ Related Videos
 https://developer.apple.com/videos/play/wwdc2018/406
 https://developer.apple.com/videos/play/wwdc2018/229
 
-## Prototyping: Fake It Till You Make It
+## 2 - Prototyping: Fake It Till You Make It
 Session 223 (wwdc14)
 Jeffrey Traer Bernstein, Linda Dong, Julian Missig, Mark Hauenstein
 Designers/Prototypers
@@ -66,10 +76,10 @@ Learn from their feedback
 Three Questions
 Do you know how to __________? Is it easy to _________?
 How can we make this better?
- 
+
 Who?
 The people your app is for
- 
+
 Don’t
 Argue, defend, dismiss
 
@@ -83,12 +93,12 @@ http://developer.apple.com/design
 Keynote Files and Toast Code
 https://developer.apple.com/library/ios/toastmodern_sample
 
-## Advanced Scrollviews and Touch Handling Techniques
+## 3 - Advanced Scrollviews and Touch Handling Techniques
 Scrollviews build on gesture recognizers and underlying multi-touch mechanics to provide a fundamental piece of the iOS user experience. 
 
 ops this one I skipped because too hard! Too much obj-c code that I dont know yet..
 
-## Introducing the New System Fonts
+## 4 - Introducing the New System Fonts
 This is incidentally one of the videos I watched at the time when Apple made them available online. Really beautiful and inspiring how much work goes into what we take for granted
 
 Visual perception is largely about illusion
@@ -99,7 +109,7 @@ SF compact for watch
 
 https://developer.apple.com/videos/play/wwdc2015/804
 
-##  Inclusive App Design
+## 5 - Inclusive App Design
 
 
 
