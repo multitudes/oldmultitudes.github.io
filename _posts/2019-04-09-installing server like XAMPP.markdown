@@ -12,7 +12,8 @@ On my local network I will have access to videos for streaming, pictures and JSO
 
 There are a few options to do this. 
 
-## PHP built in server
+# PHP built in server
+
 PHP is shipped with macOS by default.
 The easiest way to create a webserver on your machine for development, not for production(!),  is to create a folder with some files, open terminal, navigate to the folder and do
 ``` bash
@@ -28,7 +29,8 @@ To see the IP address Option click on your wifi icon in the top right menu bar!
 [https://www.php.net/manual/en/features.commandline.webserver.php](https://www.php.net/manual/en/features.commandline.webserver.php)  
 
 <hr>
-## Using the preinstalled Apache on Mojave
+
+# Using the preinstalled Apache on Mojave
 
 Apple released the macOS Mojave 10.14 on 24th September 2018 and it includes Apache and PHP pre-installed.   
 This is maybe the easiest solution to get up and running quickly and painlessly. 
@@ -169,7 +171,7 @@ Then uncomment the `LoadModule php7_module libexec/apache2/libphp7.so` to use ph
 
 <hr>
 
-## Using Xampp
+# Using Xampp
 
 I had installed on my machine and did not use it for a while. I could not start it again and I had this error message which is probably telling me something important but since I did not have any project installed at this time, I decided to reinstall the application and have a fresh start.
 
