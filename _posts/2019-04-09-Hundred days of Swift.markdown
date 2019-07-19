@@ -139,10 +139,13 @@ func askQuestion(action: UIAlertAction!) {
 #### Day 21 - Wrap up
 
 >John Carmack once said, “focused, hard work is the real key to success. Keep your eyes on the goal, and just keep taking the next step towards completing it. If you aren't sure which way to do something, do it both ways and see which works better.”
+
 <hr>
+
 ##  Project 3 - Social media
 #### Day 22
 >The famous Brazilian author Paulo Coelho said, “Twitter is my bar: I sit at the counter and listen to the conversations, starting others, feeling the atmosphere.”
+
 - UIActivityViewController  - share by iMessage, by email and by Twitter and Facebook, as well as saving the image to the photo library, assigning it to contact, printing it out via AirPrint, and more
 
 ``` swift
