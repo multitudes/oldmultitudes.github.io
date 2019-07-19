@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  "Source Control in Xcode 10"
-date:   2010-05-23
+title:  "Source Control in Xcode 10 - Git"
+date:   2019-06-19
 categories: iOS, developer
 comments: true
 published: true
@@ -9,20 +9,24 @@ published: true
  
  # draft
 
-A problem to waarn you about is that some commit need time to get displayed and will not be shown immediately when doing `command-2` or going to the source control tab. This really did confuse me for a while. I thought I was doing something wrong, or that I should be giving up on git. Do not despair. This is normal!
+### A disclaimer first of all
 
-Another one:
-I tested 'discard changes' and it does not seem to work properly. Discard all changes is always mostly highlighted but the other option discard changes in file is not! The second option would be quite useful. Dont understand what is happening there.. oh update.. it is just very slow to update. I now got the option to discard athe changes in the file, it only took 5 minutes!
+Here are some issues I have encountered using Git on Xcode 10.2.1 on Mojave 10.14.5.
 
-seems that I need to manually delete files when I check out to another branch? this when the files are not supposed to be included but Xcode displays them..
+A problem to warn you about is that some commits and actions need time to get displayed and will not be shown immediately when doing `command-2` or going to the source control tab in Xcode. This really did confuse me for a while. I thought I was doing something wrong, or that I should be giving up on git. Do not despair. This is apparently normal!
 
-I need to 
-then Git on terminal not recognized!
-so i try to do in terminal
+I tested 'discard changes' in the menu `Source Control` and it does not seem to work properly. Discard all changes is always mostly highlighted but the other option discard changes in file is not always! The second option would be quite useful. Dont understand what is happening there.. oh .. it is just very slow to update. I now got the option to discard athe changes in the file, it only took 5 minutes!
+
+After discarding the local not committed changes and when I check out to another branch, it seems that I need to manually delete files because Xcode gives me the error message "File not found" . 
+
+Another problem: Git should work in terminal as well. It did not. I get the message command not recognized!
+Looking on stackOverflow I get this solution, install or update the Xcode command line:
+``` bash
 xcode-select --install
-but turns out this doesnt work anymore. The current solution is to go to the [apple developer](https://developer.apple.com/download/more/) and download the last version.
-It is 1 Gb!
-There is another solution! 
+```
+but it turns out this doesnt work anymore.   
+The current solution is to go to the [apple developer site](https://developer.apple.com/download/more/) and download the last version of command line tools.( It is 1 Gb! it is necessary? I had already the command line tools installed..)
+Do not despair, there is another solution! 
 ``` bash
 xcode-select --reset
 ```
@@ -31,8 +35,7 @@ https://stackoverflow.com/questions/52522565/git-is-not-working-after-macos-moja
 
 
 
-what is the HEAD?
-the most recent revision stored in the repository
+## Source Control
 
 Source control is amazing because it helps you more easily revert to older versions of your code, add new features without risk to your working app, see how your code has changed over time, and work as a team.  
 We are going to look into detail of the source control built in Xcode: Git!
@@ -40,7 +43,7 @@ We are going to look into detail of the source control built in Xcode: Git!
 Git is a distributed version control system initially developed by Linus Torvalds, the principal force behind the development of the Linux kernel.  
 When you create a new project Xcode will give you this option when you will be asked where to save the new project :
 
-// pic 
+![image](/assets/img/git/1.png)
 
 
 In the course of working on your project, you’ll add files, modify code, and change your project many times.  
