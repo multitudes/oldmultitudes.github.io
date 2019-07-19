@@ -241,10 +241,90 @@ webView.allowsBackForwardNavigationGestures = true
 
 <hr>
 
+##  Project 6 - Auto Layout in code
+#### Day 30
 
+> Coco Chanel once said that “fashion is architecture: it is a matter of proportions.” 
+
+- Auto Layout in code: addConstraints with Visual Format Language
+
+#### Day 31
+
+> One of the three laws laid down by British science fiction writer Arthur C. Clarke is particularly well known: “any sufficiently advanced technology is indistinguishable from magic.”
+
+- advanced Visual Formatting Language and Auto Layout anchors
+- Every UIView has a set of anchors that define its layouts rules. The most important ones are widthAnchor, heightAnchor, topAnchor, bottomAnchor, leftAnchor, rightAnchor, leadingAnchor, trailingAnchor, centerXAnchor, and centerYAnchor.
+- The “safe area” is the space that’s actually visible inside the insets of the iPhone X and other such devices – with their rounded corners, notch and similar. It’s a space that excludes those areas, so labels no longer run underneath the notch or rounded corners.
 
 <hr>
 
+##  Day 32 - Consolidation III
+
+> Chris Bosh, an NBA All-Star basketball player, said “every athlete knows that you get good by practicing, by repeating the same moves until you achieve your goal” 
+
+## Codable, buttons, and GCD
+## Project 7 - Whitehouse petitions
+#### Day 33
+
+> Computing pioneer Mitch Kapor once said that “getting information off the internet is like taking a drink from a fire hydrant.”
+
+- UITabBarController
+- JSON – short for JavaScript Object Notation
+- `Codable`
+- custom struct called Petition , Petition.swift
+- one of the advantages of structs in Swift is that it gives us a memberwise initializer
+
+```swift
+struct Petition: Codable {
+var title: String
+var body: String
+var signatureCount: Int
+}
+```
+- a second struct. This one will have a single property called results that will be an array of our Petition struct. This matches exactly how the JSON looks: the main JSON contains the results array, and each item in that array is a Petition.
+- `if let data = try? Data(contentsOf: url) { ... }`
+``` swift
+override func viewDidLoad() {
+    super.viewDidLoad()
+
+    // let urlString = "https://api.whitehouse.gov/v1/petitions.json?limit=100"
+    let urlString = "https://www.hackingwithswift.com/samples/petitions-1.json"
+
+    if let url = URL(string: urlString) {
+        if let data = try? Data(contentsOf: url) {
+            // we're OK to parse!
+            parse(json: data)
+            }
+        }
+}
+
+func parse(json: Data) {
+    let decoder = JSONDecoder()
+
+    if let jsonPetitions = try? decoder.decode(Petitions.self, from: json) {
+        petitions = jsonPetitions.results
+        tableView.reloadData()
+}
+}
+```
+
+#### Day 34
+
+- injecting html code in detail view with  `webView.loadHTMLString(html, baseURL: nil)`
+- Adding a second tapBarController in code
+#### Day 35 
+
+> Michelle Obama once said “through my education, I didn't just develop skills, I didn't just develop the ability to learn, but I developed confidence.”
+
+- wrap up
+
+## Project 8 - 
+#### Day 36
+
+#### Day 37
+#### Day 38
+#### Day 39
+#### Day 40
 
 
 
