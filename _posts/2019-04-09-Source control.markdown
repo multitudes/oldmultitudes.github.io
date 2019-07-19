@@ -7,29 +7,6 @@ comments: true
 published: true
 ---
  
-### A disclaimer first of all
-
-Here are some issues I have encountered using Git on Xcode 10.2.1 on Mojave 10.14.5.
-
-A problem to warn you about is that some commits and actions need time to get displayed and will not be shown immediately when doing `command-2` or going to the source control tab in Xcode. This really did confuse me for a while. I thought I was doing something wrong, or that I should be giving up on git. Do not despair. This is apparently normal!
-
-I tested 'discard changes' in the menu `Source Control` and it does not seem to work properly. Discard all changes is always mostly highlighted but the other option discard changes in file is not always! The second option would be quite useful. Dont understand what is happening there.. oh .. it is just very slow to update. I now got the option to discard athe changes in the file, it only took 5 minutes!
-
-After discarding the local not committed changes and when I check out to another branch, it seems that I need to manually delete files because Xcode gives me the error message "File not found" . 
-
-Another problem: Git should work in terminal as well. It did not. I get the message command not recognized!
-Looking on stackOverflow I get this solution, install or update the Xcode command line:
-
-``` bash
-xcode-select --install
-```
-but it turns out this doesnt work anymore.   
-The current solution is to go to the [apple developer site](https://developer.apple.com/download/more/) and download the last version of command line tools.( It is 1 Gb! it is necessary? I had already the command line tools installed..)
-Do not despair, there is another solution! 
-``` bash
-xcode-select --reset
-```
-and this worked! after that my git commands were recognized...
 
 ## Source Control
 
@@ -119,6 +96,29 @@ In the Source Control navigator, right-click on the project name (GitUseExample)
 
 ![image](/assets/img/git/11.png)
 
+### A disclaimer
+
+Here are some issues I have encountered using Git on Xcode 10.2.1 on Mojave 10.14.5.
+
+A problem to warn you about is that some commits and actions need time to get displayed and will not be shown immediately when doing `command-2` or going to the source control tab in Xcode. This really did confuse me for a while. I thought I was doing something wrong, or that I should be giving up on git. Do not despair. This is apparently normal!
+
+I tested 'discard changes' in the menu `Source Control` and it does not seem to work properly. Discard all changes is always mostly highlighted but the other option discard changes in file is not always! The second option would be quite useful. Dont understand what is happening there.. oh .. it is just very slow to update. I now got the option to discard athe changes in the file, it only took 5 minutes!
+
+After discarding the local not committed changes and when I check out to another branch, it seems that I need to manually delete files because Xcode gives me the error message "File not found" . 
+
+Another problem: Git should work in terminal as well. It did not. I get the message command not recognized!
+Looking on stackOverflow I get this solution, install or update the Xcode command line:
+
+``` bash
+xcode-select --install
+```
+but it turns out this doesnt work anymore.   
+The current solution is to go to the [apple developer site](https://developer.apple.com/download/more/) and download the last version of command line tools.( It is 1 Gb! it is necessary? I had already the command line tools installed..)
+Do not despair, there is another solution! 
+``` bash
+xcode-select --reset
+```
+and this worked! after that my git commands were recognized...
 
 ### sources
 
