@@ -19,13 +19,37 @@ The only thing I am missing is sometimes when I am looking for old content. Ther
 
 This is the missing index for the 100 days of Swift! 
 
-## Days 1 - 12
+## Introduction to Swift 
+
+#### Days 1 - 12
 
 Basic Swift learning! All what you need to know about optionals and closures etc.
 See my other post with more details [here](https://multitudes.github.io/2019/04/Some-Swift-tips-for-beginner-and-intermediate.html).
 
+## Consolidation and review
+
+#### Days 13 - 15
+
+Consolidation and review
 
 <hr>
 
+## Starting iOS 
+
+Day 13
+
+
+
+
+<hr>
+
+
+
+
+<hr>
+
+
+
+<hr>
 
 
