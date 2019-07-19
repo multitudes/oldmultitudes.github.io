@@ -168,7 +168,7 @@ present(vc, animated: true)
 
 ## Web views, user input, and Auto Layout
 
-##  Project 4 - Simple web browser
+##  Project 4 - Easy browser
 #### Day 24 
 > Alexis Ohanian, the founder of Reddit, once said “to join in the industrial revolution, you needed to open a factory; in the Internet revolution, you need to open a laptop.”
 
@@ -198,11 +198,51 @@ webView.allowsBackForwardNavigationGestures = true
 - Monitoring page loads: UIToolbar - holds and shows a collection of UIBarButtonItem objects 
 - UIProgressView
 - key-value observing, or KVO to monitor the loading of the sites
-- `webView.addObserver(self, forKeyPath: #keyPath(WKWebView.estimatedProgress), options: .new, context: nil)`
+- `webView.addObserver` property
+- using KVO, you must implement a method called observeValue()
+- Refactoring
+- contains() String method to see whether each safe website exists somewhere in the host name.
+
+#### Day 26  - Wrap up
 
 
+> There’s a Korean singer called Kwon Ji-yong – better known by the awesome stage name G-Dragon – who said, “you have to believe in yourself, challenge yourself, and push yourself until the very end; that's the only way you'll succeed
+
 <hr>
+
+##  Project 5 - Word Scramble
+#### Day 27
+
+> the US general George Patton once said, “accept the challenges so that you can feel the exhilaration of victory” –
+
+- Capture lists in Swift: what’s the difference between weak, strong, and unowned references?
+- Strong capturing
+- Weak capturing
+- Unowned capturing
+- Strong reference cycles
+
+- start.txt file
+- `Bundle.main.url(forResource: "start", withExtension: "txt"){}`
+- `allWords = startWords.components(separatedBy: "\n")`
+- the `randomElement()` method of Swift’s arrays to choose one random item from all the strings.
+- The `addTextField()` method just adds an editable text input field to the UIAlertController 
+
+#### Day 28
+
+> Blackadder: “Oh, I'm sorry, sir. I'm anaspeptic, phrasmotic, even compunctuous to have caused you such pericombobulation.”
+
+- Swift uses a system of storing its characters, known as extended grapheme clusters - As a result, Swift doesn’t let us use str[7] to read the 8th character ..
+- UITextChecker to check whether a string is spelled correcty
+- UIKit was written in Objective-C before Swift’s strings came along, and it uses a different character system called UTF-16 – short for 16-bit Unicode Transformation Format – where the accent and the letter are stored separately.
+- Emoji are measured differently with Swift strings and UTF-16 strings: Swift strings count them as 1-letter strings, but UTF-16 considers them to be 2-letter strings
+
+#### Day 29 
+- Wrap up
+
 <hr>
+
+
+
 <hr>
 
 
