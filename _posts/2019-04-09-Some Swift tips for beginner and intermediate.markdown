@@ -13,9 +13,7 @@ published: true
 <br><cite></cite>
 </div>
 
-# This is a draft
-
-## currently doing Paul Hudson course and needed a place to put down some notes
+Currently doing the 100 Days of Swift by Paul Hudson and needed a place to put down some notes for my learning and enjoyment :)
 
 
 
