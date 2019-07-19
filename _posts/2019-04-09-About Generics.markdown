@@ -84,7 +84,30 @@ All we see is this simple nice declarative API, but then under the hood all thes
 This is really powerful and enables Swift UI itself to retain type safety throughout the system.   
 It doesn't leak those implementation details out to us for us we just get a simple elegant top-level API but at the same time under the hood generics is really what's powering everything.
 
-Generics should make our top-level code easier and simpler it shouldn't make it harder
+Generics should make our top-level code easier and simpler it shouldn't make it harder.
+
+## Generics are implemented in Protocols
+
+One way we can see the ower of Generics is by looking at how protocols are implemented.
+Example:
+Imagine a Drawable protocol defined with Generics, it can then be specialized to Text, Strings, shapes and all sorts of object.
+
+``` swift
+extension Shape: Drawable {
+    func draw( in  context: VectorDrawingContext){
+        points.forEach(context.add)
+    }
+}
+extension Text: Drawable {
+    func draw( in  context: TextDrawingContext){
+            context.font = font
+            context.add(String)
+        }
+}
+```
+
+
+
 
 ### sources
 
