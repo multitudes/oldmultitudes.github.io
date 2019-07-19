@@ -48,10 +48,10 @@ let items = try! fm.contentsOfDirectory(atPath: path)
 - app directories / bundles
 -  `for item in items { if item.hasPrefix("nssl"){ // }}`
 -  UITableViewController
-- navigation controller | Embed In > Navigation Controller
+- navigation controller -  Embed In -  Navigation Controller
 - Methods to display cell
 
-``` swift
+``` Swift
 override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
     return pictures.count
 }
@@ -113,6 +113,7 @@ override func viewWillDisappear(_ animated: Bool) {
 - UIButton and CALayer - CGColor:  `button1.layer.borderColor = UIColor.lightGray.cgColor`
 
 #### Day 20
+
 > Steve Jobs said, "I believe life is an intelligent thing: that things aren't random.” 
 - shuffled() to return a new, shuffled array. shuffle() for in-place shuffling
 - Int.random(in: 0...2)
@@ -130,18 +131,68 @@ func askQuestion(action: UIAlertAction!) {
 }
 ```
 #### Day 21 - Wrap up
+
+>John Carmack once said, “focused, hard work is the real key to success. Keep your eyes on the goal, and just keep taking the next step towards completing it. If you aren't sure which way to do something, do it both ways and see which works better.”
 <hr>
-##  Project 2 - Guess The Flag
-#### Day 19
+##  Project 3 - Social media
+#### Day 22
+>The famous Brazilian author Paulo Coelho said, “Twitter is my bar: I sit at the counter and listen to the conversations, starting others, feeling the atmosphere.”
+- UIActivityViewController  - share by iMessage, by email and by Twitter and Facebook, as well as saving the image to the photo library, assigning it to contact, printing it out via AirPrint, and more
 
+``` swift
+navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .action, target: self, action: #selector(shareTapped))
 
+@objc func shareTapped() {
+    guard let image = imageView.image?.jpegData(compressionQuality: 0.8) else {
+    print("No image found")
+    return
+}
+let vc = UIActivityViewController(activityItems: [image], applicationActivities: [])
+vc.popoverPresentationController?.barButtonItem = navigationItem.rightBarButtonItem
+present(vc, animated: true)
+```
+<hr>
+
+## Day 23: Consolidation II
 
 <hr>
 
+## Web views, user input, and Auto Layout
+
+##  Project 4 - Simple web browser
+#### Day 24 
+> Alexis Ohanian, the founder of Reddit, once said “to join in the industrial revolution, you needed to open a factory; in the Internet revolution, you need to open a laptop.”
+-   WKWebView // import WebKit
+- First delegate pattern | Delegation is what's called a programming pattern – a way of writing code
+``` swift
+override func loadView() {
+    webView = WKWebView()
+    webView.navigationDelegate = self
+    view = webView
+}
+```
+- In our code, we're setting the web view's navigationDelegate property to self, which means "when any web page navigation happens, please tell me – the current view controller.” You must conform to the protocol, In the case of navigationDelegate, all these methods are optional.
+- class ViewController: UIViewController, WKNavigationDelegate { ..
+``` swift
+let url = URL(string: "https://www.hackingwithswift.com")!
+webView.load(URLRequest(url: url))
+webView.allowsBackForwardNavigationGestures = true
+```
+- https:// for your websites - > App Transport Security
+- delegate function `func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {title = webView.title}`
+
+#### Day 25
+
+> If there’s one Martin Fowler quote that I love, it’s this: “I'm not a great programmer; I'm just a good programmer with great habits.” 
+- Monitoring page loads: UIToolbar - holds and shows a collection of UIBarButtonItem objects 
+- UIProgressView
+- key-value observing, or KVO to monitor the loading of the sites
+- `webView.addObserver(self, forKeyPath: #keyPath(WKWebView.estimatedProgress), options: .new, context: nil)`
 
 
 <hr>
-
+<hr>
+<hr>
 
 
 
