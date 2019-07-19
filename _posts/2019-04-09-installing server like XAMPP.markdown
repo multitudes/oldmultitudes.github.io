@@ -20,12 +20,14 @@ cd ~/myWebFolder
 php -S localhost:8000
 ```
 
-now open your browser and go to `localhost:8000`.  
+Now open your browser and go to `localhost:8000`.  
 You will see the files you have in the folder! Other devices on your local network will be able to see the same.
 To access the folder you will just need to replace "localhost" with the IP address of your mac.
 To see the IP address Option click on your wifi icon in the top right menu bar!
 
-https://www.php.net/manual/en/features.commandline.webserver.php
+[https://www.php.net/manual/en/features.commandline.webserver.php](https://www.php.net/manual/en/features.commandline.webserver.php)  
+
+<hr>
 ## Using the preinstalled Apache on Mojave
 
 Apple released the macOS Mojave 10.14 on 24th September 2018 and it includes Apache and PHP pre-installed.   
@@ -165,6 +167,7 @@ edit the config file httpd.conf:
 Then uncomment the `LoadModule php7_module libexec/apache2/libphp7.so` to use php 7.  
 
 
+<hr>
 
 ## Using Xampp
 
