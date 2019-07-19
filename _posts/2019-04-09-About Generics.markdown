@@ -6,7 +6,7 @@ categories: iOS, developer
 comments: true
 published: true
 ---
-This is an extract of the Apple Developer Keynote’s talk Working with usd for my own enjoyment and learning :)
+This is an extract of the talk "Gentle Generics" by John Sundell for my own enjoyment and learning :)
 
 
 Generics is really key to fundamentally understanding how a lot of how Swift works.
