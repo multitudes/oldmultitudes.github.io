@@ -16,14 +16,15 @@ published: true
 # This is a draft
 
 ## 
-I have been recently very busy with the 100 days of Swift and I am sometimes looking for old content. There is no index on the website and after doing a few projects you start to wonder, where did I see that so and so API.. 
+I have been recently very much enjoying the 100 days of Swift by Paul Hudson.  
+The only thing I am missing is sometimes when I am looking for old content. There is no index on the website and after a certain number of projects under your belt you feel the need to revisit some of the staff. Where was that petition API again ? 
 
-This is the missing index for the 100 days of Swift!
+This is the missing index for the 100 days of Swift! 
 
 ## Days 1 - 12
 
-Basic Swift learning! 
-See my other post here as well
+Basic Swift learning! All what you need to know about optionals and closures etc.
+See my other post with more details here as well
 
 
 <hr>

@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Some Swift for beginner and intermediate"
-date:   2010-05-23
+date:   2019-04-23
 categories: iOS, developer
 comments: true
 published: true
