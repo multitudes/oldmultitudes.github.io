@@ -281,8 +281,9 @@ var body: String
 var signatureCount: Int
 }
 ```
-- a second struct. This one will have a single property called results that will be an array of our Petition struct. This matches exactly how the JSON looks: the main JSON contains the results array, and each item in that array is a Petition.
+- To decode JSON we need a second struct. This one will have a single property called results that will be an array of our Petition struct. This matches exactly how the JSON looks: the main JSON contains the results array, and each item in that array is a Petition.
 - `if let data = try? Data(contentsOf: url) { ... }`
+
 ``` swift
 override func viewDidLoad() {
     super.viewDidLoad()
@@ -312,8 +313,8 @@ func parse(json: Data) {
 
 - injecting html code in detail view with  `webView.loadHTMLString(html, baseURL: nil)`
 - Adding a second tapBarController in code
-#### Day 35 
 
+#### Day 35 
 > Michelle Obama once said “through my education, I didn't just develop skills, I didn't just develop the ability to learn, but I developed confidence.”
 
 - wrap up
