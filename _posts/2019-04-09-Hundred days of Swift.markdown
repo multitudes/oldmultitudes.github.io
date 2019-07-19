@@ -14,26 +14,23 @@ published: true
 </div>
 
  
-I have been recently very much enjoying the 100 days of Swift by Paul Hudson.  
+I have been recently very much enjoying the [100 days of Swift by Paul Hudson](https://www.hackingwithswift.com/100).  
 The only thing I am missing is sometimes when I am looking for old content. There is no index on the website and after a certain number of projects under your belt you feel the need to revisit some of the staff. Where was that petition API again ? 
 
 This is the missing index for the 100 days of Swift! 
 
-## Introduction to Swift - Days 1 - 12  
+## Days 1 - 12 - Introduction to Swift   
 
-Basic Swift learning! All what you need to know about optionals and closures etc.
+All what you need to know about optionals and closures etc.  
 See my other post with more details [here](https://multitudes.github.io/2019/04/Some-Swift-tips-for-beginner-and-intermediate.html).
 
 <hr>
 
-## Consolidation and review - Days 13 - 15
-
-
-
+## Days 13 - 15 - Consolidation and review
 
 <hr>
 
-## Starting iOS - Days 16-22
+## Starting iOS
 
 ##  Project 1 : Storm Viewer
 
@@ -105,6 +102,8 @@ override func viewWillDisappear(_ animated: Bool) {
 
 - Wrap up
 
+<hr> 
+
 ##  Project 2 - Guess The Flag
 #### Day 19
 > Saint Augustine said “the world is a book, and those who do not travel read only a page.”
@@ -115,12 +114,25 @@ override func viewWillDisappear(_ animated: Bool) {
 
 #### Day 20
 > Steve Jobs said, "I believe life is an intelligent thing: that things aren't random.” 
+- shuffled() to return a new, shuffled array. shuffle() for in-place shuffling
+- Int.random(in: 0...2)
+- @IBAction func buttonTapped(_ sender: UIButton) {}
+- Tag - `sender.tag`
+- UIAlertController()
+``` swift
+let ac = UIAlertController(title: title, message: "...", preferredStyle: .alert)
+ac.addAction(UIAlertAction(title: "Continue", style: .default, handler: askQuestion))
+present(ac, animated: true)
 
-
-
-#### Day 21
+...
+func askQuestion(action: UIAlertAction!) {
+...
+}
+```
+#### Day 21 - Wrap up
 <hr>
-
+##  Project 2 - Guess The Flag
+#### Day 19
 
 
 
@@ -137,4 +149,4 @@ override func viewWillDisappear(_ animated: Bool) {
 
 #### Sources:
 
-GitHub (https://github.com/twostraws/HackingWithSwift)
+[GitHub HackingWithSwift](https://github.com/twostraws/HackingWithSwift)
