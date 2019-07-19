@@ -1,13 +1,31 @@
 ---
 layout: post
 title:  "Installing a web server on Mojave for iOS development and testing"
-date:   2018-06-14
+date:   2019-06-14
 categories: iOS, developer
 comments: true
 published: true
 ---
 
+I did some tutorials about web API's, JSON decoding and URL sessions. I wanted to be able to test my app to be able to access JSON data on a local server.  
+On my local network I will have access to videos for streaming, pictures and JSON files returning data.  
 
+There are a few options to do this. 
+
+## PHP built in server
+PHP is shipped with macOS by default.
+The easiest way to create a webserver on your machine for development, not for production(!),  is to create a folder with some files, open terminal, navigate to the folder and do
+``` bash
+cd ~/myWebFolder
+php -S localhost:8000
+```
+
+now open your browser and go to `localhost:8000`.  
+You will see the files you have in the folder! Other devices on your local network will be able to see the same.
+To access the folder you will just need to replace "localhost" with the IP address of your mac.
+To see the IP address Option click on your wifi icon in the top right menu bar!
+
+https://www.php.net/manual/en/features.commandline.webserver.php
 ## Using the preinstalled Apache on Mojave
 
 Apple released the macOS Mojave 10.14 on 24th September 2018 and it includes Apache and PHP pre-installed.   
