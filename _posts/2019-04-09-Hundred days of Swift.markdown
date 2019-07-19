@@ -68,6 +68,7 @@ return cell
 - Auto Layout
 - `@IBOutlet var imageView: UIImageView!`
 - didSelectRowAt
+
 ``` Swift
 override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
     
@@ -82,7 +83,9 @@ override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: Inde
     }
 }
 ```
+
 - property on UINavigationController called hidesBarsOnTap
+
 ``` swift
 override func viewWillAppear(_ animated: Bool) {
     super.viewWillAppear(animated)
@@ -94,6 +97,7 @@ override func viewWillDisappear(_ animated: Bool) {
         navigationController?.hidesBarsOnTap = false
 }
 ```
+
 - `title = "Storm Viewer"`
 - `navigationController?.navigationBar.prefersLargeTitles = true`
 - `navigationItem.largeTitleDisplayMode = .never`
