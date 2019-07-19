@@ -24,24 +24,11 @@ The first sentence reads:
 > swift -- Safe, fast, and expressive general-purpose programming
 language
 
-Swift puts a high high focus on type
+Swift puts a high high focus on type safety and leveraging the compiler in order to produce more safe code that is less prone to runtime errors and lets us write code that is more robust .
 
-safety and leveraging the compiler in
+This works in Swift is because of generics. 
 
-order to produce more safe code that is
-
-less prone to runtime errors
-it lets us write code that is
-
-more robust 
-
-a big reason why
-
-this works in Swift is because of
-
-generics 
-
-An array in Swift is implemented as a generic struct:
+An array in Swift is implemented as a generic struct: 
 
 ``` swift
 public struct Array<Element> {
