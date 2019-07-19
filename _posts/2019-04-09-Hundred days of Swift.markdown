@@ -171,6 +171,7 @@ present(vc, animated: true)
 ##  Project 4 - Simple web browser
 #### Day 24 
 > Alexis Ohanian, the founder of Reddit, once said “to join in the industrial revolution, you needed to open a factory; in the Internet revolution, you need to open a laptop.”
+
 -   WKWebView // import WebKit
 - First delegate pattern | Delegation is what's called a programming pattern – a way of writing code
 ``` swift
@@ -193,6 +194,7 @@ webView.allowsBackForwardNavigationGestures = true
 #### Day 25
 
 > If there’s one Martin Fowler quote that I love, it’s this: “I'm not a great programmer; I'm just a good programmer with great habits.” 
+
 - Monitoring page loads: UIToolbar - holds and shows a collection of UIBarButtonItem objects 
 - UIProgressView
 - key-value observing, or KVO to monitor the loading of the sites
