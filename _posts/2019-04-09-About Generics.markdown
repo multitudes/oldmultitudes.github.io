@@ -6,9 +6,7 @@ categories: iOS, developer
 comments: true
 published: true
 ---
-# draft 
-
-Generics is really key to fundamentally understanding how a lot of how Swift works.
+> Generics is really key to fundamentally understanding how a lot of how Swift works.
 
 Open the terminal and type:
 
@@ -130,12 +128,13 @@ Even though this code here might look a little bit more complex, it's an impleme
 We can introduce all these new types and we can still use that same image from the same function with any of them.  
 What we can see here through this example is that generics are really great we want to reuse some of our core logic for different use cases and they can let us build powerful shared abstractions
 
-## POP
 
-`POP` is what many people refer to as protocol oriented programming. Protocol oriented programming and generics are very highly related.  
+
+POP is what many people refer to as protocol oriented programming. Protocol oriented programming and generics are very highly related.  
 
 ![image](/assets/img/generics/3.png)
 
+Not everything should be programmed with generics in mind.
 Things can go wrong where generics might not be the right tool for the problem, for ex. a protocol contactable, for a contact list.
 This because generics are great when we want to generalize a problem and then create multiple specializations of it. So in this case we have our contactable generalization but it's just about being a contact in the implementation. We have only one specialized case and we do not need a generic
 
