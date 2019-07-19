@@ -105,10 +105,20 @@ override func viewWillDisappear(_ animated: Bool) {
 
 - Wrap up
 
-##  Project 2 - 
+##  Project 2 - Guess The Flag
 #### Day 19
 > Saint Augustine said “the world is a book, and those who do not travel read only a page.”
 
+- pixels and points - retina screens - file@2x.png | file@3x.png
+- `button1.setImage(UIImage(named: countries[1]), for: .normal) `
+- UIButton and CALayer - CGColor:  `button1.layer.borderColor = UIColor.lightGray.cgColor`
+
+#### Day 20
+> Steve Jobs said, "I believe life is an intelligent thing: that things aren't random.” 
+
+
+
+#### Day 21
 <hr>
 
 
