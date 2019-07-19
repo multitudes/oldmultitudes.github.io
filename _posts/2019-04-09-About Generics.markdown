@@ -6,7 +6,10 @@ categories: iOS, developer
 comments: true
 published: true
 ---
-> Generics is really key to fundamentally understanding how a lot of how Swift works.
+This is an extract of the Apple Developer Keynote’s talk Working with usd for my own enjoyment and learning :)
+
+
+#### Generics is really key to fundamentally understanding how a lot of how Swift works.
 
 Open the terminal and type:
 
