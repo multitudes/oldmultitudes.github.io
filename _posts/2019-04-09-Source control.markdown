@@ -7,8 +7,6 @@ comments: true
 published: true
 ---
  
- # draft
-
 ### A disclaimer first of all
 
 Here are some issues I have encountered using Git on Xcode 10.2.1 on Mojave 10.14.5.
@@ -124,6 +122,6 @@ In the Source Control navigator, right-click on the project name (GitUseExample)
 
 ### sources
 
-[A Ray Wenderlich tutorial ](https://www.raywenderlich.com/675-how-to-use-git-source-control-with-xcode-9)
-[StackOverflow about terminal and git](https://stackoverflow.com/questions/52522565/git-is-not-working-after-macos-mojave-update-xcrun-error-invalid-active-devel)
-[Command Line Tools](https://developer.apple.com/download/more/)
+[A Ray Wenderlich tutorial ](https://www.raywenderlich.com/675-how-to-use-git-source-control-with-xcode-9)  
+[StackOverflow about terminal and git](https://stackoverflow.com/questions/52522565/git-is-not-working-after-macos-mojave-update-xcrun-error-invalid-active-devel)  
+[Command Line Tools](https://developer.apple.com/download/more/)  
