@@ -12,7 +12,7 @@ On my local network I will have access to videos for streaming, pictures and JSO
 
 There are a few options to do this. 
 
-# PHP built in server
+# The PHP built in server
 
 PHP is shipped with macOS by default.
 The easiest way to create a webserver on your machine for development, not for production(!),  is to create a folder with some files, open terminal, navigate to the folder and do
