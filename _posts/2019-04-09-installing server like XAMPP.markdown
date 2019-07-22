@@ -162,11 +162,11 @@ now going to the localhost will show nothing. We did not add anything yet!
 
 #### PHP in Mojave
 
-Check the version with `php -v`
-go to ` cd /etc/apache2/`
-edit the config file httpd.conf:  
-`nano sudo nano httpd.conf`  
-Then uncomment the `LoadModule php7_module libexec/apache2/libphp7.so` to use php 7.  
+Check the version with `php -v`  
+go to ` cd /etc/apache2/`  
+edit the config file httpd.conf:    
+`nano sudo nano httpd.conf`    
+Then uncomment the `LoadModule php7_module libexec/apache2/libphp7.so` to use php 7.    
 
 
 <hr>
