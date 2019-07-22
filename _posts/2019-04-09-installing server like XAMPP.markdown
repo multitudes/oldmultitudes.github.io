@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Installing a web server on Mojave for iOS development and testing"
-date:   2019-06-14
+date:   2019-07-14
 categories: iOS, developer
 comments: true
 published: true
