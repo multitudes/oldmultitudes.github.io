@@ -51,7 +51,7 @@ let items = try! fm.contentsOfDirectory(atPath: path)
 - navigation controller -  Embed In -  Navigation Controller
 - Methods to display cell
 
-``` Swift
+```swift
 override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
     return pictures.count
 }
@@ -69,7 +69,7 @@ return cell
 - `@IBOutlet var imageView: UIImageView!`
 - didSelectRowAt
 
-``` Swift
+```swift
 override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
     
     // 1: try loading the "Detail" view controller and typecasting it to be DetailViewController
@@ -86,7 +86,7 @@ override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: Inde
 
 - property on UINavigationController called hidesBarsOnTap  
 
-``` swift
+```swift
 override func viewWillAppear(_ animated: Bool) {
     super.viewWillAppear(animated)
         navigationController?.hidesBarsOnTap = true
@@ -126,7 +126,7 @@ override func viewWillDisappear(_ animated: Bool) {
 - Tag - `sender.tag`
 - UIAlertController()
 
-``` swift
+```swift
 let ac = UIAlertController(title: title, message: "...", preferredStyle: .alert)
 ac.addAction(UIAlertAction(title: "Continue", style: .default, handler: askQuestion))
 present(ac, animated: true)
@@ -148,7 +148,7 @@ func askQuestion(action: UIAlertAction!) {
 
 - UIActivityViewController  - share by iMessage, by email and by Twitter and Facebook, as well as saving the image to the photo library, assigning it to contact, printing it out via AirPrint, and more
 
-``` swift
+```swift
 navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .action, target: self, action: #selector(shareTapped))
 
 @objc func shareTapped() {
@@ -319,8 +319,36 @@ func parse(json: Data) {
 
 - wrap up
 
-## Project 8 - 
-#### Day 36
+## Project 8 - Build the layout in code - Word game 
+#### Day 36 
+> Linus Torvalds, the creator of the massively popular Linux operating system, once said “talk is cheap; show me the code.” 
+
+- UILabel for showing text
+- UITextField to get text input
+- UIButton
+- Our ViewController haas a view property: view = UIView() is the parent class of all of UIKit’s view types: labels, buttons, progress views, and more
+- label’s textAlignment property ex `scoreLabel.textAlignment = .right`
+
+```swift
+scoreLabel = UILabel()
+scoreLabel.translatesAutoresizingMaskIntoConstraints = false
+scoreLabel.textAlignment = .right
+scoreLabel.text = "Score: 0"
+view.addSubview(scoreLabel)
+```
+- NSLayoutConstraint.activate() method, which accepts an array of constraints
+- `safeAreaLayoutGuide`  is the space available once you subtract any rounded corners or notches, inside that is the `layoutMarginsGuide`, which adds some extra margin so that views don’t run to the left and right edges of the screen
+
+```swift
+NSLayoutConstraint.activate([
+    scoreLabel.topAnchor.constraint(equalTo: view.layoutMarginsGuide.topAnchor),
+    scoreLabel.trailingAnchor.constraint(equalTo: view.layoutMarginsGuide.trailingAnchor),
+
+    // more constraints to be added here!
+])
+```
+
+
 
 #### Day 37
 #### Day 38
