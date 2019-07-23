@@ -272,6 +272,11 @@ now going to `http://192.168.64.3/myJSONfolder/` will  output the 'hello world' 
 
 Of course I will use this address to output my json files later on and start developing on my machine
 
+### some extras
+
+In case necessary change the folders and files to the right permissions to be accessed by the server :
+- `chmod 644 source-large/*.jpg` sets all files to 644 in the source-large folder
+-  `chmod 755 source-large` sets the folder to 755.
 
 <hr>
 

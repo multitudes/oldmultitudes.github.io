@@ -15,7 +15,7 @@ published: true
 
  
 I have been recently very much enjoying the [100 days of Swift by Paul Hudson](https://www.hackingwithswift.com/100).  
-The only thing I am missing is sometimes when I am looking for old content. There is no index on the website and after a certain number of projects under your belt you feel the need to revisit some of the staff. Where was that petition API again ? 
+The only thing I am missing is an index! When I am looking for old content I get stranded or need to google. There is no index on the website and after a certain number of projects under your belt you feel the need to revisit some of the staff. Where was that petition API again ? :)
 
 This is the missing index for the 100 days of Swift! 
 
