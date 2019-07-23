@@ -319,7 +319,7 @@ func parse(json: Data) {
 
 - wrap up
 
-## Project 8 - Build the layout in code - Word game 
+## Project 8 - Build the layout in code - Swifty Words 
 #### Day 36 
 > Linus Torvalds, the creator of the massively popular Linux operating system, once said “talk is cheap; show me the code.” 
 
@@ -343,16 +343,51 @@ view.addSubview(scoreLabel)
 NSLayoutConstraint.activate([
     scoreLabel.topAnchor.constraint(equalTo: view.layoutMarginsGuide.topAnchor),
     scoreLabel.trailingAnchor.constraint(equalTo: view.layoutMarginsGuide.trailingAnchor),
-
+    ...
+    cluesLabel.numberOfLines = 0,
+    cluesLabel.topAnchor.constraint(equalTo: scoreLabel.bottomAnchor)
     // more constraints to be added here!
 ])
 ```
 
+- `numberOfLines` is an integer that sets how many lines the text can wrap over, but we’re going to set it to 0 – a magic value that means “as many lines as it takes.”
+- Using `UIFont.systemFont(ofSize: 24)` will give us a 24-point font
+- The `placeholder` property of text fields
+- setting `isUserInteractionEnabled` to false
+- use `setTitle()` to adjust the title on the button like `clear.setTitle("CLEAR", for: .normal)`
 
 
 #### Day 37
+- new string method to learn, called `replacingOccurrences()`
+- Find a text file in the appbundle:
+```swift
+if let levelFileURL = Bundle.main.url(forResource: "level\(level)", withExtension: "txt") {
+        if let levelContents = try? String(contentsOf: levelFileURL) {
+            var lines = levelContents.components(separatedBy: "\n")
+            lines.shuffle()
+            for (index, line) in lines.enumerated() {
+                let parts = line.components(separatedBy: ": ")
+                let answer = parts[0]
+                let clue = parts[1]
+                ...
+
+```
+- a property observer
+``` swift
+var score = 0 {
+    didSet {
+        scoreLabel.text = "Score: \(score)"
+    }
+}
+```
 #### Day 38
+> There are many well-known quotes from Shakespeare, but there’s one I think is particularly apt today: “the fool doth think he is wise, but the wise man knows himself to be a fool.”
+
+>In my talk at NSSpain 2018 I said “Auto Layout makes hard things easy, and easy things hard” 
 #### Day 39
+> Joss Whedon, the creator of Firefly, once said that “the secret to multitasking is that it isn't actually multitasking – it’s just extreme focus and organization.” (If you weren’t aware, Firefly played a big part in the development of Swift – the internal code name (“Shiny”) was from there
+
+
 #### Day 40
 
 
@@ -361,3 +396,4 @@ NSLayoutConstraint.activate([
 #### Sources:
 
 [GitHub HackingWithSwift](https://github.com/twostraws/HackingWithSwift)
+[Talk at NSSpain Spain](http://vimeo.com/291590798)
