@@ -389,10 +389,113 @@ var score = 0 {
 
 
 #### Day 40
+#### Day 41
+#### Day 42
+#### Day 43
+#### Day 44
+#### Day 45
+#### Day 46
+#### Day 47
+#### Day 48
+#### Day 49
+#### Day 50
+
+#### Day 51
+#### Day 52
+#### Day 53
+#### Day 54
+#### Day 55
+
+#### Day 56
+#### Day 57
+#### Day 58
+#### Day 59
+#### Day 60
+#### Day 61
+#### Day 62
+#### Day 63
+#### Day 64
+#### Day 65
+#### Day 66
+#### Day 67
+#### Day 68
+#### Day 69
+#### Day 70
+#### Day 71
+#### Day 72
+#### Day 73
+#### Day 74
+#### Day 75
+#### Day 76
+#### Day 77
+#### Day 78
+#### Day 79
+#### Day 80
+#### Day 81
+#### Day 82
+#### Day 83
+#### Day 84
+#### Day 85
+#### Day 86
+#### Day 87
+
+## Project 27 - custom drawing  
+#### Day 88
+> As Michelangelo once said, “every block of stone has a statue inside it and it is the task of the sculptor to discover it.”
+
+- `Core Graphics` responsible for device-independent 2D drawing – when you want to draw shapes, paths, shadows, colors..
+- let Interface Builder do the work : Editor > Resolve Auto Layout Issues > Reset to Suggested Constraints.
+- Core Graphics sits at a lower technical level than UIKit. This means it doesn't understand classes you know like UIColor and UIBezierPath, so you either need to use their counterparts (CGColor and CGPath respectively)
+- Core Graphics differentiates between creating a path and drawing a path.
+
+- Core Graphics is extremely fast and can work on a background thread – something that UIKit can't do 
+- `UIGraphicsImageRenderer` class. This was introduced in iOS 10 to allow fast and easy graphics rendering. It isn’t a Core Graphics class; it’s a UIKit class, but it acts as a gateway to and from Core Graphics for UIKit-based apps.
+- In Core Graphics, a context is a canvas upon which we can draw, but it also stores information about how we want to draw 
+- When you create a renderer, you get to specify how big it should be. To kick off rendering you can either call the image() function to get back a UIImage of the results, or call the pngData() and jpegData() methods to get back a Data object in PNG or JPEG format 
+- the renderer image() method accepts a closure as its only parameter, which is code that should do all the drawing. It gets passed a single parameter which is a reference to a UIGraphicsImageRendererContext to draw to.
+- the `cgContext` property gives us the full power of Core Graphics.
+- five new methods: `setFillColor()` `setStrokeColor()` `setLineWidth()` `addRect()` `drawPath()` which are called on the Core Graphics context that comes from ctx.cgContext
+- drawing circles (or indeed any elliptical shape) in Core Graphics is done by specifying its rectangular bounds.
+- create a checkerboard - check `CICheckerboardGenerator`
+- drawImagesAndText()
+- put an attributed string into a graphic? attributed strings have a built-in method called draw(with:)
 
 
+#### Day 89
+> Carl Sagan once said, "if you wish to make an apple pie from scratch, you must first invent the universe."
+
+> Swift was first introduced way back in 2014, at Apple’s annual Worldwide Developer Conference (WWDC). When showing off the new language, Chris Lattner (the creator of Swift) took to the stage and immediately did something that was revolutionary for us – at least back then: he created a Swift playground in Xcode.
+
+- Wrap up and challenges
+
+## MILESTONE: PROJECTS 25-27
+
+#### Day 90
+> "As John Quincy Adams once said, “patience and perseverance have a magical effect before which difficulties disappear and obstacles vanish.”
+
+- `#targetEnvironment`(simulator) compiler directive. Swift has several of these, like `#line` and `#if swift`. 
+- `#line` is easy enough: when your code gets built it automatically gets replaced with the current line number. You can also use #filename and #function, and the combination of these are very useful in debugging strings.
+- The #if swift directive allows you to conditionally compile code depending on the Swift compiler version being used. So, you could write Swift 4.2 code and Swift 5.0 code in the same file, and have Xcode choose the right version automatically.
+
+#### Day 91 - CORE GRAPHICS REDUX
+
+## PROJECT 28
+#### Day 92
+> Fred Donaldson : “Children learn as they play. Most importantly, in play children learn how to learn.” 
+
+> George Bernard Shaw said, “we don’t stop playing because we grow old; we grow old because we stop playing.” 
+#### Day 93
+#### Day 94
+#### Day 95
+#### Day 96
+#### Day 97
+#### Day 98
+#### Day 99
+
+#### Day 100!
 
 
+PROJECT 27
 #### Sources:
 
 [GitHub HackingWithSwift](https://github.com/twostraws/HackingWithSwift)
