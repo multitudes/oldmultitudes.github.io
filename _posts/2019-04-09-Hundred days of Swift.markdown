@@ -478,12 +478,36 @@ var score = 0 {
 - The #if swift directive allows you to conditionally compile code depending on the Swift compiler version being used. So, you could write Swift 4.2 code and Swift 5.0 code in the same file, and have Xcode choose the right version automatically.
 
 #### Day 91 - CORE GRAPHICS REDUX
-
-## PROJECT 28
-#### Day 92
 > Fred Donaldson : “Children learn as they play. Most importantly, in play children learn how to learn.” 
 
 > George Bernard Shaw said, “we don’t stop playing because we grow old; we grow old because we stop playing.” 
+
+- Playground links for [ipad](https://www.hackingwithswift.com/playgrounds) and [xcode](http://hackingwithswift.com/files/playgrounds/Learn-Core-Graphics-Xcode.zip)
+
+## PROJECT 28 - Use the iOS keychain - Secret Swift
+#### Day 92
+> Bruce Schneier – a well-known US cryptographer, security analyst, and writer, once said “if you think technology can solve your security problems, then you don't understand the problems and you don't understand the technology.”
+
+- Touch ID, Face ID and the keychain. The first two are used to identify users biometrically using the fingerprint sensor on iPhones and iPads, or the face scanner on iPhone X or similar; the latter is a secure, encrypted data storage area on every device that you can read and write to.
+- UserDefaults is great for its simplicity but isn't good for private data
+- `NotificationCenter.default` to tell us when the keyboard changes or when it hides
+- `adjustKeyboard()` method,
+- a helpful class called `KeychainWrapper` . This class was not made by Apple; instead, it's open source software released under the MIT license, which means we can use it in our own projects as long as the copyright message remains intact.
+- launch a function when leaving the app.. 
+```swift
+let notificationCenter = NotificationCenter.default
+notificationCenter.addObserver(self, selector: #selector(saveSecretMessage), name: UIApplication.willResignActiveNotification, object: nil)
+
+// use the two functions
+KeychainWrapper.standard.set(secret.text, forKey: "SecretMessage")
+// and
+secret.text = KeychainWrapper.standard.string(forKey: "SecretMessage") ?? ""
+```
+- Touch ID and Face ID are part of the Local Authentication framework, and our code needs to do three things Check whether the device is capable of supporting biometric authentication – that the hardware is available and is configured by the user.
+- biometry system begin a check now. For Touch ID the string is written in code; for Face ID the string is written into our Info.plist file
+- when we're told whether Touch ID/Face ID was successful or not, it might not be on the main thread. This means we need to use async() 
+- `import LocalAuthentication`
+
 #### Day 93
 #### Day 94
 #### Day 95
