@@ -384,13 +384,97 @@ var score = 0 {
 > There are many well-known quotes from Shakespeare, but there’s one I think is particularly apt today: “the fool doth think he is wise, but the wise man knows himself to be a fool.”
 
 >In my talk at NSSpain 2018 I said “Auto Layout makes hard things easy, and easy things hard” 
+
+## Project 9 - Grand Central Dispatch
 #### Day 39
 > Joss Whedon, the creator of Firefly, once said that “the secret to multitasking is that it isn't actually multitasking – it’s just extreme focus and organization.” (If you weren’t aware, Firefly played a big part in the development of Swift – the internal code name (“Shiny”) was from there
 
+- GCD allows to fetch the data without locking up the user interface
+- Data's `contentsOf()` to download data from the internet, which is what's known as a blocking call. That is, it blocks execution of any further code in the method until it has connected to the server and fully downloaded all the data.
+- code execution processes are called threads
+- by default your own code executes on only one CPU, because you haven't created threads for other CPUs to work on.
+- All user interface work must occur on the main thread, 
+- if you’re accessing any remote resource, you should be doing it on a background thread
+- three new `GCD functions`, but the most important one is called `async()`
+- GCD creates for you a number of queues, and places tasks in those queues depending on how important you say they are.
+- but more than one code block can be executed at the same time so the finish order isn't guaranteed.
+
+“How important” some code is depends on something called “quality of service”, or QoS, which decides what level of service this code should be given
+- 4 queues. queues affect the way the system prioritizes your work: User Interactive and User Initiated tasks will be executed as quickly as possible, Utility tasks will be executed with a view to keeping power efficiency as high as possible
+- User Interactive: this is the highest priority background thread
+- User Initiated
+- The Utility queue: this should be used for long-running tasks that the user is aware of, but not necessarily desperate for now.
+- The Background queue: this is for long-running tasks that the user isn't actively aware of, or at least doesn't care
+- the default queue. This is prioritized between user-initiated and utility, and is a good general-purpose choice while you’re learning
+
+- `DispatchQueue.global().async { [weak self] in`
+- or 
+``` swift
+DispatchQueue.global(qos: .userInitiated).async { [weak self in
+    if let url = URL(string: urlString) {
+        if let data = try? Data(contentsOf: url) {
+            self?.parse(json: data)
+            return
+        }
+    }
+    // this will go on the main thread too because UI work!!
+        showError()
+    
+    }
+}
+
+[...]
+// in the parse code.. the UI work goes back to main thread
+DispatchQueue.main.async { [weak self] in
+                self?.tableView.reloadData()
+            }
+
+```
+
+- It's OK to parse the JSON on a background thread, but it's never OK to do user interface work there.
+- another way of using GCD. `performSelector(inBackground:)` and `performSelector(onMainThread:)`
+``` swift
+performSelector(inBackground: #selector(fetchJSON), with: nil)
+
+performSelector(onMainThread: #selector(showError), with: nil, waitUntilDone: false)
+
+```
+- Note: because performSelector() uses #selector, we need to mark our methods with the @objc attribute.
 
 #### Day 40
+> An old joke: " A programmer has a problem and thinks, “I can fix this using multitasking!” 
+have Now problems! two they
+
+- race conditions are a whole category of bugs caused by one task completing before it was supposed to 
+- GCD automatically handles thread creation and management, automatically balances based on available system resources, and automatically factors in Quality of Service 
+
+## Consolidation IV
 #### Day 41
+> Ricky Mondello – one of the team who builds Safari at Apple – once said, “one of my favorite things about software engineering, or any kind of growth really, is coming back to something that you previously thought was too hard and knowing that you can do it.”
+
+- three Swift features that are so important
+``` swift
+for (index, line) in lines.enumerated() {
+    let parts = line.components(separatedBy: ": ")
+...
+var score: Int = 0 {
+    didSet {
+        scoreLabel.text = "Score: \(score)"
+    }
+}
+...
+DispatchQueue.global().async { [weak self] in
+    // do background work
+
+    DispatchQueue.main.async {
+        // do main thread work
+    }
+}
+```
 #### Day 42
+> my favorite quote from Douglas Adams: “I may not have gone where I intended to go, but I think I have ended up where I intended to be.”
+
+
 #### Day 43
 #### Day 44
 #### Day 45
@@ -626,10 +710,57 @@ Broadly speaking, you want "Color Blended Layers" to show as little red as possi
 		tableView.separatorStyle = .none
 ```
 
-#### Day 98
-#### Day 99
+- 2000x2000 pixel jpeg images might only take up 500KB on disk, but when they are uncompressed by iOS they’ll need around 45 MB of RAM!
+- Instruments > `Allocations instrument`
+- maoolc means memory allocate
+- some objects are persistent (created and still exist while the program was still running) and some are transient (created and since destroyed). 
 
+#### Day 98
+> As Izey Victoria Odiase said, “don't aim for perfection – aim for 'better than yesterday’.”
+
+- When you create a UIImage using UIImage(named:) iOS loads the image and puts it into an image cache for reuse later.
+- we can skip the image cache by creating our images using the UIImage(contentsOfFile:) initializer instead. This isn't as friendly as UIImage(named:) because you need to specify the exact path to an image rather than just its filename in your app bundle
+- UIImage's cache is intelligent: if it senses memory pressure, it automatically clears itself to make room for other stuff.
+- `title = image.replacingOccurrences(of: "-Large.jpg", with: "")`
+```swift
+// the timer was using memory through strong reference 
+animTimer = Timer.scheduledTimer(withTimeInterval: 5, repeats: true) { timer in
+// function to cancel the timer
+override func viewWillDisappear(_ animated: Bool) {
+    super.viewWillDisappear(animated)
+    animTimer.invalidate()
+}
+```
+
+- Hold up your right hand and repeat after me: “I will never ship an app without running it through Instruments first.” 
+		
+
+
+## Milestone
+#### Day 99
+> as the Greek philosopher Epictetus once said, “the greater the difficulty the more glory in surmounting it” 
+
+- A failable initializer is one that might return a valid created object, or it might fail and return nil. We’re going to use this so that we can return nil if the image name can’t be found in the app bundle. a new UIImage extension that creates a new, failable, convenience initializer called UIImage(uncached:).
+
+```swift
+extension UIImage {
+    convenience init?(uncached name: String) {
+        if let path = Bundle.main.path(forResource: name, ofType: nil) {
+            self.init(contentsOfFile: path)
+        } else {
+            return nil
+        }
+    }
+}
+```
+
+- How to flip a UIView with a 3D effect: `transition(with:)`  - see code below
+
+
+<hr>
+## FINAL EXAM 
 #### Day 100!
+> As Aisha Tyler said, “success is not the absence of failure; it's the persistence through failure.”
 
 
 PROJECT 27
@@ -638,3 +769,4 @@ PROJECT 27
 [GitHub HackingWithSwift](https://github.com/twostraws/HackingWithSwift)
 [Talk at NSSpain Spain](http://vimeo.com/291590798)
 [HACKING WITH SWIFT ONLINE](https://www.hackingwithswift.com/read)
+[How to flip a UIView with a 3D effect: transition(with:)](https://www.hackingwithswift.com/example-code/uikit/how-to-flip-a-uiview-with-a-3d-effect-transitionwith)
