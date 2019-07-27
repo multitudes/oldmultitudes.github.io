@@ -543,10 +543,89 @@ currentGame.viewController = self
 
 #### Day 95
 > As Ernest Rutherford once said, “all of physics is either impossible or trivial: it is impossible until you understand it, and then it becomes trivial.”
+ - create a player
+```swift
+var player1: SKSpriteNode!
+
+player1 = SKSpriteNode(imageNamed: "player")
+        player1.name = "player1"
+        player1.physicsBody = SKPhysicsBody(circleOfRadius: player1.size.width / 2)
+        player1.physicsBody?.categoryBitMask = CollisionTypes.player.rawValue
+        player1.physicsBody?.collisionBitMask = CollisionTypes.banana.rawValue
+        player1.physicsBody?.contactTestBitMask = CollisionTypes.banana.rawValue
+        
+        // this tells not to be influenced by gravity
+        player1.physicsBody?.isDynamic = false
+        // put he player on top of the second building
+        let player1Building = buildings[1]
+        player1.position = CGPoint(x: player1Building.position.x, y: player1Building.position.y + ((player1Building.size.height + player1.size.height) / 2))
+        addChild(player1)
+        
+```
+- A texture atlas is a set of pictures that are combined into a single image. to render one of those pictures SpriteKit loads the whole atlas and just draws the small window that represents the image you want.Texture atlases allows SpriteKit to draw lots of images without having to load and unload textures – it effectively just crops the big image as needed. Xcode automatically generates these atlases for us.open Assets.xcassets, right-click in the big empty space below AppIcon, and choose New Sprite Atlas
+- converting degrees to radians is done with a fixed formula that we will put into a method called deg2rad():
+```swift
+func deg2rad(degrees: Int) -> Double {
+    return Double(degrees) * Double.pi / 180
+}
+```
+- SpriteKit uses a number of optimizations to help its physics simulation work at high speed. These optimizations don't work well with small, fast-moving objects, and our banana is just such a thing. To be sure everything works as intended, we're going to enable the usesPreciseCollisionDetection property for the banana's physics body. This works slower, but it's fine for occasional use.
+-if we calculate the cosine of our angle in radians it will tell us how much horizontal momentum to apply, and if we calculate the sine of our angle in radians it will tell us how much vertical momentum to apply.
+
+- we use the applyImpulse() method of its physics body, which accepts a CGVector as its only parameter and gives it a physical push in that direction.
+- add collision detection . Make your gamescene conform to `SKPhysicsContactDelegate`
+and in didMove()
+```swift
+physicsWorld.contactDelegate = self
+```
+
+- If the banana hit a player, we're going to call a new method named destroy(player:). If the banana hit a building, we'll call a different new method named bananaHit(building:), but we'll also pass in the contact point
+- SpriteKit has a super-stylish and built-in way of letting you transition between scenes. For example, this will cross-fade in a new scene over 2 seconds:
+``` swift
+// on the main thread after a selay
+DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+    let newGame = GameScene(size: self.size)
+    let transition = SKTransition.crossFade(withDuration: 2)
+    self.view?.presentScene(newGame, transition: transition)
+    self.changePlayer()
+        newGame.currentPlayer = self.currentPlayer
+
+        let transition = SKTransition.doorway(withDuration: 1.5)
+        self.view?.presentScene(newGame, transition: transition)
+}
+```
+- explosions are easy
+``` swift
+if let explosion = SKEmitterNode(fileNamed: "hitBuilding") {
+        explosion.position = contactPoint
+        addChild(explosion)
+    }
+```
+- `convert()`, which asks the game scene to convert the collision contact point into the coordinates relative to the building node. 
+- Core Graphics has quite a few blend modes that might look similar, but we're going to use one called `.clear`, which means "delete whatever is there already." 
+- the abs() function makes negative number positive
 
 
 #### Day 96
+> Craig Federighi, senior vice president of software engineer at Apple, once said “people sometimes have a view of programming that is something solitary and very technical, but programming is among the most creative, expressive, and social careers.”
+
+- wrap up
+
+## PROJECT 29 - Instruments
 #### Day 97
+> as Edsger Dijkstra once said, “if debugging is the process of removing software bugs, then programming must be the process of putting them in.”
+
+- Instruments. It ships as part of Xcode, and is responsible for profiling your app. "Profiling" is the term used when we monitor performance, memory usage and other information of an app, with the aim of improving efficiency.
+- Press Cmd+I to run your app using Instruments. This will build your ode in Release mode, which men fully optimized for maximum performance 
+- select Time Profiler
+- Under the Debug menu on your Mac you’ll see a few options. Two in particular are very useful: `Color Blended Layers` shows views that are opaque in green and translucent in red. If there are multiple transparent views inside each other, you'll see more and more red. `Color Offscreen-Rendered` shows views that require an extra drawing pass in yellow. Some special drawing work must be drawn individually off screen then drawn again onto the screen, which means a lot more work.
+Broadly speaking, you want "Color Blended Layers" to show as little red as possible, and "Color Offscreen-Rendered Yellow" to show no yellow.
+
+```swift
+		tableView.rowHeight = 90
+		tableView.separatorStyle = .none
+```
+
 #### Day 98
 #### Day 99
 
