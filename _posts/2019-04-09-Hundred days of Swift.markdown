@@ -509,8 +509,42 @@ secret.text = KeychainWrapper.standard.string(forKey: "SecretMessage") ?? ""
 - `import LocalAuthentication`
 
 #### Day 93
-#### Day 94
+
+> As Gene Spafford once said, “the online truly secure system is one that is powered off, cast in a block of concrete and sealed in a lead-lined room with armed guards.”
+
+- security, encryption in ios 
+- If you use biometric authentication but store your data in UserDefaults, it can be read out by bypassing the app. If you store your data in the iOS keychain but don’t put it behind biometric authentication or similar, anyone can launch the app and just take it.
+
+## PROJECT 29 - Exploding Monkeys
+#### Day 94 
+> 'Don’t practice until you get it right; practice until you can’t get it wrong.'
+
+- `SKSpriteNode` subclass for buildings that sets up physics, draws the building graphic, and ultimately handles the building being hit 
+- `import SpriteKit`
+- three methods: `setup()` will set its name, texture, and physics. `configurePhysics()` will set up per-pixel physics for the sprite's `current texture`(texture will change as the game progresses. `drawBuilding()` will do the Core Graphics rendering of a building, and return it as a UIImage.
+- define some collision bitmasks
+- a new way to create colors: hue, saturation and brightness, or HSB. The helpful thing about HSB is that if you keep the saturation and brightness constant, changing the hue value will cycle through all possible colors – it's an easy way to generate matching pastel colors
+- basic Swift feature `stride()`, which lets you loop from one number to another with a specific interval. 
+```swift
+for row in stride(from: 10, to: Int(size.height - 10), by: 40) {
+```
+- `Bool.random()` to generate either true or false randomly
+- mixing UIKit and SpriteKit, our game view controller needs to house and manage the user interface, and the game scene needs to manage everything inside the game. But they also need to talk to each other:
+```swift
+// Add this property to the game scene:
+weak var viewController: GameViewController!
+//Now add this property to the game view controller:
+var currentGame: GameScene!
+
+currentGame = scene as? GameScene
+currentGame.viewController = self
+```
+
+
 #### Day 95
+> As Ernest Rutherford once said, “all of physics is either impossible or trivial: it is impossible until you understand it, and then it becomes trivial.”
+
+
 #### Day 96
 #### Day 97
 #### Day 98
@@ -524,3 +558,4 @@ PROJECT 27
 
 [GitHub HackingWithSwift](https://github.com/twostraws/HackingWithSwift)
 [Talk at NSSpain Spain](http://vimeo.com/291590798)
+[HACKING WITH SWIFT ONLINE](https://www.hackingwithswift.com/read)
