@@ -579,9 +579,10 @@ DispatchQueue.global().async { [weak self] in
 - Touch ID, Face ID and the keychain. The first two are used to identify users biometrically using the fingerprint sensor on iPhones and iPads, or the face scanner on iPhone X or similar; the latter is a secure, encrypted data storage area on every device that you can read and write to.
 - UserDefaults is great for its simplicity but isn't good for private data
 - `NotificationCenter.default` to tell us when the keyboard changes or when it hides
-- `adjustKeyboard()` method,
+- `adjustKeyboard()` method  
 - a helpful class called `KeychainWrapper` . This class was not made by Apple; instead, it's open source software released under the MIT license, which means we can use it in our own projects as long as the copyright message remains intact.
-- launch a function when leaving the app.. 
+- launch a function when leaving the app..   
+
 ```swift
 let notificationCenter = NotificationCenter.default
 notificationCenter.addObserver(self, selector: #selector(saveSecretMessage), name: UIApplication.willResignActiveNotification, object: nil)
