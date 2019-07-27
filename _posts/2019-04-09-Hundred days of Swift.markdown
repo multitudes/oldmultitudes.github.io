@@ -614,18 +614,21 @@ secret.text = KeychainWrapper.standard.string(forKey: "SecretMessage") ?? ""
 - define some collision bitmasks
 - a new way to create colors: hue, saturation and brightness, or HSB. The helpful thing about HSB is that if you keep the saturation and brightness constant, changing the hue value will cycle through all possible colors – it's an easy way to generate matching pastel colors
 - basic Swift feature `stride()`, which lets you loop from one number to another with a specific interval. 
+
 ```swift
 for row in stride(from: 10, to: Int(size.height - 10), by: 40) {
 ```
 - `Bool.random()` to generate either true or false randomly
-- mixing UIKit and SpriteKit, our game view controller needs to house and manage the user interface, and the game scene needs to manage everything inside the game. But they also need to talk to each other:
+- mixing UIKit and SpriteKit, our game view controller needs to house and manage the user interface, and the game scene needs to manage everything inside the game. But they also need to talk to each other:  
+
+
 ```swift
 // Add this property to the game scene:
 weak var viewController: GameViewController!
 //Now add this property to the game view controller:
 var currentGame: GameScene!
 
-currentGame = scene as? GameScene
+currentGame = scene as? GameScene   
 currentGame.viewController = self
 ```
 
