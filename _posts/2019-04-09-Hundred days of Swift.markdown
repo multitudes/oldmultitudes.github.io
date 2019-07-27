@@ -381,13 +381,14 @@ var score = 0 {
 }
 ```
 #### Day 38
-> There are many well-known quotes from Shakespeare, but there’s one I think is particularly apt today: “the fool doth think he is wise, but the wise man knows himself to be a fool.”
+> There are many well-known quotes from Shakespeare, but there’s one I think is particularly apt today: “the fool doth think he is wise, but the wise man knows himself to be a fool.”  
 
->In my talk at NSSpain 2018 I said “Auto Layout makes hard things easy, and easy things hard” 
+
+>In my talk at NSSpain 2018 I said “Auto Layout makes hard things easy, and easy things hard”   
 
 ## Project 9 - Grand Central Dispatch
 #### Day 39
-> Joss Whedon, the creator of Firefly, once said that “the secret to multitasking is that it isn't actually multitasking – it’s just extreme focus and organization.” (If you weren’t aware, Firefly played a big part in the development of Swift – the internal code name (“Shiny”) was from there
+> Joss Whedon, the creator of Firefly, once said that “the secret to multitasking is that it isn't actually multitasking – it’s just extreme focus and organization.” (If you weren’t aware, Firefly played a big part in the development of Swift – the internal code name (“Shiny”) was from there  
 
 - GCD allows to fetch the data without locking up the user interface
 - Data's `contentsOf()` to download data from the internet, which is what's known as a blocking call. That is, it blocks execution of any further code in the method until it has connected to the server and fully downloaded all the data.
@@ -409,7 +410,9 @@ var score = 0 {
 
 - `DispatchQueue.global().async { [weak self] in`
 - or 
+
 ``` swift
+
 DispatchQueue.global(qos: .userInitiated).async { [weak self in
     if let url = URL(string: urlString) {
         if let data = try? Data(contentsOf: url) {
@@ -423,7 +426,7 @@ DispatchQueue.global(qos: .userInitiated).async { [weak self in
     }
 }
 
-[...]
+
 // in the parse code.. the UI work goes back to main thread
 DispatchQueue.main.async { [weak self] in
                 self?.tableView.reloadData()
@@ -433,6 +436,7 @@ DispatchQueue.main.async { [weak self] in
 
 - It's OK to parse the JSON on a background thread, but it's never OK to do user interface work there.
 - another way of using GCD. `performSelector(inBackground:)` and `performSelector(onMainThread:)`
+
 ``` swift
 performSelector(inBackground: #selector(fetchJSON), with: nil)
 
@@ -443,36 +447,36 @@ performSelector(onMainThread: #selector(showError), with: nil, waitUntilDone: fa
 
 #### Day 40
 > An old joke: " A programmer has a problem and thinks, “I can fix this using multitasking!” 
-have Now problems! two they
+have Now problems! two they  
 
 - race conditions are a whole category of bugs caused by one task completing before it was supposed to 
 - GCD automatically handles thread creation and management, automatically balances based on available system resources, and automatically factors in Quality of Service 
 
 ## Consolidation IV
 #### Day 41
-> Ricky Mondello – one of the team who builds Safari at Apple – once said, “one of my favorite things about software engineering, or any kind of growth really, is coming back to something that you previously thought was too hard and knowing that you can do it.”
+> Ricky Mondello – one of the team who builds Safari at Apple – once said, “one of my favorite things about software engineering, or any kind of growth really, is coming back to something that you previously thought was too hard and knowing that you can do it.”  
 
 - three Swift features that are so important
 ``` swift
 for (index, line) in lines.enumerated() {
     let parts = line.components(separatedBy: ": ")
-...
+// ..
 var score: Int = 0 {
     didSet {
         scoreLabel.text = "Score: \(score)"
     }
 }
-...
+// ..
 DispatchQueue.global().async { [weak self] in
     // do background work
 
     DispatchQueue.main.async {
         // do main thread work
     }
-}
+}   
 ```
 #### Day 42
-> my favorite quote from Douglas Adams: “I may not have gone where I intended to go, but I think I have ended up where I intended to be.”
+> my favorite quote from Douglas Adams: “I may not have gone where I intended to go, but I think I have ended up where I intended to be.”  
 
 
 #### Day 43
