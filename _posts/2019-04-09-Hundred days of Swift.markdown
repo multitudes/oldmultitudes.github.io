@@ -634,7 +634,7 @@ currentGame.viewController = self
 
 
 #### Day 95
-> As Ernest Rutherford once said, “all of physics is either impossible or trivial: it is impossible until you understand it, and then it becomes trivial.”
+> As Ernest Rutherford once said, “all of physics is either impossible or trivial: it is impossible until you understand it, and then it becomes trivial.”  
 
 - create a player  
 
