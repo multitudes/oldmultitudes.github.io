@@ -526,6 +526,18 @@ func getDocumentsDirectory() -> URL {
 
 ```
 
+- NSObject is what's called a universal base class for all Cocoa Touch classes. That means all UIKit classes ultimately come from NSObject
+- indexPath.item rather than indexPath.row
+- round the cell amd i,age
+
+``` swift
+ cell.imageView.layer.borderColor = UIColor(white: 0, alpha: 0.3).cgColor
+    cell.imageView.layer.borderWidth = 2
+    cell.imageView.layer.cornerRadius = 3
+    cell.layer.cornerRadius = 7
+
+```
+
 
 #### Day 44
 #### Day 45
