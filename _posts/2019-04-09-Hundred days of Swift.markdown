@@ -478,8 +478,55 @@ DispatchQueue.global().async { [weak self] in
 #### Day 42
 > my favorite quote from Douglas Adams: “I may not have gone where I intended to go, but I think I have ended up where I intended to be.”  
 
+- `UICollectionViewController`, `UIImagePickerController`and `UUID`
+- `fatalError()` always causes a crash, so we can it to escape from a method that has a return value without sending anything back
+- `collectionView(_:numberOfItemsInSection:)`
+- `collectionView(_:cellForItemAt:)`
+- `dequeueReusableCell(withReuseIdentifier:for:)`
 
 #### Day 43
+> by the words of Valerie Plame: “Privacy is precious – I think privacy is the last true luxury. To be able to live your life as you choose without having everyone comment on it or know about.”
+
+- `UIImagePickerController`
+- Create a button `navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addNewPerson))`
+- this is the picker!
+- We set the `allowsEditing` property to be `true`, which allows the user to crop the picture they select.
+- When you set self as the delegate, you'll need to conform not only to the `UIImagePickerControllerDelegate` protocol, but also the `UINavigationControllerDelegate` protocol.
+The whole method is being called from Objective-C code using `#selector`, so we need to use the `@objc` attribute
+
+```swift
+@objc func addNewPerson() {
+    let picker = UIImagePickerController()
+    picker.allowsEditing = true
+    picker.delegate = self
+    present(picker, animated: true)
+}
+```
+ - The delegate method we care about is `imagePickerController(_, didFinishPickingMediaWithInfo:)`, which returns when the user selected an image and it's being returned to you. 
+
+- we need to generate a unique filename for every image we import. We're going to use a new type for this, called `UUID`, which generates a Universally Unique Identifier 
+
+```swift 
+let imageName = UUID().uuidString
+```
+- All apps that are installed have a directory called Documents where you can save private information for the app, and it's also automatically synchronized with iCloud. The problem is, it's not obvious how to find that directory, so I have a method I use called getDocumentsDirectory() that does exactly that – you don't need to understand how it works, but you do need to copy it into your code.
+``` swift
+// ..
+let imagePath = getDocumentsDirectory().appendingPathComponent(imageName)
+
+    if let jpegData = image.jpegData(compressionQuality: 0.8) {
+        try? jpegData.write(to: imagePath)
+    }
+//
+func getDocumentsDirectory() -> URL {
+        let paths = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
+        return paths[0]
+    }
+
+
+```
+
+
 #### Day 44
 #### Day 45
 #### Day 46
