@@ -540,8 +540,71 @@ func getDocumentsDirectory() -> URL {
 
 
 #### Day 44
+
+- Wrap up and Challenge
+
+## PROJECT 11
 #### Day 45
+
+> Michael Jordan:“I’ve missed more than 9000 shots in my career. I've lost almost 300 games. 26 times, I've been trusted to take the game winning shot and missed. I've failed over and over and over again in my life. And that is why I succeed.”  
+
+- SpriteKit is Apple’s high-performance drawing toolkit that lets us build advanced 2D games with relative ease.  
+- in `GameScene.swift` replace with   
+
+``` swift
+import SpriteKit
+
+class GameScene: SKScene {
+    override func didMove(to view: SKView) {
+    }
+
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+    }
+}
+```
+
+- in the scene editor in the attributes inspector change the anchor point which should 0 for both X and Y.  
+- SpriteKit considers Y:0 to be the bottom of the screen whereas UIKit considers it to be the top   
+- iPad is 1024 points wide and 768 high  
+- move the `Actions.sks` trash  
+- If you want to place an image in your game, the class to use is called SKSpriteNode. To place the background image in the center of a landscape iPad, we need to place it at the position X:512, Y:384  
+- the blend mode .replace. Blend modes determine how a node is drawn, and SpriteKit gives you many options. The .replace option means "just draw it, ignoring any alpha values,"   
+- give the background a zPosition of -1, which in our game means "draw this behind everything else."  
+
+``` swift
+let background = SKSpriteNode(imageNamed: "background.jpg")
+background.position = CGPoint(x: 512, y: 384)
+background.blendMode = .replace
+background.zPosition = -1
+addChild(background)
+```
+- add to the `touchesBegan()` method. This method gets called (in UIKit and SpriteKit) whenever someone starts touching their device  
+
+``` swift
+let background = SKSpriteNode(imageNamed: "background.jpg")
+background.position = CGPoint(x: 512, y: 384)
+background.blendMode = .replace
+background.zPosition = -1
+addChild(background)
+```
+
+- Add a physicsBody. And just before the end of didMove(to:), add this:  
+
+``` swift
+physicsBody = SKPhysicsBody(edgeLoopFrom: frame)
+```
+- `ball.physicsBody?.restitution = 0.4` restitution refers to bounciness
+- `bouncer.physicsBody?.isDynamic = false` object will not move upon collision
+
+
 #### Day 46
+
+> “In the beginning there was nothing, which exploded.” That’s a quote from Terry Pratchett’s book "Lords and Ladies"
+
+- Angles are specified in radians, not degrees. This is true in UIKit too. 360 degrees is equal to the value of 2 x Pi – that is, the mathematical value π. Therefore π radians is equal to 180 degrees.  
+- Rather than have you try to memorize it, there is a built-in value of π called CGFloat.pi.  
+
+
 #### Day 47
 #### Day 48
 #### Day 49
