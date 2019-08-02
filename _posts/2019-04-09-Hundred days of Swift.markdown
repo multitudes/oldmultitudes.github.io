@@ -779,12 +779,72 @@ let defaults = UserDefaults.standard
 [Elements of Functional Programming](https://www.youtube.com/watch?v=OgU8d_E1K14)
 [Teaching Swift at Scale](https://vimeo.com/291590798)
 
-## PROJECT 13
+## PROJECT 13 - Instafilter
 #### [Day 52](https://www.hackingwithswift.com/100/52)
 > As Alexa Hirschfeld said, “the biggest challenge is to stay focused – to have the discipline when there are so many competing things.”
 
+- See project 10 as well 
+- We will use the `UIImagePickerController`
+- add  `UIImagePickerControllerDelegate`,`UINavigationControllerDelegate`
+- the first time you use a UIImagePickerController iOS will ask the user for permission to read their photo library, which means we need to add a text string describing our intent. So, open Info.plist add : Privacy - Photo Library Additions Usage Description
+-  a new function: `UIImageWriteToSavedPhotosAlbum()`  
 
 #### [Day 53](https://www.hackingwithswift.com/100/53)
+> As Ben Shneiderman, a professor for Computer Science at the University of Maryland, once said, “a picture is worth a thousand words; an interface is worth a thousand pictures”
+
+- we will use Core Image - Its API has never really been updated for Swift -Core Image is yet another super-fast and super-powerful framework from Apple. It does only one thing, which is to apply filters to images that manipulate them in various ways.  
+- `import CoreImage`  
+- add two more properties :
+- `var context: CIContext!` this is the Core Image component that handles rendering  
+- `var currentFilter: CIFilter!` This is a Core Image filter, and will store whatever filter the user has activated.  
+
+```swift
+// in the didFinishPickingMediaWithInfo method:
+
+let beginImage = CIImage(image: currentImage)
+
+currentFilter.setValue(beginImage, forKey: kCIInputImageKey)
+
+// applyProcessing()
+```
+
+- The CIImage data type is, for the sake of this project, just the Core Image equivalent of UIImage.   
+
+- this is the applyProcessing function. 
+```swift
+func applyProcessing() {
+    guard let image = currentFilter.outputImage else { return }
+    currentFilter.setValue(intensity.value, forKey: kCIInputIntensityKey)
+
+    if let cgimg = context.createCGImage(image, from: image.extent) {
+        let processedImage = UIImage(cgImage: cgimg)
+        imageView.image = processedImage
+    }
+}
+```
+- and the last two functions nescessary to save the image to the iphone
+```swift 
+@IBAction func save(_ sender: Any) {
+guard let image = imageView.image else { return }
+
+UIImageWriteToSavedPhotosAlbum(image, self, #selector(image(_:didFinishSavingWithError:contextInfo:)), nil)
+}
+
+@objc func image(_ image: UIImage, didFinishSavingWithError error: Error?, contextInfo: UnsafeRawPointer) {
+    if let error = error {
+    // we got back an error!
+    let ac = UIAlertController(title: "Save error", message: error.localizedDescription, preferredStyle: .alert)
+    ac.addAction(UIAlertAction(title: "OK", style: .default))
+    present(ac, animated: true)
+    } else {
+    let ac = UIAlertController(title: "Saved!", message: "Your altered image has been saved to your photos.", preferredStyle: .alert)
+    ac.addAction(UIAlertAction(title: "OK", style: .default))
+    present(ac, animated: true)
+}
+}
+```
+
+
 #### [Day 54](https://www.hackingwithswift.com/100/54)
 #### [Day 55](https://www.hackingwithswift.com/100/55)
 
