@@ -577,7 +577,15 @@ class GameScene: SKScene {
 - And unlike UIKit SpriteKit positions things based on their center – i.e., the point 0,0 refers to the horizontal and vertical center of a node.  
 - the blend mode .replace. Blend modes determine how a node is drawn, and SpriteKit gives you many options. The .replace option means "just draw it, ignoring any alpha values,"   
 - give the background a zPosition of -1, which in our game means "draw this behind everything else."  
+- add to  `didMove(to:)`   
 
+``` swift
+let background = SKSpriteNode(imageNamed: "background.jpg")
+background.position = CGPoint(x: 512, y: 384)
+background.blendMode = .replace
+background.zPosition = -1
+addChild(background)
+```
 - add to the `touchesBegan()` method. This method gets called (in UIKit and SpriteKit) whenever someone starts touching their device  
 
 ```swift
@@ -588,21 +596,19 @@ if let touch = touches.first {
     addChild(box)
 }
 ```
-``` swift
-let background = SKSpriteNode(imageNamed: "background.jpg")
-background.position = CGPoint(x: 512, y: 384)
-background.blendMode = .replace
-background.zPosition = -1
-addChild(background)
-```
+- UITouch is a UIKit class that is also used in SpriteKit, and provides information about a touch   
 
 - Add a physicsBody. And just before the end of didMove(to:), add this:  
 
 ``` swift
+box.physicsBody = SKPhysicsBody(rectangleOf: CGSize(width: 64, height: 64))
+// and for the container
 physicsBody = SKPhysicsBody(edgeLoopFrom: frame)
 ```
-- `ball.physicsBody?.restitution = 0.4` restitution refers to bounciness
-- `bouncer.physicsBody?.isDynamic = false` object will not move upon collision
+- We gonna now replace the boxes with balls  and add some bouncers    
+- `ball.physicsBody = SKPhysicsBody(circleOfRadius: ball.size.width / 2.0)` 
+- `ball.physicsBody?.restitution = 0.4`  restitution refers to bounciness
+- `bouncer.physicsBody?.isDynamic = false`  object will not move upon collision
 
 
 #### [Day 46](https://www.hackingwithswift.com/100/46)
@@ -614,7 +620,7 @@ physicsBody = SKPhysicsBody(edgeLoopFrom: frame)
 - CGFloat can be either a Double or a Float depending on the device your code runs on. Swift also has Double.pi and Float.pi for when you need it at different precisions.  
 - When you create an action it will execute once. If you want it to run forever, you create another action to wrap the first using the repeatForever() method, then run that.  
 - Apple recommends assigning names to your nodes  
-- Add `physicsWorld.contactDelegate = self`
+- Add `physicsWorld.contactDelegate = self` for Collision detection
 - Make our scene the contact delegate of the physics world – this means, "tell us when contact occurs between two bodies.  
 - conform to the `SKPhysicsContactDelegate protocol` then assign the physics world's contactDelegate property to be our scene but still not enough. Need to do is change the `contactTestBitMask` property of our physics objects, which sets the contact notifications we want to receive.   
 `ball.physicsBody!.contactTestBitMask = ball.physicsBody!.collisionBitMask `  
@@ -645,8 +651,8 @@ var score = 0 {
 ```
 
 - a new property on nodes called zRotation, if you imagine sticking a skewer through the Z position – i.e., going directly into your screen – and through a node, then you can imagine Z rotation: it rotates a node on the screen   
-- using both Int.random(in:) for integer values and CGFloat.random(in:) for CGFloat values, with the latter being used to create random red, green, and blue values for a UIColor.  
-
+- using both Int.random(in:) for integer values and CGFloat.random(in:) for CGFloat values, with the latter being used to create random red, green, and blue values for a UIColor.    
+- The removeFromParent() method removes a node from your node tree.   
 
 #### [Day 47](https://www.hackingwithswift.com/100/47)
 > As Shakuntala Devi once said, “nobody challenges me – I challenge myself.”
@@ -654,9 +660,9 @@ var score = 0 {
 - `SKEmitterNode class`
 - play with the particle editor: `Particle Texture`: what image to use for your particles. `Particles Birthrate`: how fast to create new particles. `Particles Maximum`: the maximum number of particles this emitter should create before finishing. `Lifetime Start`: the basic value for how many seconds each particle should live for. `Lifetime Range`: how much, plus or minus, to vary lifetime. `Position Range X/Y`: how much to vary the creation position of particles from the emitter node's position. `Angle Start`: which angle you want to fire particles, in degrees, where 0 is to the right and 90 is straight up. `Angle Range`: how many degrees to randomly vary particle angle. `Speed Start`: how fast each particle should move in its direction. `Speed Range`: how much to randomly vary particle speed. `Acceleration X/Y`: how much to affect particle speed over time. This can be used to simulate gravity or wind. `Alpha Start`: how transparent particles are when created. `Alpha Range`: how much to randomly vary particle transparency. `Alpha Speed`: how much to change particle transparency over time. A negative value means "fade out." `Scale Start / Range / Speed`: how big particles should be when created, how much to vary it, and how much it should change over time. A negative value means "shrink slowly." `Rotation Start / Range / Speed`: what Z rotation particles should have, how much to vary it, and how much they should spin over time. `Color Blend Factor / Range / Speed`: how much to color each particle, how much to vary it, and how much it should change over time.
 
-[REVIEW](https://www.hackingwithswift.com/review/hws/project-11-pachinko)
+[REVIEW Project 11](https://www.hackingwithswift.com/review/hws/project-11-pachinko)
 
-## PROJECT 12
+## PROJECT 12 - User Defaults
 
 #### [Day 48](https://www.hackingwithswift.com/100/48)
 
@@ -758,14 +764,26 @@ let defaults = UserDefaults.standard
     }
 ```
 
-[REVIEW](https://www.hackingwithswift.com/review/hws/project-12-userdefaults)
+[REVIEW Project 12](https://www.hackingwithswift.com/review/hws/project-12-userdefaults)
 
+## MILESTONE: PROJECTS 10-12
 #### [Day 50](https://www.hackingwithswift.com/100/50)
 
-
-
+## Some element of functional programming
 #### [Day 51](https://www.hackingwithswift.com/100/51)
+
+>As Leonardo da Vinci said, “the noblest pleasure is the joy of understanding”
+
+- learn about map(), flatMap(), filter()  
+
+[Elements of Functional Programming](https://www.youtube.com/watch?v=OgU8d_E1K14)
+[Teaching Swift at Scale](https://vimeo.com/291590798)
+
+## PROJECT 13
 #### [Day 52](https://www.hackingwithswift.com/100/52)
+> As Alexa Hirschfeld said, “the biggest challenge is to stay focused – to have the discipline when there are so many competing things.”
+
+
 #### [Day 53](https://www.hackingwithswift.com/100/53)
 #### [Day 54](https://www.hackingwithswift.com/100/54)
 #### [Day 55](https://www.hackingwithswift.com/100/55)
@@ -1030,7 +1048,7 @@ override func viewWillDisappear(_ animated: Bool) {
 		
 
 
-## Milestone
+## Milestone 
 #### [Day 99](https://www.hackingwithswift.com/100/99)
 > as the Greek philosopher Epictetus once said, “the greater the difficulty the more glory in surmounting it” 
 
