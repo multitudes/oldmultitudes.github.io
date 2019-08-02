@@ -358,7 +358,7 @@ NSLayoutConstraint.activate([
 - use `setTitle()` to adjust the title on the button like `clear.setTitle("CLEAR", for: .normal)`
 
 
-#### [Day 3](https://www.hackingwithswift.com/100/37)
+#### [Day 37](https://www.hackingwithswift.com/100/37)
 - new string method to learn, called `replacingOccurrences()`
 - Find a text file in the appbundle:
 ```swift
@@ -642,19 +642,125 @@ var score = 0 {
 }
 ```
 
-- a new property on nodes called zRotation,f you imagine sticking a skewer through the Z position – i.e., going directly into your screen – and through a node, then you can imagine Z rotation: it rotates a node on the screen   
+- a new property on nodes called zRotation, if you imagine sticking a skewer through the Z position – i.e., going directly into your screen – and through a node, then you can imagine Z rotation: it rotates a node on the screen   
 - using both Int.random(in:) for integer values and CGFloat.random(in:) for CGFloat values, with the latter being used to create random red, green, and blue values for a UIColor.  
 
 
 #### [Day 47](https://www.hackingwithswift.com/100/47)
 > As Shakuntala Devi once said, “nobody challenges me – I challenge myself.”
 
+- `SKEmitterNode class`
+- play with the particle editor: `Particle Texture`: what image to use for your particles. `Particles Birthrate`: how fast to create new particles. `Particles Maximum`: the maximum number of particles this emitter should create before finishing. `Lifetime Start`: the basic value for how many seconds each particle should live for. `Lifetime Range`: how much, plus or minus, to vary lifetime. `Position Range X/Y`: how much to vary the creation position of particles from the emitter node's position. `Angle Start`: which angle you want to fire particles, in degrees, where 0 is to the right and 90 is straight up. `Angle Range`: how many degrees to randomly vary particle angle. `Speed Start`: how fast each particle should move in its direction. `Speed Range`: how much to randomly vary particle speed. `Acceleration X/Y`: how much to affect particle speed over time. This can be used to simulate gravity or wind. `Alpha Start`: how transparent particles are when created. `Alpha Range`: how much to randomly vary particle transparency. `Alpha Speed`: how much to change particle transparency over time. A negative value means "fade out." `Scale Start / Range / Speed`: how big particles should be when created, how much to vary it, and how much it should change over time. A negative value means "shrink slowly." `Rotation Start / Range / Speed`: what Z rotation particles should have, how much to vary it, and how much they should spin over time. `Color Blend Factor / Range / Speed`: how much to color each particle, how much to vary it, and how much it should change over time.
 
+[REVIEW](https://www.hackingwithswift.com/review/hws/project-11-pachinko)
 
+## PROJECT 12
 
 #### [Day 48](https://www.hackingwithswift.com/100/48)
+
+> Douglas Adams once said, “most of the time spent wrestling with technologies that don't quite work yet is just not worth the effort for end users, however much fun it is for nerds like us.”
+
+- NSCoding is a great way to read and write data when using UserDefaults, and is the most common option when you must write Swift code that lives alongside Objective-C code. if you’re only writing Swift, the Codable protocol is easier
+- You can use UserDefaults to store any basic data type for as long as the app is installed. Max around 100K!
+
+``` swift
+let defaults = UserDefaults.standard
+// write
+defaults.set(25, forKey: "Age")
+//When you're reading values from UserDefaults you need to check the return type carefully
+let savedInteger = defaults.integer(forKey:"Age")
+
+//and arrays too
+let array = ["Hello", "World"]
+defaults.set(array, forKey: "SavedArray")
+
+let dict = ["Name": "Paul", "Country": "UK"]
+defaults.set(dict, forKey: "SavedDict")
+
+// to read need some objc
+let array = defaults.object(forKey:"SavedArray") as? [String] ?? [String]()
+let dict = defaults.object(forKey: "SavedDict") as? [String: String] ?? [String: String]()
+
+```
+
+- All your data types must be one of the following: boolean, integer, float, double, string, array, dictionary, Date.
+
+- our data classes must conform to the NSCoding protocol, which is used for archiving object graphs and there is a required init to retrieve the data
+
+``` swift
+required init(coder aDecoder: NSCoder) {
+name = aDecoder.decodeObject(forKey: "name") as? String ?? ""
+image = aDecoder.decodeObject(forKey: "image") as? String ?? ""
+}
+
+func encode(with aCoder: NSCoder) {
+aCoder.encode(name, forKey: "name")
+aCoder.encode(image, forKey: "image")
+}
+```
+
+- So we have our object and it conforms to NSCoding. There is the archivedData() method of NSKeyedArchiver which turns an object graph into a Data object which can be put in a dic in defaults. Then we can call self.save()
+
+``` swift
+// To save our people array of people objects..
+
+func save() {
+if let savedData = try? NSKeyedArchiver.archivedData(withRootObject: people, requiringSecureCoding: false) {
+let defaults = UserDefaults.standard
+defaults.set(savedData, forKey: "people")
+}
+}
+```
+
+- we retrieve the data first thing in viewDidLoad(): 
+- First check if there is an object in defaults for our key, then try to decode it as [Person] if this is ok then use it ..
+
+``` swift
+let defaults = UserDefaults.standard
+
+if let savedPeople = defaults.object(forKey: "people") as? Data {
+    if let decodedPeople = try? NSKeyedUnarchiver.unarchiveTopLevelObjectWithData(savedPeople) as? [Person] {
+    people = decodedPeople
+    }
+}
+```
+
 #### [Day 49](https://www.hackingwithswift.com/100/49)
+
+> Alan Perlis once said “fools ignore complexity; pragmatists suffer it; some can avoid it; geniuses remove it.” Today you’re going to see that in Swift code: rather than try to simplify the code for NSCoding, the Swift team found a way to remove it entirely using the Codable protocol.
+
+- You can use Codable instead of NSCoding in the class declaration if not using objc . it is so easy. going to use the JSONEncoder class to convert our people array into a Data object, which can then be saved to UserDefaults.
+
+``` swift
+func save() {
+    let jsonEncoder = JSONEncoder()
+    if let savedData = try? jsonEncoder.encode(people) {
+        let defaults = UserDefaults.standard
+        defaults.set(savedData, forKey: "people")
+        } else {
+        print("Failed to save people.")
+        }
+}
+
+// and in view did load
+let defaults = UserDefaults.standard
+
+    if let savedPeople = defaults.object(forKey: "people") as? Data {
+        let jsonDecoder = JSONDecoder()
+
+    do {
+        people = try jsonDecoder.decode([Person].self, from: savedPeople)
+    } catch {
+    print("Failed to load people")
+        }
+    }
+```
+
+[REVIEW](https://www.hackingwithswift.com/review/hws/project-12-userdefaults)
+
 #### [Day 50](https://www.hackingwithswift.com/100/50)
+
+
 
 #### [Day 51](https://www.hackingwithswift.com/100/51)
 #### [Day 52](https://www.hackingwithswift.com/100/52)
