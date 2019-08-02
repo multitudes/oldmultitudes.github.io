@@ -19,14 +19,14 @@ The only thing I am missing is an index! When I am looking for old content I get
 
 This is the missing index for the 100 days of Swift! 
 
-## Days 1 - 12 - Introduction to Swift   
+## [Day 1-12](https://www.hackingwithswift.com/100/1)  - Introduction to Swift   
 
 All what you need to know about optionals and closures etc.  
 See my other post with more details [here](https://multitudes.github.io/2019/04/Some-Swift-tips-for-beginner-and-intermediate.html).
 
 <hr>
 
-## Days 13 - 15 - Consolidation and review
+## [Day 13-14-15](https://www.hackingwithswift.com/100/13)  - Consolidation and review
 
 <hr>
 
@@ -34,7 +34,7 @@ See my other post with more details [here](https://multitudes.github.io/2019/04/
 
 ##  Project 1 : Storm Viewer
 
-#### Day 16
+#### [Day 16](https://www.hackingwithswift.com/100/16) 
 
 > Dennis Ritchie, the inventor of the C programming language and co-inventor of UNIX, once said “the only way to learn a new programming language is by writing programs in it.”
 
@@ -61,7 +61,7 @@ override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexP
 return cell
 }
 ```
-#### Day 17 
+#### [Day 17](https://www.hackingwithswift.com/100/17)  
 
 > as Walt Disney said, “of all our inventions for mass communication, pictures still speak the most universally understood language.”
 
@@ -102,14 +102,14 @@ override func viewWillDisappear(_ animated: Bool) {
 - `navigationController?.navigationBar.prefersLargeTitles = true`
 - `navigationItem.largeTitleDisplayMode = .never`
 
-#### Day 18
+#### [Day 18](https://www.hackingwithswift.com/100/18) 
 
 - Wrap up
 
 <hr> 
 
 ##  Project 2 - Guess The Flag
-#### Day 19
+#### [Day 19](https://www.hackingwithswift.com/100/19) 
 > Saint Augustine said “the world is a book, and those who do not travel read only a page.”
 
 - pixels and points - retina screens - file@2x.png  file@3x.png
@@ -136,7 +136,7 @@ func askQuestion(action: UIAlertAction!) {
 ...
 }
 ```
-#### Day 21 - Wrap up
+#### [Day 21](https://www.hackingwithswift.com/100/21)  - Wrap up
 
 >John Carmack once said, “focused, hard work is the real key to success. Keep your eyes on the goal, and just keep taking the next step towards completing it. If you aren't sure which way to do something, do it both ways and see which works better.”
 
@@ -144,7 +144,7 @@ func askQuestion(action: UIAlertAction!) {
 
 ##  Project 3 - Social media
 
-#### Day 22
+#### [Day 22](https://www.hackingwithswift.com/100/22) 
 >The famous Brazilian author Paulo Coelho said, “Twitter is my bar: I sit at the counter and listen to the conversations, starting others, feeling the atmosphere.”
 
 - UIActivityViewController  - share by iMessage, by email and by Twitter and Facebook, as well as saving the image to the photo library, assigning it to contact, printing it out via AirPrint, and more
@@ -163,14 +163,14 @@ present(vc, animated: true)
 ```
 <hr>
 
-#### Day 23: Consolidation II
+#### [Day 23](https://www.hackingwithswift.com/100/23) : Consolidation II
 
 <hr>
 
 ## Web views, user input, and Auto Layout
 
 ##  Project 4 - Easy browser
-#### Day 24 
+#### [Day 24](https://www.hackingwithswift.com/100/24)  
 > Alexis Ohanian, the founder of Reddit, once said “to join in the industrial revolution, you needed to open a factory; in the Internet revolution, you need to open a laptop.”
 
 -   WKWebView // import WebKit
@@ -192,7 +192,7 @@ webView.allowsBackForwardNavigationGestures = true
 - https:// for your websites - > App Transport Security
 - delegate function `func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {title = webView.title}`
 
-#### Day 25
+#### [Day 25](https://www.hackingwithswift.com/100/25) 
 
 > If there’s one Martin Fowler quote that I love, it’s this: “I'm not a great programmer; I'm just a good programmer with great habits.” 
 
@@ -204,7 +204,7 @@ webView.allowsBackForwardNavigationGestures = true
 - Refactoring
 - contains() String method to see whether each safe website exists somewhere in the host name.
 
-#### Day 26  - Wrap up
+#### [Day 26](https://www.hackingwithswift.com/100/26)   - Wrap up
 
 
 > There’s a Korean singer called Kwon Ji-yong – better known by the awesome stage name G-Dragon – who said, “you have to believe in yourself, challenge yourself, and push yourself until the very end; that's the only way you'll succeed
@@ -212,7 +212,7 @@ webView.allowsBackForwardNavigationGestures = true
 <hr>
 
 ##  Project 5 - Word Scramble
-#### Day 27
+#### [Day 27](https://www.hackingwithswift.com/100/27) 
 
 > the US general George Patton once said, “accept the challenges so that you can feel the exhilaration of victory” –
 
@@ -228,7 +228,7 @@ webView.allowsBackForwardNavigationGestures = true
 - the `randomElement()` method of Swift’s arrays to choose one random item from all the strings.
 - The `addTextField()` method just adds an editable text input field to the UIAlertController 
 
-#### Day 28
+#### [Day 28](https://www.hackingwithswift.com/100/28) 
 
 > Blackadder: “Oh, I'm sorry, sir. I'm anaspeptic, phrasmotic, even compunctuous to have caused you such pericombobulation.”
 
@@ -237,19 +237,19 @@ webView.allowsBackForwardNavigationGestures = true
 - UIKit was written in Objective-C before Swift’s strings came along, and it uses a different character system called UTF-16 – short for 16-bit Unicode Transformation Format – where the accent and the letter are stored separately.
 - Emoji are measured differently with Swift strings and UTF-16 strings: Swift strings count them as 1-letter strings, but UTF-16 considers them to be 2-letter strings
 
-#### Day 29 
+#### [Day 29](https://www.hackingwithswift.com/100/29) 
 - Wrap up
 
 <hr>
 
 ##  Project 6 - Auto Layout in code
-#### Day 30
+#### [Day 30](https://www.hackingwithswift.com/100/30)
 
 > Coco Chanel once said that “fashion is architecture: it is a matter of proportions.” 
 
 - Auto Layout in code: addConstraints with Visual Format Language
 
-#### Day 31
+#### [Day 31](https://www.hackingwithswift.com/100/31)
 
 > One of the three laws laid down by British science fiction writer Arthur C. Clarke is particularly well known: “any sufficiently advanced technology is indistinguishable from magic.”
 
@@ -259,13 +259,13 @@ webView.allowsBackForwardNavigationGestures = true
 
 <hr>
 
-####  Day 32 - Consolidation III
+####  [Day 32](https://www.hackingwithswift.com/100/32 - Consolidation III
 
 > Chris Bosh, an NBA All-Star basketball player, said “every athlete knows that you get good by practicing, by repeating the same moves until you achieve your goal” 
 
 ## Codable, buttons, and GCD
 ## Project 7 - Whitehouse petitions
-#### Day 33
+#### [Day 33](https://www.hackingwithswift.com/100/33)
 
 > Computing pioneer Mitch Kapor once said that “getting information off the internet is like taking a drink from a fire hydrant.”
 
@@ -310,18 +310,18 @@ func parse(json: Data) {
 }
 ```
 
-#### Day 34
+#### [Day 34](https://www.hackingwithswift.com/100/34)
 
 - injecting html code in detail view with  `webView.loadHTMLString(html, baseURL: nil)`
 - Adding a second tapBarController in code
 
-#### Day 35 
+#### [Day 35](https://www.hackingwithswift.com/100/35) 
 > Michelle Obama once said “through my education, I didn't just develop skills, I didn't just develop the ability to learn, but I developed confidence.”
 
 - wrap up
 
 ## Project 8 - Build the layout in code - Swifty Words 
-#### Day 36 
+#### [Day 36](https://www.hackingwithswift.com/100/36)
 > Linus Torvalds, the creator of the massively popular Linux operating system, once said “talk is cheap; show me the code.” 
 
 - UILabel for showing text
@@ -358,7 +358,7 @@ NSLayoutConstraint.activate([
 - use `setTitle()` to adjust the title on the button like `clear.setTitle("CLEAR", for: .normal)`
 
 
-#### Day 37
+#### [Day 3](https://www.hackingwithswift.com/100/37)
 - new string method to learn, called `replacingOccurrences()`
 - Find a text file in the appbundle:
 ```swift
@@ -381,14 +381,14 @@ var score = 0 {
     }
 }
 ```
-#### Day 38
+#### [Day 38](https://www.hackingwithswift.com/100/38)
 > There are many well-known quotes from Shakespeare, but there’s one I think is particularly apt today: “the fool doth think he is wise, but the wise man knows himself to be a fool.”  
 
 
 >In my talk at NSSpain 2018 I said “Auto Layout makes hard things easy, and easy things hard”   
 
 ## Project 9 - Grand Central Dispatch
-#### Day 39
+#### [Day 39](https://www.hackingwithswift.com/100/39)
 > Joss Whedon, the creator of Firefly, once said that “the secret to multitasking is that it isn't actually multitasking – it’s just extreme focus and organization.” (If you weren’t aware, Firefly played a big part in the development of Swift – the internal code name (“Shiny”) was from there  
 
 - GCD allows to fetch the data without locking up the user interface
@@ -448,7 +448,7 @@ performSelector(onMainThread: #selector(showError), with: nil, waitUntilDone: fa
 ```
 - Note: because performSelector() uses #selector, we need to mark our methods with the @objc attribute.
 
-#### Day 40
+#### [Day 40](https://www.hackingwithswift.com/100/40)
 > An old joke: " A programmer has a problem and thinks, “I can fix this using multitasking!” 
 have Now problems! two they  
 
@@ -456,7 +456,7 @@ have Now problems! two they
 - GCD automatically handles thread creation and management, automatically balances based on available system resources, and automatically factors in Quality of Service 
 
 ## Consolidation IV
-#### Day 41
+#### [Day 41](https://www.hackingwithswift.com/100/41)
 > Ricky Mondello – one of the team who builds Safari at Apple – once said, “one of my favorite things about software engineering, or any kind of growth really, is coming back to something that you previously thought was too hard and knowing that you can do it.”  
 
 - three Swift features that are so important
@@ -945,7 +945,7 @@ extension UIImage {
 
 <hr>
 ## FINAL EXAM 
-#### [Day 100](https://www.hackingwithswift.com/100/100)!
+#### [Day 100!](https://www.hackingwithswift.com/100/100)
 > As Aisha Tyler said, “success is not the absence of failure; it's the persistence through failure.”
 
 
