@@ -143,6 +143,7 @@ func askQuestion(action: UIAlertAction!) {
 <hr>
 
 ##  Project 3 - Social media
+
 #### Day 22
 >The famous Brazilian author Paulo Coelho said, “Twitter is my bar: I sit at the counter and listen to the conversations, starting others, feeling the atmosphere.”
 
@@ -162,7 +163,7 @@ present(vc, animated: true)
 ```
 <hr>
 
-## Day 23: Consolidation II
+#### Day 23: Consolidation II
 
 <hr>
 
@@ -258,7 +259,7 @@ webView.allowsBackForwardNavigationGestures = true
 
 <hr>
 
-##  Day 32 - Consolidation III
+####  Day 32 - Consolidation III
 
 > Chris Bosh, an NBA All-Star basketball player, said “every athlete knows that you get good by practicing, by repeating the same moves until you achieve your goal” 
 
@@ -408,10 +409,12 @@ var score = 0 {
 - The Background queue: this is for long-running tasks that the user isn't actively aware of, or at least doesn't care
 - the default queue. This is prioritized between user-initiated and utility, and is a good general-purpose choice while you’re learning
 
-- `DispatchQueue.global().async { [weak self] in`
-- or 
 
 ``` swift
+// default Q
+DispatchQueue.global().async { [weak self] in 
+[...]
+// or 
 
 DispatchQueue.global(qos: .userInitiated).async { [weak self in
     if let url = URL(string: urlString) {
@@ -475,7 +478,10 @@ DispatchQueue.global().async { [weak self] in
     }
 }   
 ```
-#### Day 42
+
+## PROJECT 10 - Names to Faces 
+
+#### [Day 42](https://www.hackingwithswift.com/100/42)
 > my favorite quote from Douglas Adams: “I may not have gone where I intended to go, but I think I have ended up where I intended to be.”  
 
 - `UICollectionViewController`, `UIImagePickerController`and `UUID`
@@ -484,7 +490,7 @@ DispatchQueue.global().async { [weak self] in
 - `collectionView(_:cellForItemAt:)`
 - `dequeueReusableCell(withReuseIdentifier:for:)`
 
-#### Day 43
+#### [Day 43](https://www.hackingwithswift.com/100/43)
 > by the words of Valerie Plame: “Privacy is precious – I think privacy is the last true luxury. To be able to live your life as you choose without having everyone comment on it or know about.”
 
 - `UIImagePickerController`
@@ -539,7 +545,7 @@ func getDocumentsDirectory() -> URL {
 ```
 
 
-#### Day 44
+#### [Day 44](https://www.hackingwithswift.com/100/44)
 
 - Wrap up and Challenge
 
@@ -603,9 +609,49 @@ physicsBody = SKPhysicsBody(edgeLoopFrom: frame)
 
 - Angles are specified in radians, not degrees. This is true in UIKit too. 360 degrees is equal to the value of 2 x Pi – that is, the mathematical value π. Therefore π radians is equal to 180 degrees.  
 - Rather than have you try to memorize it, there is a built-in value of π called CGFloat.pi.  
+- CGFloat can be either a Double or a Float depending on the device your code runs on. Swift also has Double.pi and Float.pi for when you need it at different precisions.  
+- When you create an action it will execute once. If you want it to run forever, you create another action to wrap the first using the repeatForever() method, then run that.  
+- Apple recommends assigning names to your nodes  
+- Add `physicsWorld.contactDelegate = self`
+- Make our scene the contact delegate of the physics world – this means, "tell us when contact occurs between two bodies.  
+- conform to the `SKPhysicsContactDelegate protocol` then assign the physics world's contactDelegate property to be our scene but still not enough. Need to do is change the `contactTestBitMask` property of our physics objects, which sets the contact notifications we want to receive.   
+`ball.physicsBody!.contactTestBitMask = ball.physicsBody!.collisionBitMask `  
+- we don't know what order it will come in. That is, did the ball hit the slot, did the slot hit the ball, or did both happen?
+
+``` swift
+func didBegin(_ contact: SKPhysicsContact) {
+    guard let nodeA = contact.bodyA.node else { return }
+    guard let nodeB = contact.bodyB.node else { return }
+
+    if nodeA.name == "ball" {
+        collisionBetween(ball: nodeA, object: nodeB)
+    } else if nodeB.name == "ball" {
+        collisionBetween(ball: nodeB, object: nodeA)
+    }
+}
+```
+- To make a score show on the screen we need to do two things: create a score integer that tracks the value itself, then create a new node type, SKLabelNode, that displays the value to players.  
+
+``` swift
+var scoreLabel: SKLabelNode!
+
+var score = 0 {
+    didSet {
+        scoreLabel.text = "Score: \(score)"
+    }
+}
+```
+
+- a new property on nodes called zRotation,f you imagine sticking a skewer through the Z position – i.e., going directly into your screen – and through a node, then you can imagine Z rotation: it rotates a node on the screen   
+- using both Int.random(in:) for integer values and CGFloat.random(in:) for CGFloat values, with the latter being used to create random red, green, and blue values for a UIColor.  
 
 
 #### Day 47
+> As Shakuntala Devi once said, “nobody challenges me – I challenge myself.”
+
+
+
+
 #### Day 48
 #### Day 49
 #### Day 50
