@@ -549,7 +549,7 @@ func getDocumentsDirectory() -> URL {
 
 - Wrap up and Challenge
 
-## PROJECT 11
+## PROJECT 11 - Pachinko
 #### [Day 45](https://www.hackingwithswift.com/100/45)
 
 > Michael Jordan:“I’ve missed more than 9000 shots in my career. I've lost almost 300 games. 26 times, I've been trusted to take the game winning shot and missed. I've failed over and over and over again in my life. And that is why I succeed.”  
@@ -574,18 +574,20 @@ class GameScene: SKScene {
 - iPad is 1024 points wide and 768 high  
 - move the `Actions.sks` trash  
 - If you want to place an image in your game, the class to use is called SKSpriteNode. To place the background image in the center of a landscape iPad, we need to place it at the position X:512, Y:384  
+- And unlike UIKit SpriteKit positions things based on their center – i.e., the point 0,0 refers to the horizontal and vertical center of a node.  
 - the blend mode .replace. Blend modes determine how a node is drawn, and SpriteKit gives you many options. The .replace option means "just draw it, ignoring any alpha values,"   
 - give the background a zPosition of -1, which in our game means "draw this behind everything else."  
 
-``` swift
-let background = SKSpriteNode(imageNamed: "background.jpg")
-background.position = CGPoint(x: 512, y: 384)
-background.blendMode = .replace
-background.zPosition = -1
-addChild(background)
-```
 - add to the `touchesBegan()` method. This method gets called (in UIKit and SpriteKit) whenever someone starts touching their device  
 
+```swift
+if let touch = touches.first {
+    let location = touch.location(in: self)
+    let box = SKSpriteNode(color: UIColor.red, size: CGSize(width: 64, height: 64))
+    box.position = location
+    addChild(box)
+}
+```
 ``` swift
 let background = SKSpriteNode(imageNamed: "background.jpg")
 background.position = CGPoint(x: 512, y: 384)
