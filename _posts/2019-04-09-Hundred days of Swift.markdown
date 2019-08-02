@@ -550,7 +550,7 @@ func getDocumentsDirectory() -> URL {
 - Wrap up and Challenge
 
 ## PROJECT 11
-#### Day 45
+#### [Day 45](https://www.hackingwithswift.com/100/45)
 
 > Michael Jordan:“I’ve missed more than 9000 shots in my career. I've lost almost 300 games. 26 times, I've been trusted to take the game winning shot and missed. I've failed over and over and over again in my life. And that is why I succeed.”  
 
@@ -603,7 +603,7 @@ physicsBody = SKPhysicsBody(edgeLoopFrom: frame)
 - `bouncer.physicsBody?.isDynamic = false` object will not move upon collision
 
 
-#### Day 46
+#### [Day 46](https://www.hackingwithswift.com/100/46)
 
 > “In the beginning there was nothing, which exploded.” That’s a quote from Terry Pratchett’s book "Lords and Ladies"
 
@@ -646,57 +646,57 @@ var score = 0 {
 - using both Int.random(in:) for integer values and CGFloat.random(in:) for CGFloat values, with the latter being used to create random red, green, and blue values for a UIColor.  
 
 
-#### Day 47
+#### [Day 47](https://www.hackingwithswift.com/100/47)
 > As Shakuntala Devi once said, “nobody challenges me – I challenge myself.”
 
 
 
 
-#### Day 48
-#### Day 49
-#### Day 50
+#### [Day 48](https://www.hackingwithswift.com/100/48)
+#### [Day 49](https://www.hackingwithswift.com/100/49)
+#### [Day 50](https://www.hackingwithswift.com/100/50)
 
-#### Day 51
-#### Day 52
-#### Day 53
-#### Day 54
-#### Day 55
+#### [Day 51](https://www.hackingwithswift.com/100/51)
+#### [Day 52](https://www.hackingwithswift.com/100/52)
+#### [Day 53](https://www.hackingwithswift.com/100/53)
+#### [Day 54](https://www.hackingwithswift.com/100/54)
+#### [Day 55](https://www.hackingwithswift.com/100/55)
 
-#### Day 56
-#### Day 57
-#### Day 58
-#### Day 59
-#### Day 60
-#### Day 61
-#### Day 62
-#### Day 63
-#### Day 64
-#### Day 65
-#### Day 66
-#### Day 67
-#### Day 68
-#### Day 69
-#### Day 70
-#### Day 71
-#### Day 72
-#### Day 73
-#### Day 74
-#### Day 75
-#### Day 76
-#### Day 77
-#### Day 78
-#### Day 79
-#### Day 80
-#### Day 81
-#### Day 82
-#### Day 83
-#### Day 84
-#### Day 85
-#### Day 86
-#### Day 87
+#### [Day 56](https://www.hackingwithswift.com/100/56)
+#### [Day 57](https://www.hackingwithswift.com/100/57)
+#### [Day 58](https://www.hackingwithswift.com/100/58)
+#### [Day 59](https://www.hackingwithswift.com/100/59)
+#### [Day 60](https://www.hackingwithswift.com/100/60)
+#### [Day 61](https://www.hackingwithswift.com/100/61)
+#### [Day 62](https://www.hackingwithswift.com/100/62)
+#### [Day 63](https://www.hackingwithswift.com/100/63)
+#### [Day 64](https://www.hackingwithswift.com/100/64)
+#### [Day 65](https://www.hackingwithswift.com/100/65)
+#### [Day 66](https://www.hackingwithswift.com/100/66)
+#### [Day 67](https://www.hackingwithswift.com/100/67)
+#### [Day 68](https://www.hackingwithswift.com/100/68)
+#### [Day 69](https://www.hackingwithswift.com/100/69)
+#### [Day 70](https://www.hackingwithswift.com/100/70)
+#### [Day 71](https://www.hackingwithswift.com/100/71)
+#### [Day 72](https://www.hackingwithswift.com/100/72)
+#### [Day 73](https://www.hackingwithswift.com/100/73)
+#### [Day 74](https://www.hackingwithswift.com/100/74)
+#### [Day 75](https://www.hackingwithswift.com/100/75)
+#### [Day 76](https://www.hackingwithswift.com/100/76)
+#### [Day 77](https://www.hackingwithswift.com/100/77)
+#### [Day 78](https://www.hackingwithswift.com/100/78)
+#### [Day 79](https://www.hackingwithswift.com/100/79)
+#### [Day 80](https://www.hackingwithswift.com/100/80)
+#### [Day 81](https://www.hackingwithswift.com/100/81)
+#### [Day 82](https://www.hackingwithswift.com/100/82)
+#### [Day 83](https://www.hackingwithswift.com/100/83)
+#### [Day 84](https://www.hackingwithswift.com/100/84)
+#### [Day 85](https://www.hackingwithswift.com/100/85)
+#### [Day 86](https://www.hackingwithswift.com/100/86)
+#### [Day 87](https://www.hackingwithswift.com/100/87)
 
 ## Project 27 - custom drawing  
-#### Day 88
+#### [Day 88](https://www.hackingwithswift.com/100/88)
 > As Michelangelo once said, “every block of stone has a statue inside it and it is the task of the sculptor to discover it.”
 
 - `Core Graphics` responsible for device-independent 2D drawing – when you want to draw shapes, paths, shadows, colors..
@@ -717,7 +717,7 @@ var score = 0 {
 - put an attributed string into a graphic? attributed strings have a built-in method called draw(with:)
 
 
-#### Day 89
+#### [Day 89](https://www.hackingwithswift.com/100/89)
 > Carl Sagan once said, "if you wish to make an apple pie from scratch, you must first invent the universe."
 
 > Swift was first introduced way back in 2014, at Apple’s annual Worldwide Developer Conference (WWDC). When showing off the new language, Chris Lattner (the creator of Swift) took to the stage and immediately did something that was revolutionary for us – at least back then: he created a Swift playground in Xcode.
@@ -726,14 +726,14 @@ var score = 0 {
 
 ## MILESTONE: PROJECTS 25-27
 
-#### Day 90
+#### [Day 90](https://www.hackingwithswift.com/100/90)
 > "As John Quincy Adams once said, “patience and perseverance have a magical effect before which difficulties disappear and obstacles vanish.”
 
 - `#targetEnvironment`(simulator) compiler directive. Swift has several of these, like `#line` and `#if swift`. 
 - `#line` is easy enough: when your code gets built it automatically gets replaced with the current line number. You can also use #filename and #function, and the combination of these are very useful in debugging strings.
 - The #if swift directive allows you to conditionally compile code depending on the Swift compiler version being used. So, you could write Swift 4.2 code and Swift 5.0 code in the same file, and have Xcode choose the right version automatically.
 
-#### Day 91 - CORE GRAPHICS REDUX
+#### [Day 91](https://www.hackingwithswift.com/100/91) - CORE GRAPHICS REDUX
 > Fred Donaldson : “Children learn as they play. Most importantly, in play children learn how to learn.” 
 
 > George Bernard Shaw said, “we don’t stop playing because we grow old; we grow old because we stop playing.” 
@@ -741,7 +741,7 @@ var score = 0 {
 - Playground links for [ipad](https://www.hackingwithswift.com/playgrounds) and [xcode](http://hackingwithswift.com/files/playgrounds/Learn-Core-Graphics-Xcode.zip)
 
 ## PROJECT 28 - Use the iOS keychain - Secret Swift
-#### Day 92
+#### [Day 92](https://www.hackingwithswift.com/100/92)
 > Bruce Schneier – a well-known US cryptographer, security analyst, and writer, once said “if you think technology can solve your security problems, then you don't understand the problems and you don't understand the technology.”
 
 - Touch ID, Face ID and the keychain. The first two are used to identify users biometrically using the fingerprint sensor on iPhones and iPads, or the face scanner on iPhone X or similar; the latter is a secure, encrypted data storage area on every device that you can read and write to.
@@ -765,7 +765,7 @@ secret.text = KeychainWrapper.standard.string(forKey: "SecretMessage") ?? ""
 - when we're told whether Touch ID/Face ID was successful or not, it might not be on the main thread. This means we need to use async() 
 - `import LocalAuthentication`
 
-#### Day 93
+#### [Day 93](https://www.hackingwithswift.com/100/93)
 
 > As Gene Spafford once said, “the online truly secure system is one that is powered off, cast in a block of concrete and sealed in a lead-lined room with armed guards.”
 
@@ -773,7 +773,7 @@ secret.text = KeychainWrapper.standard.string(forKey: "SecretMessage") ?? ""
 - If you use biometric authentication but store your data in UserDefaults, it can be read out by bypassing the app. If you store your data in the iOS keychain but don’t put it behind biometric authentication or similar, anyone can launch the app and just take it.
 
 ## PROJECT 29 - Exploding Monkeys
-#### Day 94 
+#### [Day 94](https://www.hackingwithswift.com/100/94) 
 > 'Don’t practice until you get it right; practice until you can’t get it wrong.'
 
 - `SKSpriteNode` subclass for buildings that sets up physics, draws the building graphic, and ultimately handles the building being hit 
@@ -801,7 +801,7 @@ currentGame.viewController = self
 ```
 
 
-#### Day 95
+#### [Day 95](https://www.hackingwithswift.com/100/95)
 > As Ernest Rutherford once said, “all of physics is either impossible or trivial: it is impossible until you understand it, and then it becomes trivial.”  
 
 - create a player  
@@ -875,13 +875,13 @@ if let explosion = SKEmitterNode(fileNamed: "hitBuilding") {
 - the abs() function makes negative number positive
 
 
-#### Day 96
+#### [Day 96](https://www.hackingwithswift.com/100/96)
 > Craig Federighi, senior vice president of software engineer at Apple, once said “people sometimes have a view of programming that is something solitary and very technical, but programming is among the most creative, expressive, and social careers.”
 
 - wrap up
 
 ## PROJECT 29 - Instruments
-#### Day 97
+#### [Day 97](https://www.hackingwithswift.com/100/97)
 > as Edsger Dijkstra once said, “if debugging is the process of removing software bugs, then programming must be the process of putting them in.”
 
 - Instruments. It ships as part of Xcode, and is responsible for profiling your app. "Profiling" is the term used when we monitor performance, memory usage and other information of an app, with the aim of improving efficiency.
@@ -900,7 +900,7 @@ Broadly speaking, you want "Color Blended Layers" to show as little red as possi
 - maoolc means memory allocate
 - some objects are persistent (created and still exist while the program was still running) and some are transient (created and since destroyed). 
 
-#### Day 98
+#### [Day 98](https://www.hackingwithswift.com/100/98)
 > As Izey Victoria Odiase said, “don't aim for perfection – aim for 'better than yesterday’.”
 
 - When you create a UIImage using UIImage(named:) iOS loads the image and puts it into an image cache for reuse later.
@@ -923,7 +923,7 @@ override func viewWillDisappear(_ animated: Bool) {
 
 
 ## Milestone
-#### Day 99
+#### [Day 99](https://www.hackingwithswift.com/100/99)
 > as the Greek philosopher Epictetus once said, “the greater the difficulty the more glory in surmounting it” 
 
 - A failable initializer is one that might return a valid created object, or it might fail and return nil. We’re going to use this so that we can return nil if the image name can’t be found in the app bundle. a new UIImage extension that creates a new, failable, convenience initializer called UIImage(uncached:).
@@ -945,7 +945,7 @@ extension UIImage {
 
 <hr>
 ## FINAL EXAM 
-#### Day 100!
+#### [Day 100](https://www.hackingwithswift.com/100/100)!
 > As Aisha Tyler said, “success is not the absence of failure; it's the persistence through failure.”
 
 
