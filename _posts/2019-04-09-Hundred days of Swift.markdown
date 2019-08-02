@@ -259,7 +259,7 @@ webView.allowsBackForwardNavigationGestures = true
 
 <hr>
 
-####  [Day 32](https://www.hackingwithswift.com/100/32 - Consolidation III
+####  [Day 32](https://www.hackingwithswift.com/100/32) - Consolidation III
 
 > Chris Bosh, an NBA All-Star basketball player, said “every athlete knows that you get good by practicing, by repeating the same moves until you achieve your goal” 
 
