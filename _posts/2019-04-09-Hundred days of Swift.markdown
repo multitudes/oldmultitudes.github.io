@@ -885,6 +885,31 @@ DispatchQueue.main.asyncAfter(deadline: .now() + 1) { [weak self] in
 ```
 
 #### [Day 56](https://www.hackingwithswift.com/100/56)
+
+> Marie Curie, the only person in history to win the Nobel prize in two different sciences, once said, “I was taught that the way of progress was neither swift nor easy.”
+
+- `SKAction`  
+- `SKAction.wait(forDuration:)` creates an action that waits for a period of time, measured in seconds.  
+- `SKAction.run(block:)' will run any code we want, provided as a closure. "Block" is Objective-C's name for a Swift closure.  
+- `SKAction.sequence()`  takes an array of actions, and executes them in order. Each action won't start executing until the previous one finished.  
+- The code to hide a penguin  
+
+```swift
+let delay = SKAction.wait(forDuration: 0.25)
+let hide = SKAction.moveBy(x: 0, y: -80, duration: 0.5)
+let notVisible = SKAction.run { [unowned self] in self.isVisible = false }
+charNode.run(SKAction.sequence([delay, hide, notVisible]))
+}
+```
+- in the function `touchesBegan()` we check where we touched and see if we got a whackSlot with the below    
+- `guard let whackSlot = node.parent?.parent as? WhackSlot else { continue }`  
+- `SKAction`'s  `playSoundFileNamed()` method  
+- `caf` is a renamed `aiff` file. AIFF is a pretty terrible file format when it comes to file size, but it's much faster to load and use than MP3s and M4As  
+- ex `run(SKAction.playSoundFileNamed("whackBad.caf", waitForCompletion: false))`
+
+[Review Project 14](https://www.hackingwithswift.com/review/hws/project-14-whack-a-penguin)
+
+
 #### [Day 57](https://www.hackingwithswift.com/100/57)
 #### [Day 58](https://www.hackingwithswift.com/100/58)
 #### [Day 59](https://www.hackingwithswift.com/100/59)
