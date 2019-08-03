@@ -909,8 +909,13 @@ charNode.run(SKAction.sequence([delay, hide, notVisible]))
 
 [Review Project 14](https://www.hackingwithswift.com/review/hws/project-14-whack-a-penguin)
 
-
+## PROJECT 15 - Animation
 #### [Day 57](https://www.hackingwithswift.com/100/57)
+> John Maeda, design lead at Automattic (the company behind Wordpress), put this rather succinctly: “Design used to be the seasoning you’d sprinkle on for taste; now it’s the flour you need at the start of the recipe.”  
+
+
+
+
 #### [Day 58](https://www.hackingwithswift.com/100/58)
 #### [Day 59](https://www.hackingwithswift.com/100/59)
 #### [Day 60](https://www.hackingwithswift.com/100/60)
