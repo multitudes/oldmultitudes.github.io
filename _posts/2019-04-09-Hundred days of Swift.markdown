@@ -856,8 +856,33 @@ UIImageWriteToSavedPhotosAlbum(image, self, #selector(image(_:didFinishSavingWit
 #### [Day 55](https://www.hackingwithswift.com/100/55)
 > Ezra Koenig said “some people say video games rot your brain, but I think they work different muscles that maybe you don't normally use.”
 
+- `SKCropNode`  This is a special kind of `SKNode` subclass that uses an image as a cropping mask: anything in the colored part will be visible, anything in the transparent part will be invisible.  
+- `let cropNode = SKCropNode()`  
+- you create a cropnode. the position will be relative to the parent.. position is on top. Create a character node as sprite node with image, position it relative to parent and add as crop node child. then add the crop node. The mask node will be a sprite node with a mask image where the transparent parts will not be shown and will cover our character.
 
+```swift
+let cropNode = SKCropNode()
+cropNode.position = CGPoint(x: 0, y: 15)
+cropNode.zPosition = 1
+cropNode.maskNode = SKSpriteNode(imageNamed: "whackMask")
 
+charNode = SKSpriteNode(imageNamed: "penguinGood")
+charNode.position = CGPoint(x: 0, y: -90)
+charNode.name = "character"
+cropNode.addChild(charNode)
+
+addChild(cropNode)
+```
+
+- `SKAction`, called  `moveBy(x:y:duration:)`    
+- `charNode.run(SKAction.moveBy(x: 0, y: 80, duration: 0.05))`    
+- We can change the image inside our penguin sprite by changing its texture property. This takes a new class called `SKTexture`   
+- delay :  some new Grand Central Dispatch (GCD) code: asyncAfter() is used to schedule a closure to execute after the time has been reached  
+```swift
+DispatchQueue.main.asyncAfter(deadline: .now() + 1) { [weak self] in
+    self?.doStuff()
+}
+```
 
 #### [Day 56](https://www.hackingwithswift.com/100/56)
 #### [Day 57](https://www.hackingwithswift.com/100/57)
