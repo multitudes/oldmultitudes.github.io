@@ -967,7 +967,7 @@ UIView.animate(withDuration: 1, delay: 0, options: [],
 #### [Day 60](https://www.hackingwithswift.com/100/60)
 > Do you remember when the iPhone was announced? Seeing Steve Jobs show us on-device maps for the first time was incredible – after at least a decade of maps seeming like dusty old things we can safely ignore, suddenly mapping was cool again  
 
--adding a map is so easy : in storyboard , search for "map" in the object library, drop a map view into your view controller so that it occupies the full view, then use Resolve Auto Layout Issues > Add Missing Constraints so that it stays next to each edge.
+- adding a map is so easy : in storyboard , search for "map" in the object library, drop a map view into your view controller so that it occupies the full view, then use `Resolve Auto Layout Issues > Add Missing Constraints` so that it stays next to each edge.  Now, run your program and you should see a basic map working nicely.
 - `import MapKit`
 - ctrl - drag from `mapView` to the viewController file and create an outlet. then ctrl - drag to the viewController in panel and choose `delegate`  !!
 - `Annotations` are objects that contain a title, a subtitle and a position. The first two are both strings, the third is a new data type called `CLLocationCoordinate2D` , which is a structure that holds a latitude and longitude for where the annotation should be placed  
@@ -992,7 +992,6 @@ class Capital: NSObject, MKAnnotation {
 }
 ```
 
-Now, run your program and you should see a basic map working nicely.
 
 #### [Day 61](https://www.hackingwithswift.com/100/61)
 #### [Day 62](https://www.hackingwithswift.com/100/62)
