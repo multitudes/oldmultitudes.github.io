@@ -959,8 +959,41 @@ UIView.animate(withDuration: 1, delay: 0, options: [],
 
 - wrap up and [review project 15](https://www.hackingwithswift.com/review/hws/project-15-animation)  
 
+## MILESTONE: PROJECTS 13-15
 #### [Day 59](https://www.hackingwithswift.com/100/59)
+> As Anthony J. D'Angelo once said, “develop a passion for learning – if you do, you will never cease to grow.”
+
+## PROJECT 16 - Capital Cities
 #### [Day 60](https://www.hackingwithswift.com/100/60)
+> Do you remember when the iPhone was announced? Seeing Steve Jobs show us on-device maps for the first time was incredible – after at least a decade of maps seeming like dusty old things we can safely ignore, suddenly mapping was cool again  
+
+-adding a map is so easy : in storyboard , search for "map" in the object library, drop a map view into your view controller so that it occupies the full view, then use Resolve Auto Layout Issues > Add Missing Constraints so that it stays next to each edge.
+- `import MapKit`
+- ctrl - drag from `mapView` to the viewController file and create an outlet. then ctrl - drag to the viewController in panel and choose `delegate`  !!
+- `Annotations` are objects that contain a title, a subtitle and a position. The first two are both strings, the third is a new data type called `CLLocationCoordinate2D` , which is a structure that holds a latitude and longitude for where the annotation should be placed  
+- Map annotations are described not as a class, but as a protocol.
+- we want to conform to the `MKAnnotation` protocol  
+- With map annotations, you can't use structs, and you must inherit from `NSObject` because it needs to be interactive with Apple's Objective-C code.
+
+```swift
+import MapKit
+import UIKit
+
+class Capital: NSObject, MKAnnotation {
+    var title: String?
+    var coordinate: CLLocationCoordinate2D
+    var info: String
+
+    init(title: String, coordinate: CLLocationCoordinate2D, info: String) {
+        self.title = title
+        self.coordinate = coordinate
+        self.info = info
+}
+}
+```
+
+Now, run your program and you should see a basic map working nicely.
+
 #### [Day 61](https://www.hackingwithswift.com/100/61)
 #### [Day 62](https://www.hackingwithswift.com/100/62)
 #### [Day 63](https://www.hackingwithswift.com/100/63)
