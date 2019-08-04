@@ -1077,9 +1077,20 @@ override func didMove(to view: SKView) {
 }
 ```
 
-- this disables gravity : `physicsWorld.gravity = CGVector(dx: 0, dy: 0)` or ` physicsWorld.gravity = .zero
+- this disables gravity : `physicsWorld.gravity = CGVector(dx: 0, dy: 0)` or ` physicsWorld.gravity = .zero`
 - and need to conform to the `SKPhysicsContactDelegate`  
+- We need a timer `var gameTimer: Timer?` When you create an Timer you specify five parameters: how many seconds you want the delay to be, what object should be told when the timer fires, what method should be called on that object when the timer fires, any context you want to provide, and whether the time should repeat.  
+- `gameTimer = Timer.scheduledTimer(timeInterval: 0.35, target: self, selector: #selector(createEnemy), userInfo: nil, repeats: true)`  
+- `linearDamping` and `angularDamping` properties, which mean movement and rotation slowing down over time  
+- there is a builtin function update... `override func update(_ currentTime: TimeInterval) { // Called before each frame is rendered }` here I will update the score and destroy the sprites which went past our player ...
 - 
+
+
+```swift
+
+```
+
+
 
 #### [Day 62](https://www.hackingwithswift.com/100/62)
 > Fred Brooks, who wrote the seminal book The Mythical Man-Month: "Plan to throw the first one away.”
