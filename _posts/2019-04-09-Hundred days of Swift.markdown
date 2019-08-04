@@ -994,7 +994,52 @@ class Capital: NSObject, MKAnnotation {
 
 - adding a point will be easy in `viewDidLoad()`, ex: `let london = Capital(title: "London", coordinate: CLLocationCoordinate2D(latitude: 51.507222, longitude: -0.1275), info: "Home to the 2012 Summer Olympics.")`  
 - and `mapView.addAnnotation(london)` 
--  Every time the map needs to show an annotation, it calls a `viewFor` method on its delegate. 
+-  Every time the map needs to show an annotation, it calls a `viewFor` method on its delegate.   
+- Customizing an annotation view is a little bit like customizing a table view cell or collection view cell, because iOS automatically reuses annotation views to make best use of memory. If there isn't one available to reuse, we need to create one from scratch using the `MKPinAnnotationView` class.
+- If an annotation is not one of yours, just return nil from the method to have Apple's default used instead  
+- add `MKMapViewDelegate` n your code   
+
+```swift
+func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
+    // If the annotation isn't from a capital city, it must return nil so iOS uses a default view.
+    guard annotation is Capital else { return nil }
+
+    // Define a reuse identifier
+    let identifier = "Capital"
+
+    // Try to dequeue
+    var annotationView = mapView.dequeueReusableAnnotationView(withIdentifier: identifier)
+
+    if annotationView == nil {
+    // or create a new one using MKPinAnnotationView which sets its canShowCallout property to true. This triggers the popup with the city name.
+    annotationView = MKPinAnnotationView(annotation: annotation, reuseIdentifier: identifier)
+    annotationView?.canShowCallout = true
+
+    // Create a new UIButton using the built-in .detailDisclosure type. This is a small blue "i" symbol with a circle around it.
+    let btn = UIButton(type: .detailDisclosure)
+    annotationView?.rightCalloutAccessoryView = btn
+    } else {
+    // 6
+    annotationView?.annotation = annotation
+}
+// and use the calloutAccessoryControlTapped method. The annotation view contains a property called annotation, which will contain our Capital object. So, we can pull that out, typecast it as a Capital, then show its title and information in any way we want. The easiest for now is just to use a UIAlertController, so that's what we'll do.
+
+
+func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
+    guard let capital = view.annotation as? Capital else { return }
+    let placeName = capital.title
+    let placeInfo = capital.info
+
+    let ac = UIAlertController(title: placeName, message: placeInfo, preferredStyle: .alert)
+    ac.addAction(UIAlertAction(title: "OK", style: .default))
+    present(ac, animated: true)
+    }
+
+    return annotationView
+}
+```
+- and thats it!  
+
 
 #### [Day 61](https://www.hackingwithswift.com/100/61)
 #### [Day 62](https://www.hackingwithswift.com/100/62)
