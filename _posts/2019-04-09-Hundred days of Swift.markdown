@@ -1077,7 +1077,8 @@ override func didMove(to view: SKView) {
 }
 ```
 
-- this disables gravity : `physicsWorld.gravity = CGVector(dx: 0, dy: 0)` or ` physicsWorld.gravity = .zero`
+- this disables gravity : `physicsWorld.gravity = CGVector(dx: 0, dy: 0)` or  `physicsWorld.gravity = .zero`  
+
 - and need to conform to the `SKPhysicsContactDelegate`  
 - We need a timer `var gameTimer: Timer?` When you create an Timer you specify five parameters: how many seconds you want the delay to be, what object should be told when the timer fires, what method should be called on that object when the timer fires, any context you want to provide, and whether the time should repeat.  
 - `gameTimer = Timer.scheduledTimer(timeInterval: 0.35, target: self, selector: #selector(createEnemy), userInfo: nil, repeats: true)`  
@@ -1094,6 +1095,9 @@ override func didMove(to view: SKView) {
 
 #### [Day 62](https://www.hackingwithswift.com/100/62)
 > Fred Brooks, who wrote the seminal book The Mythical Man-Month: "Plan to throw the first one away.”
+
+
+
 #### [Day 63](https://www.hackingwithswift.com/100/63)
 #### [Day 64](https://www.hackingwithswift.com/100/64)
 #### [Day 65](https://www.hackingwithswift.com/100/65)
