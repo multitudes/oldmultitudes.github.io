@@ -913,7 +913,7 @@ charNode.run(SKAction.sequence([delay, hide, notVisible]))
 #### [Day 57](https://www.hackingwithswift.com/100/57)
 > John Maeda, design lead at Automattic (the company behind Wordpress), put this rather succinctly: “Design used to be the seasoning you’d sprinkle on for taste; now it’s the flour you need at the start of the recipe.”    
 
-- we add an image to pir view:
+- we add an image to the view:
 
 ```swift
 imageView = UIImageView(image: UIImage(named: "penguin"))
