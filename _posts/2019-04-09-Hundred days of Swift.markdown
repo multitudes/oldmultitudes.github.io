@@ -955,6 +955,9 @@ UIView.animate(withDuration: 1, delay: 0, options: [],
 
 
 #### [Day 58](https://www.hackingwithswift.com/100/58)
+> Larry Niven once said, “that's the thing about people who think they hate computers – what they really hate is lousy programmers.”
+
+- wrap up and [review project 15](https://www.hackingwithswift.com/review/hws/project-15-animation)  
 
 #### [Day 59](https://www.hackingwithswift.com/100/59)
 #### [Day 60](https://www.hackingwithswift.com/100/60)
