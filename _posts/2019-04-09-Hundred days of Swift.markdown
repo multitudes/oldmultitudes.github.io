@@ -992,6 +992,9 @@ class Capital: NSObject, MKAnnotation {
 }
 ```
 
+- adding a point will be easy in `viewDidLoad()`, ex: `let london = Capital(title: "London", coordinate: CLLocationCoordinate2D(latitude: 51.507222, longitude: -0.1275), info: "Home to the 2012 Summer Olympics.")`  
+- and `mapView.addAnnotation(london)` 
+-  Every time the map needs to show an annotation, it calls a `viewFor` method on its delegate. 
 
 #### [Day 61](https://www.hackingwithswift.com/100/61)
 #### [Day 62](https://www.hackingwithswift.com/100/62)
