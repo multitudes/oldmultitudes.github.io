@@ -1084,18 +1084,17 @@ override func didMove(to view: SKView) {
 - `gameTimer = Timer.scheduledTimer(timeInterval: 0.35, target: self, selector: #selector(createEnemy), userInfo: nil, repeats: true)`  
 - `linearDamping` and `angularDamping` properties, which mean movement and rotation slowing down over time  
 - there is a builtin function update... `override func update(_ currentTime: TimeInterval) { // Called before each frame is rendered }` here I will update the score and destroy the sprites which went past our player ...
-- 
+- To move our player we implement the `touchesMoved()` method with `guard let touch = touches.first else { return }; 
+var location = touch.location(in: self)`  
+- When there is a collision: `func didBegin(_ contact: SKPhysicsContact) { //explosion! } `  we remore the player and add emitter particles  
+
+#### [Day 62](https://www.hackingwithswift.com/100/62)
+> Fred Brooks, who wrote the seminal book The Mythical Man-Month: "Plan to throw the first one away.”
 
 
 ```swift
 
 ```
-
-
-
-#### [Day 62](https://www.hackingwithswift.com/100/62)
-> Fred Brooks, who wrote the seminal book The Mythical Man-Month: "Plan to throw the first one away.”
-
 
 
 #### [Day 63](https://www.hackingwithswift.com/100/63)
