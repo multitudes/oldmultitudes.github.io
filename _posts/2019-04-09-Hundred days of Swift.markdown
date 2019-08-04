@@ -1045,7 +1045,7 @@ func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView, callou
 
 - wrap up and [review project 16](https://www.hackingwithswift.com/review/hws/project-16-capital-cities)
 
-## PROJECT 17 - 
+## PROJECT 17 - Space Race
 
 - this is already most of the code:
 
@@ -1098,6 +1098,11 @@ var location = touch.location(in: self)`
 
 
 #### [Day 63](https://www.hackingwithswift.com/100/63)
+> As Mahatma Gandhi said, “An ounce of practice is worth more than tons of preaching.”  
+
+[Review project 17](https://www.hackingwithswift.com/review/hws/project-17-space-race)
+
+## PROJECT 18
 #### [Day 64](https://www.hackingwithswift.com/100/64)
 #### [Day 65](https://www.hackingwithswift.com/100/65)
 #### [Day 66](https://www.hackingwithswift.com/100/66)
