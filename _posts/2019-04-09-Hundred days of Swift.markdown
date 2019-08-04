@@ -1045,8 +1045,44 @@ func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView, callou
 
 - wrap up and [review project 16](https://www.hackingwithswift.com/review/hws/project-16-capital-cities)
 
-## 
+## PROJECT 17 - 
+
+- this is already most of the code:
+
+```swift
+override func didMove(to view: SKView) {
+    backgroundColor = .black
+
+    starfield = SKEmitterNode(fileNamed: "starfield")!
+    starfield.position = CGPoint(x: 1024, y: 384)
+    starfield.advanceSimulationTime(10)
+    addChild(starfield)
+    starfield.zPosition = -1
+
+    player = SKSpriteNode(imageNamed: "player")
+    player.position = CGPoint(x: 100, y: 384)
+    player.physicsBody = SKPhysicsBody(texture: player.texture!, size: player.size)
+    player.physicsBody?.contactTestBitMask = 1
+    addChild(player)
+
+    scoreLabel = SKLabelNode(fontNamed: "Chalkduster")
+    scoreLabel.position = CGPoint(x: 16, y: 16)
+    scoreLabel.horizontalAlignmentMode = .left
+    addChild(scoreLabel)
+
+    score = 0
+
+    physicsWorld.gravity = CGVector(dx: 0, dy: 0)
+    physicsWorld.contactDelegate = self
+}
+```
+
+- this disables gravity : `physicsWorld.gravity = CGVector(dx: 0, dy: 0)` or ` physicsWorld.gravity = .zero
+- and need to conform to the `SKPhysicsContactDelegate`  
+
+
 #### [Day 62](https://www.hackingwithswift.com/100/62)
+> Fred Brooks, who wrote the seminal book The Mythical Man-Month: "Plan to throw the first one away.”
 #### [Day 63](https://www.hackingwithswift.com/100/63)
 #### [Day 64](https://www.hackingwithswift.com/100/64)
 #### [Day 65](https://www.hackingwithswift.com/100/65)
