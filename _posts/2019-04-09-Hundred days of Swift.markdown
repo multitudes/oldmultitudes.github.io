@@ -1079,7 +1079,7 @@ override func didMove(to view: SKView) {
 
 - this disables gravity : `physicsWorld.gravity = CGVector(dx: 0, dy: 0)` or ` physicsWorld.gravity = .zero
 - and need to conform to the `SKPhysicsContactDelegate`  
-
+- 
 
 #### [Day 62](https://www.hackingwithswift.com/100/62)
 > Fred Brooks, who wrote the seminal book The Mythical Man-Month: "Plan to throw the first one away.”
