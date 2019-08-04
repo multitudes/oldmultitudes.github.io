@@ -911,12 +911,51 @@ charNode.run(SKAction.sequence([delay, hide, notVisible]))
 
 ## PROJECT 15 - Animation
 #### [Day 57](https://www.hackingwithswift.com/100/57)
-> John Maeda, design lead at Automattic (the company behind Wordpress), put this rather succinctly: “Design used to be the seasoning you’d sprinkle on for taste; now it’s the flour you need at the start of the recipe.”  
+> John Maeda, design lead at Automattic (the company behind Wordpress), put this rather succinctly: “Design used to be the seasoning you’d sprinkle on for taste; now it’s the flour you need at the start of the recipe.”    
 
+- we add an image to pir view:
 
+```swift
+imageView = UIImageView(image: UIImage(named: "penguin"))
+imageView.center = CGPoint(x: 512, y: 384)
+view.addSubview(imageView)
+```
+
+- we want to hide the button during the animation. to do so we pass the UIButton in sender..
+
+``` swift
+@IBAction func tapped(_ sender: UIButton) {
+sender.isHidden = true
+```
+- we gonna use this funtion of UIView: `UIView.animate(withDuration: <#T##TimeInterval#>, delay: <#T##TimeInterval#>, options: <#T##UIView.AnimationOptions#>, animations: <#T##() -> Void#>, completion: <#T##((Bool) -> Void)?##((Bool) -> Void)?##(Bool) -> Void#>)`    
+- in code we pass two closures:
+
+```swift
+UIView.animate(withDuration: 1, delay: 0, options: [], 
+    animations: {
+        switch self.currentAnimation {
+        case 0:
+            break
+
+        default:
+            break
+            }
+    }) { finished in
+        sender.isHidden = false
+}
+```
+
+- in the animation closure we put code to be execute.  
+- `CGAffineTransform`. This is a structure that represents a specific kind of transform that we can apply to any `UIView` object or subclass.
+- ex  `self.imageView.transform = CGAffineTransform(scaleX: 2, y: 2)`  
+- ex `self.imageView.transform = CGAffineTransform(translationX: -256, y: -256)`  
+
+- return to original value `self.imageView.transform = .identity` This effectively clears our view of any pre-defined transform  
+- We can also use CGAffineTransform to rotate views, using its rotationAngle initializer. `self.imageView.transform = CGAffineTransform(rotationAngle: CGFloat.pi)` . Core Animation will always take the shortest route to make the rotation work.   
 
 
 #### [Day 58](https://www.hackingwithswift.com/100/58)
+
 #### [Day 59](https://www.hackingwithswift.com/100/59)
 #### [Day 60](https://www.hackingwithswift.com/100/60)
 #### [Day 61](https://www.hackingwithswift.com/100/61)
