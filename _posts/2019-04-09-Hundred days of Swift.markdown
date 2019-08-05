@@ -1244,7 +1244,65 @@ node.run(move)
 
 [PROJECT 20 Review](https://www.hackingwithswift.com/review/hws/project-20-fireworks-night)
 
+## PROJECT 21 - Local Notifications
 #### [Day 72](https://www.hackingwithswift.com/100/72)
+> Tim Ferriss is a well-known podcaster and angel investor, who once said “in a digital world, there are numerous technologies that we are attached to that create infinite interruption.”
+
+- `import UserNotifications`
+-  request auth 
+
+```swift
+@objc func registerLocal() {
+    let center = UNUserNotificationCenter.current()
+
+    center.requestAuthorization(options: [.alert, .badge, .sound]) { (granted, error) in
+        if granted {
+            print("Yay!")
+            } else {
+            print("D'oh")
+        }
+    }
+}
+```
+
+- the trigger – when to show the notification – can be a calendar trigger that shows the notification at an exact time, it can be an interval trigger that shows the notification after a certain time interval has lapsed, or it can be a geofence that shows the notification based on the user’s location.  
+- new data type called `DateComponents`.
+
+``` swift
+var dateComponents = DateComponents()
+dateComponents.hour = 10
+dateComponents.minute = 30
+let trigger = UNCalendarNotificationTrigger(dateMatching: dateComponents, repeats: true)
+```  
+
+- what to show, we need to use the class `UNMutableNotificationContent`  
+- This class got `title` property , `body` property, `sound` property with `UNNotificationSound.default` , `userInfo` dictionary property and custom actions by specifying the `categoryIdentifier` property.  
+
+- ex
+
+```swift
+@objc func scheduleLocal() {
+let center = UNUserNotificationCenter.current()
+
+let content = UNMutableNotificationContent()
+content.title = "Late wake up call"
+content.body = "The early bird catches the worm, but the second mouse gets the cheese."
+content.categoryIdentifier = "alarm"
+content.userInfo = ["customData": "fizzbuzz"]
+content.sound = UNNotificationSound.default
+
+var dateComponents = DateComponents()
+dateComponents.hour = 10
+dateComponents.minute = 30
+let trigger = UNCalendarNotificationTrigger(dateMatching: dateComponents, repeats: true)
+
+let request = UNNotificationRequest(identifier: UUID().uuidString, content: content, trigger: trigger)
+center.add(request)
+}
+````
+
+
+
 #### [Day 73](https://www.hackingwithswift.com/100/73)
 #### [Day 74](https://www.hackingwithswift.com/100/74)
 #### [Day 75](https://www.hackingwithswift.com/100/75)
