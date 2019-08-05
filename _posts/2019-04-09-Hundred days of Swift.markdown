@@ -1231,6 +1231,15 @@ node.run(move)
 
 ```
 
+- The `follow()` method takes three other parameters, all of which are useful. The first decides whether the path coordinates are absolute or are relative to the node's current position. If you specify `asOffset` as true, it means any coordinates in your path are adjusted to take into account the node's position.  
+- The third parameter to `follow()` is `orientToPath` and makes a complicated task into an easy one. When it's set to true, the node will automatically rotate itself as it moves on the path so that it's always facing down the path. Perfect for fireworks, and indeed most things! Finally, you can specify a speed to adjust how fast it moves along the path.   
+-  a new piece of Swift syntax  `for case let`  
+- our built in functions `touchesBegan()` and `touchesMoved()`  
+- You see, when we ask for all the nodes under the users finger we’ll get back an array of SKNode, and that’s not good enough we want to run the body of our loop only for sprite nodes, not for the other items.  
+- `for case let node as SKSpriteNode in nodesAtPoint {`   : The let node part creates a new constant called node, the case…as SKSpriteNode part means “if we can typecast this item as a sprite node  
+- 
+
+
 
 
 #### [Day 71](https://www.hackingwithswift.com/100/71)
