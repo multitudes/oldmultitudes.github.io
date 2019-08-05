@@ -1237,12 +1237,13 @@ node.run(move)
 - our built in functions `touchesBegan()` and `touchesMoved()`  
 - You see, when we ask for all the nodes under the users finger we’ll get back an array of SKNode, and that’s not good enough we want to run the body of our loop only for sprite nodes, not for the other items.  
 - `for case let node as SKSpriteNode in nodesAtPoint {`   : The let node part creates a new constant called node, the case…as SKSpriteNode part means “if we can typecast this item as a sprite node  
-- 
-
-
 
 
 #### [Day 71](https://www.hackingwithswift.com/100/71)
+> John Gruber recounts an anecdote he heard about how shake to undo came about, which might why it just doesn’t fit in with the rest of the platform: "Scott Forstall charged the iOS team with devising an interface for Undo — everyone knew the iPhone should have it,1 but no one had a good idea how to do it. One engineer joked that they could just make you shake the iPhone to invoke it. Forstall said he loved the idea, and what was proposed as a joke has been with us as the Undo interface ever since.  
+
+[PROJECT 20 Review](https://www.hackingwithswift.com/review/hws/project-20-fireworks-night)
+
 #### [Day 72](https://www.hackingwithswift.com/100/72)
 #### [Day 73](https://www.hackingwithswift.com/100/73)
 #### [Day 74](https://www.hackingwithswift.com/100/74)
