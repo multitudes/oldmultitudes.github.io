@@ -1205,12 +1205,12 @@ notificationCenter.addObserver(self, selector: #selector(adjustForKeyboard), nam
 - When working with keyboards, the dictionary will contain a key called `UIResponder.keyboardFrameEndUserInfoKey` telling us the frame of the keyboard after it has finished animating. This will be of type `NSValue`, which in turn is of type `CGRect`. The `CGRect` struct holds both a `CGPoint` and a `CGSize`, so it can be used to describe a rectangle.  
 - One of the quirks of Objective-C was that arrays and dictionaries couldn't contain structures like CGRect, so Apple had a special class called NSValue that acted as a wrapper around structures so they could be put into dictionaries and arrays.    
 
-- look for the function on the website!!
-
-
-
+- look for the `function text view insets for keyboards ` on the website!!
 
 #### [Day 69](https://www.hackingwithswift.com/100/69)
+
+wrap up! [Review Project 19]()
+
 #### [Day 70](https://www.hackingwithswift.com/100/70)
 #### [Day 71](https://www.hackingwithswift.com/100/71)
 #### [Day 72](https://www.hackingwithswift.com/100/72)
