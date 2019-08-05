@@ -1211,8 +1211,25 @@ notificationCenter.addObserver(self, selector: #selector(adjustForKeyboard), nam
 
 wrap up! [Review Project 19](https://www.hackingwithswift.com/review/hws/project-19-javascript-injection)
 
-## PROJECT 20 - 
+## PROJECT 20 - Fireworks Night
 #### [Day 70](https://www.hackingwithswift.com/100/70)
+
+>When Steve Jobs first announced the iPhone, he asked an important question: “how are we going to communicate with this?” His answer was as follows: “We don’t want to carry around a mouse, right? So what are we going to do? Oh, a stylus, right? We’re going to use a stylus. No! Who wants a stylus? You have to get them and put them away, and you lose them – yuck. Nobody wants a stylus, so we’re not going to use a stylus. We’re going to use the best pointing device in the world. We’re going to use a pointing device we’re all born with, we’re born with ten of them – we’re going to use our fingers.”  
+
+- create a timer firing every 6 sec `gameTimer = Timer.scheduledTimer(timeInterval: 6, target: self, selector: #selector(launchFireworks), userInfo: nil, repeats: true)`  
+-  two new properties: `color` and `colorBlendFactor`. These two show off a simple but useful feature of `SpriteKit`, which is its ability to recolor your sprites dynamically with absolutely no performance cost. So, our rocket image is actually white, but by giving it `.red` with `colorBlendFactor` set to 1 (use the new color exclusively) it will appear red.  
+-  a new `SKAction` you haven't seen before: `follow()`. This takes a `CGPath` as its first parameter (we'll pull this from the `UIBezierPath`) and makes the node move along that path. It doesn't have to be a straight line like we're using, any bezier path is fine.  
+
+```swift
+let path = UIBezierPath()
+path.move(to: .zero)
+path.addLine(to: CGPoint(x: xMovement, y: 1000))
+
+// 5
+let move = SKAction.follow(path.cgPath, asOffset: true, orientToPath: true, speed: 200)
+node.run(move)
+
+```
 
 
 
