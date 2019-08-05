@@ -1301,9 +1301,18 @@ center.add(request)
 }
 ````
 
-
+ - cancel pending notifications `center.removeAllPendingNotificationRequests()`
+ -  two new classes: `UNNotificationAction` creates an individual button for the user to tap, and `UNNotificationCategory` groups multiple buttons together under a single identifier.  
+ - need to add `UNUserNotificationCenterDelegate`
+ 
 
 #### [Day 73](https://www.hackingwithswift.com/100/73)
+> “if privacy matters in your life, it should matter to the phone your life is on.” 
+
+[PROJECT 21 Review](https://www.hackingwithswift.com/review/hws/project-21-local-notifications)
+
+
+
 #### [Day 74](https://www.hackingwithswift.com/100/74)
 #### [Day 75](https://www.hackingwithswift.com/100/75)
 #### [Day 76](https://www.hackingwithswift.com/100/76)
