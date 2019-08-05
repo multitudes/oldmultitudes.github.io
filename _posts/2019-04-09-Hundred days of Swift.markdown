@@ -1125,12 +1125,52 @@ var location = touch.location(in: self)`
 #### [Day 66](https://www.hackingwithswift.com/100/66)
 > As Dan Millman said, “willpower is the key to success – successful people strive no matter what they feel by applying their will to overcome apathy, doubt or fear.”  
 
-[Review MILESTONE: PROJECTS 16-18]()
-sss
-
-
-
+## PROJECT 19 - JS Injection
 #### [Day 67](https://www.hackingwithswift.com/100/67)
+> Ginni Rometty once said: "what I knew was I liked math and science, and I never wanted to memorize everything – I wanted to understand where it came from"
+
+- Safari extensions are launched from within the Safari action menu, but they ship inside a parent app. That is, you can't ship an extension by itself – it needs have an app alongside it. Frequently the app does very little, but it must at least be present.  
+- go to the `File` menu and choose `New > Target`. When you're asked to choose a template, select `iOS > Application Extension > Action Extension  
+- Xcode has given you two files: `ActionViewController.swift` and `MainInterface.storyboard`.  
+-  When our extension is created, its `extensionContext` lets us control how it interacts with the parent app. In the case of `inputItems` this will be an array of data the parent app is sending to our extension to use.  
+- Our input item contains an array of attachments, which are given to us wrapped up as an `NSItemProvider`. Our code pulls out the first attachment  
+- The next line uses `loadItem(forTypeIdentifier: )` to ask the item provider to actually provide us with its item, but you'll notice it uses a closure so this code executes asynchronously.      
+
+``` swift 
+if let inputItem = extensionContext?.inputItems.first as? NSExtensionItem {
+    if let itemProvider = inputItem.attachments?.first {
+        itemProvider.loadItem(forTypeIdentifier: kUTTypePropertyList as String) { [weak self] (dict, error) in
+        // do stuff!
+            }
+        }
+}
+```
+
+- inside the extension group there is a `plist` (that's short for property list, remember) contains metadata about apps and extensions  
+- in plist editor look for `NSExtension` and `NSExtensionAttributes` and  `NSExtensionActivationRule`, set to `TRUEPREDICATE`. Change string to be Dictionary, then open its disclosure arrow and click the small + button to the left of “Dictionary”, and when it asks you for a key name change "New item" to be `NSExtensionActivationSupportsWebPageWithMaxCount` with value `1` . We only want to receive webpages.  
+- click again on + and add `NSExtensionJavaScriptPreprocessingFile` , then give it the value `Action`. This tells iOS that when our extension is called, we need to run the JavaScript preprocessing file called `Action.js`   
+- Right-click on your extension's `Info.plist` file and choose `New File`. When you're asked what template you want, choose `iOS > Other > Empty`, then name it Action.js, and put this text into it: 
+
+``` js
+var Action = function() {};
+
+    Action.prototype = {
+
+        run: function(parameters) {
+
+},
+
+finalize: function(parameters) {
+
+}
+
+};
+
+var ExtensionPreprocessingJS = new Action
+```
+
+
+
 #### [Day 68](https://www.hackingwithswift.com/100/68)
 #### [Day 69](https://www.hackingwithswift.com/100/69)
 #### [Day 70](https://www.hackingwithswift.com/100/70)
