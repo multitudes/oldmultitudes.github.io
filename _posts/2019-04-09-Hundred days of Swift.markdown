@@ -1102,10 +1102,32 @@ var location = touch.location(in: self)`
 
 [Review project 17](https://www.hackingwithswift.com/review/hws/project-17-space-race)
 
-## PROJECT 18
+## PROJECT 18 - Debugging
 #### [Day 64](https://www.hackingwithswift.com/100/64)
+> Thomas Fuchs once said, “the best error message is the one that never shows up.”   
+
+>“Debugging is twice as hard as writing the code in the first place. Therefore, if you write the code as cleverly as possible, you are, by definition, not smart enough to debug it.”
+
+- the absolute easiest debugging technique, which is the `print()` function  
+- `print(1, 2, 3, 4, 5, separator: "-")` and `print("Some message", terminator: "")` (terminator is by default "\n")  
+- One level up from print() are `assertions`, which are debug-only checks that will force your app to crash if a specific condition isn't true.  When you build a release version of your app – i.e., when you ship your app to the App Store – Xcode automatically disables your assertions so they won’t reach your users  
+- ex `assert(1 == 1, "Maths failure!")`  
+- `breakpoints`  
+- Xcode also gives you an interactive LLDB debugger window, where you can type commands to query values and run methods. Try typing `p` `i` to ask Xcode to print the value of the `i` variable   
+-  in Xcode go to the `Debug` menu and choose `View Debugging > Capture View Hierarchy`. After a few seconds of thinking, Xcode will show you a screenshot of your app’s UI. if you click and drag inside the hierarchy display, you'll see you're actually viewing a 3D representation of your view  
+
 #### [Day 65](https://www.hackingwithswift.com/100/65)
+
+[Review project 18](https://www.hackingwithswift.com/review/hws/project-18-debugging)
+
+## MILESTONE: PROJECTS 16-18
+
 #### [Day 66](https://www.hackingwithswift.com/100/66)
+> As Dan Millman said, “willpower is the key to success – successful people strive no matter what they feel by applying their will to overcome apathy, doubt or fear.”  
+
+[Review MILESTONE: PROJECTS 16-18]()
+
+
 #### [Day 67](https://www.hackingwithswift.com/100/67)
 #### [Day 68](https://www.hackingwithswift.com/100/68)
 #### [Day 69](https://www.hackingwithswift.com/100/69)
