@@ -1126,6 +1126,8 @@ var location = touch.location(in: self)`
 > As Dan Millman said, “willpower is the key to success – successful people strive no matter what they feel by applying their will to overcome apathy, doubt or fear.”  
 
 [Review MILESTONE: PROJECTS 16-18]()
+sss
+
 
 
 #### [Day 67](https://www.hackingwithswift.com/100/67)
