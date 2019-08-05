@@ -1091,12 +1091,6 @@ var location = touch.location(in: self)`
 #### [Day 62](https://www.hackingwithswift.com/100/62)
 > Fred Brooks, who wrote the seminal book The Mythical Man-Month: "Plan to throw the first one away.”
 
-
-```swift
-
-```
-
-
 #### [Day 63](https://www.hackingwithswift.com/100/63)
 > As Mahatma Gandhi said, “An ounce of practice is worth more than tons of preaching.”  
 
@@ -1139,8 +1133,9 @@ var location = touch.location(in: self)`
 ``` swift 
 if let inputItem = extensionContext?.inputItems.first as? NSExtensionItem {
     if let itemProvider = inputItem.attachments?.first {
-        itemProvider.loadItem(forTypeIdentifier: kUTTypePropertyList as String) { [weak self] (dict, error) in
-        // do stuff!
+        itemProvider.loadItem(forTypeIdentifier: kUTTypePropertyList as String) { 
+            [weak self] (dict, error) in
+            // do stuff!
             }
         }
 }
@@ -1154,9 +1149,9 @@ if let inputItem = extensionContext?.inputItems.first as? NSExtensionItem {
 ``` js
 var Action = function() {};
 
-    Action.prototype = {
+Action.prototype = {
 
-        run: function(parameters) {
+run: function(parameters) {
 
 },
 
@@ -1169,9 +1164,52 @@ finalize: function(parameters) {
 var ExtensionPreprocessingJS = new Action
 ```
 
-
+- There are two functions: run() and finalize(). The first is called before your extension is run, and the other is called after.
+- check under `extension` `build phases`  . you should see Action.js under `Copy Bundle Resources` and not `Compile Sources`. If this isn't the case, you can just drag it to move.  
 
 #### [Day 68](https://www.hackingwithswift.com/100/68)
+> As Jeremy Foster once said, “every developer loves and hates JavaScript a little bit”
+
+- The point of this project isn’t to teach you JavaScript, but instead to show you what’s possible with iOS  
+- Go to Action.js and modify the run() function to this:  
+
+``` js
+run: function(parameters) {
+parameters.completionFunction({"URL": document.URL, "title": document.title });
+},
+```
+
+- Now that data is being sent from JavaScript, data will be received in Swift. In ActionViewController.swift, replace the // do stuff! comment with this:  
+
+``` swift
+guard let itemDictionary = dict as? NSDictionary else { return }
+guard let javaScriptValues = itemDictionary[NSExtensionJavaScriptPreprocessingResultsKey] as? NSDictionary else { return }
+print(javaScriptValues)
+```
+
+-  `UITextField` it's useful for letting users enter text into a single-line text box. But if you want multiple lines of text you need `UITextView`  
+- [ ... phew check on the web for more.. basically we input JS and it will be executed on the site ...]
+
+- We can ask to be told when the keyboard state changes by using a new class called NotificationCenter. Behind the scenes, iOS is constantly sending out notifications when things happen – keyboard changing, application moving to the background, as well as any custom events that applications post. We can add ourselves as an observer for certain notifications and a method we name will be called when the notification occurs, and will even be passed any useful information.  
+- When working with the keyboard, the notifications we care about are `keyboardWillHideNotification` and `keyboardWillChangeFrameNotification`. The first will be sent when the keyboard has finished hiding, and the second will be shown when any keyboard state change happens – including showing and hiding, but also orientation, QuickType and more.  
+- add this code to 'viewDidLoad()':  
+
+```swift
+let notificationCenter = NotificationCenter.default
+notificationCenter.addObserver(self, selector: #selector(adjustForKeyboard), name: UIResponder.keyboardWillHideNotification, object: nil)
+notificationCenter.addObserver(self, selector: #selector(adjustForKeyboard), name: UIResponder.keyboardWillChangeFrameNotification object: nil)
+```
+
+- The `adjustForKeyboard()` method is complicated, but that's because it has quite a bit of work to do. First, it will receive a parameter that is of type Notification. This will include the name of the notification as well as a Dictionary containing notification-specific information called userInfo.  
+
+- When working with keyboards, the dictionary will contain a key called `UIResponder.keyboardFrameEndUserInfoKey` telling us the frame of the keyboard after it has finished animating. This will be of type `NSValue`, which in turn is of type `CGRect`. The `CGRect` struct holds both a `CGPoint` and a `CGSize`, so it can be used to describe a rectangle.  
+- One of the quirks of Objective-C was that arrays and dictionaries couldn't contain structures like CGRect, so Apple had a special class called NSValue that acted as a wrapper around structures so they could be put into dictionaries and arrays.    
+
+- look for the function on the website!!
+
+
+
+
 #### [Day 69](https://www.hackingwithswift.com/100/69)
 #### [Day 70](https://www.hackingwithswift.com/100/70)
 #### [Day 71](https://www.hackingwithswift.com/100/71)
