@@ -1312,8 +1312,12 @@ center.add(request)
 [PROJECT 21 Review](https://www.hackingwithswift.com/review/hws/project-21-local-notifications)
 
 
-
+## MILESTONE: PROJECTS 19-21
 #### [Day 74](https://www.hackingwithswift.com/100/74)
+>Henry Petroski, a professor of engineering at Duke University in the US, said “as engineers, we’re going to be in a position to change the world, not just study it.” 
+
+
+
 #### [Day 75](https://www.hackingwithswift.com/100/75)
 #### [Day 76](https://www.hackingwithswift.com/100/76)
 #### [Day 77](https://www.hackingwithswift.com/100/77)
