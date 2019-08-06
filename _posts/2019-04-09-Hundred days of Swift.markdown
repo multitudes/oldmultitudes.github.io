@@ -1587,9 +1587,9 @@ extension UIImage {
 
 
 PROJECT 27
-#### Sources:
+#### Sources:  
 
-[GitHub HackingWithSwift](https://github.com/twostraws/HackingWithSwift)
-[Talk at NSSpain Spain](http://vimeo.com/291590798)
-[HACKING WITH SWIFT ONLINE](https://www.hackingwithswift.com/read)
-[How to flip a UIView with a 3D effect: transition(with:)](https://www.hackingwithswift.com/example-code/uikit/how-to-flip-a-uiview-with-a-3d-effect-transitionwith)
+[GitHub HackingWithSwift](https://github.com/twostraws/HackingWithSwift)  
+[Talk at NSSpain Spain](http://vimeo.com/291590798)  
+[HACKING WITH SWIFT ONLINE](https://www.hackingwithswift.com/read)  
+[How to flip a UIView with a 3D effect: transition(with:)](https://www.hackingwithswift.com/example-code/uikit/how-to-flip-a-uiview-with-a-3d-effect-transitionwith)  
