@@ -1,12 +1,12 @@
 ---
 layout: post
 title:  "Everything about Swift playgrounds"
-date:   2019-06-15
+date:   2001-06-15
 categories: iOS, developer
 comments: true
 published: true
 ---
-
+# achtung.. still a draft :)
 Now, here’s the code to assign the Live View property of the Playground Page to a UIView object. You can also assign either a class or a view controller.
 
 You’d have to import the framework PlaygroundSupport for that, and UIKit as well.
@@ -42,4 +42,4 @@ The basic syntax for Markup for rich documentation is as follows:
 [Student submissions for the WWDC 2018 Scholarship](https://github.com/wwdc/2018)  
 [Awesome Swift Playgrounds](https://github.com/uraimo/Awesome-Swift-Playgrounds)  
 [An Introduction to Swift Playgrounds](https://www.techotopia.com/index.php/An_Introduction_to_Swift_Playgrounds)  
-
+[How to create live playgrounds in Xcode](https://www.hackingwithswift.com/example-code/uikit/how-to-create-live-playgrounds-in-xcode)
