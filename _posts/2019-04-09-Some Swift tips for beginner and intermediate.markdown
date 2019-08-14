@@ -14,7 +14,7 @@ published: true
 </div>
 
 I just finished the 100 Days of Swift by Paul Hudson and needed a place to put down some notes for my learning and enjoyment :)
-This post is inspired from the 100 Days of Swift [days 1 to 12](https://www.hackingwithswift.com/100):
+This post is inspired from the 100 Days of Swift - [Days 1 to 12](https://www.hackingwithswift.com/100):
 
 
 
@@ -31,9 +31,9 @@ Open Playgrounds to practice your code. Open Xcode and do `shift` +`alt`+ `comma
 `command` + `shift` `Y` shows the console window below.  
 `command` + `shift` `J` shows the sidebar.  
 
-Add a new shortcut to render your mark up in > Preferences > Key Bindings and add a custom one in `Show Rendered Markup` if not already there.   
+Add a new shortcut to render your mark up in > Preferences > Key Bindings and add a custom one in `Show Rendered Markup` if not already there. More about [Markup syntax here!](https://developer.apple.com/library/archive/documentation/Xcode/Reference/xcode_markup_formatting_ref/index.html#//apple_ref/doc/uid/TP40016497-CH2-SW1)    
 
-One reason Playground might eat up CPU usage is because it will auto build and run your code every few seconds / keystroke. To avoid this `turn off auto run`  by selecting `Manually Run` with a long press of the mouse on the play button above the console. 
+One reason Playground might eat up CPU usage is because it will auto build and run your code every few seconds / keystroke. To avoid this turn off auto run by selecting `Manually Run` with a long press of the mouse on the play button above the console. 
 
 
 

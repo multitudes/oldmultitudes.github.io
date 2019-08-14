@@ -62,6 +62,77 @@ It took me two days to understand how to put the MyView class into the sources f
 Playgrounds can also contain other resources.  
 Resources are any other file that you'd like to use in your playground such as images, audio, video, storyboards, and ZIPs.
 Just like sources, there's a resources folder at the top level of the playground as well as for each page.
+
+Here is the code shown in the WWDC presentation. It will show one button in live view.
+
+``` swift
+import UIKit
+import PlaygroundSupport
+
+// create the class - we will put it in a separate file in a moment! 
+class MyView : UIView {
+    @objc func changeTitle(_ sender: UIButton!) {
+    sender.setTitle("Welcome to WWDC 2018!", for: [])
+    }
+}
+
+// create the view
+let myView = MyView(frame: CGRect(x: 0, y: 0, width: 500, height: 500))
+
+// create the button
+var button = UIButton(type: .system)
+button.frame = CGRect(x: 100, y: 100, width: 300, height: 200)
+button.setTitle("Press me@! ", for: [])
+button.tintColor = #colorLiteral(red: 0.1411764771, green: 0.3960784376, blue: 0.5647059083, alpha: 1)
+button.setTitleColor(#colorLiteral(red: 0.9098039269, green: 0.4784313738, blue: 0.6431372762, alpha: 1), for: [])
+button.addTarget(myView, action: #selector(MyView.changeTitle), for: .touchUpInside)
+
+// add the button to the subview
+myView.addSubview(button)
+
+// present in liveview
+PlaygroundPage.current.liveView = myView
+
+```
+If we would take the class above as and add it in source in a separate file as `MyView.swift` it would not compile! 
+
+``` swift
+
+class MyView : UIView {
+    @objc func changeTitle(_ sender: UIButton!) {
+    sender.setTitle("Welcome to WWDC 2018!", for: [])
+    }
+}
+```
+
+Swift would complain about a few things. First the class needs to be made public to be recognized in the playgrounds. Second the class needs an initializer! and needs a super init as well..! how to do this!? 
+I found the answer in this [Stackoverflow page](https://stackoverflow.com/questions/24339145/how-do-i-write-a-custom-init-for-a-uiview-subclass-in-swift)
+It turns out it is not so easy to initialize a view. Quite messy actually. Here is the code. And this time it will compile! 
+
+``` swift
+import UIKit
+
+// the class needs to be marked as public. And the methods and vars too!
+public class MyView : UIView {
+    
+    // the next two inits are required
+    override public init(frame: CGRect ) { 
+        super.init(frame: frame)
+    }
+
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+    }
+
+// this is my method. Needs to be public too!
+
+    @objc public func changeTitle(_ sender: UIButton!) {
+        sender.setTitle("Welcome to WWDC 2018!", for: [])
+    }
+}
+
+```
+
 You can use these resources that you've added to your playground both in your markup and code.
 Similar to how you create a link in your playground, you can use this highlighted syntax to imbed an image in your markup.
 You also specify alternate text describing the image along with hover title text that shows my pointer is over the image.
@@ -76,8 +147,7 @@ This example uses a URL for resource with extension API to ask the main bundle f
  
 Resources in your playground are automatically treated as resources of the main bundle.  
 
-for more see the markup formatting [reference link below][1]
-### 
+### How to use the play button 
 
 Whether a beginner just getting started with Apple APIs, a seasoned engineer with a deadline, or a data scientist building machine learning models,  Xcode playgrounds are probably the fastest way to get started coding against Apple's APIs.
 In Xcode 10, playgrounds are faster and more responsive than ever allowing you to execute your code in a step-by-step fashion.
@@ -131,8 +201,7 @@ They allow you to explore code and data interactively.
 
 So as you know, when a user types in a line of code values show up on the right hand side in the result sidebar.
 For types that are no optimized for playgrounds there are two ways that playgrounds will generate this description.
-For types that do not conform to `CustomStringConvertible`, we will create a structured representation using the Swift type.
-For types that do conform to `CustomStringConvertible`, we will use the result of calling `descriptions`.
+For types that do not conform to `CustomStringConvertible`, we will create a structured representation using the Swift type. For types that do conform to `CustomStringConvertible`, we will use the result of calling `descriptions`.
 
 This is still text though and there are times when text isn't going to be enough and you would like to return something graphical, maybe a picture.
 The way to control what you return is to implement `CustomPlaygroundDisplayConvertible`, a new protocol introduced in Xcode 9.3
@@ -161,58 +230,17 @@ Playgrounds don’t have Storyboards. You can create a view (UIView) of any size
 PlaygroundSupport is a framework for doing things like accessing a playground page and managing its execution, managing live views, and sharing and accessing persistent data.
 
 ## Creating Rich Documentation with Markup
-Swift Playgrounds lets you create beautiful documentation give your playgrounds an extra bit of polish (that is easier to read than the regular comments) using a language called Markup.
-The basic syntax for Markup for rich documentation is as follows:
-... 
 
-It is especially great when you're making a playground to share with others.
-With markup you can include stylized text, images, and video in your playground.
-Now let's take a quick walkthrough what is possible with markup.
-Here I've included some markup comments with text for a poem I'm writing.
-A markup comment is like a regular comment but with a colon after the forward slashes.
-The rest of the comment is then treated as markup text.
-If you have multiple lines of comments next to each other they form one block of markup text.
-You can also use multiline comments by putting a colon after the first asterisks.
-Here's our markup in Xcode now.
-It is showing the raw markup of the poem I wrote.
-To show it in its rendered form, select the button in the top right corner of the window, which shows Xcode's Inspector.
-Then select Render Documentation under Playground Settings.
-The lines in my poem are now rendered.
-Other interesting things you can do with the markup are adding headings to a Playground peach.
-You can use headings to create structure in your playground.
-You can use number signs to supply up to three levels of heading.
-In this example the title of my poem "Roses are Red" as a first level heading, the subtitle, "An Ode to Markup" as a second level heading, and the byline as a third level heading.
-Remember to add at least one space between the number sign and the heading string, otherwise you'll have a number sign connected to your heading when rendered.
-This is what the headings look like rendered when included with the lines in my poem.
-You can see that the first level heading is largest, followed by the second level, and then the third level heading.
-You can also format the text in your markup content.
-You can wrap a string of characters on a single asterisk on each side to italicize the text between the asterisks.
-You can also use backticks to display text with Code Font.
-Finally, if you use two asterisks instead of one the text will be bold.
-Let's take a look at this rendered.
-You can see that red and blue are italicized.
-Markup is in Code Font and fun is in bold.
-Let's take a look at using lists in markup.
-If a markup comment starts with a number followed by a period, it will create an item in a numbered list.
-In this example, I've added the lines of my poem to a numbered list.
-Here you can see the lines of my poem rendered in a number list, each line representing an item in a numbered list.
-You can also create a bullet to list in markup.
-A bulleted list is like a number list except each line starts with an asterisks instead of a number.
-This is how my poem in rendered in a bulleted list with each line in my poem represented as a bulleted item in a bulletin list.
-Markup can also contain links.
-In this example I've created a link to roses and violets.
-To create a link you wrap the text in brackets and then place the destination of the link in parentheses after.
-Another way you can create a link is by using a reference.
-In this example I've created a reference named 1, but this can be any string.
-It doesn't have to be a number.
-When creating and using a link reference you wrap the name in brackets.
-When creating a reference you add a colon and then the destination to the link.
-Here are the links represented in rendered form, Roses, Violets, and Fun are shown in blue to represent a link.
+Swift Playgrounds lets you create beautiful documentation give your playgrounds an extra bit of polish (that is easier to read than the regular comments) using a language called Markup.
+You might want to make a playground to share with others.  
+With markup you can include stylized text, images, and video.
+The basic syntax for Markup for rich documentation is as follows:
+
 
 
 ### sources
-[1]: https://developer.apple.com/library/content/documentation/Xcode/Reference/xcode_markup_formatting_ref/index.html
-[2]:https://stackoverflow.com/questions/24339145/how-do-i-write-a-custom-init-for-a-uiview-subclass-in-swift
+[Markup syntax](https://developer.apple.com/library/content/documentation/Xcode/Reference/xcode_markup_formatting_ref/index.html)
+[Important! Subclass UIView and Initializers](https://stackoverflow.com/questions/24339145/how-do-i-write-a-custom-init-for-a-uiview-subclass-in-swift)
 [From Hacking with Swift: "How to create live playgrounds in Xcode"](https://www.hackingwithswift.com/example-code/uikit/how-to-create-live-playgrounds-in-xcode)  
 [Developing iOS 11 Apps with Swift by Stanford](https://itunes.apple.com/gb/course/developing-ios-11-apps-with-swift/id1309275316)  
 [Using JSON with Custom Types](https://developer.apple.com/documentation/foundation/archives_and_serialization/using_json_with_custom_types)    
@@ -231,6 +259,5 @@ Here are the links represented in rendered form, Roses, Violets, and Fun are sho
 [An Introduction to Swift Playgrounds](https://www.techotopia.com/index.php/An_Introduction_to_Swift_Playgrounds)  
 [How to create live playgrounds in Xcode](https://www.hackingwithswift.com/example-code/uikit/how-to-create-live-playgrounds-in-xcode)
 [FreeCodeCamp - How to make something with Swift Playgrounds](https://www.freecodecamp.org/news/how-to-make-something-with-swift-playgrounds-33e560b84184/)
-
 Tibet Rooney-Rabdau,  Alex Brown and TJ Usiyan of Apple - [Getting the Most out of Playgrounds in Xcode - WWDC2018](https://developer.apple.com/videos/play/wwdc2018/402/)
 
