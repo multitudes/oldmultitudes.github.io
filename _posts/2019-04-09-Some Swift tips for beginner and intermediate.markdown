@@ -131,8 +131,8 @@ Tuples allow you to store several values together in a single value. That might 
 
 You can’t add or remove items from a tuple; they are fixed in size.
 You can’t change the type of items in a tuple; they always have the same types they were created with.
-You can access items in a tuple using numerical positions or by naming them
-Tuples are created by placing multiple items into parentheses, like this:
+You can access items in a tuple using numerical positions or by naming them.  
+Tuples are created by placing multiple items into parentheses, like this:  
 
 ``` swift
 var name = (first: "Taylor", last: "Swift")
@@ -142,9 +142,10 @@ name.0
 name.first
 ```
 If you need a specific, fixed collection of related values where each item has a precise position or name, you should use a tuple:
-If you need a collection of values that must be unique or you need to be able to check whether a specific item is in there extremely quickly, you should use a set:
-If you need a collection of values that can contain duplicates, or the order of your items matters, you should use an array:
-Dictionaries are collections of values just like arrays, but rather than storing things with an integer position you can access them using anything you want.
+If you need a collection of values that must be unique or you need to be able to check whether a specific item is in there extremely quickly, you should use a set.  
+If you need a collection of values that can contain duplicates, or the order of your items matters, you should use an array.  
+
+Dictionaries are collections of values just like arrays, but rather than storing things with an integer position you can access them using anything you want.  
 
 There is a big difference, however, in how Swift returns the values from a dictionary. When you access a value at an index of an array, you are simply given the value. When you access a value with a key in a dictionary, you are given an optional.
 Removing an item from a dictionary is quite simple; you do so by setting the value to nil. Because the values in dictionaries are returned as optionals, you don’t have to worry about nil causing any problems 
