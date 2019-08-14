@@ -51,6 +51,12 @@ Since these are compiled as separate modules, you can use access control to cont
 Anything you want to use as your main playground source should be marked as Public.
 A great example of things to put into the sources folder is helper code such as classes or extensions that are outside of the main playground.
 
+This is the example from WWDC2018 in the session "Making the most out of your playgrounds"
+
+
+It took me two days to understand how to put the MyView class into the sources folder. And this thanks to [StackOverflow as below][2]
+
+
 ### Adding other resources
 
 Playgrounds can also contain other resources.  
@@ -206,6 +212,7 @@ Here are the links represented in rendered form, Roses, Violets, and Fun are sho
 
 ### sources
 [1]: https://developer.apple.com/library/content/documentation/Xcode/Reference/xcode_markup_formatting_ref/index.html
+[2]:https://stackoverflow.com/questions/24339145/how-do-i-write-a-custom-init-for-a-uiview-subclass-in-swift
 [From Hacking with Swift: "How to create live playgrounds in Xcode"](https://www.hackingwithswift.com/example-code/uikit/how-to-create-live-playgrounds-in-xcode)  
 [Developing iOS 11 Apps with Swift by Stanford](https://itunes.apple.com/gb/course/developing-ios-11-apps-with-swift/id1309275316)  
 [Using JSON with Custom Types](https://developer.apple.com/documentation/foundation/archives_and_serialization/using_json_with_custom_types)    
