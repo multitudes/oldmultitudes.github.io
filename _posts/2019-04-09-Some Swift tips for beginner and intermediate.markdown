@@ -14,6 +14,7 @@ published: true
 </div>
 
 I just finished the 100 Days of Swift by Paul Hudson and needed a place to put down some notes for my learning and enjoyment :)
+This post is inspired from the 100 Days of Swift [days 1 to 12](https://www.hackingwithswift.com/100):
 
 
 
@@ -644,6 +645,7 @@ struct Progress {
 At first, classes seem very similar to structs but they introduce a new, important, and complex feature called inheritance and important differences
 
 The first difference between classes and structs is that classes never come with a memberwise initializer. This means if you have properties in your class, you must always create your own initializer.
+
 ``` swift
 
 // must have initializer!
@@ -750,7 +752,7 @@ func displayID(thing: Identifiable) {
 
 One protocol can inherit from another in a process known as protocol inheritance. Unlike with classes, you can inherit from multiple protocols at the same time before you add your own customizations on top
 
-```
+``` swift
 protocol Payable {
     func calculateWages() -> Int
 }
@@ -788,7 +790,7 @@ helloNewEmployee(employee: carl)
 ### Extensions
 Extensions allow you to add methods to existing types, to make them do things they weren’t originally designed to do.
 For example, we could add an extension to the Int type so that it has a squared() method that returns the current number multiplied by itself:
-```
+``` swift
 extension Int {
     func squared() -> Int {
         return self * self
@@ -800,7 +802,7 @@ let number = 9
 number.squared()
 ```
 Swift doesn’t let you add stored properties in extensions, so you must use computed properties instead. For example, we could add a new isEven computed property to integers that returns true if it holds an even number:
-```
+``` swift
 extension Int {
     var isEven: Bool {
         return self % 2 == 0
@@ -818,7 +820,7 @@ For example, here is an array and a set containing some names:
 
 Swift’s arrays and sets both conform to a protocol called Collection, so we can write an extension to that protocol to add a summarize() method to print the collection neatly
 
-```
+``` swift
 let pythons = ["Eric", "Graham", "John", "Michael", "Terry", "Terry"]
 let beatles = Set(["John", "Paul", "George", "Ringo"])
 
@@ -843,22 +845,26 @@ beatles.summarize()
 Protocol extensions can provide default implementations for our own protocol methods. This makes it easy for types to conform to a protocol, and allows a technique called “protocol-oriented programming” – crafting your code around protocols and protocol extensions.
 
 First, here’s a protocol called Identifiable that requires any conforming type to have an id property and an identify() method:
-```
+
+``` swift
 protocol Identifiable {
     var id: String { get set }
     func identify()
 }
 ```
 We could make every conforming type write their own identify() method, but protocol extensions allow us to provide a default:
-```
+
+``` swift
 extension Identifiable {
     func identify() {
         print("My ID is \(id).")
     }
 }
 ```
+
 Now when we create a type that conforms to Identifiable it gets identify() automatically:
-```
+
+``` swift
 struct User: Identifiable {
     var id: String
 }
@@ -960,7 +966,7 @@ Because of this, trying to read name.count is unsafe and Swift won’t allow it.
 #### Optional Binding
 with 'if let' ..
 
-```
+``` swift
 if let unwrapped = name {
     print("\(unwrapped.count) letters")
 } else {
@@ -970,7 +976,7 @@ if let unwrapped = name {
 #### guard let
 An alternative to if let is guard let, which also unwraps optionals. guard let will unwrap an optional for you, but if it finds nil inside it expects you to exit the function, loop, or condition you used it in
 However, the major difference between if let and guard let is that your unwrapped optional remains usable after the guard code.
-```
+``` swift
 func greet(_ name: String?) {
     guard let unwrapped = name else {
         print("You didn't provide a name!")
@@ -986,14 +992,16 @@ func greet(_ name: String?) {
 One way to unwrap an optional is through forced unwrapping. Use forced unwrapping when you know that an optional has a value and you want the computer to access that value directly. You do this by entering an ! after the optional name. If you force-unwrap an optional and it has a nil value, your program will crash.
 
 For example, if you have a string that contains a number, you can convert it to an Int like this:
-```
+
+``` swift
 let str = "5"
 let num = Int(str)
 ```
 That makes num an optional Int because you might have tried to convert a string like “Fish” rather than “5”.
 
 Even though Swift isn’t sure the conversion will work, you can see the code is safe so you can force unwrap the result by writing ! after Int(str), like this:
-```
+
+``` swift
 let num = Int(str)!
 ```
  But if you’re wrong – if str was something that couldn’t be converted to an integer – your code will crash.
@@ -1005,7 +1013,8 @@ rather than unwrap the optional every time you use it, you can declare it as an 
 You might be wondering when you would ever use these implicitly unwrapped optionals. A common use is when you write an app with a storyboard. When you want to connect variables in your code to objects in the storyboard, you make them implicitly unwrapped optionals. You’ll see these come up in Chapter 10 while you’re creating the Birthday Tracker app. These variables need to be optional (because the storyboard requires it), but they will always have a value (since they are connected to the storyboard, the storyboard will always give them a value before you use them).
 Other than in this special case, you shouldn’t be using implicitly unwrapped optionals very often. They aren’t as safe
 
-```
+``` swift
+
 let age: Int! = nil
 
 ```
@@ -1098,6 +1107,7 @@ That converts a string to an integer, but because you might try to pass any stri
 This is a failable initializer: an initializer that might work or might not. You can write these in your own structs and classes by using init?() rather than init(), and return nil if something goes wrong. The return value will then be an optional of your type, for you to unwrap however you want.
 
 ### Typecasting
+
 ``` swift
 class Animal { }
 class Fish: Animal { }
@@ -1109,12 +1119,13 @@ class Dog: Animal {
 }
 
 let pets = [Fish(), Dog(), Fish(), Dog()]
-
 ```
+
 Swift can see both Fish and Dog inherit from the Animal class, so it uses type inference to make pets an array of Animal.
 If we want to loop over the pets array and ask all the dogs to bark, we need to perform a typecast: Swift will check to see whether each pet is a Dog object, and if it is we can then call makeNoise().
 
 This uses a new keyword called as?, which returns an optional: it will be nil if the typecast failed, or a converted type otherwise.
+
 ``` swift
 for pet in pets {
     if let dog = pet as? Dog {
@@ -1153,9 +1164,7 @@ var last = Double.pi.ulp
 [apple documentation](https://developer.apple.com/documentation/swift/optional)  
 [Swift Playground and Markdown](http://www.thomashanning.com/xcode-markup-for-playgrounds/)  
 
-This post is inspired from the 100 Days of Swift [days 1 to 12](https://www.hackingwithswift.com/100):
-
-> “the secret to getting ahead is getting started.” Mark Twain
+> “The secret to getting ahead is getting started.” Mark Twain
 
 
 - [Day 1](https://www.hackingwithswift.com/100/1) – variables, simple data types, and string interpolation
