@@ -1135,17 +1135,17 @@ This post is inspired from the 100 Days of Swift [days 1 to 12](https://www.hack
 
 
 - [Day 1](https://www.hackingwithswift.com/100/1) – variables, simple data types, and string interpolation
-- Day 2 – arrays, dictionaries, sets, and enums
-- Day 3 – operators and conditions
-- Day 4 – loops, loops, and more loops
-- Day 5 – functions, parameters, and errors
-- Day 6 – closures part one
-- Day 7 – closures part two
-- Day 8 – structs, properties, and methods
-- Day 9 – access control, static properties, and laziness
-- Day 10 – classes and inheritance
-- Day 11 – protocols, extensions, and protocol extensions
-- Day 12 – optionals, unwrapping, and typecasting
+- [Day 2](https://www.hackingwithswift.com/100/2) – arrays, dictionaries, sets, and enums
+- [Day 3](https://www.hackingwithswift.com/100/3) – operators and conditions
+- [Day 4](https://www.hackingwithswift.com/100/4) – loops, loops, and more loops
+- [Day 5](https://www.hackingwithswift.com/100/5) – functions, parameters, and errors
+- [Day 6](https://www.hackingwithswift.com/100/6) – closures part one
+- [Day 7](https://www.hackingwithswift.com/100/7) – closures part two
+- [Day 8](https://www.hackingwithswift.com/100/8) – structs, properties, and methods
+- [Day 9](https://www.hackingwithswift.com/100/9)– access control, static properties, and laziness
+- [Day 10](https://www.hackingwithswift.com/100/10) – classes and inheritance
+- [Day 11](https://www.hackingwithswift.com/100/11) – protocols, extensions, and protocol extensions
+- [Day 12](https://www.hackingwithswift.com/100/12) – optionals, unwrapping, and typecasting
 
 <hr>
 
