@@ -1131,9 +1131,10 @@ var last = Double.pi.ulp
 
 This post is inspired from the 100 Days of Swift [days 1 to 12](https://www.hackingwithswift.com/100):
 
-- [Day 1](https://www.hackingwithswift.com/100/1) – variables, simple data types, and string interpolation
 > “the secret to getting ahead is getting started.” Mark Twain
 
+
+- [Day 1](https://www.hackingwithswift.com/100/1) – variables, simple data types, and string interpolation
 - Day 2 – arrays, dictionaries, sets, and enums
 - Day 3 – operators and conditions
 - Day 4 – loops, loops, and more loops
