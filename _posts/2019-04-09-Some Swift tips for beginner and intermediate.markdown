@@ -22,20 +22,6 @@ This post is inspired from the 100 Days of Swift [days 1 to 12](https://www.hack
     <img src="/assets/img/AR-QL-Pictures/Screenshot5.jpg">
 </a> -->
 
-### About the Apple SDK
-
-SDK is the iOS Software Development Kit.  
-The iOS SDK is a suite of prebuilt programming libraries that help you write apps quickly and in a way that Apple expects. A programming library is a collection of related software modules that you can use in your programs.  
-Xcode is a code editor known as an integrated development environment (IDE).    
-
-### Settings
- 
-Some of the things Xcode will ask you:  
-* "Organization Identifier" is a unique identifier usually made up of your personal web site domain name in reverse, can be anything as long as it is unique 
-* The "Organization Name", here you can invent your own company name, use your real name, or choose anything else you want.   
-* The "Bundle Identifier" combines the names you entered in the Organization Identifier and the Product Name fields, and it is created automatically.  
-
-
 ### Open the Swift playgrounds
 
 Swift is what’s known as a type-safe language, which means that every variable must be of one specific type  
@@ -43,14 +29,22 @@ Swift is what’s known as a type-safe language, which means that every variable
 Open Playgrounds to practice your code. Open Xcode and do `shift` +`alt`+ `command`+ `N`  to create a new playground.
 
 `command` + `shift` `Y` shows the console window below.  
+`command` + `shift` `J` shows the sidebar.  
 
-PS. Check playgrounds for ipad too!
+Add a new shortcut to render your mark up in > Preferences > Key Bindings and add a custom one in `Show Rendered Markup` if not already there.   
+
+One reason Playground might eat up CPU usage is because it will auto build and run your code every few seconds / keystroke. To avoid this `turn off auto run`  by selecting `Manually Run` with a long press of the mouse on the play button above the console. 
+
+
 
 Put this line on the top of the playground
 ```
 import Foundation  
 ```
-> The Foundation framework provides a base layer of functionality for apps and frameworks, including data storage and persistence, text processing, date and time calculations, sorting and filtering, and networking
+
+The Foundation framework provides a base layer of functionality for apps and frameworks, including data storage and persistence, text processing, date and time calculations, sorting and filtering, and networking.  
+
+
 
 ### Casting
 
@@ -91,7 +85,7 @@ lines
 
 Swift also has a feature called string interpolation – the ability to place variables inside your strings to make them more useful.
 
-You can place any type of variable inside your string – all you have to do is write a backslash, \, followed by your variable name in parentheses. For example:
+You can place any type of variable inside your string – all you have to do is write a backslash `\`  followed by your variable name in parentheses. For example:
 
 ``` swift
 var score = 85
@@ -1161,9 +1155,7 @@ var last = Double.pi.ulp
 
 ### Sources:
 
-[Playground tips](https://fluffy.es/xcode-playground-tips/)  
-[apple documentation](https://developer.apple.com/documentation/swift/optional)  
-[Swift Playground and Markdown](http://www.thomashanning.com/xcode-markup-for-playgrounds/)  
+[Apple Documentation - Optionals](https://developer.apple.com/documentation/swift/optional)  
 
 > “The secret to getting ahead is getting started.” Mark Twain
 
@@ -1184,3 +1176,7 @@ var last = Double.pi.ulp
 <hr>
 
 [^1]: What?
+
+
+
+PS. Check playgrounds for ipad too!
