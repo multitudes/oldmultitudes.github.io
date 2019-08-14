@@ -476,15 +476,18 @@ travel {
 ```
 or
 ``` swift
+
 func travel(action: (String, Int) -> String) {
     print("I'm getting ready to go.")
     let description = action("London", 60)
     print(description)
     print("I arrived!")
 }
-``` swift
-We’re going to call that using a trailing closure and shorthand closure parameter names. Because this accepts two parameters, we’ll be getting both $0 and $1:
 ```
+
+We’re going to call that using a trailing closure and shorthand closure parameter names. Because this accepts two parameters, we’ll be getting both $0 and $1:
+
+
 ``` swift
 travel {
     "I'm going to \($0) at \($1) miles per hour."
@@ -1130,17 +1133,19 @@ This post is inspired from the 100 Days of Swift [days 1 to 12](https://www.hack
 
 - [Day 1](https://www.hackingwithswift.com/100/1) – variables, simple data types, and string interpolation
 > “the secret to getting ahead is getting started.” Mark Twain
+
 - Day 2 – arrays, dictionaries, sets, and enums
 - Day 3 – operators and conditions
 - Day 4 – loops, loops, and more loops
-Day 5 – functions, parameters, and errors
-Day 6 – closures part one
-Day 7 – closures part two
-Day 8 – structs, properties, and methods
-Day 9 – access control, static properties, and laziness
-Day 10 – classes and inheritance
-Day 11 – protocols, extensions, and protocol extensions
-Day 12 – optionals, unwrapping, and typecasting
+- Day 5 – functions, parameters, and errors
+- Day 6 – closures part one
+- Day 7 – closures part two
+- Day 8 – structs, properties, and methods
+- Day 9 – access control, static properties, and laziness
+- Day 10 – classes and inheritance
+- Day 11 – protocols, extensions, and protocol extensions
+- Day 12 – optionals, unwrapping, and typecasting
+
 <hr>
 
 [^1]: What?
