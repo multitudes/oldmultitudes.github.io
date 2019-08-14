@@ -13,7 +13,7 @@ published: true
 <br><cite></cite>
 </div>
 
-Currently doing the 100 Days of Swift by Paul Hudson and needed a place to put down some notes for my learning and enjoyment :)
+I just finished the 100 Days of Swift by Paul Hudson and needed a place to put down some notes for my learning and enjoyment :)
 
 
 
@@ -78,8 +78,8 @@ lines
 Swift is very particular about how you write those quote marks: the opening and closing triple must be on their own line, but that opening and closing line breaks won’t be included in your final string.
 
 If you only want multi-line strings to format your code neatly, and you don’t want those line breaks to actually be in your string, end each line with a \, like this:
-``` swift
 
+``` swift
 var str2 = """
 This goes \
 over multiple \
@@ -91,6 +91,7 @@ lines
 Swift also has a feature called string interpolation – the ability to place variables inside your strings to make them more useful.
 
 You can place any type of variable inside your string – all you have to do is write a backslash, \, followed by your variable name in parentheses. For example:
+
 ``` swift
 var score = 85
 var str = "Your score was \(score)"
@@ -103,6 +104,7 @@ The let keyword creates constants, which are values that can be set once and nev
 
 ### Type annotations
 If you want you can be explicit about the type of your data rather than relying on Swift’s type inference, like this:
+
 ``` swift
 let album: String = "Reputation"
 let year: Int = 1989
@@ -115,10 +117,12 @@ Sets are collections of values just like arrays, except they have two difference
 Items aren’t stored in any order; they are stored in what is effectively a random order.  
 No item can appear twice in a set; all items must be unique.  
 You can create sets directly from arrays, like this:
+
 ``` swift
 let colors = Set(["red", "green", "blue"])
 ```
 If you try to insert a duplicate item into a set, the duplicates get ignored. For example:
+
 ``` swift
 let colors2 = Set(["red", "green", "blue", "red", "blue"])
 ```
@@ -128,6 +132,7 @@ You can’t add or remove items from a tuple; they are fixed in size.
 You can’t change the type of items in a tuple; they always have the same types they were created with.
 You can access items in a tuple using numerical positions or by naming them
 Tuples are created by placing multiple items into parentheses, like this:
+
 ``` swift
 var name = (first: "Taylor", last: "Swift")
 // You then access items using numerical positions starting from 0:
@@ -146,6 +151,7 @@ Removing an item from a dictionary is quite simple; you do so by setting the val
 When using type annotations, dictionaries are written in brackets with a colon between your identifier and value types. For example, [String: Double] and [String: String].
 
 #### Dictionary default values
+
 ``` swift
 let favoriteIceCream = [
     "Paul": "Chocolate",
@@ -155,19 +161,22 @@ favoriteIceCream["Charlotte", default: "Unknown"]
 ```
 #### Creating empty collections
 Arrays, sets, and dictionaries are called collections
-```
+
+``` swift
 var teams = [String: String]()
 
 var results = [Int]()
 ```
 The exception is creating an empty set, which is done differently:
-```
+
+``` swift
 var words = Set<String>()
 var numbers = Set<Int>()
 ```
 Swift has special syntax only for dictionaries and arrays; other types must use angle bracket syntax like sets.
 
 ### Enumerations
+
 ``` swift
 enum Result {
     case success
@@ -175,13 +184,16 @@ enum Result {
 }
 ```
 And now when we use it we must choose one of those two values:
+
 ``` swift
 let result4 = Result.failure
 ```
+
 #### Enum associated values
 
 Enum raw values
 If you want, you can assign one or more cases a specific value, and Swift will generate the rest. It’s not very natural for us to think of Earth as the second planet, so you could write this:
+
 ``` swift
 enum Planet: Int {
     case mercury = 1
@@ -190,13 +202,17 @@ enum Planet: Int {
     case mars
 }
 ```
+
 Now Swift will assign 1 to mercury and count upwards from there, meaning that earth is now the third planet.
 
 ### Operator overloading
+
 For example, + sums integers But + also joins strings and even arrays
 
 ### The ternary operator
+
 Swift has a rarely used operator called the ternary operator.
+
 ``` swift
 let firstCard = 11
 let secondCard = 10
@@ -204,6 +220,7 @@ print(firstCard == secondCard ? "Cards are the same" : "Cards are different")
 ```
 
 ### Switch statements
+
 Swift gives us two ways of making ranges: the ..< and ... operators. The half-open range operator, ..<, creates ranges up to but excluding the final value, and the closed range operator, ..., creates ranges up to and including the final value.
 the default case must be there to ensure all possible values are covered.
 
@@ -220,15 +237,18 @@ Believe it or not, function calls used to be really slow. Steve Johnson, the aut
 Swift lets us provide two names for each parameter: one to be used externally when calling the function, and one to be used internally inside the function. This is as simple as writing two names, separated by a space.
 
 To demonstrate this, here’s a function that uses two names for its string parameter:
+
 ``` swift
 func sayHello(to name: String) {
     print("Hello, \(name)!")
 }
 ```
 The parameter is called to name, which means externally it’s called to, but internally it’s called name. This gives variables a sensible name inside the function, but means calling the function reads naturally:
+
 ``` swift
 sayHello(to: "Taylor")
 ```
+
 You might have noticed that we don’t actually send any parameter names when we call print() – we say print("Hello") rather than print(message: "Hello").
 
 You can get this same behavior in your own functions by using an underscore, `_`  
@@ -251,6 +271,7 @@ square(numbers: 1, 2, 3, 4, 5)
 Sometimes functions fail because they have bad input, or because something went wrong internally. Swift lets us throw errors from functions by marking them as throws before their return type, then using the throw keyword when something goes wrong.
 
 First we need to define an enum that describes the errors we can throw. These must always be based on Swift’s existing Error type. We’re going to write a function that checks whether a password is good, so we’ll throw an error if the user tries an obvious password:
+
 ``` swift
 enum PasswordError: Error {
     case obvious
@@ -259,6 +280,7 @@ enum PasswordError: Error {
 Now we’ll write a checkPassword() function that will throw that error if something goes wrong. This means using the throws keyword before the function’s return value, then using throw PasswordError.obvious if their password is “password”.
 
 Here’s that in Swift:
+
 ``` swift
 func checkPassword(_ password: String) throws -> Bool {
     if password == "password" {
@@ -988,10 +1010,10 @@ let age: Int! = nil
 
 ```
 Because they behave as if they were already unwrapped, you don’t need if let or guard let to use implicitly unwrapped optionals. However, if you try to use them and they have no value – if they are nil – your code crashes.
-#### nil coalescing
+#### Nil coalescing
 When the optional has a value, the value will be used as usual, but when the optional is nil, the nil coalescing operator will use the default value instead.
 ex
-```
+``` swift
 func username(for id: Int) -> String? {
     if id == 1 {
         return "Taylor Swift"
@@ -999,9 +1021,11 @@ func username(for id: Int) -> String? {
         return nil
     }
 }
+```
 
 If we call that with ID 15 we’ll get back nil because the user isn’t recognized, but with nil coalescing we can provide a default value of “Anonymous” like this:
 
+``` swift
 let user = username(for: 15) ?? "Anonymous"
 
 ```
@@ -1012,7 +1036,7 @@ Swift provides us with a shortcut when using optionals: if you want to access so
 
 When that code is run, Swift will check whether b has a value, and if it’s nil the rest of the line will be ignored – Swift will return nil immediately. But if it has a value, it will be unwrapped and execution will continue.
 
-```
+``` swift
 let names = ["John", "Paul", "George", "Ringo"]
 let beatle = names.first?.uppercased()
 ```
@@ -1021,7 +1045,7 @@ That question mark is optional chaining – if first returns nil then Swift won�
 
 ### Optional try
 Back when we were talking about throwing functions, we looked at this code:
-```
+``` swift
 enum PasswordError: Error {
     case obvious
 }
@@ -1048,7 +1072,7 @@ There are two alternatives to try, both of which will make more sense now that y
 The first is try?, and changes throwing functions into functions that return an optional. If the function throws an error you’ll be sent nil as the result, otherwise you’ll get the return value wrapped as an optional.
 
 Using try? we can run checkPassword() like this:
-```
+``` swift
 if let result = try? checkPassword("password") {
     print("Result was \(result)")
 } else {
@@ -1058,14 +1082,14 @@ if let result = try? checkPassword("password") {
 The other alternative is try!, which you can use when you know for sure that the function will not fail. If the function does throw an error, your code will crash.
 
 Using try! we can rewrite the code to this:
-```
+``` swift
 try! checkPassword("sekrit")
 print("OK!")
 ```
 ### Failable initializers
 
 When talking about force unwrapping, I used this code:
-```
+``` swift
 let str = "5"
 let num = Int(str)
 ```
@@ -1074,7 +1098,7 @@ That converts a string to an integer, but because you might try to pass any stri
 This is a failable initializer: an initializer that might work or might not. You can write these in your own structs and classes by using init?() rather than init(), and return nil if something goes wrong. The return value will then be an optional of your type, for you to unwrap however you want.
 
 ### Typecasting
-```
+``` swift
 class Animal { }
 class Fish: Animal { }
 
@@ -1091,7 +1115,7 @@ Swift can see both Fish and Dog inherit from the Animal class, so it uses type i
 If we want to loop over the pets array and ask all the dogs to bark, we need to perform a typecast: Swift will check to see whether each pet is a Dog object, and if it is we can then call makeNoise().
 
 This uses a new keyword called as?, which returns an optional: it will be nil if the typecast failed, or a converted type otherwise.
-```
+``` swift
 for pet in pets {
     if let dog = pet as? Dog {
         dog.makeNoise()
@@ -1125,9 +1149,9 @@ var last = Double.pi.ulp
 
 ### Sources:
 
-[Playground tips](https://fluffy.es/xcode-playground-tips/)
-[apple documentation](https://developer.apple.com/documentation/swift/optional)
-[Swift Playground and Markdown](http://www.thomashanning.com/xcode-markup-for-playgrounds/)
+[Playground tips](https://fluffy.es/xcode-playground-tips/)  
+[apple documentation](https://developer.apple.com/documentation/swift/optional)  
+[Swift Playground and Markdown](http://www.thomashanning.com/xcode-markup-for-playgrounds/)  
 
 This post is inspired from the 100 Days of Swift [days 1 to 12](https://www.hackingwithswift.com/100):
 
