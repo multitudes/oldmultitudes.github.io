@@ -9,12 +9,29 @@ published: true
 
 
 <div class="message">
-"iOS and macOS programs have long been written in a language called Objective-C. In the summer of 2014, Apple introduced a new and exciting language for writing apps called Swift" 
-<br><cite></cite>
+
+“The secret to getting ahead is getting started.” 
+
+<br><cite>Mark Twain</cite>
 </div>
 
 I just finished the 100 Days of Swift by Paul Hudson and needed a place to put down some notes for my learning and enjoyment :)
-This post is inspired from the 100 Days of Swift - [Days 1 to 12](https://www.hackingwithswift.com/100):
+This post is inspired from the first 12 days of the 100 Days of Swift by Paul Hudson, you can catch up here:
+
+
+
+- [Day 1](https://www.hackingwithswift.com/100/1) – variables, simple data types, and string interpolation
+- [Day 2](https://www.hackingwithswift.com/100/2) – arrays, dictionaries, sets, and enums
+- [Day 3](https://www.hackingwithswift.com/100/3) – operators and conditions
+- [Day 4](https://www.hackingwithswift.com/100/4) – loops, loops, and more loops
+- [Day 5](https://www.hackingwithswift.com/100/5) – functions, parameters, and errors
+- [Day 6](https://www.hackingwithswift.com/100/6) – closures part one
+- [Day 7](https://www.hackingwithswift.com/100/7) – closures part two
+- [Day 8](https://www.hackingwithswift.com/100/8) – structs, properties, and methods
+- [Day 9](https://www.hackingwithswift.com/100/9)– access control, static properties, and laziness
+- [Day 10](https://www.hackingwithswift.com/100/10) – classes and inheritance
+- [Day 11](https://www.hackingwithswift.com/100/11) – protocols, extensions, and protocol extensions
+- [Day 12](https://www.hackingwithswift.com/100/12) – optionals, unwrapping, and typecasting
 
 
 
@@ -61,8 +78,9 @@ In Swift, the spaces around an operator are important, and both variables need t
 
 ### Multi-line strings
 
-/* Standard Swift strings use double quotes, but you can’t include line breaks in there.
+Standard Swift strings use double quotes, but you can’t include line breaks in there.
 If you want multi-line strings you need slightly different syntax: start and end with three double quote marks, like this: 
+
 ``` swift
 var str1 = """
 This goes
@@ -1156,26 +1174,10 @@ var last = Double.pi.ulp
 ### Sources:
 
 [Apple Documentation - Optionals](https://developer.apple.com/documentation/swift/optional)  
+[100 Days of Swift by Paul Hudson](https://www.hackingwithswift.com/100)
 
-> “The secret to getting ahead is getting started.” Mark Twain
-
-
-- [Day 1](https://www.hackingwithswift.com/100/1) – variables, simple data types, and string interpolation
-- [Day 2](https://www.hackingwithswift.com/100/2) – arrays, dictionaries, sets, and enums
-- [Day 3](https://www.hackingwithswift.com/100/3) – operators and conditions
-- [Day 4](https://www.hackingwithswift.com/100/4) – loops, loops, and more loops
-- [Day 5](https://www.hackingwithswift.com/100/5) – functions, parameters, and errors
-- [Day 6](https://www.hackingwithswift.com/100/6) – closures part one
-- [Day 7](https://www.hackingwithswift.com/100/7) – closures part two
-- [Day 8](https://www.hackingwithswift.com/100/8) – structs, properties, and methods
-- [Day 9](https://www.hackingwithswift.com/100/9)– access control, static properties, and laziness
-- [Day 10](https://www.hackingwithswift.com/100/10) – classes and inheritance
-- [Day 11](https://www.hackingwithswift.com/100/11) – protocols, extensions, and protocol extensions
-- [Day 12](https://www.hackingwithswift.com/100/12) – optionals, unwrapping, and typecasting
 
 <hr>
-
-[^1]: What?
 
 
 

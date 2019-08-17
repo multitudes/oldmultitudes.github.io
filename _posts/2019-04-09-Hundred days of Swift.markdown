@@ -1317,10 +1317,152 @@ center.add(request)
 >Henry Petroski, a professor of engineering at Duke University in the US, said “as engineers, we’re going to be in a position to change the world, not just study it.” 
 
 
-
+## PROJECT 22 - 
 #### [Day 75](https://www.hackingwithswift.com/100/75)
+
+> As Phyllis Schlafly said, “location is the key to most businesses, and the entrepreneurs typically build their reputation at a particular spot.”
+
+Apple introduced iBeacon technology with iOS 7, already a long time ago!
+ I recommend you install the app "Locate Beacon" on your iPad or iPhone, because that comes with an iBeacon transmitter built in, making it perfect for testing. 
+Need an iOS device that's compatible with iBeacons, which means iPhone 5 or later, 3rd generation iPad or later. the iOS Simulator won't work.  
+
+You're creating an app that needs to be woken up when the user reaches a location. You need access even when the app isn't running. It is a privacy concern.
+
+Apple flags it up in three ways:
+
+- If you request Always access, users will still get the chance to choose When In Use.   
+- If they choose Always, iOS will automatically ask them again after a few days to confirm they still want to grant Always access.  
+- When your app is using location data in the background the iOS UI will update to reflect that – users will know it’s happening.  
+- Users can, at any point, go into the settings app and change from Always down to When In Use.  
+
+This requires a change to your apps Info.plist file.  And then you will need:  
+
+
+``` swift
+import CoreLocation
+// This is the Core Location class that lets us configure how we want to be notified about location, and will also deliver location updates to us.
+var locationManager: CLLocationManager?
+
+//create the object , then set ourselves as its delegate (easy, but we need to conform to the protocol), then finally we need to request authorization
+class ViewController: UIViewController, CLLocationManagerDelegate {
+override func viewDidLoad() {
+    super.viewDidLoad()
+
+    locationManager = CLLocationManager()
+    locationManager?.delegate = self
+    locationManager?.requestAlwaysAuthorization()
+
+}
+```
+
+Requesting location authorization is a non-blocking call, When the user has finally made their mind, you'll get told their result because we set ourselves as the delegate for our CLLocationManager object. The method that will be called is this one:  
+``` swift
+func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
+    if status == .authorizedAlways {
+        if CLLocationManager.isMonitoringAvailable(for: CLBeaconRegion.self) {
+            if CLLocationManager.isRangingAvailable() {
+                // do stuff
+            }
+        }
+    }
+}
+```
+we use a new class called `CLBeaconRegion`, which is used to identify a beacon uniquely. Second, we give that to our `CLLocationManager` object by calling its `startMonitoring(for:)` and `startRangingBeacons(in:)` methods.
+
+`iBeacons` are identified using three pieces of information: a `universally unique identifier` : `UUID`, plus a major number and a minor number. The first number is a long hexadecimal string that you can create by running the `uuidgen` in your Mac's terminal. The major number is used to subdivide within the UUID. So, if you have 10,000 stores in your supermarket chain, you would use the same UUID for them all but give each one a different major number. That major number must be between 1 and 65535, The minor number can (if you wish) be used to subdivide within the major number
+
+``` swift
+func startScanning() {
+    let uuid = UUID(uuidString: "5A4BCFCE-174E-4BAC-A814-092E77F6B7E5")!
+    let beaconRegion = CLBeaconRegion(proximityUUID: uuid, major: 123, minor: 456, identifier: "MyBeacon")
+
+    locationManager?.startMonitoring(for: beaconRegion)
+    locationManager?.startRangingBeacons(in: beaconRegion)
+}
+// and this updating us on the results
+func update(distance: CLProximity) {
+    UIView.animate(withDuration: 1) {
+        switch distance {
+            case .unknown:
+            case .far:
+            case .near:
+            case .immediate:
+            @unknown default:
+            }
+}
+}
+// and here is the last piece of code needed
+func locationManager(_ manager: CLLocationManager, didRangeBeacons beacons: [CLBeacon], in region: CLBeaconRegion) {
+    if let beacon = beacons.first {
+        update(distance: beacon.proximity)
+    } else {
+        update(distance: .unknown)
+        }
+}
+```
+
+
 #### [Day 76](https://www.hackingwithswift.com/100/76)
+> Mo Farah – multiple-time British Olympic gold medallist – said “if you dream and have the ambition and want to work hard, then you can achieve.” 
+
+[Wrap up](https://www.hackingwithswift.com/review/hws/project-22-detect-a-beacon) 
+
+## PROJECT 23 - Swifty Ninja
 #### [Day 77](https://www.hackingwithswift.com/100/77)
+> Winston Churchill once said, “success is not final, failure is not fatal: it is the courage to continue that counts.”
+
+Drawing a shape in SpriteKit is easy thanks to a special node type called `SKShapeNode`. This lets you define any kind of shape you can draw, along with line width, stroke color and more, and it will render it to the screen.
+
+We're going to keep an array of the user's swipe points so that we can draw a shape resembling their slicing. To make this work, we're going to need four new methods, two of which you've met already. They are: touchesBegan(), touchesMoved(), touchesEnded() and redrawActiveSlice().  
+we can store swipe points:  
+
+``` swift
+var activeSlicePoints = [CGPoint]()
+
+override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
+    guard let touch = touches.first else { return }
+    let location = touch.location(in: self)
+    activeSlicePoints.append(location)
+    redrawActiveSlice()
+}
+
+override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
+    activeSliceBG.run(SKAction.fadeOut(withDuration: 0.25))
+    activeSliceFG.run(SKAction.fadeOut(withDuration: 0.25))
+}
+```
+
+This is how we draw keeping 12 points in the array with a Bezier path!
+
+``` swift
+func redrawActiveSlice() {
+// If we have fewer than two points in our array, we don't have enough data to draw a line so it needs to clear the shapes and exit the method.
+if activeSlicePoints.count < 2 {
+    activeSliceBG.path = nil
+    activeSliceFG.path = nil
+return
+}
+
+// If we have more than 12 slice points in our array, we need to remove the oldest ones until we have at most 12
+if activeSlicePoints.count > 12 {
+    activeSlicePoints.removeFirst(activeSlicePoints.count - 12)
+}
+
+// It needs to start its line at the position of the first swipe point, then go through each of the others drawing lines to each point.
+let path = UIBezierPath()
+    path.move(to: activeSlicePoints[0])
+
+for i in 1 ..< activeSlicePoints.count {
+    path.addLine(to: activeSlicePoints[i])
+}
+
+// update the slice shape paths so they get drawn using their designs – i.e., line width and color.
+activeSliceBG.path = path.cgPath
+activeSliceFG.path = path.cgPath
+}
+```
+
+ 
 #### [Day 78](https://www.hackingwithswift.com/100/78)
 #### [Day 79](https://www.hackingwithswift.com/100/79)
 #### [Day 80](https://www.hackingwithswift.com/100/80)
