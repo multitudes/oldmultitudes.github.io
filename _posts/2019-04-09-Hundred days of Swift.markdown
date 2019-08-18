@@ -1627,6 +1627,89 @@ var peerID = MCPeerID(displayName: UIDevice.current.name)
 var mcSession: MCSession?
 var mcAdvertiserAssistant: MCAdvertiserAssistant?
 ```
+Depending on what users select in our alert controller, we need to call one of two methods: `startHosting()` or `joinSession()`.
+All multipeer services on iOS must declare a service type, which is a 15-digit string that uniquely identify your service.   
+Apple's example is, "a text chat app made by ABC company could use the service type abc-txtchat"; for this project I'll be using hws-project25.
+
+This service type is used by both `MCAdvertiserAssistant` and `MCBrowserViewController` to make sure your users only see other users of the same app. They both also want a reference to your `MCSession` instance so they can take care of connections for you.
+
+We're going to start by initializing our `MCSession` so that we're able to make connections. Put this code into `viewDidLoad()`:
+
+```swift
+mcSession = MCSession(peer: peerID, securityIdentity: nil, encryptionPreference: .required)
+mcSession?.delegate = self
+
+// and the funcs
+func startHosting(action: UIAlertAction) {
+guard let mcSession = mcSession else { return }
+mcAdvertiserAssistant = MCAdvertiserAssistant(serviceType: "hws-project25", discoveryInfo: nil, session: mcSession)
+mcAdvertiserAssistant?.start()
+}
+
+func joinSession(action: UIAlertAction) {
+guard let mcSession = mcSession else { return }
+let mcBrowser = MCBrowserViewController(serviceType: "hws-project25", session: mcSession)
+mcBrowser.delegate = self
+present(mcBrowser, animated: true)
+}
+```
+That's two protocols we need to conform to in order to fix our current compile failures. Easily done: add `MCSessionDelegate` and `MCBrowserViewControllerDelegate`  
+
+When a user connects or disconnects from our session, the method `session(_:peer:didChangeState:)` is called 
+
+``` swift
+func session(_ session: MCSession, peer peerID: MCPeerID, didChange state: MCSessionState) {
+    switch state {
+    case .connected:
+    print("Connected: \(peerID.displayName)")
+
+    case .connecting:
+    print("Connecting: \(peerID.displayName)")
+
+    case .notConnected:
+    print("Not Connected: \(peerID.displayName)")
+
+    @unknown default:
+    print("Unknown state received: \(peerID.displayName)")
+    }
+}
+// Here's the final protocol method, to catch data being received in our session:
+
+func session(_ session: MCSession, didReceive data: Data, fromPeer peerID: MCPeerID) {
+    DispatchQueue.main.async { [weak self] in    
+        if let image = UIImage(data: data) {
+            self?.images.insert(image, at: 0)
+            self?.collectionView.reloadData()
+            }
+    }
+}
+```
+
+The final piece of code: 
+
+``` swift
+// 1 Check if we have an active session we can use.
+guard let mcSession = mcSession else { return }
+
+// 2 Check if there are any peers to send to.
+if mcSession.connectedPeers.count > 0 {
+
+// 3 Convert the new image to a Data object
+    if let imageData = image.pngData() {
+
+// 4 Send it to all peers, ensuring it gets delivered.
+        do {
+            try mcSession.send(imageData, toPeers: mcSession.connectedPeers, with: .reliable)
+            } catch {
+
+// 5 Show an error message if there's a problem
+                let ac = UIAlertController(title: "Send error", message: error.localizedDescription, preferredStyle: .alert)
+                ac.addAction(UIAlertAction(title: "OK", style: .default))
+                present(ac, animated: true)
+                }
+            }
+}
+```
 
 #### [Day 84](https://www.hackingwithswift.com/100/84)
 #### [Day 85](https://www.hackingwithswift.com/100/85)
@@ -1887,7 +1970,6 @@ extension UIImage {
 > As Aisha Tyler said, “success is not the absence of failure; it's the persistence through failure.”
 
 
-PROJECT 27
 #### Sources:  
 
 [GitHub HackingWithSwift](https://github.com/twostraws/HackingWithSwift)  
