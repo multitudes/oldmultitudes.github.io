@@ -1554,6 +1554,56 @@ let attributedString = NSAttributedString(string: string, attributes: attributes
 
 ## MILESTONE: PROJECTS 22-24
 #### [Day 82](https://www.hackingwithswift.com/100/82)
+> Cicero once said that “to know the laws is not to memorize their letter but to grasp their full force and meaning.” 
+
+[Challenge](https://www.hackingwithswift.com/guide/9/3/challenge)
+
+1. Extend UIView so that it has a bounceOut(duration:) method that uses animation to scale its size down to 0.0001 over a specified number of seconds.
+2. Extend Int with a times() method that runs a closure as many times as the number is high. For example, 5.times { print("Hello!") } will print “Hello” five times.
+3. Extend Array so that it has a mutating remove(item:) method. If the item exists more than once, it should remove only the first instance it finds. Tip: you will need to add the Comparable constraint to make this work!
+
+``` swift
+import UIKit
+
+// extension 1: animate out a UIView
+extension UIView {
+func bounceOut(duration: TimeInterval) {
+    UIView.animate(withDuration: duration) { [unowned self] in
+        self.transform = CGAffineTransform(scaleX: 0.0001, y: 0.0001)
+        }
+    }
+}
+
+// extension 2: create a times() method for integers
+extension Int {
+func times(_ closure: () -> Void) {
+    guard self > 0 else { return }
+
+    for _ in 0 ..< self {
+        closure()
+        }
+    }
+}    
+
+// extension 3: remove an item from an array
+extension Array where Element: Comparable {
+mutating func remove(item: Element) {
+    if let location = self.firstIndex(of: item) {
+        self.remove(at: location)
+    }
+}
+}
+
+// some test code to make sure everything works
+let view = UIView()
+view.bounceOut(duration: 3)
+
+5.times { print("Hello") }
+
+var numbers = [1, 2, 3, 4, 5]
+numbers.remove(item: 3)
+```
+
 #### [Day 83](https://www.hackingwithswift.com/100/83)
 #### [Day 84](https://www.hackingwithswift.com/100/84)
 #### [Day 85](https://www.hackingwithswift.com/100/85)
