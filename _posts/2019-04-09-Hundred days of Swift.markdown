@@ -1716,7 +1716,7 @@ if mcSession.connectedPeers.count > 0 {
 #### [Day 84](https://www.hackingwithswift.com/100/84)
 > There are a number of well-known quotes from Steve Jobs, but if I had to pick one – my all-time favorite – it would be this: “it is in Apple’s DNA that technology alone is not enough – it’s technology married with liberal arts, married with the humanities, that yields us the results that make our heart sing.”  
 
-[[Challenge and Wrap-Up](https://www.hackingwithswift.com/review/hws/project-25-selfie-share)
+[Challenge and Wrap-Up](https://www.hackingwithswift.com/review/hws/project-25-selfie-share)
 
 ## Project 26 - Marble Maze
 #### [Day 85](https://www.hackingwithswift.com/100/85) 
@@ -1730,9 +1730,27 @@ We're going to be using the categoryBitMask, contactTestBitMask and collisionBit
 
 
 #### [Day 86](https://www.hackingwithswift.com/100/86)
-#### [Day 87](https://www.hackingwithswift.com/100/87)
+> Back when the original iPad launched Apple showed off one of those “Jony Ive in an infinitely white room” videos, where Jony had this to say: “it’s true: when something exceeds your ability to understand how it works, it sort of becomes magical – and that’s exactly what the iPad is.”  
 
-## Project 27 - custom drawing  
+All motion detection is done with an Apple framework called Core Motion, and most of the work is done by a class called CMMotionManager. Using it here won't require any special user permissions  
+
+```swift
+var motionManager: CMMotionManager!
+
+// Put this this into didMove(to:):
+
+motionManager = CMMotionManager()
+motionManager.startAccelerometerUpdates()
+```
+
+Special compiler instructions. `#if targetEnvironment(simulator)`, `#else` and `#endif`. 
+
+#### [Day 87](https://www.hackingwithswift.com/100/87)
+> Seth Godin – author and marketing genius – once said “surprise and delight and connection are remarkable.”
+
+[Wrap up and review](https://www.hackingwithswift.com/review/hws/project-26-marble-maze)
+
+## Project 27 - Custom Drawing  
 #### [Day 88](https://www.hackingwithswift.com/100/88)
 > As Michelangelo once said, “every block of stone has a statue inside it and it is the task of the sculptor to discover it.”
 
