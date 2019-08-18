@@ -1502,7 +1502,8 @@ func playSwooshSound() {
 
 [Wrap up and challenges](https://www.hackingwithswift.com/review/hws/project-23-swifty-ninja)
 
-## PROJECT 24 - 
+## PROJECT 24 - Swift Strings
+
 #### [Day 80](https://www.hackingwithswift.com/100/80)
 > Steve Jobs famously said “this is what customers pay us for: to sweat all these details so it's easy and pleasant for them to use our computers,” and strings are a good example of one of those details – they look like they ought to be simple, but if you want to get them right you need to spend some time working at it.  
 
@@ -1530,8 +1531,28 @@ One last useful method of strings is `contains()`
 
 We want to be able to add formatting like bold or italics, select from different fonts, or add some color, and for those jobs we have a new class called `NSAttributedString`. Attributed strings are made up of two parts: a plain Swift string, plus a dictionary containing a series of attributes  
 
+``` swift
+let string = "This is a test string"
+let attributes: [NSAttributedString.Key: Any] = [
+    .foregroundColor: UIColor.white,
+    .backgroundColor: UIColor.red,
+    .font: UIFont.boldSystemFont(ofSize: 36)
+]
+
+let attributedString = NSAttributedString(string: string, attributes: attributes)
+
+```
+`UILabel`, `UITextField`, `UITextView`, `UIButton`, `UINavigationBar`, and more all support attributed strings just as well as regular strings.
+
+
 
 #### [Day 81](https://www.hackingwithswift.com/100/81)
+> remember this quote from Frank Chimero: “people ignore design that ignores people.”
+
+
+[Wrap up and challenges](https://www.hackingwithswift.com/review/hws/project-24-swift-strings)
+
+## MILESTONE: PROJECTS 22-24
 #### [Day 82](https://www.hackingwithswift.com/100/82)
 #### [Day 83](https://www.hackingwithswift.com/100/83)
 #### [Day 84](https://www.hackingwithswift.com/100/84)
