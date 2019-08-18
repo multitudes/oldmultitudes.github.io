@@ -1556,11 +1556,13 @@ let attributedString = NSAttributedString(string: string, attributes: attributes
 #### [Day 82](https://www.hackingwithswift.com/100/82)
 > Cicero once said that “to know the laws is not to memorize their letter but to grasp their full force and meaning.” 
 
-[Challenge](https://www.hackingwithswift.com/guide/9/3/challenge)
+#### [Challenge](https://www.hackingwithswift.com/guide/9/3/challenge)
 
 1. Extend UIView so that it has a bounceOut(duration:) method that uses animation to scale its size down to 0.0001 over a specified number of seconds.
 2. Extend Int with a times() method that runs a closure as many times as the number is high. For example, 5.times { print("Hello!") } will print “Hello” five times.
 3. Extend Array so that it has a mutating remove(item:) method. If the item exists more than once, it should remove only the first instance it finds. Tip: you will need to add the Comparable constraint to make this work!
+
+#### Solution
 
 ``` swift
 import UIKit
@@ -1615,6 +1617,16 @@ numbers.remove(item: 3)
  2. MCPeerID identifies each user uniquely in a session.
  3. MCAdvertiserAssistant is used when creating a session, telling others that we exist and handling invitations.
  4. MCBrowserViewController is used when looking for sessions, showing users who is nearby and letting them join.
+
+``` swift
+import MultipeerConnectivity
+
+// Now add these to your view controller:
+
+var peerID = MCPeerID(displayName: UIDevice.current.name)
+var mcSession: MCSession?
+var mcAdvertiserAssistant: MCAdvertiserAssistant?
+```
 
 #### [Day 84](https://www.hackingwithswift.com/100/84)
 #### [Day 85](https://www.hackingwithswift.com/100/85)
