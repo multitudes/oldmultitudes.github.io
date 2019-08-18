@@ -1502,7 +1502,35 @@ func playSwooshSound() {
 
 [Wrap up and challenges](https://www.hackingwithswift.com/review/hws/project-23-swifty-ninja)
 
+## PROJECT 24 - 
 #### [Day 80](https://www.hackingwithswift.com/100/80)
+> Steve Jobs famously said “this is what customers pay us for: to sweat all these details so it's easy and pleasant for them to use our computers,” and strings are a good example of one of those details – they look like they ought to be simple, but if you want to get them right you need to spend some time working at it.  
+
+There’s more to strings than just being a sequence of characters. In fact, Swift’s string handling is the most advanced I’ve seen in any language, and as a result if you play by Swift’s rules you’ll find your apps work great in every conceivable language – something that most developers for other languages need to work hard at.
+`NSAttributedString`  Supported for attributed strings is baked into most of UIKit, so you can use it with UILabel, UITextView, and more.
+
+``` swift
+let name = "Taylor"
+
+for letter in name {
+    print("Give me a \(letter)!"
+}
+// this wont work
+print(name[3])
+```
+Letters in a string aren’t just a series of alphabetical characters – they can contain accents such as á, é, í, ó, or ú, they can contain combining marks that generate wholly new characters by building up symbols, or they can even be emoji.  
+
+```swift
+let letter = name[name.index(name.startIndex, offsetBy: 3)]
+```
+Also `reading name.count` isn’t a quick operation: Swift literally needs to go over every letter counting up however many there are, before returning that. As a result, it’s always better to use someString.isEmpty rather than someString.count == 0 if you’re looking for an empty string.  
+There are methods for checking whether a string starts with or ends with a substring: `hasPrefix()` and `hasSuffix()`.
+Individual letters in strings aren’t instances of `String`, but are instead instances of `Character` – a dedicated type for holding single-letters of a string.  
+One last useful method of strings is `contains()`
+
+We want to be able to add formatting like bold or italics, select from different fonts, or add some color, and for those jobs we have a new class called `NSAttributedString`. Attributed strings are made up of two parts: a plain Swift string, plus a dictionary containing a series of attributes  
+
+
 #### [Day 81](https://www.hackingwithswift.com/100/81)
 #### [Day 82](https://www.hackingwithswift.com/100/82)
 #### [Day 83](https://www.hackingwithswift.com/100/83)
