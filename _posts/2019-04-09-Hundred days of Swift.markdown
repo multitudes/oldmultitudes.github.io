@@ -1703,7 +1703,8 @@ if mcSession.connectedPeers.count > 0 {
             } catch {
 
 // 5 Show an error message if there's a problem
-                let ac = UIAlertController(title: "Send error", message: error.localizedDescription, preferredStyle: .alert)
+                let ac = UIAlertController(title: "Send error", message: error.localizedDescription,
+                preferredStyle: .alert)
                 ac.addAction(UIAlertAction(title: "OK", style: .default))
                 present(ac, animated: true)
                 }
@@ -1711,8 +1712,23 @@ if mcSession.connectedPeers.count > 0 {
 }
 ```
 
+
 #### [Day 84](https://www.hackingwithswift.com/100/84)
-#### [Day 85](https://www.hackingwithswift.com/100/85)
+> There are a number of well-known quotes from Steve Jobs, but if I had to pick one – my all-time favorite – it would be this: “it is in Apple’s DNA that technology alone is not enough – it’s technology married with liberal arts, married with the humanities, that yields us the results that make our heart sing.”  
+
+[[Challenge and Wrap-Up](https://www.hackingwithswift.com/review/hws/project-25-selfie-share)
+
+## Project 26 - Marble Maze
+#### [Day 85](https://www.hackingwithswift.com/100/85) 
+> Dan O’Sullivan once wrote, “personal computers have evolved in an office environment in which you sit on your butt, moving only your fingers, entering and receiving information censored by your conscious mind. That is not your whole life, and probably not even the best part – we need to think about computers that sense more of your body, serve you in more places, and convey the physical expression in addition to information.”  
+
+We're going to be using the categoryBitMask, contactTestBitMask and collisionBitMask properties in their fullest for this project, because we have very precise rules that make the game work. To clarify, here's what each of them mean:
+
+1. The `categoryBitMask` property is a number defining the type of object this is for considering collisions.
+2. The `collisionBitMask` property is a number defining what categories of object this node should collide with,
+3. The `contactTestBitMask` property is a number defining which collisions we want to be notified about.
+
+
 #### [Day 86](https://www.hackingwithswift.com/100/86)
 #### [Day 87](https://www.hackingwithswift.com/100/87)
 
