@@ -1604,7 +1604,18 @@ var numbers = [1, 2, 3, 4, 5]
 numbers.remove(item: 3)
 ```
 
+## Project 25 - Selfie Share
 #### [Day 83](https://www.hackingwithswift.com/100/83)
+> Back in 1980, Bob Metcalfe outlined what has since become known as Metcalfe’s law: “the effect of a telecommunications network is proportional to the square of the number of connected users of the system.”
+
+ A new technology called the multipeer connectivity framework.   
+ Multipeer connectivity requires four new classes:  
+ 
+ 1. MCSession is the manager class that handles all multipeer connectivity for us.
+ 2. MCPeerID identifies each user uniquely in a session.
+ 3. MCAdvertiserAssistant is used when creating a session, telling others that we exist and handling invitations.
+ 4. MCBrowserViewController is used when looking for sessions, showing users who is nearby and letting them join.
+
 #### [Day 84](https://www.hackingwithswift.com/100/84)
 #### [Day 85](https://www.hackingwithswift.com/100/85)
 #### [Day 86](https://www.hackingwithswift.com/100/86)
