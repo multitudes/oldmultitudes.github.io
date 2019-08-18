@@ -1479,6 +1479,17 @@ func playSwooshSound() {
 }
 ```
 
+ Creating a bomb also needs to play a fuse sound, but that has its own complexity. You've already seen that SKAction has a very simple way to play sounds, but it's so simple that it's not useful here  
+ That solution is called AVAudioPlayer, and it's not a SpriteKit class – it's available to use in your UIKit apps too if you want. We're going to have an AVAudioPlayer property for our class that will store a sound just for bomb fuses so that we can stop it as needed.  
+ 
+ A new protocol : CaseIterable. This is one of Swift’s most useful protocols.
+ 
+ ```swift
+ enum SequenceType: CaseIterable {
+    case oneNoBomb, one, twoWithOneBomb, two, three, four, chain, fastChain
+ }
+ ```
+ we can then use randomElement() to pick random sequence types to run our game.   So, to generate lots of random sequence types we can use SequenceType.allCases.randomElement() again and again.  
  
  
 #### [Day 78](https://www.hackingwithswift.com/100/78)
