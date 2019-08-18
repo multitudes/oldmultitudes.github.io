@@ -1462,8 +1462,30 @@ activeSliceFG.path = path.cgPath
 }
 ```
 
+The sounds! We want only one swoosh to play at once, so we're going to set to true a property called isSwooshSoundActive, make the waitForCompletion of our SKAction true, then use a completion closure for runAction() so that isSwooshSoundActive is set to false.  
+
+``` swift
+func playSwooshSound() {
+    isSwooshSoundActive = true
+
+    let randomNumber = Int.random(in: 1...3)
+    let soundName = "swoosh\(randomNumber).caf"
+
+    let swooshSound = SKAction.playSoundFileNamed(soundName, waitForCompletion: true)
+
+    run(swooshSound) { [weak self] in
+        self?.isSwooshSoundActive = false
+    }
+}
+```
+
+ 
  
 #### [Day 78](https://www.hackingwithswift.com/100/78)
+> as Thomas Edison once said, “the most certain way to succeed is always to try just one more time.”
+
+
+
 #### [Day 79](https://www.hackingwithswift.com/100/79)
 #### [Day 80](https://www.hackingwithswift.com/100/80)
 #### [Day 81](https://www.hackingwithswift.com/100/81)

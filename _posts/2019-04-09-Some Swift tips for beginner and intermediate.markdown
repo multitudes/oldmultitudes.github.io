@@ -1179,6 +1179,4 @@ var last = Double.pi.ulp
 
 <hr>
 
-
-
-PS. Check playgrounds for ipad too!
+ 
