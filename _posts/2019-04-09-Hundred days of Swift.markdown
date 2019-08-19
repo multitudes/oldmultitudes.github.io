@@ -477,7 +477,7 @@ have Now problems! two they
 
 [Review](https://www.hackingwithswift.com/review/hws/project-9-grand-central-dispatch)
 
-## Consolidation IV
+## MILESTONE: PROJECTS 7-9
 #### [Day 41](https://www.hackingwithswift.com/100/41)
 > Ricky Mondello – one of the team who builds Safari at Apple – once said, “one of my favorite things about software engineering, or any kind of growth really, is coming back to something that you previously thought was too hard and knowing that you can do it.”  
 
@@ -537,8 +537,10 @@ The whole method is being called from Objective-C code using `#selector`, so we 
 ```swift 
 let imageName = UUID().uuidString
 ```
-- All apps that are installed have a directory called Documents where you can save private information for the app, and it's also automatically synchronized with iCloud. The problem is, it's not obvious how to find that directory, so I have a method I use called getDocumentsDirectory() that does exactly that – you don't need to understand how it works, but you do need to copy it into your code.
-``` swift
+
+- All apps that are installed have a directory called Documents where you can save private information for the app, and it's also automatically synchronized with iCloud. The problem is, it's not obvious how to find that directory, so I have a method I use called getDocumentsDirectory() that does exactly that – you don't need to understand how it works, but you do need to copy it into your code.  
+
+```swift
 // ..
 let imagePath = getDocumentsDirectory().appendingPathComponent(imageName)
 
