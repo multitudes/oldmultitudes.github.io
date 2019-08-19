@@ -1597,7 +1597,7 @@ let attributedString = NSAttributedString(string: string, attributes: attributes
 > remember this quote from Frank Chimero: “people ignore design that ignores people.”
 
 
-[Wrap up and challenges](https://www.hackingwithswift.com/Review/hws/project-24-swift-strings)
+[Review](https://www.hackingwithswift.com/review/hws/project-24-swift-strings)
 
 ## MILESTONE: PROJECTS 22-24
 #### [Day 82](https://www.hackingwithswift.com/100/82)
