@@ -1091,6 +1091,9 @@ func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView, callou
 [Review](https://www.hackingwithswift.com/review/hws/project-16-capital-cities)
 
 ## PROJECT 17 - Space Race
+#### [Day 62](https://www.hackingwithswift.com/100/62)
+> Fred Brooks, who wrote the seminal book The Mythical Man-Month: "Plan to throw the first one away.”
+
 
 - this is already most of the code:
 
@@ -1133,13 +1136,11 @@ override func didMove(to view: SKView) {
 var location = touch.location(in: self)`  
 - When there is a collision: `func didBegin(_ contact: SKPhysicsContact) { //explosion! } `  we remore the player and add emitter particles  
 
-#### [Day 62](https://www.hackingwithswift.com/100/62)
-> Fred Brooks, who wrote the seminal book The Mythical Man-Month: "Plan to throw the first one away.”
 
 #### [Day 63](https://www.hackingwithswift.com/100/63)
 > As Mahatma Gandhi said, “An ounce of practice is worth more than tons of preaching.”  
 
-[Review project 17](https://www.hackingwithswift.com/Review/hws/project-17-space-race)
+[Review](https://www.hackingwithswift.com/review/hws/project-17-space-race)
 
 ## PROJECT 18 - Debugging
 #### [Day 64](https://www.hackingwithswift.com/100/64)
