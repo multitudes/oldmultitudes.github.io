@@ -111,7 +111,7 @@ override func viewWillDisappear(_ animated: Bool) {
 #### [Day 19](https://www.hackingwithswift.com/100/19) 
 > Saint Augustine said “the world is a book, and those who do not travel read only a page.”
 
-- pixels and points - retina screens - file@2x.png  file@3x.png
+- pixels and points - retina screens -axample of images for different displays: file@2x.png and file@3x.png
 - `button1.setImage(UIImage(named: countries[1]), for: .normal) `
 - UIButton and CALayer - CGColor:  `button1.layer.borderColor = UIColor.lightGray.cgColor`
 
@@ -119,11 +119,11 @@ override func viewWillDisappear(_ animated: Bool) {
 
 > Steve Jobs said, "I believe life is an intelligent thing: that things aren't random.” 
 
-- shuffled() to return a new, shuffled array. shuffle() for in-place shuffling
-- Int.random(in: 0...2)
-- @IBAction func buttonTapped(_ sender: UIButton) {}
+- `shuffled()` to return a new, shuffled array. `shuffle()` for in-place shuffling
+- `Int.random(in: 0...2)`
+- `@IBAction func buttonTapped(_ sender: UIButton) {}`
 - Tag - `sender.tag`
-- UIAlertController()
+- `UIAlertController()`
 
 ```swift
 let ac = UIAlertController(title: title, message: "...", preferredStyle: .alert)
@@ -135,9 +135,11 @@ func askQuestion(action: UIAlertAction!) {
 ...
 }
 ```
-#### [Day 21](https://www.hackingwithswift.com/100/21)  - Wrap up
+#### [Day 21](https://www.hackingwithswift.com/100/21) 
 
 >John Carmack once said, “focused, hard work is the real key to success. Keep your eyes on the goal, and just keep taking the next step towards completing it. If you aren't sure which way to do something, do it both ways and see which works better.”
+
+
 
 <hr>
 
