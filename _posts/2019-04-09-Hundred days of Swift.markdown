@@ -174,8 +174,10 @@ present(vc, animated: true)
 #### [Day 24](https://www.hackingwithswift.com/100/24)  
 > Alexis Ohanian, the founder of Reddit, once said “to join in the industrial revolution, you needed to open a factory; in the Internet revolution, you need to open a laptop.”
 
--   WKWebView // import WebKit
-- First delegate pattern | Delegation is what's called a programming pattern – a way of writing code
+- Lots of new things: `WKWebView` (Apple's extraordinary web widget), `UIToolbar` (a toolbar component that holds `UIBarButtonItems`), `UIProgressView`, delegation, key-value observing, and how to create your views in code. 
+- `import WebKit`
+
+
 ``` swift
 override func loadView() {
     webView = WKWebView()
@@ -183,8 +185,10 @@ override func loadView() {
     view = webView
 }
 ```
-- In our code, we're setting the web view's navigationDelegate property to self, which means "when any web page navigation happens, please tell me – the current view controller.” You must conform to the protocol, In the case of navigationDelegate, all these methods are optional.
+- First delegate pattern | Delegation is what's called a programming pattern – a way of writing code. A delegate is one thing acting in place of another, effectively answering questions and responding to events on its behalf. In our example, we're using WKWebView: Apple's powerful, flexible and efficient web renderer. But as smart as WKWebView is, it doesn't know (or care) how our application wants to behave, because that's our custom code. The delegation solution is brilliant: we can tell WKWebView that we want to be informed when something interesting happens. In our code, we're setting the web view's navigationDelegate property to self, which means "when any web page navigation happens, please tell me – the current view controller.”
+
 - class ViewController: UIViewController, WKNavigationDelegate { ..
+
 ``` swift
 let url = URL(string: "https://www.hackingwithswift.com")!
 webView.load(URLRequest(url: url))
