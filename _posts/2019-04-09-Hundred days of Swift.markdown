@@ -890,8 +890,9 @@ UIImageWriteToSavedPhotosAlbum(image, self, #selector(image(_:didFinishSavingWit
 
 
 #### [Day 54](https://www.hackingwithswift.com/100/54)
+> Nate Berkus, a famous American interior designer, once said “you will enrich your life immeasurably if you approach it with a sense of wonder and discovery, and always challenge yourself to try new things.”
 
-[Review project 13](https://www.hackingwithswift.com/Review/hws/project-13-instafilter)
+[Review](https://www.hackingwithswift.com/review/hws/project-13-instafilter)
 
 ## Project 14 - Whack a Penguin
 #### [Day 55](https://www.hackingwithswift.com/100/55)
