@@ -19,7 +19,7 @@ The only thing I am missing is an index! When I am looking for old content I get
 
 This is the missing index for the 100 days of Swift! 
 
-## [Day 1-15](https://www.hackingwithswift.com/100/1)  - Introduction to Swift   
+## [Day 1-15 - Introduction to Swift](https://www.hackingwithswift.com/100/1)   
 
 All what you need to know about optionals and closures etc.  
 See my other post with more details here: [Some Swift for beginner and intermediate](https://multitudes.github.io/2019/04/Some-Swift-tips-for-beginner-and-intermediate.html).  
@@ -27,7 +27,7 @@ See my other post with more details here: [Some Swift for beginner and intermedi
 
 <hr>
 
-## Starting iOS
+## [Starting iOS]
 
 ##  Project 1 : Storm Viewer
 
