@@ -103,7 +103,7 @@ override func viewWillDisappear(_ animated: Bool) {
 #### [Day 18](https://www.hackingwithswift.com/100/18) 
 > Maya Angelou once said, “nothing will work unless you do.”
 
-- [Challenge](https://www.hackingwithswift.com/review/hws/project-1-storm-viewer)
+[Challenge](https://www.hackingwithswift.com/review/hws/project-1-storm-viewer)
 
 <hr> 
 
