@@ -971,7 +971,7 @@ sender.isHidden = true
 ```
 - we gonna use this funtion of UIView: 
 ``` swift`
-UIView.animate(withDuration: <#T##TimeInterval#>, delay: <#T##TimeInterval#>, options: <#T##UIView.AnimationOptions#>, animations: <#T##() -> Void#>, completion: <#T##((Bool) -> Void)?##((Bool) -> Void)?##(Bool) -> Void#>)`    
+UIView.animate(withDuration: , delay: , options: , animations: , completion: )`    
 ```
 
 - in code we pass two closures:
@@ -1088,7 +1088,7 @@ func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView, callou
 
 #### [Day 61](https://www.hackingwithswift.com/100/61)
 
-- wrap up and [Review project 16](https://www.hackingwithswift.com/Review/hws/project-16-capital-cities)
+[Review](https://www.hackingwithswift.com/review/hws/project-16-capital-cities)
 
 ## PROJECT 17 - Space Race
 
