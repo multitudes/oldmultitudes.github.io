@@ -203,16 +203,18 @@ webView.allowsBackForwardNavigationGestures = true
 
 - Monitoring page loads: UIToolbar - holds and shows a collection of UIBarButtonItem objects 
 - UIProgressView
-- key-value observing, or KVO to monitor the loading of the sites
+- Key-value observing, or KVO to monitor the loading of the sites
 - `webView.addObserver` property
 - using KVO, you must implement a method called observeValue()
 - Refactoring
 - contains() String method to see whether each safe website exists somewhere in the host name.
+- special keyword `@escaping`, we’re acknowledging that the closure might be used later.   
 
 #### [Day 26](https://www.hackingwithswift.com/100/26)   - Wrap up
-
-
 > There’s a Korean singer called Kwon Ji-yong – better known by the awesome stage name G-Dragon – who said, “you have to believe in yourself, challenge yourself, and push yourself until the very end; that's the only way you'll succeed
+
+[Challenge](https://www.hackingwithswift.com/review/hws/project-4-easy-browser)
+
 
 <hr>
 
