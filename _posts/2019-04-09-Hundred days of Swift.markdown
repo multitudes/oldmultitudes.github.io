@@ -1289,7 +1289,7 @@ node.run(move)
 #### [Day 71](https://www.hackingwithswift.com/100/71)
 > John Gruber recounts an anecdote he heard about how shake to undo came about, which might why it just doesn’t fit in with the rest of the platform: "Scott Forstall charged the iOS team with devising an interface for Undo — everyone knew the iPhone should have it,1 but no one had a good idea how to do it. One engineer joked that they could just make you shake the iPhone to invoke it. Forstall said he loved the idea, and what was proposed as a joke has been with us as the Undo interface ever since.  
 
-[PROJECT 20 Review](https://www.hackingwithswift.com/Review/hws/project-20-fireworks-night)
+[Review](https://www.hackingwithswift.com/review/hws/project-20-fireworks-night)
 
 ## PROJECT 21 - Local Notifications
 #### [Day 72](https://www.hackingwithswift.com/100/72)
