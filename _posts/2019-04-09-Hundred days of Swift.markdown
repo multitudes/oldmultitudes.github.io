@@ -680,7 +680,24 @@ var score = 0 {
 > As Shakuntala Devi once said, “nobody challenges me – I challenge myself.”
 
 - `SKEmitterNode class`
-- play with the particle editor: `Particle Texture`: what image to use for your particles. `Particles Birthrate`: how fast to create new particles. `Particles Maximum`: the maximum number of particles this emitter should create before finishing. `Lifetime Start`: the basic value for how many seconds each particle should live for. `Lifetime Range`: how much, plus or minus, to vary lifetime. `Position Range X/Y`: how much to vary the creation position of particles from the emitter node's position. `Angle Start`: which angle you want to fire particles, in degrees, where 0 is to the right and 90 is straight up. `Angle Range`: how many degrees to randomly vary particle angle. `Speed Start`: how fast each particle should move in its direction. `Speed Range`: how much to randomly vary particle speed. `Acceleration X/Y`: how much to affect particle speed over time. This can be used to simulate gravity or wind. `Alpha Start`: how transparent particles are when created. `Alpha Range`: how much to randomly vary particle transparency. `Alpha Speed`: how much to change particle transparency over time. A negative value means "fade out." `Scale Start / Range / Speed`: how big particles should be when created, how much to vary it, and how much it should change over time. A negative value means "shrink slowly." `Rotation Start / Range / Speed`: what Z rotation particles should have, how much to vary it, and how much they should spin over time. `Color Blend Factor / Range / Speed`: how much to color each particle, how much to vary it, and how much it should change over time.
+- play with the particle editor:   
+`Particle Texture`: what image to use for your particles.   
+`Particles Birthrate`: how fast to create new particles.  
+`Particles Maximum`: the maximum number of particles this emitter should create before finishing.   
+`Lifetime Start`: the basic value for how many seconds each particle should live for.   
+`Lifetime Range`: how much, plus or minus, to vary lifetime.   
+`Position Range X/Y`: how much to vary the creation position of particles from the emitter node's position.   
+`Angle Start`: which angle you want to fire particles, in degrees, where 0 is to the right and 90 is straight up.   
+`Angle Range`: how many degrees to randomly vary particle angle.   
+`Speed Start`: how fast each particle should move in its direction.   
+`Speed Range`: how much to randomly vary particle speed.   
+`Acceleration X/Y`: how much to affect particle speed over time. This can be used to simulate gravity or wind.   
+`Alpha Start`: how transparent particles are when created.   
+`Alpha Range`: how much to randomly vary particle transparency.   
+`Alpha Speed`: how much to change particle transparency over time. A negative value means "fade out."   
+`Scale Start / Range / Speed`: how big particles should be when created, how much to vary it, and how much it should change over time. A negative value means "shrink slowly."   
+`Rotation Start / Range / Speed`: what Z rotation particles should have, how much to vary it, and how much they should spin over time.   
+`Color Blend Factor / Range / Speed`: how much to color each particle, how much to vary it, and how much it should change over time.  
 
 [Review](https://www.hackingwithswift.com/review/hws/project-11-pachinko)
 
