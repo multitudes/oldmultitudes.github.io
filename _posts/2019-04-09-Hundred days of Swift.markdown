@@ -333,10 +333,11 @@ func parse(json: Data) {
 
 [Review](https://www.hackingwithswift.com/review/hws/project-7-whitehouse-petitions)
 
-## Project 8 - Build the layout in code - Swifty Words 
+## Project 8 - Swifty Words 
 #### [Day 36](https://www.hackingwithswift.com/100/36)
 > Linus Torvalds, the creator of the massively popular Linux operating system, once said “talk is cheap; show me the code.” 
 
+- Building a UIKit user interface programmatically
 - UILabel for showing text
 - UITextField to get text input
 - UIButton
@@ -350,7 +351,7 @@ scoreLabel.textAlignment = .right
 scoreLabel.text = "Score: 0"
 view.addSubview(scoreLabel)
 ```
-- NSLayoutConstraint.activate() method, which accepts an array of constraints
+- `NSLayoutConstraint.activate()` method, which accepts an array of constraints
 - `safeAreaLayoutGuide`  is the space available once you subtract any rounded corners or notches, inside that is the `layoutMarginsGuide`, which adds some extra margin so that views don’t run to the left and right edges of the screen
 
 ```swift
@@ -374,6 +375,7 @@ NSLayoutConstraint.activate([
 #### [Day 37](https://www.hackingwithswift.com/100/37)
 - new string method to learn, called `replacingOccurrences()`
 - Find a text file in the appbundle:
+
 ```swift
 if let levelFileURL = Bundle.main.url(forResource: "level\(level)", withExtension: "txt") {
         if let levelContents = try? String(contentsOf: levelFileURL) {
@@ -386,6 +388,7 @@ if let levelFileURL = Bundle.main.url(forResource: "level\(level)", withExtensio
                 ...
 
 ```
+
 - a property observer
 ``` swift
 var score = 0 {
@@ -396,9 +399,10 @@ var score = 0 {
 ```
 #### [Day 38](https://www.hackingwithswift.com/100/38)
 > There are many well-known quotes from Shakespeare, but there’s one I think is particularly apt today: “the fool doth think he is wise, but the wise man knows himself to be a fool.”  
+In his talk at NSSpain 2018 Paul Hudson said “Auto Layout makes hard things easy, and easy things hard”   
 
+[Review](https://www.hackingwithswift.com/review/hws/project-8-7-swifty-words)
 
->In my talk at NSSpain 2018 I said “Auto Layout makes hard things easy, and easy things hard”   
 
 ## Project 9 - Grand Central Dispatch
 #### [Day 39](https://www.hackingwithswift.com/100/39)
