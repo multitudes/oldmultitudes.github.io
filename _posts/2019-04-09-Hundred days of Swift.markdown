@@ -949,7 +949,7 @@ charNode.run(SKAction.sequence([delay, hide, notVisible]))
 - `caf` is a renamed `aiff` file. AIFF is a pretty terrible file format when it comes to file size, but it's much faster to load and use than MP3s and M4As  
 - ex `run(SKAction.playSoundFileNamed("whackBad.caf", waitForCompletion: false))`
 
-[Review](https://www.hackingwithswift.com/Review/hws/project-14-whack-a-penguin)
+[Review](https://www.hackingwithswift.com/review/hws/project-14-whack-a-penguin)
 
 ## PROJECT 15 - Animation
 #### [Day 57](https://www.hackingwithswift.com/100/57)
