@@ -1547,7 +1547,7 @@ func playSwooshSound() {
 #### [Day 79](https://www.hackingwithswift.com/100/79)
 > Shigeru Miyamoto – the legendary Japanese game designer who gave us Mario, Zelda, Donkey Kong, and more – once said “to create a new standard, you have to be up for that challenge and really enjoy it.”   
 
-[Wrap up and challenges](https://www.hackingwithswift.com/Review/hws/project-23-swifty-ninja)
+[Review](https://www.hackingwithswift.com/review/hws/project-23-swifty-ninja)
 
 ## PROJECT 24 - Swift Strings
 
