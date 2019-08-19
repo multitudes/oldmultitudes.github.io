@@ -1356,7 +1356,7 @@ center.add(request)
 #### [Day 73](https://www.hackingwithswift.com/100/73)
 > “if privacy matters in your life, it should matter to the phone your life is on.” 
 
-[PROJECT 21 Review](https://www.hackingwithswift.com/Review/hws/project-21-local-notifications)
+[Review](https://www.hackingwithswift.com/review/hws/project-21-local-notifications)
 
 
 ## MILESTONE: PROJECTS 19-21
@@ -1452,7 +1452,7 @@ func locationManager(_ manager: CLLocationManager, didRangeBeacons beacons: [CLB
 #### [Day 76](https://www.hackingwithswift.com/100/76)
 > Mo Farah – multiple-time British Olympic gold medallist – said “if you dream and have the ambition and want to work hard, then you can achieve.” 
 
-[Wrap up](https://www.hackingwithswift.com/Review/hws/project-22-detect-a-beacon) 
+[Review](https://www.hackingwithswift.com/review/hws/project-22-detect-a-beacon) 
 
 ## PROJECT 23 - Swifty Ninja
 #### [Day 77](https://www.hackingwithswift.com/100/77)
