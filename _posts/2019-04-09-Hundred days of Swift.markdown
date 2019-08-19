@@ -803,10 +803,11 @@ let defaults = UserDefaults.standard
     }
 ```
 
-[Review Project 12](https://www.hackingwithswift.com/Review/hws/project-12-userdefaults)
+[Review](https://www.hackingwithswift.com/Review/hws/project-12-userdefaults)
 
 ## MILESTONE: PROJECTS 10-12
 #### [Day 50](https://www.hackingwithswift.com/100/50)
+> Aristotle once said, “it is frequent repetition that produces a natural tendency.” 
 
 ## Some element of functional programming
 #### [Day 51](https://www.hackingwithswift.com/100/51)
@@ -815,7 +816,8 @@ let defaults = UserDefaults.standard
 
 - learn about map(), flatMap(), filter()  
 
-[Elements of Functional Programming](https://www.youtube.com/watch?v=OgU8d_E1K14)
+[Elements of Functional Programming](https://www.youtube.com/watch?v=OgU8d_E1K14)  
+
 [Teaching Swift at Scale](https://vimeo.com/291590798)
 
 ## PROJECT 13 - Instafilter
