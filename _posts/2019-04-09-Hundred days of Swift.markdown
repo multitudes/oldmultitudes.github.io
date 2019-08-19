@@ -975,7 +975,6 @@ UIView.animate(withDuration: <#T##TimeInterval#>, delay: <#T##TimeInterval#>, op
 ```
 
 - in code we pass two closures:
-
 ```swift
 UIView.animate(withDuration: 1, delay: 0, options: [], 
     animations: {
@@ -1003,7 +1002,7 @@ UIView.animate(withDuration: 1, delay: 0, options: [],
 #### [Day 58](https://www.hackingwithswift.com/100/58)
 > Larry Niven once said, “that's the thing about people who think they hate computers – what they really hate is lousy programmers.”
 
-- wrap up and [Review project 15](https://www.hackingwithswift.com/Review/hws/project-15-animation)  
+[Review](https://www.hackingwithswift.com/review/hws/project-15-animation)  
 
 ## MILESTONE: PROJECTS 13-15
 #### [Day 59](https://www.hackingwithswift.com/100/59)
