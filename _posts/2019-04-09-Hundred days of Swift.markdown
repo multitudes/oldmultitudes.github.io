@@ -1763,7 +1763,7 @@ if mcSession.connectedPeers.count > 0 {
 #### [Day 84](https://www.hackingwithswift.com/100/84)
 > There are a number of well-known quotes from Steve Jobs, but if I had to pick one – my all-time favorite – it would be this: “it is in Apple’s DNA that technology alone is not enough – it’s technology married with liberal arts, married with the humanities, that yields us the results that make our heart sing.”  
 
-[Challenge and Wrap-Up](https://www.hackingwithswift.com/Review/hws/project-25-selfie-share)
+[Review](https://www.hackingwithswift.com/review/hws/project-25-selfie-share)
 
 ## Project 26 - Marble Maze
 #### [Day 85](https://www.hackingwithswift.com/100/85) 
@@ -1795,7 +1795,7 @@ Special compiler instructions. `#if targetEnvironment(simulator)`, `#else` and `
 #### [Day 87](https://www.hackingwithswift.com/100/87)
 > Seth Godin – author and marketing genius – once said “surprise and delight and connection are remarkable.”
 
-[Wrap up and Review](https://www.hackingwithswift.com/Review/hws/project-26-marble-maze)
+[Review](https://www.hackingwithswift.com/review/hws/project-26-marble-maze)
 
 ## Project 27 - Custom Drawing  
 #### [Day 88](https://www.hackingwithswift.com/100/88)
@@ -1824,7 +1824,7 @@ Special compiler instructions. `#if targetEnvironment(simulator)`, `#else` and `
 
 > Swift was first introduced way back in 2014, at Apple’s annual Worldwide Developer Conference (WWDC). When showing off the new language, Chris Lattner (the creator of Swift) took to the stage and immediately did something that was revolutionary for us – at least back then: he created a Swift playground in Xcode.
 
-- Wrap up and challenges
+[Review]()
 
 ## MILESTONE: PROJECTS 25-27
 
