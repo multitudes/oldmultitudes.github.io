@@ -22,11 +22,8 @@ This is the missing index for the 100 days of Swift!
 ## [Day 1-12](https://www.hackingwithswift.com/100/1)  - Introduction to Swift   
 
 All what you need to know about optionals and closures etc.  
-See my other post with more details [here](https://multitudes.github.io/2019/04/Some-Swift-tips-for-beginner-and-intermediate.html).
+See my other post with more details here: [Some Swift for beginner and intermediate](https://multitudes.github.io/2019/04/Some-Swift-tips-for-beginner-and-intermediate.html).  
 
-<hr>
-
-## [Day 13-14-15](https://www.hackingwithswift.com/100/13)  - Consolidation and review
 
 <hr>
 

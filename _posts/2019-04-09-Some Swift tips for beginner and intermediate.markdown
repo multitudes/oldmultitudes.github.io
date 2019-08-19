@@ -31,13 +31,10 @@ This post is inspired from the first 12 days of the 100 Days of Swift by Paul Hu
 - [Day 9](https://www.hackingwithswift.com/100/9)– access control, static properties, and laziness
 - [Day 10](https://www.hackingwithswift.com/100/10) – classes and inheritance
 - [Day 11](https://www.hackingwithswift.com/100/11) – protocols, extensions, and protocol extensions
-- [Day 12](https://www.hackingwithswift.com/100/12) – optionals, unwrapping, and typecasting
-
-
-
-<!-- <a rel="ar" href="/assets/img/AR-QL-Pictures/retrotv.usdz">
-    <img src="/assets/img/AR-QL-Pictures/Screenshot5.jpg">
-</a> -->
+- [Day 12](https://www.hackingwithswift.com/100/12) – optionals, unwrapping, and typecasting  
+And
+<hr>
+[Day 13-14-15](https://www.hackingwithswift.com/100/13)  - Consolidation and review
 
 ### Open the Swift playgrounds
 
