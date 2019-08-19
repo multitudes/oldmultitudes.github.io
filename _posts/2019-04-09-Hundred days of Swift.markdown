@@ -270,13 +270,12 @@ webView.allowsBackForwardNavigationGestures = true
 
 <hr>
 
-## Consolidation III
+## MILESTONE: PROJECTS 4-6
 ####  [Day 32](https://www.hackingwithswift.com/100/32) - Consolidation III
 
 > Chris Bosh, an NBA All-Star basketball player, said “every athlete knows that you get good by practicing, by repeating the same moves until you achieve your goal” 
 
 
-## Codable, buttons, and GCD
 ## Project 7 - Whitehouse petitions
 #### [Day 33](https://www.hackingwithswift.com/100/33)
 
@@ -324,6 +323,7 @@ func parse(json: Data) {
 ```
 
 #### [Day 34](https://www.hackingwithswift.com/100/34)
+> Mike Davidson, the ex-VP of design at Twitter once said that “writing old-school HTML code was never very much fun but now it's getting downright tedious for most people.”
 
 - injecting html code in detail view with  `webView.loadHTMLString(html, baseURL: nil)`
 - Adding a second tapBarController in code
@@ -331,7 +331,7 @@ func parse(json: Data) {
 #### [Day 35](https://www.hackingwithswift.com/100/35) 
 > Michelle Obama once said “through my education, I didn't just develop skills, I didn't just develop the ability to learn, but I developed confidence.”
 
-- wrap up
+[Review](https://www.hackingwithswift.com/review/hws/project-7-whitehouse-petitions)
 
 ## Project 8 - Build the layout in code - Swifty Words 
 #### [Day 36](https://www.hackingwithswift.com/100/36)
