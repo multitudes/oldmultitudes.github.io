@@ -419,12 +419,15 @@ In his talk at NSSpain 2018 Paul Hudson said “Auto Layout makes hard things ea
 - but more than one code block can be executed at the same time so the finish order isn't guaranteed.
 
 “How important” some code is depends on something called “quality of service”, or QoS, which decides what level of service this code should be given
-- 4 queues. queues affect the way the system prioritizes your work: User Interactive and User Initiated tasks will be executed as quickly as possible, Utility tasks will be executed with a view to keeping power efficiency as high as possible
-- User Interactive: this is the highest priority background thread
-- User Initiated
-- The Utility queue: this should be used for long-running tasks that the user is aware of, but not necessarily desperate for now.
+- 4 queues.   
+- Queues affect the way the system prioritizes your work:   
+- User Interactive and User Initiated tasks will be executed as quickly as possible  
+- Utility tasks will be executed with a view to keeping power efficiency as high as possible  
+- User Interactive: this is the highest priority background thread  
+- User Initiated  
+- The Utility queue should be used for long-running tasks that the user is aware of, but not necessarily desperate for now.
 - The Background queue: this is for long-running tasks that the user isn't actively aware of, or at least doesn't care
-- the default queue. This is prioritized between user-initiated and utility, and is a good general-purpose choice while you’re learning
+- The default queue. This is prioritized between user-initiated and utility, and is a good general-purpose choice while you’re learning  
 
 
 ``` swift
@@ -463,7 +466,7 @@ performSelector(inBackground: #selector(fetchJSON), with: nil)
 performSelector(onMainThread: #selector(showError), with: nil, waitUntilDone: false)
 
 ```
-- Note: because performSelector() uses #selector, we need to mark our methods with the @objc attribute.
+- Note: because `performSelector()` uses `#selector`, we need to mark our methods with the `@objc` attribute.
 
 #### [Day 40](https://www.hackingwithswift.com/100/40)
 > An old joke: " A programmer has a problem and thinks, “I can fix this using multitasking!” 
@@ -471,6 +474,8 @@ have Now problems! two they
 
 - race conditions are a whole category of bugs caused by one task completing before it was supposed to 
 - GCD automatically handles thread creation and management, automatically balances based on available system resources, and automatically factors in Quality of Service 
+
+[Review](https://www.hackingwithswift.com/review/hws/project-9-grand-central-dispatch)
 
 ## Consolidation IV
 #### [Day 41](https://www.hackingwithswift.com/100/41)
