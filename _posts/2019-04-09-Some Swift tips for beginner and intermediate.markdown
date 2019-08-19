@@ -16,7 +16,7 @@ published: true
 </div>
 
 I just finished the 100 Days of Swift by Paul Hudson and needed a place to put down some notes for my learning and enjoyment :)
-This post is inspired from the first 12 days of the 100 Days of Swift by Paul Hudson, you can catch up here:
+This post is inspired from the first 15 days of the 100 Days of Swift by Paul Hudson, you can catch up here:
 
 
 
@@ -32,8 +32,8 @@ This post is inspired from the first 12 days of the 100 Days of Swift by Paul Hu
 - [Day 10](https://www.hackingwithswift.com/100/10) – classes and inheritance
 - [Day 11](https://www.hackingwithswift.com/100/11) – protocols, extensions, and protocol extensions
 - [Day 12](https://www.hackingwithswift.com/100/12) – optionals, unwrapping, and typecasting  
-And
-<hr>
+And  
+
 [Day 13-14-15](https://www.hackingwithswift.com/100/13)  - Consolidation and review
 
 ### Open the Swift playgrounds
