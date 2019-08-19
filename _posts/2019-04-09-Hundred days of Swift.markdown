@@ -27,7 +27,7 @@ See my other post with more details here: [Some Swift for beginner and intermedi
 
 <hr>
 
-## [Starting iOS]
+## Starting iOS
 
 ##  Project 1 : Storm Viewer
 
