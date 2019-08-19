@@ -103,7 +103,7 @@ override func viewWillDisappear(_ animated: Bool) {
 #### [Day 18](https://www.hackingwithswift.com/100/18) 
 > Maya Angelou once said, “nothing will work unless you do.”
 
-[Review](https://www.hackingwithswift.com/review/hws/project-1-storm-viewer)
+[Review](https://www.hackingwithswift.com/Review/hws/project-1-storm-viewer)
 
 <hr> 
 
@@ -139,7 +139,7 @@ func askQuestion(action: UIAlertAction!) {
 
 >John Carmack once said, “focused, hard work is the real key to success. Keep your eyes on the goal, and just keep taking the next step towards completing it. If you aren't sure which way to do something, do it both ways and see which works better.”
 
-[Review](https://www.hackingwithswift.com/review/hws/project-2-guess-the-flag)
+[Review](https://www.hackingwithswift.com/Review/hws/project-2-guess-the-flag)
 
 <hr>
 
@@ -213,7 +213,7 @@ webView.allowsBackForwardNavigationGestures = true
 #### [Day 26](https://www.hackingwithswift.com/100/26)   - Wrap up
 > There’s a Korean singer called Kwon Ji-yong – better known by the awesome stage name G-Dragon – who said, “you have to believe in yourself, challenge yourself, and push yourself until the very end; that's the only way you'll succeed
 
-[Review](https://www.hackingwithswift.com/review/hws/project-4-easy-browser)
+[Review](https://www.hackingwithswift.com/Review/hws/project-4-easy-browser)
 
 
 <hr>
@@ -223,7 +223,7 @@ webView.allowsBackForwardNavigationGestures = true
 
 > the US general George Patton once said, “accept the challenges so that you can feel the exhilaration of victory” 
 
-- Capture lists in Swift review: what’s the difference between weak, strong, and unowned references?
+- Capture lists in Swift Review: what’s the difference between weak, strong, and unowned references?
 - Strong capturing
 - Weak capturing
 - Unowned capturing
@@ -247,7 +247,7 @@ webView.allowsBackForwardNavigationGestures = true
 #### [Day 29](https://www.hackingwithswift.com/100/29) 
 > remember the words of Patrick McKenzie: “every great developer you know got there by solving problems they were unqualified to solve until they actually did it.”
 
-[Review](https://www.hackingwithswift.com/review/hws/project-5-word-scramble)
+[Review](https://www.hackingwithswift.com/Review/hws/project-5-word-scramble)
 
 <hr>
 
@@ -266,7 +266,7 @@ webView.allowsBackForwardNavigationGestures = true
 - Every UIView has a set of anchors that define its layouts rules. The most important ones are widthAnchor, heightAnchor, topAnchor, bottomAnchor, leftAnchor, rightAnchor, leadingAnchor, trailingAnchor, centerXAnchor, and centerYAnchor.
 - The “safe area” is the space that’s actually visible inside the insets of the iPhone X and other such devices – with their rounded corners, notch and similar. It’s a space that excludes those areas, so labels no longer run underneath the notch or rounded corners.
 
-[Review](https://www.hackingwithswift.com/review/hws/project-6-auto-layout)
+[Review](https://www.hackingwithswift.com/Review/hws/project-6-auto-layout)
 
 <hr>
 
@@ -331,7 +331,7 @@ func parse(json: Data) {
 #### [Day 35](https://www.hackingwithswift.com/100/35) 
 > Michelle Obama once said “through my education, I didn't just develop skills, I didn't just develop the ability to learn, but I developed confidence.”
 
-[Review](https://www.hackingwithswift.com/review/hws/project-7-whitehouse-petitions)
+[Review](https://www.hackingwithswift.com/Review/hws/project-7-whitehouse-petitions)
 
 ## Project 8 - Swifty Words 
 #### [Day 36](https://www.hackingwithswift.com/100/36)
@@ -401,7 +401,7 @@ var score = 0 {
 > There are many well-known quotes from Shakespeare, but there’s one I think is particularly apt today: “the fool doth think he is wise, but the wise man knows himself to be a fool.”  
 In his talk at NSSpain 2018 Paul Hudson said “Auto Layout makes hard things easy, and easy things hard”   
 
-[Review](https://www.hackingwithswift.com/review/hws/project-8-7-swifty-words)
+[Review](https://www.hackingwithswift.com/Review/hws/project-8-7-swifty-words)
 
 
 ## Project 9 - Grand Central Dispatch
@@ -475,7 +475,7 @@ have Now problems! two they
 - race conditions are a whole category of bugs caused by one task completing before it was supposed to 
 - GCD automatically handles thread creation and management, automatically balances based on available system resources, and automatically factors in Quality of Service 
 
-[Review](https://www.hackingwithswift.com/review/hws/project-9-grand-central-dispatch)
+[Review](https://www.hackingwithswift.com/Review/hws/project-9-grand-central-dispatch)
 
 ## MILESTONE: PROJECTS 7-9
 #### [Day 41](https://www.hackingwithswift.com/100/41)
@@ -569,7 +569,7 @@ func getDocumentsDirectory() -> URL {
 #### [Day 44](https://www.hackingwithswift.com/100/44)
 > as Denis Waitley said, “the results you achieve will be in direct proportion to the effort you apply.”
 
-[Review](https://www.hackingwithswift.com/review/hws/project-10-names-to-faces)
+[Review](https://www.hackingwithswift.com/Review/hws/project-10-names-to-faces)
 
 ## PROJECT 11 - Pachinko
 #### [Day 45](https://www.hackingwithswift.com/100/45)
@@ -699,7 +699,7 @@ var score = 0 {
 `Rotation Start / Range / Speed`: what Z rotation particles should have, how much to vary it, and how much they should spin over time.   
 `Color Blend Factor / Range / Speed`: how much to color each particle, how much to vary it, and how much it should change over time.  
 
-[Review](https://www.hackingwithswift.com/review/hws/project-11-pachinko)
+[Review](https://www.hackingwithswift.com/Review/hws/project-11-pachinko)
 
 ## PROJECT 12 - User Defaults
 
@@ -803,7 +803,7 @@ let defaults = UserDefaults.standard
     }
 ```
 
-[REVIEW Project 12](https://www.hackingwithswift.com/review/hws/project-12-userdefaults)
+[Review Project 12](https://www.hackingwithswift.com/Review/hws/project-12-userdefaults)
 
 ## MILESTONE: PROJECTS 10-12
 #### [Day 50](https://www.hackingwithswift.com/100/50)
@@ -889,7 +889,7 @@ UIImageWriteToSavedPhotosAlbum(image, self, #selector(image(_:didFinishSavingWit
 
 #### [Day 54](https://www.hackingwithswift.com/100/54)
 
-[Review project 13](https://www.hackingwithswift.com/review/hws/project-13-instafilter)
+[Review project 13](https://www.hackingwithswift.com/Review/hws/project-13-instafilter)
 
 ## Project 14 - Whack a Penguin
 #### [Day 55](https://www.hackingwithswift.com/100/55)
@@ -946,7 +946,7 @@ charNode.run(SKAction.sequence([delay, hide, notVisible]))
 - `caf` is a renamed `aiff` file. AIFF is a pretty terrible file format when it comes to file size, but it's much faster to load and use than MP3s and M4As  
 - ex `run(SKAction.playSoundFileNamed("whackBad.caf", waitForCompletion: false))`
 
-[Review Project 14](https://www.hackingwithswift.com/review/hws/project-14-whack-a-penguin)
+[Review Project 14](https://www.hackingwithswift.com/Review/hws/project-14-whack-a-penguin)
 
 ## PROJECT 15 - Animation
 #### [Day 57](https://www.hackingwithswift.com/100/57)
@@ -996,7 +996,7 @@ UIView.animate(withDuration: 1, delay: 0, options: [],
 #### [Day 58](https://www.hackingwithswift.com/100/58)
 > Larry Niven once said, “that's the thing about people who think they hate computers – what they really hate is lousy programmers.”
 
-- wrap up and [review project 15](https://www.hackingwithswift.com/review/hws/project-15-animation)  
+- wrap up and [Review project 15](https://www.hackingwithswift.com/Review/hws/project-15-animation)  
 
 ## MILESTONE: PROJECTS 13-15
 #### [Day 59](https://www.hackingwithswift.com/100/59)
@@ -1082,7 +1082,7 @@ func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView, callou
 
 #### [Day 61](https://www.hackingwithswift.com/100/61)
 
-- wrap up and [review project 16](https://www.hackingwithswift.com/review/hws/project-16-capital-cities)
+- wrap up and [Review project 16](https://www.hackingwithswift.com/Review/hws/project-16-capital-cities)
 
 ## PROJECT 17 - Space Race
 
@@ -1133,7 +1133,7 @@ var location = touch.location(in: self)`
 #### [Day 63](https://www.hackingwithswift.com/100/63)
 > As Mahatma Gandhi said, “An ounce of practice is worth more than tons of preaching.”  
 
-[Review project 17](https://www.hackingwithswift.com/review/hws/project-17-space-race)
+[Review project 17](https://www.hackingwithswift.com/Review/hws/project-17-space-race)
 
 ## PROJECT 18 - Debugging
 #### [Day 64](https://www.hackingwithswift.com/100/64)
@@ -1151,7 +1151,7 @@ var location = touch.location(in: self)`
 
 #### [Day 65](https://www.hackingwithswift.com/100/65)
 
-[Review project 18](https://www.hackingwithswift.com/review/hws/project-18-debugging)
+[Review project 18](https://www.hackingwithswift.com/Review/hws/project-18-debugging)
 
 ## MILESTONE: PROJECTS 16-18
 
@@ -1248,7 +1248,7 @@ notificationCenter.addObserver(self, selector: #selector(adjustForKeyboard), nam
 
 #### [Day 69](https://www.hackingwithswift.com/100/69)
 
-wrap up! [Review Project 19](https://www.hackingwithswift.com/review/hws/project-19-javascript-injection)
+wrap up! [Review Project 19](https://www.hackingwithswift.com/Review/hws/project-19-javascript-injection)
 
 ## PROJECT 20 - Fireworks Night
 #### [Day 70](https://www.hackingwithswift.com/100/70)
@@ -1281,7 +1281,7 @@ node.run(move)
 #### [Day 71](https://www.hackingwithswift.com/100/71)
 > John Gruber recounts an anecdote he heard about how shake to undo came about, which might why it just doesn’t fit in with the rest of the platform: "Scott Forstall charged the iOS team with devising an interface for Undo — everyone knew the iPhone should have it,1 but no one had a good idea how to do it. One engineer joked that they could just make you shake the iPhone to invoke it. Forstall said he loved the idea, and what was proposed as a joke has been with us as the Undo interface ever since.  
 
-[PROJECT 20 Review](https://www.hackingwithswift.com/review/hws/project-20-fireworks-night)
+[PROJECT 20 Review](https://www.hackingwithswift.com/Review/hws/project-20-fireworks-night)
 
 ## PROJECT 21 - Local Notifications
 #### [Day 72](https://www.hackingwithswift.com/100/72)
@@ -1348,7 +1348,7 @@ center.add(request)
 #### [Day 73](https://www.hackingwithswift.com/100/73)
 > “if privacy matters in your life, it should matter to the phone your life is on.” 
 
-[PROJECT 21 Review](https://www.hackingwithswift.com/review/hws/project-21-local-notifications)
+[PROJECT 21 Review](https://www.hackingwithswift.com/Review/hws/project-21-local-notifications)
 
 
 ## MILESTONE: PROJECTS 19-21
@@ -1444,7 +1444,7 @@ func locationManager(_ manager: CLLocationManager, didRangeBeacons beacons: [CLB
 #### [Day 76](https://www.hackingwithswift.com/100/76)
 > Mo Farah – multiple-time British Olympic gold medallist – said “if you dream and have the ambition and want to work hard, then you can achieve.” 
 
-[Wrap up](https://www.hackingwithswift.com/review/hws/project-22-detect-a-beacon) 
+[Wrap up](https://www.hackingwithswift.com/Review/hws/project-22-detect-a-beacon) 
 
 ## PROJECT 23 - Swifty Ninja
 #### [Day 77](https://www.hackingwithswift.com/100/77)
@@ -1539,7 +1539,7 @@ func playSwooshSound() {
 #### [Day 79](https://www.hackingwithswift.com/100/79)
 > Shigeru Miyamoto – the legendary Japanese game designer who gave us Mario, Zelda, Donkey Kong, and more – once said “to create a new standard, you have to be up for that challenge and really enjoy it.”   
 
-[Wrap up and challenges](https://www.hackingwithswift.com/review/hws/project-23-swifty-ninja)
+[Wrap up and challenges](https://www.hackingwithswift.com/Review/hws/project-23-swifty-ninja)
 
 ## PROJECT 24 - Swift Strings
 
@@ -1589,7 +1589,7 @@ let attributedString = NSAttributedString(string: string, attributes: attributes
 > remember this quote from Frank Chimero: “people ignore design that ignores people.”
 
 
-[Wrap up and challenges](https://www.hackingwithswift.com/review/hws/project-24-swift-strings)
+[Wrap up and challenges](https://www.hackingwithswift.com/Review/hws/project-24-swift-strings)
 
 ## MILESTONE: PROJECTS 22-24
 #### [Day 82](https://www.hackingwithswift.com/100/82)
@@ -1755,7 +1755,7 @@ if mcSession.connectedPeers.count > 0 {
 #### [Day 84](https://www.hackingwithswift.com/100/84)
 > There are a number of well-known quotes from Steve Jobs, but if I had to pick one – my all-time favorite – it would be this: “it is in Apple’s DNA that technology alone is not enough – it’s technology married with liberal arts, married with the humanities, that yields us the results that make our heart sing.”  
 
-[Challenge and Wrap-Up](https://www.hackingwithswift.com/review/hws/project-25-selfie-share)
+[Challenge and Wrap-Up](https://www.hackingwithswift.com/Review/hws/project-25-selfie-share)
 
 ## Project 26 - Marble Maze
 #### [Day 85](https://www.hackingwithswift.com/100/85) 
@@ -1787,7 +1787,7 @@ Special compiler instructions. `#if targetEnvironment(simulator)`, `#else` and `
 #### [Day 87](https://www.hackingwithswift.com/100/87)
 > Seth Godin – author and marketing genius – once said “surprise and delight and connection are remarkable.”
 
-[Wrap up and review](https://www.hackingwithswift.com/review/hws/project-26-marble-maze)
+[Wrap up and Review](https://www.hackingwithswift.com/Review/hws/project-26-marble-maze)
 
 ## Project 27 - Custom Drawing  
 #### [Day 88](https://www.hackingwithswift.com/100/88)
