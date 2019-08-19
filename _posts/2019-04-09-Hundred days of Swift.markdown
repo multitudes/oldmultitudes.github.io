@@ -103,7 +103,7 @@ override func viewWillDisappear(_ animated: Bool) {
 #### [Day 18](https://www.hackingwithswift.com/100/18) 
 > Maya Angelou once said, “nothing will work unless you do.”
 
-[Challenge](https://www.hackingwithswift.com/review/hws/project-1-storm-viewer)
+[Review](https://www.hackingwithswift.com/review/hws/project-1-storm-viewer)
 
 <hr> 
 
@@ -139,7 +139,7 @@ func askQuestion(action: UIAlertAction!) {
 
 >John Carmack once said, “focused, hard work is the real key to success. Keep your eyes on the goal, and just keep taking the next step towards completing it. If you aren't sure which way to do something, do it both ways and see which works better.”
 
-[Challenge](https://www.hackingwithswift.com/review/hws/project-2-guess-the-flag)
+[Review](https://www.hackingwithswift.com/review/hws/project-2-guess-the-flag)
 
 <hr>
 
@@ -213,7 +213,7 @@ webView.allowsBackForwardNavigationGestures = true
 #### [Day 26](https://www.hackingwithswift.com/100/26)   - Wrap up
 > There’s a Korean singer called Kwon Ji-yong – better known by the awesome stage name G-Dragon – who said, “you have to believe in yourself, challenge yourself, and push yourself until the very end; that's the only way you'll succeed
 
-[Challenge](https://www.hackingwithswift.com/review/hws/project-4-easy-browser)
+[Review](https://www.hackingwithswift.com/review/hws/project-4-easy-browser)
 
 
 <hr>
@@ -221,9 +221,9 @@ webView.allowsBackForwardNavigationGestures = true
 ##  Project 5 - Word Scramble
 #### [Day 27](https://www.hackingwithswift.com/100/27) 
 
-> the US general George Patton once said, “accept the challenges so that you can feel the exhilaration of victory” –
+> the US general George Patton once said, “accept the challenges so that you can feel the exhilaration of victory” 
 
-- Capture lists in Swift: what’s the difference between weak, strong, and unowned references?
+- Capture lists in Swift review: what’s the difference between weak, strong, and unowned references?
 - Strong capturing
 - Weak capturing
 - Unowned capturing
@@ -245,7 +245,9 @@ webView.allowsBackForwardNavigationGestures = true
 - Emoji are measured differently with Swift strings and UTF-16 strings: Swift strings count them as 1-letter strings, but UTF-16 considers them to be 2-letter strings
 
 #### [Day 29](https://www.hackingwithswift.com/100/29) 
-- Wrap up
+> remember the words of Patrick McKenzie: “every great developer you know got there by solving problems they were unqualified to solve until they actually did it.”
+
+[Review](https://www.hackingwithswift.com/review/hws/project-5-word-scramble)
 
 <hr>
 
