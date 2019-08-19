@@ -256,7 +256,7 @@ webView.allowsBackForwardNavigationGestures = true
 
 > Coco Chanel once said that “fashion is architecture: it is a matter of proportions.” 
 
-- Auto Layout in code: addConstraints with Visual Format Language
+- Auto Layout in code and addConstraints with Visual Format Language
 
 #### [Day 31](https://www.hackingwithswift.com/100/31)
 
@@ -266,11 +266,15 @@ webView.allowsBackForwardNavigationGestures = true
 - Every UIView has a set of anchors that define its layouts rules. The most important ones are widthAnchor, heightAnchor, topAnchor, bottomAnchor, leftAnchor, rightAnchor, leadingAnchor, trailingAnchor, centerXAnchor, and centerYAnchor.
 - The “safe area” is the space that’s actually visible inside the insets of the iPhone X and other such devices – with their rounded corners, notch and similar. It’s a space that excludes those areas, so labels no longer run underneath the notch or rounded corners.
 
+[Review](https://www.hackingwithswift.com/review/hws/project-6-auto-layout)
+
 <hr>
 
+## Consolidation III
 ####  [Day 32](https://www.hackingwithswift.com/100/32) - Consolidation III
 
 > Chris Bosh, an NBA All-Star basketball player, said “every athlete knows that you get good by practicing, by repeating the same moves until you achieve your goal” 
+
 
 ## Codable, buttons, and GCD
 ## Project 7 - Whitehouse petitions
