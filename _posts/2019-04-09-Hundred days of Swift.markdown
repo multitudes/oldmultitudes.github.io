@@ -1157,8 +1157,9 @@ var location = touch.location(in: self)`
 -  in Xcode go to the `Debug` menu and choose `View Debugging > Capture View Hierarchy`. After a few seconds of thinking, Xcode will show you a screenshot of your app’s UI. if you click and drag inside the hierarchy display, you'll see you're actually viewing a 3D representation of your view  
 
 #### [Day 65](https://www.hackingwithswift.com/100/65)
+> When I first took up cycling there was a particular long, steep hill I used to practice on, and it was so hard for me – I remember getting off half way up and walking the remainder! I asked one of the team at my local bike shop about it, and his response really stuck with me: “it doesn’t get much easier, but you do get faster.”
 
-[Review project 18](https://www.hackingwithswift.com/Review/hws/project-18-debugging)
+[Review](https://www.hackingwithswift.com/review/hws/project-18-debugging)
 
 ## MILESTONE: PROJECTS 16-18
 
