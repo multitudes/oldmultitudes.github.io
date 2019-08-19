@@ -969,7 +969,11 @@ view.addSubview(imageView)
 @IBAction func tapped(_ sender: UIButton) {
 sender.isHidden = true
 ```
-- we gonna use this funtion of UIView: `UIView.animate(withDuration: <#T##TimeInterval#>, delay: <#T##TimeInterval#>, options: <#T##UIView.AnimationOptions#>, animations: <#T##() -> Void#>, completion: <#T##((Bool) -> Void)?##((Bool) -> Void)?##(Bool) -> Void#>)`    
+- we gonna use this funtion of UIView: 
+``` swift`
+UIView.animate(withDuration: <#T##TimeInterval#>, delay: <#T##TimeInterval#>, options: <#T##UIView.AnimationOptions#>, animations: <#T##() -> Void#>, completion: <#T##((Bool) -> Void)?##((Bool) -> Void)?##(Bool) -> Void#>)`    
+```
+
 - in code we pass two closures:
 
 ```swift
