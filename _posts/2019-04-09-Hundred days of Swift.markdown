@@ -552,13 +552,10 @@ func getDocumentsDirectory() -> URL {
         let paths = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
         return paths[0]
     }
-
-
 ```
 
-- NSObject is what's called a universal base class for all Cocoa Touch classes. That means all UIKit classes ultimately come from NSObject
-- indexPath.item rather than indexPath.row
-- round the cell amd i,age
+- NSObject is what's called a universal base class for all Cocoa Touch classes. That means all UIKit classes ultimately come from NSObject  
+- indexPath.item rather than indexPath.row   
 
 ``` swift
  cell.imageView.layer.borderColor = UIColor(white: 0, alpha: 0.3).cgColor
@@ -571,7 +568,7 @@ func getDocumentsDirectory() -> URL {
 
 #### [Day 44](https://www.hackingwithswift.com/100/44)
 
-- Wrap up and Challenge
+[Review](https://www.hackingwithswift.com/review/hws/project-10-names-to-faces)
 
 ## PROJECT 11 - Pachinko
 #### [Day 45](https://www.hackingwithswift.com/100/45)
