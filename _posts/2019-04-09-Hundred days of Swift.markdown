@@ -164,11 +164,11 @@ present(vc, animated: true)
 ```
 <hr>
 
-#### [Day 23](https://www.hackingwithswift.com/100/23) : Consolidation II
+## MILESTONE: PROJECTS 1-3
+#### [Day 23](https://www.hackingwithswift.com/100/23)
+> As Margaret Atwood once said, “if I waited for perfection, I would never write a word.” 
 
 <hr>
-
-## Web views, user input, and Auto Layout
 
 ##  Project 4 - Easy browser
 #### [Day 24](https://www.hackingwithswift.com/100/24)  
