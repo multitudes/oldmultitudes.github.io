@@ -1256,7 +1256,7 @@ notificationCenter.addObserver(self, selector: #selector(adjustForKeyboard), nam
 
 #### [Day 69](https://www.hackingwithswift.com/100/69)
 
-wrap up! [Review Project 19](https://www.hackingwithswift.com/Review/hws/project-19-javascript-injection)
+[Review](https://www.hackingwithswift.com/review/hws/project-19-javascript-injection)
 
 ## PROJECT 20 - Fireworks Night
 #### [Day 70](https://www.hackingwithswift.com/100/70)
