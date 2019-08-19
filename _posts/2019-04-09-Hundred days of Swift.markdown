@@ -567,6 +567,7 @@ func getDocumentsDirectory() -> URL {
 
 
 #### [Day 44](https://www.hackingwithswift.com/100/44)
+> as Denis Waitley said, “the results you achieve will be in direct proportion to the effort you apply.”
 
 [Review](https://www.hackingwithswift.com/review/hws/project-10-names-to-faces)
 
@@ -593,7 +594,7 @@ class GameScene: SKScene {
 - in the scene editor in the attributes inspector change the anchor point which should 0 for both X and Y.  
 - SpriteKit considers Y:0 to be the bottom of the screen whereas UIKit considers it to be the top   
 - iPad is 1024 points wide and 768 high  
-- move the `Actions.sks` trash  
+- move the `Actions.sks` to trash  
 - If you want to place an image in your game, the class to use is called SKSpriteNode. To place the background image in the center of a landscape iPad, we need to place it at the position X:512, Y:384  
 - And unlike UIKit SpriteKit positions things based on their center – i.e., the point 0,0 refers to the horizontal and vertical center of a node.  
 - the blend mode .replace. Blend modes determine how a node is drawn, and SpriteKit gives you many options. The .replace option means "just draw it, ignoring any alpha values,"   
@@ -681,7 +682,7 @@ var score = 0 {
 - `SKEmitterNode class`
 - play with the particle editor: `Particle Texture`: what image to use for your particles. `Particles Birthrate`: how fast to create new particles. `Particles Maximum`: the maximum number of particles this emitter should create before finishing. `Lifetime Start`: the basic value for how many seconds each particle should live for. `Lifetime Range`: how much, plus or minus, to vary lifetime. `Position Range X/Y`: how much to vary the creation position of particles from the emitter node's position. `Angle Start`: which angle you want to fire particles, in degrees, where 0 is to the right and 90 is straight up. `Angle Range`: how many degrees to randomly vary particle angle. `Speed Start`: how fast each particle should move in its direction. `Speed Range`: how much to randomly vary particle speed. `Acceleration X/Y`: how much to affect particle speed over time. This can be used to simulate gravity or wind. `Alpha Start`: how transparent particles are when created. `Alpha Range`: how much to randomly vary particle transparency. `Alpha Speed`: how much to change particle transparency over time. A negative value means "fade out." `Scale Start / Range / Speed`: how big particles should be when created, how much to vary it, and how much it should change over time. A negative value means "shrink slowly." `Rotation Start / Range / Speed`: what Z rotation particles should have, how much to vary it, and how much they should spin over time. `Color Blend Factor / Range / Speed`: how much to color each particle, how much to vary it, and how much it should change over time.
 
-[REVIEW Project 11](https://www.hackingwithswift.com/review/hws/project-11-pachinko)
+[Review](https://www.hackingwithswift.com/review/hws/project-11-pachinko)
 
 ## PROJECT 12 - User Defaults
 
