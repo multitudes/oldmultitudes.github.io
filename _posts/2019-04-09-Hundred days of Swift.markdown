@@ -139,7 +139,7 @@ func askQuestion(action: UIAlertAction!) {
 
 >John Carmack once said, “focused, hard work is the real key to success. Keep your eyes on the goal, and just keep taking the next step towards completing it. If you aren't sure which way to do something, do it both ways and see which works better.”
 
-
+[Challenge](https://www.hackingwithswift.com/review/hws/project-2-guess-the-flag)
 
 <hr>
 
