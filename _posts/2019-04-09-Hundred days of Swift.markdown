@@ -1790,7 +1790,7 @@ motionManager = CMMotionManager()
 motionManager.startAccelerometerUpdates()
 ```
 
-Special compiler instructions. `#if targetEnvironment(simulator)`, `#else` and `#endif`. 
+- Special compiler instructions. `#if targetEnvironment(simulator)`, `#else` and `#endif`. 
 
 #### [Day 87](https://www.hackingwithswift.com/100/87)
 > Seth Godin – author and marketing genius – once said “surprise and delight and connection are remarkable.”
@@ -1802,21 +1802,21 @@ Special compiler instructions. `#if targetEnvironment(simulator)`, `#else` and `
 > As Michelangelo once said, “every block of stone has a statue inside it and it is the task of the sculptor to discover it.”
 
 - `Core Graphics` responsible for device-independent 2D drawing – when you want to draw shapes, paths, shadows, colors..
-- let Interface Builder do the work : Editor > Resolve Auto Layout Issues > Reset to Suggested Constraints.
-- Core Graphics sits at a lower technical level than UIKit. This means it doesn't understand classes you know like UIColor and UIBezierPath, so you either need to use their counterparts (CGColor and CGPath respectively)
-- Core Graphics differentiates between creating a path and drawing a path.
+- let Interface Builder do the work : `Editor > Resolve Auto Layout Issues > Reset to Suggested Constraints`.
+- `Core Graphics` sits at a lower technical level than `UIKit`. This means it doesn't understand classes you know like `UIColor` and `UIBezierPath`, so you either need to use their counterparts (`CGColor` and `CGPath` respectively)
+- `Core Graphics` differentiates between creating a path and drawing a path.
 
-- Core Graphics is extremely fast and can work on a background thread – something that UIKit can't do 
-- `UIGraphicsImageRenderer` class. This was introduced in iOS 10 to allow fast and easy graphics rendering. It isn’t a Core Graphics class; it’s a UIKit class, but it acts as a gateway to and from Core Graphics for UIKit-based apps.
-- In Core Graphics, a context is a canvas upon which we can draw, but it also stores information about how we want to draw 
-- When you create a renderer, you get to specify how big it should be. To kick off rendering you can either call the image() function to get back a UIImage of the results, or call the pngData() and jpegData() methods to get back a Data object in PNG or JPEG format 
-- the renderer image() method accepts a closure as its only parameter, which is code that should do all the drawing. It gets passed a single parameter which is a reference to a UIGraphicsImageRendererContext to draw to.
-- the `cgContext` property gives us the full power of Core Graphics.
+- `Core Graphics` is extremely fast and can work on a background thread – something that UIKit can't do 
+- `UIGraphicsImageRenderer` class. This was introduced in iOS 10 to allow fast and easy graphics rendering. It isn’t a `Core Graphics` class; it’s a `UIKit` class, but it acts as a gateway to and from `Core Graphics` for UIKit-based apps.
+- In `Core Graphics`, a context is a canvas upon which we can draw, but it also stores information about how we want to draw 
+- When you create a renderer, you get to specify how big it should be. To kick off rendering you can either call the `image()` function to get back a `UIImage` of the results, or call the `pngData()` and `jpegData()` methods to get back a Data object in PNG or JPEG format 
+- the `renderer image()` method accepts a closure as its only parameter, which is code that should do all the drawing. It gets passed a single parameter which is a reference to a `UIGraphicsImageRendererContext` to draw to.
+- the `cgContext` property gives us the full power of `Core Graphics`.
 - five new methods: `setFillColor()` `setStrokeColor()` `setLineWidth()` `addRect()` `drawPath()` which are called on the Core Graphics context that comes from ctx.cgContext
-- drawing circles (or indeed any elliptical shape) in Core Graphics is done by specifying its rectangular bounds.
+- drawing circles (or indeed any elliptical shape) in `Core Graphics` is done by specifying its rectangular bounds.
 - create a checkerboard - check `CICheckerboardGenerator`
-- drawImagesAndText()
-- put an attributed string into a graphic? attributed strings have a built-in method called draw(with:)
+- `drawImagesAndText()`
+- put an attributed string into a graphic? attributed strings have a built-in method called `draw(with:)`
 
 
 #### [Day 89](https://www.hackingwithswift.com/100/89)
