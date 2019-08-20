@@ -1833,7 +1833,7 @@ motionManager.startAccelerometerUpdates()
 
 - `#targetEnvironment`(simulator) compiler directive. Swift has several of these, like `#line` and `#if swift`. 
 - `#line` is easy enough: when your code gets built it automatically gets replaced with the current line number. You can also use #filename and #function, and the combination of these are very useful in debugging strings.
-- The #if swift directive allows you to conditionally compile code depending on the Swift compiler version being used. So, you could write Swift 4.2 code and Swift 5.0 code in the same file, and have Xcode choose the right version automatically.
+- The '#if' swift directive allows you to conditionally compile code depending on the Swift compiler version being used. So, you could write Swift 4.2 code and Swift 5.0 code in the same file, and have Xcode choose the right version automatically.
 
 #### [Day 91](https://www.hackingwithswift.com/100/91) - CORE GRAPHICS REDUX
 > Fred Donaldson : “Children learn as they play. Most importantly, in play children learn how to learn.” 
@@ -1862,9 +1862,9 @@ KeychainWrapper.standard.set(secret.text, forKey: "SecretMessage")
 // and
 secret.text = KeychainWrapper.standard.string(forKey: "SecretMessage") ?? ""
 ```
-- Touch ID and Face ID are part of the Local Authentication framework, and our code needs to do three things Check whether the device is capable of supporting biometric authentication – that the hardware is available and is configured by the user.
-- biometry system begin a check now. For Touch ID the string is written in code; for Face ID the string is written into our Info.plist file
-- when we're told whether Touch ID/Face ID was successful or not, it might not be on the main thread. This means we need to use async() 
+- Touch ID and Face ID are part of the `Local Authentication` framework, and our code needs to check whether the device is capable of supporting biometric authentication, that the hardware is available and is configured by the user.
+- Biometry system checks. For Touch ID the string is written in code; for Face ID the string is written into our Info.plist file
+- By the authentication we're told whether Touch ID/Face ID was successful or not, it might not be on the main thread. This means we need to use `async()`
 - `import LocalAuthentication`
 
 #### [Day 93](https://www.hackingwithswift.com/100/93)
@@ -1872,7 +1872,9 @@ secret.text = KeychainWrapper.standard.string(forKey: "SecretMessage") ?? ""
 > As Gene Spafford once said, “the online truly secure system is one that is powered off, cast in a block of concrete and sealed in a lead-lined room with armed guards.”
 
 - security, encryption in ios 
-- If you use biometric authentication but store your data in UserDefaults, it can be read out by bypassing the app. If you store your data in the iOS keychain but don’t put it behind biometric authentication or similar, anyone can launch the app and just take it.
+- If you use biometric authentication but store your data in `UserDefaults`, it can be read out by bypassing the app. If you store your data in the iOS keychain but don’t put it behind biometric authentication or similar, anyone can launch the app and just take it.
+
+[Review](https://www.hackingwithswift.com/review/hws/project-28-secret-swift)
 
 ## PROJECT 29 - Exploding Monkeys
 #### [Day 94](https://www.hackingwithswift.com/100/94) 
