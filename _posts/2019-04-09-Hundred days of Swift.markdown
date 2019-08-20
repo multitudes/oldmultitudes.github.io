@@ -1769,7 +1769,7 @@ if mcSession.connectedPeers.count > 0 {
 #### [Day 85](https://www.hackingwithswift.com/100/85) 
 > Dan O’Sullivan once wrote, “personal computers have evolved in an office environment in which you sit on your butt, moving only your fingers, entering and receiving information censored by your conscious mind. That is not your whole life, and probably not even the best part – we need to think about computers that sense more of your body, serve you in more places, and convey the physical expression in addition to information.”  
 
-We're going to be using the categoryBitMask, contactTestBitMask and collisionBitMask properties in their fullest for this project, because we have very precise rules that make the game work. To clarify, here's what each of them mean:
+We're going to be using the `categoryBitMask`, `contactTestBitMask` and `collisionBitMask` properties in their fullest for this project, because we have very precise rules that make the game work. To clarify, here's what each of them mean:
 
 1. The `categoryBitMask` property is a number defining the type of object this is for considering collisions.
 2. The `collisionBitMask` property is a number defining what categories of object this node should collide with,
@@ -1779,7 +1779,7 @@ We're going to be using the categoryBitMask, contactTestBitMask and collisionBit
 #### [Day 86](https://www.hackingwithswift.com/100/86)
 > Back when the original iPad launched Apple showed off one of those “Jony Ive in an infinitely white room” videos, where Jony had this to say: “it’s true: when something exceeds your ability to understand how it works, it sort of becomes magical – and that’s exactly what the iPad is.”  
 
-All motion detection is done with an Apple framework called Core Motion, and most of the work is done by a class called CMMotionManager. Using it here won't require any special user permissions  
+All motion detection is done with an Apple framework called `Core Motion`, and most of the work is done by a class called `CMMotionManager`. Using it here won't require any special user permissions  
 
 ```swift
 var motionManager: CMMotionManager!
@@ -1824,7 +1824,7 @@ Special compiler instructions. `#if targetEnvironment(simulator)`, `#else` and `
 
 > Swift was first introduced way back in 2014, at Apple’s annual Worldwide Developer Conference (WWDC). When showing off the new language, Chris Lattner (the creator of Swift) took to the stage and immediately did something that was revolutionary for us – at least back then: he created a Swift playground in Xcode.
 
-[Review]()
+[Review](https://www.hackingwithswift.com/review/hws/project-27-core-graphics)
 
 ## MILESTONE: PROJECTS 25-27
 
