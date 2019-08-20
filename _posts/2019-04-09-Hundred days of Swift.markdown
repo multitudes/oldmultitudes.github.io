@@ -1882,7 +1882,7 @@ secret.text = KeychainWrapper.standard.string(forKey: "SecretMessage") ?? ""
 
 - `SKSpriteNode` subclass for buildings that sets up physics, draws the building graphic, and ultimately handles the building being hit 
 - `import SpriteKit`
-- three methods: `setup()` will set its name, texture, and physics. `configurePhysics()` will set up per-pixel physics for the sprite's `current texture`(texture will change as the game progresses. `drawBuilding()` will do the Core Graphics rendering of a building, and return it as a UIImage.
+- three methods: `setup()` will set its name, texture, and physics. `configurePhysics()` will set up per-pixel physics for the sprite's current texture (texture will change as the game progresses. `drawBuilding()` will do the Core Graphics rendering of a building, and return it as a UIImage.
 - define some collision bitmasks
 - a new way to create colors: hue, saturation and brightness, or HSB. The helpful thing about HSB is that if you keep the saturation and brightness constant, changing the hue value will cycle through all possible colors – it's an easy way to generate matching pastel colors
 - basic Swift feature `stride()`, which lets you loop from one number to another with a specific interval. 
@@ -1891,7 +1891,7 @@ secret.text = KeychainWrapper.standard.string(forKey: "SecretMessage") ?? ""
 for row in stride(from: 10, to: Int(size.height - 10), by: 40) {
 ```
 - `Bool.random()` to generate either true or false randomly
-- mixing UIKit and SpriteKit, our game view controller needs to house and manage the user interface, and the game scene needs to manage everything inside the game. But they also need to talk to each other:  
+- mixing `UIKit` and `SpriteKit`, our game view controller needs to house and manage the user interface, and the game scene needs to manage everything inside the game. But they also need to talk to each other:  
 
 
 ```swift
@@ -1982,7 +1982,7 @@ if let explosion = SKEmitterNode(fileNamed: "hitBuilding") {
 #### [Day 96](https://www.hackingwithswift.com/100/96)
 > Craig Federighi, senior vice president of software engineer at Apple, once said “people sometimes have a view of programming that is something solitary and very technical, but programming is among the most creative, expressive, and social careers.”
 
-- wrap up
+[Review](https://www.hackingwithswift.com/review/hws/project-29-exploding-monkeys)
 
 ## PROJECT 29 - Instruments
 #### [Day 97](https://www.hackingwithswift.com/100/97)
