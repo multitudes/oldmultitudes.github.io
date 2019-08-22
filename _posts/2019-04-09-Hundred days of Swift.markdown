@@ -1989,10 +1989,9 @@ if let explosion = SKEmitterNode(fileNamed: "hitBuilding") {
 > as Edsger Dijkstra once said, “if debugging is the process of removing software bugs, then programming must be the process of putting them in.”
 
 - Instruments. It ships as part of Xcode, and is responsible for profiling your app. "Profiling" is the term used when we monitor performance, memory usage and other information of an app, with the aim of improving efficiency.
-- Press Cmd+I to run your app using Instruments. This will build your ode in Release mode, which men fully optimized for maximum performance 
+- Press `Cmd+I` to run your app using Instruments. This will build your ode in Release mode, which men fully optimized for maximum performance 
 - select Time Profiler
-- Under the Debug menu on your Mac you’ll see a few options. Two in particular are very useful: `Color Blended Layers` shows views that are opaque in green and translucent in red. If there are multiple transparent views inside each other, you'll see more and more red. `Color Offscreen-Rendered` shows views that require an extra drawing pass in yellow. Some special drawing work must be drawn individually off screen then drawn again onto the screen, which means a lot more work.
-Broadly speaking, you want "Color Blended Layers" to show as little red as possible, and "Color Offscreen-Rendered Yellow" to show no yellow.
+- Under the Debug menu on your Mac you’ll see a few options. Two in particular are very useful: `Color Blended Layers` shows views that are opaque in green and translucent in red. If there are multiple transparent views inside each other, you'll see more and more red. `Color Offscreen-Rendered` shows views that require an extra drawing pass in yellow. Some special drawing work must be drawn individually off screen then drawn again onto the screen, which means a lot more work. Broadly speaking, you want "Color Blended Layers" to show as little red as possible, and "Color Offscreen-Rendered Yellow" to show no yellow.
 
 ```swift
 		tableView.rowHeight = 90
@@ -2001,15 +2000,16 @@ Broadly speaking, you want "Color Blended Layers" to show as little red as possi
 
 - 2000x2000 pixel jpeg images might only take up 500KB on disk, but when they are uncompressed by iOS they’ll need around 45 MB of RAM!
 - Instruments > `Allocations instrument`
-- maoolc means memory allocate
+- `malloc` means memory allocate
 - some objects are persistent (created and still exist while the program was still running) and some are transient (created and since destroyed). 
 
 #### [Day 98](https://www.hackingwithswift.com/100/98)
 > As Izey Victoria Odiase said, “don't aim for perfection – aim for 'better than yesterday’.”
 
-- When you create a UIImage using UIImage(named:) iOS loads the image and puts it into an image cache for reuse later.
-- we can skip the image cache by creating our images using the UIImage(contentsOfFile:) initializer instead. This isn't as friendly as UIImage(named:) because you need to specify the exact path to an image rather than just its filename in your app bundle
-- UIImage's cache is intelligent: if it senses memory pressure, it automatically clears itself to make room for other stuff.
+- When you create a `UIImage` using `UIImage(named:)` iOS loads the image and puts it into an image cache for reuse later.
+- we can skip the image cache by creating our images using the `UIImage(contentsOfFile:)` initializer instead. This isn't as friendly as `UIImage(named:)` because you need to specify the exact path to an image rather than just its filename in your app bundle
+- `UIImage`'s cache is intelligent: if it senses memory pressure, it automatically clears itself to make room for other stuff.  
+
 - `title = image.replacingOccurrences(of: "-Large.jpg", with: "")`
 
 ```swift
@@ -2024,7 +2024,7 @@ override func viewWillDisappear(_ animated: Bool) {
 
 - Hold up your right hand and repeat after me: “I will never ship an app without running it through Instruments first.” 
 		
-
+[Review](https://www.hackingwithswift.com/review/hws/project-30-instruments)
 
 ## Milestone 
 #### [Day 99](https://www.hackingwithswift.com/100/99)
