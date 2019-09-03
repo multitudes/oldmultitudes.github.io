@@ -33,8 +33,7 @@ This post is inspired from the first 15 days of the 100 Days of Swift by Paul Hu
 - [Day 11](https://www.hackingwithswift.com/100/11) – protocols, extensions, and protocol extensions
 - [Day 12](https://www.hackingwithswift.com/100/12) – optionals, unwrapping, and typecasting  
 And  
-
-[Day 13-14-15](https://www.hackingwithswift.com/100/13)  - Consolidation and review
+- [Day 13-14-15](https://www.hackingwithswift.com/100/13)  - Consolidation and review
 
 ### Open the Swift playgrounds
 
@@ -702,7 +701,7 @@ override func makeNoise() {
 
 // sometimes you want to disallow other developers from building their own class based on yours.
 
-Swift gives us a final keyword just for this purpose: when you declare a class as being final, no other class can inherit from it.
+// Swift gives us a final keyword just for this purpose: when you declare a class as being final, no other class can inherit from it.
 
 final class Dog {
    // ...
@@ -723,11 +722,11 @@ deinit {
     print("\(name) is no more!")
 }
 
-//The final difference between classes and structs is the way they deal with constants. If you have a constant struct with a variable property, that property can’t be changed because the struct itself is constant.
+// The final difference between classes and structs is the way they deal with constants. If you have a constant struct with a variable property, that property can’t be changed because the struct itself is constant.
 
-//However, if you have a constant class with a variable property, that property can be changed
+// However, if you have a constant class with a variable property, that property can be changed
 
-//If you want to stop that from happening you need to make the property constant:
+// If you want to stop that from happening you need to make the property constant
 
 ```
 
