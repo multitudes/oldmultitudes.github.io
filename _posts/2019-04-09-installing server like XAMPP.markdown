@@ -21,10 +21,8 @@ cd ~/myWebFolder
 php -S localhost:8000
 ```
 
-Now open your browser and go to `localhost:8000`.  
-You will see the files you have in the folder! Other devices on your local network will be able to see the same.
-To access the folder you will just need to replace "localhost" with the IP address of your mac.
-To see the IP address Option click on your wifi icon in the top right menu bar!
+Now open your browser and go to `localhost:8000` + `/` + your fie name  
+You will see the file! Other devices on your local network will be able to see the same.
 
 [https://www.php.net/manual/en/features.commandline.webserver.php](https://www.php.net/manual/en/features.commandline.webserver.php)  
 
