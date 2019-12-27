@@ -7,7 +7,8 @@ comments: true
 published: true
 ---
 
-This blog article is really still in progress because at the time of writing I did not finish the [Advent of code 2019 ](https://adventofcode.com). I wanted to do the challenges with swift and I thought the Xcode Playgrounds would be ideal for this. I would collect all challenges in one big playground with multiple pages and publish it on [Github](). 
+This blog article is really still in progress because at the time of writing I did not finish the [Advent of code 2019 ](https://adventofcode.com). 
+I wanted to do the challenges with swift and I thought the Xcode Playgrounds would be ideal for this. I would collect all challenges in one big playground with multiple pages and publish it on [Github](). 
 After all the possibility to insert markdown and create a nice layout to explain the code seemed a great feature, and many WWDC scholarships submission are done with the playgrounds and it is also actively encouraged by Apple. Swift is a modern language said to be as fast as C and offer many nice features like functional programming.
 I thought about writing about my experiences doing the AoC but kept procrastinating. I started quite late doing the challenges and could not catch up fast enough to finish them by the 25th. Today is the 27th december and I am still on day 13! 
 However I had a nagging bug on the IntCode Computer on board of my spaceship. The IntCode Computer started builiding itself on day 2 where we had to decode an easy sequence of instructions.
