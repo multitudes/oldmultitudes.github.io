@@ -83,10 +83,9 @@ Switch to the Source Control navigator, right-click on the master branch and sel
 
 ## Create a .gitignore file
 Some files do not need to be tracked because are internal and Xcode can regenerate them.
-However this did not work for me in Terminal! If any tips please let me know in the comments!
-the command would be:
+The command is:
 ``` bash
-$ git config --global alias.ignore '!gi() { curl -L -s https://www.gitignore.io/api/$@ ;}; gi'
+git config --global alias.ignore '!gi() { curl -L -s https://www.gitignore.io/api/$@ ;}; gi'
 ```
 
 ## Xcode and GitHub
