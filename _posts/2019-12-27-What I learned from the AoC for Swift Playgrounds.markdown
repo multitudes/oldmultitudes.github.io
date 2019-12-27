@@ -40,9 +40,13 @@ This came as a shock, and became a road block for me and many others like is to 
 
 ![Reddit Post Image](/assets/img/aoc/aoc1.png)
 
-The first problem on day 9, many forgot to implement the relative mode on the third parameter which had been mostly implicitly left out till now. This would give '203' as output. I thought there is an element of genius in how these challenges are made. I found out and corrected the code. Everything was working correctly now, Perhaps not as elegantly as I wanted but still, this is my first aoc and I am no professional developer after all.
-Every smaller test file with IntCode was working..  but the part two got caught in an infinite loop or so I thought.
-Nobody else had this problem. I read and reread the challenge description including all possible hints on the aoc website and the reddits. This sentence had me thinking for a long time
+The first big problem came on the day 9 part 1 challenge, many forgot to implement the relative mode on the third parameter, which had been mostly implicitly left out till now. 
+This would give ‘203’ as output. 
+I thought there is an element of genius in how these challenges are made. :) 
+I found out and corrected the code. Everything was working correctly now. 
+Perhaps not as elegantly as I wanted but still, this is my first aoc and I am no professional developer after all. Every smaller test file with IntCode was working.. but part two got caught in an infinite loop or so I thought. Nobody else had this problem. I read and reread the challenge description including all possible hints on the aoc website and the reddits. 
+
+Especially this sentence below had me thinking for a long time.
 
 >Part two does have a purpose. I'm not telling exactly what it is yet, but it's an entirely different kind of test than part 1 did. If you got the right answer, your Intcode implementation passed that test. If you got part 1, you should have gotten part 2 for free, but virtual machines are persnickety critters.
 
@@ -86,8 +90,9 @@ I found this enlightening answer on SO [recursive-algorithm-is-much-slower-in-pl
 
 Playgrounds are slow!
 
-The most performant way is to make all the performance critical code in a .swift file inside the Sources folder in the playground. Note: In order to use the functions, classes, properties and methods from the Sources folder you have to mark them public. If you want to subclass a class it has to be marked open.
+Of course the most performant way is to make all the performance critical code in a .swift file inside the Sources folder in the playground, but I never imagined this would make such a big difference! 
 
+This below is another example of how the Playgrounds can be unexpectedly quirky!
 
 ``` swift
 var count = 0
