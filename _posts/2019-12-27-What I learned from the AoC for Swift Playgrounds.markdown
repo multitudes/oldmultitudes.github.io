@@ -7,6 +7,8 @@ comments: true
 published: true
 ---
 
+![AoC Image](/assets/img/aoc/aoc0.png)
+
 This blog article is still in progress because at the time of writing I did not finish the [Advent of code 2019](https://adventofcode.com). 
 I wanted to do the challenges with swift and I thought the Xcode Playgrounds would be ideal for this. I would collect all challenges in one big playground with multiple pages and publish it on [Github](https://github.com/multitudes/Advent-of-Code-2019).
 
