@@ -38,7 +38,7 @@ The important difference is that relative mode parameters don't count from addre
 
 This came as a shock, and became a road block for me and many others like is to be seen on the [reddit forum](https://www.reddit.com/r/adventofcode/comments/e85b6d/2019_day_9_solutions/fa9e8av?utm_source=share&utm_medium=web2x) 
 
-![Reddit Post Image](/assets/img/aoc/aoc1)
+![Reddit Post Image](/assets/img/aoc/aoc1.png)
 
 The first problem on day 9, many forgot to implement the relative mode on the third parameter which had been mostly implicitly left out till now. This would give '203' as output. I thought there is an element of genius in how these challenges are made. I found out and corrected the code. Everything was working correctly now, Perhaps not as elegantly as I wanted but still, this is my first aoc and I am no professional developer after all.
 Every smaller test file with IntCode was working..  but the part two got caught in an infinite loop or so I thought.
