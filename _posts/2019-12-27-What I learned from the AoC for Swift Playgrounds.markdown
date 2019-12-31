@@ -110,6 +110,19 @@ Without the parenthesis: about 10.000 loop iterations per second
 With parenthesis: about 10.000.000 loop iterations per second !!!
 
 
+
+## Get more Performance
+
+-Put all your classes and structs in a swift or in a few .swift files and add them to the sources folder.  All the classes and structs need to be marked public or the main code will not see them. This will speed up the performance considerably.
+- Use less print statements.
+- Use macOs playgrounds (there an option for that in the inspector)
+
 ## The disadvantages to use Xcode Playgrounds for Swift 
+
+- Once you put your classes and structs in sources there is a message that you will get all the time. I think I wasted lots of time on this. "... is inaccessible due to internal protection level." Need to make every.single.property! and methods! public. Thats a lot! plus the structs will need a public init. and if they do not have an init they need one now. 
+- Putting the code in the source makes it very slow to debug, the playground needs minutes(!) to understand that you made a change in a swift file in sources, or that a struct that was in the maion file previously is now in sources.
+- I had to restart Xcode a lot doing the above. Xcode again needs minutes(!) to understand that you corrected a struct permission from internal to public.
+- Playgrounds do not have debuggers. An easy options is to use print statements and these make your code slow
+- Using macOs playgrounds it is then not possible obviously to use UIkit and changing from macOS to iOS playgrounds would change all pages.  
 
 to be continued
