@@ -9,17 +9,43 @@ published: false
 
 ![AoC Image](/assets/img/aoc/aoc0.png)
 
-This blog article is still in progress because at the time of writing I did not finish the [Advent of code 2019](https://adventofcode.com). 
-I wanted to do the challenges with swift and I thought the Xcode Playgrounds would be ideal for this. I would collect all challenges in one big playground with multiple pages and publish it on [Github](https://github.com/multitudes/Advent-of-Code-2019).
 
-After all the possibility to insert markdown and create a nice layout to explain the code seemed a great feature, and many WWDC scholarships submission are done with the playgrounds and it is also actively encouraged by Apple.
+The [Advent of code 2019](https://adventofcode.com) in December 2019 has been a great experience.  
+At the beginning of the month, I had to study for the IHK German Chamber Of Commerce Software developer exams, which I passed by the way, and to be able to focus on just writing code and algorithms in the language of my choice has been a great relief and fun!
+I enjoyed the challenges and especially the realisations that came with them. The puzzles were not easy for me. I cannot believe 100 people a day could manage to solve those in less than one hour. 
+I loved the Reddit with the discussions and the poems! Not only people get to solve these much quicker than me but they manage to write a poem too. I thought this was wonderful, also I enjoyed to see that people used so many different programming languages to solve the challenges, from Bash, to Go, to Excel, even ARMv7-M Assembly! 
+It is incredibly inspiring to see so many skills in actions and look at each other code, even if I do not understand most of it.
+With time I found two other developers using Swift and the solutions were implemented using packages and templates, allowing the code to be run in Terminal on Mac or Linux. I thought this was interesting because Swift is open source and I still rely too much on the Apple platform. 
+This blog article is still in progress because at the time of writing I did not finish the [Advent of code 2019](https://adventofcode.com). I managed to get to day 15 and then life got in the way. I am just not fast enough I guess. In 2020 I will prepare myself for hopefully a new job as a Software developer and I will put all my energy in editing my Website, my CV and applying for jobs. I will put the challenges aside for the moment being!
+
+#### What can go wrong using the Swift Playgrounds on Xcode?  
+
+My programming language of choice is Swift and I thought the Xcode Playgrounds would be ideal for this. I did not know what would expect me haha!
+At the end of the article below, I will explain more in detail the pro and contra of using the playgrounds for the challenges.
+
+I collected all the challenges in one big playground with multiple pages and published it on [Github](https://github.com/multitudes/Advent-of-Code-2019) to document my journey.
+
+Xcode playground can insert markdown and create a nice layout to introduce and describe the challenges and explain the code. They are similar to the Notebooks in Python, and it seemed to be a great feature and a bonus. As seen in the images this is an example of markdown rendering and navigation in the playgrounds. I assigned a shortcut to go from the editing mode to the rendered mode
+![AoC Image](/assets/img/aoc/markdown0.png)
+![AoC Image](/assets/img/aoc/markdown1.png)
+
+Many WWDC scholarships submission are done with the playgrounds and its use is also actively encouraged by Apple.
 Swift is a modern language said to be as fast as C and offer many nice features like functional programming. 
-I thought about writing about my experiences doing the AoC but kept procrastinating. I started quite late doing the challenges and could not catch up fast enough to finish them by the 25th. 
+
+### Day 1
+
+This was just to get the party going. The leaderboards have been unlocked in 4 minutes 12 seconds, which mean it took so long for the first person to get to the solution. Especially for people starting doing the challenges to learn a new language, the first day is helping to get the system ready, to get comfortable doing all basic operations required by the later challenges like reading and saving files from a disk, display solution, print to screen etc.
+Not difficult at all but it took a long time for me to understand how certain things in Playground works. 
+For instance, where do I put the input file? In the Sources or Resources folder? Not a trivial question. The Sources folder is for the source code, but it would work for any other resources too. However, the correct way is to put the input.txt file for the puzzle in Ressources! The Sources folder is for the code. Swift files will not be recognized if put in the wrong folder. This I learned!
+
+![AoC Image](/assets/img/aoc/sourceFolder.png)
+
+
 Today is the 27th December and I am still on day 13! However, I had a nagging bug on the IntCode Computer on board of my spaceship. The IntCode Computer started building itself on day 2 where we had to decode an easy sequence of instructions.
 
-## The IntCode Computer
+### Day 2: Meet the IntCode Computer
 
-The IntCode is at the heart of many AoC 2019 challenges. It starts at day 2: 
+The IntCode Computer is at the heart of many AoC 2019 challenges. It starts on day 2:
 
 > An Intcode program is a list of integers separated by commas (like 1,0,0,3,99). To run one, start by looking at the first integer (called position 0). Here, you will find an opcode - either 1, 2, or 99. The opcode indicates what to do; for example, 99 means that the program is finished and should immediately halt. Encountering an unknown opcode means something went wrong.
 For example, suppose you have the following program:
@@ -30,13 +56,13 @@ This challenge has been continued in Day 5 where we got more opcodes and in day 
 
 >The Elves have sent you some Amplifier Controller Software (your puzzle input), a program that should run on your existing Intcode computer. Each amplifier will need to run a copy of the program.
 
-And finally in day 9:
+And finally in day 9 came what resulted for many to be a watershed moment in the advent of code:
 
 >Your existing Intcode computer is missing one key feature: it needs support for parameters in relative mode.
 Parameters in mode 2, relative mode, behave very similarly to parameters in position mode: the parameter is interpreted as a position. Like position mode, parameters in relative mode can be read from or written to.
 The important difference is that relative mode parameters don't count from address 0. Instead, they count from a value called the relative base. The relative base starts at 0.
 
-This came as a shock, and became a road block for me and many others like is to be seen on the [reddit forum](https://www.reddit.com/r/adventofcode/comments/e85b6d/2019_day_9_solutions/fa9e8av?utm_source=share&utm_medium=web2x) 
+This challenge somehow came as a shock and became a roadblock for me and many others like is to be seen on the [reddit forum](https://www.reddit.com/r/adventofcode/comments/e85b6d/2019_day_9_solutions/fa9e8av?utm_source=share&utm_medium=web2x) 
 
 ![Reddit Post Image](/assets/img/aoc/aoc1.png)
 
@@ -44,7 +70,7 @@ The first big problem came on the day 9 part 1 challenge, many forgot to impleme
 This would give ‘203’ as output. 
 I thought there is an element of genius in how these challenges are made. :) 
 I found out and corrected the code. Everything was working correctly now. 
-Perhaps not as elegantly as I wanted but still, this is my first aoc and I am no professional developer after all. Every smaller test file with IntCode was working.. but part two got caught in an infinite loop or so I thought. Nobody else had this problem. I read and reread the challenge description including all possible hints on the aoc website and the reddits. 
+Perhaps not as elegantly as I wanted but still, this is my first AoC and I am no professional developer after all. Every smaller test file with IntCode was working.. but part two got caught in an infinite loop or so I thought. Nobody else had this problem. I read and reread the challenge description including all possible hints on the AoC website and the Reddit. 
 
 Especially this sentence below had me thinking for a long time.
 
@@ -54,14 +80,9 @@ and
 
 > Once run, it will boost the sensors automatically, but it might take a few seconds to complete the operation on slower hardware.
 
-A few seconds.. I have a mac mini 2018 with an i7 intel 6 cores...  It cannot run for 10 minutes? 
-
-I spent hours on this inserting more and more print statements (which ironically would just make my playground more slow).
-
-I had really a bad feeling. Part two would not give me any output and I could not find the bug.
-
-I had a break from the IntCode and did the day 10 which incidentally had a great learning effect on me to get to know more about angles and radiants including the atan2 function!
-Day 11 had me using the IntCode computer to manoever a Hull painting robot. It worked!
+A few seconds...? I have a mac mini 2018 with an i7 intel 6 cores... It cannot run for 10 minutes?  
+I spent hours on this inserting more and more print statements (which ironically would just make my playground slower). I had a bad feeling. Part two would not give me any output and I could not find the bug.  I had a break from the IntCode! 
+Desperation is a part of doing the challenges. In my case it turned out that the playgrounds as I was using them were too slow!  
 
 ## Day 12
 
@@ -126,3 +147,7 @@ With parenthesis: about 10.000.000 loop iterations per second !!!
 - Using macOs playgrounds it is then not possible obviously to use UIkit and changing from macOS to iOS playgrounds would change all pages.  
 
 to be continued
+
+
+ and did the day 10 which incidentally had a great learning effect on me to get to know more about angles and radiants including the atan2 function!
+Day 11 had me using the IntCode computer to manoeuvre a Hull painting robot. It worked!
