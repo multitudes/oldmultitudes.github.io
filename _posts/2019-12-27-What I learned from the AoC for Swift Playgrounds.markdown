@@ -109,7 +109,13 @@ At day 3 I started to refactor code and use a separate swift file for functions 
 ## Day 4: Secure Container
 
 Cryptography! Create a sequence of numbers and check how many meet the selected criteria. Good fun, I thought it would be easier then I had an "aha" moment. My solution was wrong. I had to think harder, and this is part of the fun :)
-I printed the sequences to debug and could see that this slowed down the code quite a bit but nothing too bad yet. The worse was yet to come! 
+I printed the sequences to debug and could see that this slowed down the code quite a bit. I took out the print statements to see if the speed would improve.   
+When writing the this article I actually went back and recorded this gif:
+
+![Reddit Post Image](/assets/img/aoc/aocday4-slow.gif)
+
+I did not realize at the time how bad this was.  
+But the worse was yet to come! 
 
 ## Day 5 - Sunny with a Chance of Asteroids
 
