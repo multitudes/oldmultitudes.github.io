@@ -100,6 +100,16 @@ I spent hours on this inserting more and more print statements (which ironically
 
 Desperation is a part of doing the challenges. In my case it turned out that the playgrounds as I was using them were too slow!  
 
+## Day 10
+
+This challenge incidentally had a great learning effect on me. 
+I had to stop and learn more about angles and radiants including the atan2() function! Great stuff and honestly not trivial, but I am happy that I understood now how to reverse the direction and calculate the angles of my laser beam to distroy those asteroids.  
+
+
+## Day 11
+
+Day 11 had me using the IntCode computer to manoeuvre a Hull painting robot. It worked! and that made me happy for the day!
+
 ## Day 12
 
 >The space near Jupiter is not a very safe place; you need to be careful of a big distracting red spot, extreme radiation, and a whole lot of moons swirling around. You decide to start by tracking the four largest moons: Io, Europa, Ganymede, and Callisto.
@@ -148,7 +158,7 @@ With parenthesis: about 10.000.000 loop iterations per second !!!
 
 
 
-## Get more Performance
+# Get more Performance!
 
 -Put all your classes and structs in a swift or in a few .swift files and add them to the sources folder.  All the classes and structs need to be marked public or the main code will not see them. This will speed up the performance considerably.
 - Use less print statements.
@@ -162,8 +172,4 @@ With parenthesis: about 10.000.000 loop iterations per second !!!
 - Playgrounds do not have debuggers. An easy options is to use print statements and these make your code slow
 - Using macOs playgrounds it is then not possible obviously to use UIkit and changing from macOS to iOS playgrounds would change all pages.  
 
-to be continued
 
-
- and did the day 10 which incidentally had a great learning effect on me to get to know more about angles and radiants including the atan2 function!
-Day 11 had me using the IntCode computer to manoeuvre a Hull painting robot. It worked!
