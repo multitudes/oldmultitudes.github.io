@@ -145,7 +145,7 @@ This will bring some havoc :)
 ## Day 10
 
 This challenge incidentally had a great learning effect on me. 
-I had to stop and learn more about angles and radiants including the atan2() function! Great stuff and honestly not trivial, but I am happy that I understood now how to reverse the direction and calculate the angles of my laser beam to distroy those asteroids.  
+I had to stop and learn more about angles and radiants including the atan2() function! Great stuff and honestly not trivial, but I am happy that I understood now how to reverse the direction and calculate the angles of my laser beam to destroy those asteroids.  
 
 
 ## Day 11
@@ -165,21 +165,19 @@ The challenge is about performant code!
 >Determine the number of steps that must occur before all of the moons' positions and velocities exactly match a previous point in time.
 For example, the first example above takes 2772 steps before they exactly match a previous point in time; it eventually returns to the initial state.
 Of course, the universe might last for a very long time before repeating. 
-This set of initial positions takes 4686774924 steps before it repeats a previous state! Clearly, you might need to find a more efficient way to simulate the universe.
+This set of initial positions takes 4686774924 steps before it repeats a previous state! You might need to find a more efficient way to simulate the universe.
 
-Part 2 of the challenge went into a loop again. All smaller test position have been debugged, the code seemed correct. I spent days on it. Xmas eve was in between so I stopped worrying and had a break. Eventually after Xmas I had a go at it again. Again I looked in Reddit for hints. The solution, which again was pure genius and I would probably have missed it, consists of calculating every axe indipendently, calculate the number of steps for it to go into the original position and velocity, then check the next axe and the next. The result is then the lowest common multiplicator or LCM of the three orbits!
-I did this but the third orbit would jut go on forever. I thought this is wrong.
-I was growing increasily frustrated. I thought this is the end of my challenges. I spent hours on it.
+Part 2 of the challenge went into a loop again. All smaller test position has been debugged, the code seemed correct. I spent days on it. Xmas eve was in between so I stopped worrying and had a break. Eventually, after Xmas, I had a go at it again. Again I looked in Reddit for hints. The solution, which again was pure genius and I would probably have missed it, consists of calculating every axe independently, calculate the number of steps for it to go into the original position and velocity, then check the next axe and the next. The result is then the lowest common multiplicator or LCM of the three orbits!
+I did this but the third orbit would just go on forever. I thought this is wrong.
+I was growing increasingly frustrated. I thought this is the end of my challenges. I spent hours on it.
 Until I left it running and made a coffee, then had a phone call. And when I came back the answer was staring at me:
 
 >376243355967784
 
-Beautiful but how is that possible? I finally googled specifically for "How slow are playgrounds compared to Swift?""
+Beautiful but how is that possible? I finally googled specifically for "How slow are playgrounds compared to Swift?"
 I found this enlightening answer on SO [recursive-algorithm-is-much-slower-in-playgrounds](https://stackoverflow.com/questions/55303853/recursive-algorithm-is-much-slower-in-playgrounds-1-minute-than-xcode-0-1-sec) and [swift-playground-execution-speed](https://stackoverflow.com/a/47542545/9497800)
 
-Playgrounds are slow!
-
-Of course the most performant way is to make all the performance critical code in a .swift file inside the Sources folder in the playground, but I never imagined this would make such a big difference! 
+Of course, the most performant way is to make all the performance-critical code in a Swift file inside the Sources folder in the playground, but I never imagined this would make such a big difference! 
 
 This below is another example of how the Playgrounds can be unexpectedly quirky!
 
@@ -202,16 +200,22 @@ With parenthesis: about 10.000.000 loop iterations per second !!!
 
 # Get more Performance!
 
+<<<<<<< HEAD
+-Put all your classes and structs in a swift or a few swift files and add them to the sources folder. All the classes and structs need to be marked public or the main code will not see them. This will speed up the performance considerably.
+- Use fewer print statements.
+- Use macOS playgrounds (there an option for that in the inspector)
+=======
 - Put all your classes and structs in a swift or in a few .swift files and add them to the sources folder.  All the classes and structs need to be marked public or the main code will not see them. This will speed up the performance considerably.
 - Use less print statements.
 - Use macOs playgrounds (there an option for that in the inspector)
 
 ## The disadvantages to use Xcode Playgrounds for Swift 
+>>>>>>> c4b04acc8cdd2730702e67e0cb7cdf78c1760465
 
-- Once you put your classes and structs in sources there is a message that you will get all the time. I think I wasted lots of time on this. "... is inaccessible due to internal protection level." Need to make every.single.property! and methods! public. Thats a lot! plus the structs will need a public init. and if they do not have an init they need one now. 
-- Putting the code in the source makes it very slow to debug, the playground needs minutes(!) to understand that you made a change in a swift file in sources, or that a struct that was in the maion file previously is now in sources.
-- I had to restart Xcode a lot doing the above. Xcode again needs minutes(!) to understand that you corrected a struct permission from internal to public.
-- Playgrounds do not have debuggers. An easy options is to use print statements and these make your code slow
-- Using macOs playgrounds it is then not possible obviously to use UIkit and changing from macOS to iOS playgrounds would change all pages.  
+## The disadvantages to using Xcode Playgrounds for Swift 
 
+- Once you put your classes and structs in sources there is a message that you will get all the time like: "... is inaccessible due to internal protection level". This informs you that you need to make every single property and methods public. That's a lot of extra typing because the structs will need a public initializer. Usually, you would get one for free, well they do need one now. 
+- Putting the code in the source makes it very slow to debug, the playground needs minutes(!) to understand that you made a change in a Swift file in sources, or that a struct that was in the main file previously, is now in the Sources folder.
+- I had to restart Xcode a lot doing the above. Xcode again needs quite a long time to understand that the permission has been changed from internal to public.
+- Playgrounds do not have debuggers. An easy option is to use print statements and these make your code slow.
 
