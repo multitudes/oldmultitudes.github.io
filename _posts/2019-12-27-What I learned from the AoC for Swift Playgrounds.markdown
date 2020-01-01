@@ -21,8 +21,7 @@ Not only people get to solve these much quicker than me but they manage to write
 It is incredibly inspiring to see so many skills in actions and look at each other code, even if I do not understand most of it.  
 With time I found two other developers using Swift and the solutions were implemented using packages and templates, allowing the code to be run in Terminal on Mac or Linux. I thought this was interesting because Swift is open source and I still rely too much on the Apple platform.     
 
-This blog article is still in progress and will be for a while, because at the time of writing I did not finish the [Advent of code 2019](https://adventofcode.com).   
-I managed to get to day 15 and then life got in the way.  
+This blog article is still in progress and will be for a while, because at the time of writing I did not finish the [Advent of code 2019](https://adventofcode.com). I managed to get to day 15 and then life got in the way.  
 
 I am just not fast enough I guess. In 2020 I will put all my energies to prepare myself for hopefully a new job as a Software developer. Priority are editing my Website, write my CV and apply for jobs. I will put the challenges aside for the moment being!
 
@@ -53,8 +52,8 @@ For instance, where do I put the input file? In the Sources or Resources folder?
 
 ![AoC Image](/assets/img/aoc/sourceFolder.png)
 
-### Day 2: Meet the IntCode Computer
-
+### Day 2: Meet the IntCode Computer  
+  
 The IntCode Computer is at the heart of many AoC 2019 challenges.   
 
 It starts on day 2:
@@ -99,6 +98,10 @@ A few seconds...? I have a mac mini 2018 with an i7 intel 6 cores... It cannot r
 I spent hours on this inserting more and more print statements (which ironically would just make my playground slower). I had a bad feeling. Part two would not give me any output and I could not find the bug.  I had a break from the IntCode!  
 
 Desperation is a part of doing the challenges. In my case it turned out that the playgrounds as I was using them were too slow!  
+
+## Day 3: Crossed Wires
+
+
 
 ## Day 10
 
