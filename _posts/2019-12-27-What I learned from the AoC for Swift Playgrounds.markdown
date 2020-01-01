@@ -125,7 +125,22 @@ Again fun times with the IntCode computer!
 
 A classic linked lists problem 
 
-##
+## Day 7 - Amplification Circuit
+
+Using the IntCode computer! It gets more and more obvious that who had already at the beginning a modular implementation of the computer will be at advantage! 
+
+## Day 8: Space Image Format
+
+This was neat and not too difficult.
+
+## Day 9: Sensor Boost
+
+Getting dirty!  
+The new feature of the IntCode Computer!
+> Your existing Intcode computer is missing one key feature: it needs support for parameters in relative mode.
+
+This will bring some havoc :)
+
 
 ## Day 10
 
