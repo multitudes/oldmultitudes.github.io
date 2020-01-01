@@ -42,18 +42,22 @@ Swift is a modern language said to be as fast as C and offer many nice features 
 
 ### Day 1
 
-This was just to get the party going. The leaderboards have been unlocked in 4 minutes 12 seconds, which mean it took so long for the first person to get to the solution. Especially for people starting doing the challenges to learn a new language, the first day is helping to get the system ready, to get comfortable doing all basic operations required by the later challenges like reading and saving files from a disk, display solution, print to screen etc.
-Not difficult at all but it took a long time for me to understand how certain things in Playground works. 
+This was just to get the party going.   
+
+The leaderboards have been unlocked in 4 minutes 12 seconds, which mean it took so long for the first person to get to the solution.   
+Especially for people starting doing the challenges to learn a new language, the first day is helping to get the system ready, to get comfortable doing all basic operations required by the later challenges like reading and saving files from a disk, display solution, print to screen etc.
+
+Not difficult at all but it took a long time for me to understand how certain things in Playground works.    
+
 For instance, where do I put the input file? In the Sources or Resources folder? Not a trivial question. The Sources folder is for the source code, but it would work for any other resources too. However, the correct way is to put the input.txt file for the puzzle in Ressources! The Sources folder is for the code. Swift files will not be recognized if put in the wrong folder. This I learned!
 
 ![AoC Image](/assets/img/aoc/sourceFolder.png)
 
-
-Today is the 27th December and I am still on day 13! However, I had a nagging bug on the IntCode Computer on board of my spaceship. The IntCode Computer started building itself on day 2 where we had to decode an easy sequence of instructions.
-
 ### Day 2: Meet the IntCode Computer
 
-The IntCode Computer is at the heart of many AoC 2019 challenges. It starts on day 2:
+The IntCode Computer is at the heart of many AoC 2019 challenges.   
+
+It starts on day 2:
 
 > An Intcode program is a list of integers separated by commas (like 1,0,0,3,99). To run one, start by looking at the first integer (called position 0). Here, you will find an opcode - either 1, 2, or 99. The opcode indicates what to do; for example, 99 means that the program is finished and should immediately halt. Encountering an unknown opcode means something went wrong.
 For example, suppose you have the following program:
@@ -74,10 +78,12 @@ This challenge somehow came as a shock and became a roadblock for me and many ot
 
 ![Reddit Post Image](/assets/img/aoc/aoc1.png)
 
-The first big problem came on the day 9 part 1 challenge, many forgot to implement the relative mode on the third parameter, which had been mostly implicitly left out till now. 
+The first big problem came on the day 9 part 1 challenge.  
+Many forgot to implement the relative mode on the third parameter, which had been mostly implicitly left out till now.   
 This would give ‘203’ as output. 
 I thought there is an element of genius in how these challenges are made. :) 
-I found out and corrected the code. Everything was working correctly now. 
+
+I found out and corrected the code. Everything was working correctly now.   
 Perhaps not as elegantly as I wanted but still, this is my first AoC and I am no professional developer after all. Every smaller test file with IntCode was working.. but part two got caught in an infinite loop or so I thought. Nobody else had this problem. I read and reread the challenge description including all possible hints on the AoC website and the Reddit. 
 
 Especially this sentence below had me thinking for a long time.
@@ -89,7 +95,9 @@ and
 > Once run, it will boost the sensors automatically, but it might take a few seconds to complete the operation on slower hardware.
 
 A few seconds...? I have a mac mini 2018 with an i7 intel 6 cores... It cannot run for 10 minutes?  
-I spent hours on this inserting more and more print statements (which ironically would just make my playground slower). I had a bad feeling. Part two would not give me any output and I could not find the bug.  I had a break from the IntCode! 
+
+I spent hours on this inserting more and more print statements (which ironically would just make my playground slower). I had a bad feeling. Part two would not give me any output and I could not find the bug.  I had a break from the IntCode!  
+
 Desperation is a part of doing the challenges. In my case it turned out that the playgrounds as I was using them were too slow!  
 
 ## Day 12
