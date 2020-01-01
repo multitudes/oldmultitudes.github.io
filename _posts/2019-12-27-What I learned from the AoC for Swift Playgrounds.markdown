@@ -101,7 +101,8 @@ Desperation is a part of doing the challenges. In my case it turned out that the
 
 ## Day 3: Crossed Wires
 
-
+The nice thing about this challenge is the understanding that came with using the right collection type in Swift.   
+For this Sets were the best solution to be quick and efficient
 
 ## Day 10
 
