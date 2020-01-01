@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "What I learned from the AoC for Swift Playgrounds"
+title:  "What I learned from doing the Advent of Code 2019"
 date:   2019-12-27
 categories: iOS, developer
 comments: true
