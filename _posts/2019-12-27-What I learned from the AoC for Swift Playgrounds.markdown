@@ -114,10 +114,18 @@ When writing the this article I actually went back and recorded this gif:
 
 ![Reddit Post Image](/assets/img/aoc/aocday4-slow.gif)
 
-I did not realize at the time how bad this was.  
+I did not realize at the time how bad this was.  I later understood this code would run instantaneously on Swift but not on the playground page...
 But the worse was yet to come! 
 
 ## Day 5 - Sunny with a Chance of Asteroids
+
+Again fun times with the IntCode computer!
+
+## Day 6 - Universal Orbit Map
+
+A classic linked lists problem 
+
+##
 
 ## Day 10
 
