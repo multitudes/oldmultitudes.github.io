@@ -32,7 +32,8 @@ At the end of the article below, I will explain more in detail the pro and contr
 
 I collected all the challenges in one big playground with multiple pages and published it on [Github](https://github.com/multitudes/Advent-of-Code-2019) to document my journey.
 
-Xcode playground can insert markdown and create a nice layout to introduce and describe the challenges and explain the code. They are similar to the Notebooks in Python, and it seemed to be a great feature and a bonus. As seen in the images this is an example of markdown rendering and navigation in the playgrounds. I assigned a shortcut to go from the editing mode to the rendered mode
+Xcode playground can insert markdown and create a nice layout to introduce and describe the challenges and explain the code. They are similar to the Notebooks in Python, and it seemed to be a great feature and a bonus. As seen in the images this is an example of markdown rendering and navigation in the playgrounds. I assigned a shortcut to go from the editing mode to the rendered mode.  
+
 ![AoC Image](/assets/img/aoc/markdown0.png)
 ![AoC Image](/assets/img/aoc/markdown1.png)
 
@@ -102,7 +103,15 @@ Desperation is a part of doing the challenges. In my case it turned out that the
 ## Day 3: Crossed Wires
 
 The nice thing about this challenge is the understanding that came with using the right collection type in Swift.   
-For this Sets were the best solution to be quick and efficient
+For this Sets were the best solution to be quick and efficient.   
+At day 3 I started to refactor code and use a separate swift file for functions and structs in the Sources folder. 
+
+## Day 4: Secure Container
+
+Cryptography! Create a sequence of numbers and check how many meet the selected criteria. Good fun, I thought it would be easier then I had an "aha" moment. My solution was wrong. I had to think harder, and this is part of the fun :)
+I printed the sequences to debug and could see that this slowed down the code quite a bit but nothing too bad yet. The worse was yet to come! 
+
+## Day 5 - Sunny with a Chance of Asteroids
 
 ## Day 10
 
