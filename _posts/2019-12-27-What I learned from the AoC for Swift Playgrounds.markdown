@@ -4,7 +4,7 @@ title:  "What I learned from the AoC for Swift Playgrounds"
 date:   2019-12-27
 categories: iOS, developer
 comments: true
-published: false
+published: true
 ---
 
 ![AoC Image](/assets/img/aoc/aoc0.png)
