@@ -16,8 +16,10 @@ I enjoyed the challenges and especially the realisations that came with them. Th
 I loved the Reddit with the discussions and the poems!  
 Not only people get to solve these much quicker than me but they manage to write a poem too. I thought this was wonderful, also I enjoyed to see that people used so many different programming languages to solve the challenges, from Bash, to Go, to Excel, even ARMv7-M Assembly!   
 It is incredibly inspiring to see so many skills in actions and look at each other code, even if I do not understand most of it.
-With time I found two other developers using Swift and the solutions were implemented using packages and templates, allowing the code to be run in Terminal on Mac or Linux. I thought this was interesting because Swift is open source and I still rely too much on the Apple platform. 
-This blog article is still in progress because at the time of writing I did not finish the [Advent of code 2019](https://adventofcode.com). I managed to get to day 15 and then life got in the way. I am just not fast enough I guess. In 2020 I will prepare myself for hopefully a new job as a Software developer and I will put all my energy in editing my Website, my CV and applying for jobs. I will put the challenges aside for the moment being!
+With time I found two other developers using Swift and the solutions were implemented using packages and templates, allowing the code to be run in Terminal on Mac or Linux. I thought this was interesting because Swift is open source and I still rely too much on the Apple platform.   
+This blog article is still in progress and will be for a while, because at the time of writing I did not finish the [Advent of code 2019](https://adventofcode.com).   
+I managed to get to day 15 and then life got in the way.  
+I am just not fast enough I guess. In 2020 I will put all my energies to prepare myself for hopefully a new job as a Software developer. Priority are editing my Website, write my CV and apply for jobs. I will put the challenges aside for the moment being!
 
 #### What can go wrong using the Swift Playgrounds on Xcode?  
 
