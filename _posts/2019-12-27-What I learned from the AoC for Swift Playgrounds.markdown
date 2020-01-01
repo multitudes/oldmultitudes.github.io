@@ -202,7 +202,7 @@ With parenthesis: about 10.000.000 loop iterations per second !!!
 
 # Get more Performance!
 
--Put all your classes and structs in a swift or in a few .swift files and add them to the sources folder.  All the classes and structs need to be marked public or the main code will not see them. This will speed up the performance considerably.
+- Put all your classes and structs in a swift or in a few .swift files and add them to the sources folder.  All the classes and structs need to be marked public or the main code will not see them. This will speed up the performance considerably.
 - Use less print statements.
 - Use macOs playgrounds (there an option for that in the inspector)
 
