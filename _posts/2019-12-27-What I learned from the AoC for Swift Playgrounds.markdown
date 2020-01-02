@@ -160,12 +160,14 @@ Day 11 had me using the IntCode computer to manoeuvre a Hull painting robot. It 
 
 ### Day 12
 
+A challenge to determine when 4 Jupyter moons would get into their initial state again. Of course, that had to be done more smartly and I came across a modified version of the greatest common factor algorithm, also called [Euclidean algorithm](https://en.wikipedia.org/wiki/Euclidean_algorithm) to calculate the [Least Common Multiple](https://en.wikipedia.org/wiki/Least_common_multiple). This has been a bonus learning experience.
+
 >The space near Jupiter is not a very safe place; you need to be careful of a big distracting red spot, extreme radiation, and a whole lot of moons swirling around. You decide to start by tracking the four largest moons: Io, Europa, Ganymede, and Callisto.
 After a brief scan, you calculate the position of each moon (your puzzle input). You just need to simulate their motion so you can avoid them.
 Each moon has a 3-dimensional position (x, y, and z) and a 3-dimensional velocity. The position of each moon is given in your scan; the x, y, and z velocity of each moon starts at 0.
 Simulate the motion of the moons in time steps. Within each time step, first update the velocity of every moon by applying gravity. Then, once all moons' velocities have been updated, update the position of every moon by applying velocity. Time progresses by one step once all of the positions are updated.
 
-Arriving at day 12 I had to cross a till now invisible? to me and unforeseen barrier with my Xcode Playgrounds.
+However, I had to cross a till now invisible to me and unforeseen barrier with my Xcode Playgrounds.
 The challenge is about performant code!
 
 >Determine the number of steps that must occur before all of the moons' positions and velocities exactly match a previous point in time.
