@@ -9,10 +9,13 @@ published: true
 
 ![AoC Image](/assets/img/aoc/aoc0.png)
 
+At the beginning of the month, I had to study hard for the IHK German Chamber Of Commerce Software developer exams. After passing those I was able to focus on different things again. This is when I found out about the Advent Of Code. To spend more time just writing code and algorithms in the language of my choice has been a great way to relax and have some fun!  
 
-The [Advent of code 2019](https://adventofcode.com) in December 2019 has been a great experience.  
+I did many tutorials with Swift before and the experience has always been guided. Of course, it has to be like this, nothing wrong with the tutorials. It is just that I never really did put into practice what I was learning. The advent of code has allowed me to approach and deal with problems. I was almost about to say real-world problems, but really to rescue Santa cannot be considered a real-world problem, can it? 
 
-At the beginning of the month, I had to study hard for the IHK German Chamber Of Commerce Software developer exams. After passing those I was able to focus on different things again. To spend more time just writing code and algorithms in the language of my choice has been a great way to relax and have some fun!  
+Let me explain. I love to take a book and practice algorithms. This is a different experience than, say: "I need to calculate this, how can I do it?", and then spending a few hours looking for a solution.
+
+The [Advent of code 2019](https://adventofcode.com) in December 2019 has been a great experience to practice all that I learned with Swift in 2019. 
 
 I enjoyed the challenges and especially the realisations that came with them. The puzzles were not easy for me. I cannot believe 100 people a day could manage to solve those in less than one hour.     
 I loved the Reddit with the discussions and the poems!  
@@ -100,13 +103,13 @@ I spent hours on this inserting more and more print statements (which ironically
 
 Desperation is a part of doing the challenges. In my case it turned out that the playgrounds as I was using them were too slow!  
 
-## Day 3: Crossed Wires
+### Day 3: Crossed Wires
 
 The nice thing about this challenge is the understanding that came with using the right collection type in Swift.   
 For this Sets were the best solution to be quick and efficient.   
 At day 3 I started to refactor code and use a separate swift file for functions and structs in the Sources folder. 
 
-## Day 4: Secure Container
+### Day 4: Secure Container
 
 Cryptography! Create a sequence of numbers and check how many meet the selected criteria. Good fun, I thought it would be easier then I had an "aha" moment. My solution was wrong. I had to think harder, and this is part of the fun :)
 I printed the sequences to debug and could see that this slowed down the code quite a bit. I took out the print statements to see if the speed would improve.   
@@ -114,26 +117,29 @@ When writing the this article I actually went back and recorded this gif:
 
 ![Reddit Post Image](/assets/img/aoc/aocday4-slow.gif)
 
+This is slow! 
 I did not realize at the time how bad this was.  I later understood this code would run instantaneously on Swift but not on the playground page...
 But the worse was yet to come! 
 
-## Day 5 - Sunny with a Chance of Asteroids
+### Day 5 - Sunny with a Chance of Asteroids
 
 Again fun times with the IntCode computer!
 
-## Day 6 - Universal Orbit Map
+### Day 6 - Universal Orbit Map
 
-A classic linked lists problem 
+A classic linked lists problem. 
 
-## Day 7 - Amplification Circuit
+### Day 7 - Amplification Circuit
 
-Using the IntCode computer! It gets more and more obvious that who had already at the beginning a modular implementation of the computer will be at advantage! 
+Using the IntCode computer! It gets more and more obvious that who had already at the beginning a modular implementation of the computer will be at advantage!
 
-## Day 8: Space Image Format
+I did miss this and did not spend more time at the beginning refactoring this code if I did so the later challenges would have been easier!
+
+### Day 8: Space Image Format
 
 This was neat and not too difficult.
 
-## Day 9: Sensor Boost
+### Day 9: Sensor Boost
 
 Getting dirty!  
 The new feature of the IntCode Computer!
@@ -142,17 +148,17 @@ The new feature of the IntCode Computer!
 This will bring some havoc :)
 
 
-## Day 10
+### Day 10
 
 This challenge incidentally had a great learning effect on me. 
 I had to stop and learn more about angles and radiants including the atan2() function! Great stuff and honestly not trivial, but I am happy that I understood now how to reverse the direction and calculate the angles of my laser beam to destroy those asteroids.  
 
 
-## Day 11
+### Day 11
 
 Day 11 had me using the IntCode computer to manoeuvre a Hull painting robot. It worked! and that made me happy for the day!
 
-## Day 12
+### Day 12
 
 >The space near Jupiter is not a very safe place; you need to be careful of a big distracting red spot, extreme radiation, and a whole lot of moons swirling around. You decide to start by tracking the four largest moons: Io, Europa, Ganymede, and Callisto.
 After a brief scan, you calculate the position of each moon (your puzzle input). You just need to simulate their motion so you can avoid them.
@@ -196,7 +202,10 @@ for i in 0..<1_000_000_000 {
 Without the parenthesis: about 10.000 loop iterations per second
 With parenthesis: about 10.000.000 loop iterations per second !!!
 
+### Day 13-15
 
+After Xmas, I managed to do three more days but the momentum had somewhat gone. I know it is important to get going but I just feel guilty to spend so much time on challenges when I should put my energy into finding a job. This comes with preparing my CV, cleaning up my portfolio and doing a few more iOS project to show. Right now that is all that I can concentrate on. 
+So I stopped on Day 15. 
 
 # Get more Performance!
 
@@ -210,4 +219,6 @@ With parenthesis: about 10.000.000 loop iterations per second !!!
 - Putting the code in the source makes it very slow to debug, the playground needs minutes(!) to understand that you made a change in a Swift file in sources, or that a struct that was in the main file previously, is now in the Sources folder.
 - I had to restart Xcode a lot doing the above. Xcode again needs quite a long time to understand that the permission has been changed from internal to public.
 - Playgrounds do not have debuggers. An easy option is to use print statements and these make your code slow.
-
+- There is no readLine function in the Playgrounds, so strangely it is not possible to input anything in your running program. All languages since the '70s and before having this possibility obviously, I believe the Playgrounds have always been a way to quickly test some software, so the inputs are hardcoded in the software you write, still, it is puzzling! 
+- The graphical possibilities using the console are limited. There are other ways to have a graphical interface but this requires some more knowledge of the macOS or iOS UIKit and it is not trivial. For instance, I can draw a maze in the console using the print functions with a carriage return and ASCII characters like "-" and "#" but if I wanted to clear the console? There is no such thing as a clear command and I did look and try! I do miss things which are long been available in Bash and Terminal shells and for a reason! Because they are useful! 
+ 
