@@ -11,18 +11,23 @@ title: About
 <!-- ![image](/assets/img/) -->
 
 
-
+<!--
 <a href="https://multitudes.github.io/">
     <img style="float: left; margin-top: 1rem; margin-right: 1rem; border: 0.2rem solid white; height:180px ;padding: 0px;border-radius:50%" src="https://multitudes.github.io/assets/img/laurent.jpg" alt="Laurent Brusa profile picture" >
     </a>
+    -->
 Hi, I am Laurent. 
 <br>
 
-I am passionate about developing for iOS, about sound and music applications, natural language application, education and deep learning applied to computer vision and recursive networks for language applications.
+I am passionate about developing for iOS, about sound and music applications, natural language application, education and deep learning applied to computer vision.
 
-My preferred languages include Swift, C, C++, full stack, front and back end with PHP, JS, and JQuery. I also love Python and started to get into Machine and Deep Learning since the summer of 2018. thanks to the great online courses offered by Jeremy Howard of [fast.ai](https://course.fast.ai). I work on Macs and I am at ease with a Linux terminal.
+I live in Germany and successfully completed the two years courses for the IHK (German Chamber Of Commerce) Developer Certificate in 2020.
+ 
+I did the online courses on Artificial Intelligence offered by Jeremy Howard of [fast.ai](https://course.fast.ai) and by the [Helsinki University](https://www.elementsofai.com). 
 
-I am a multi-linguist in a technology driven business. I speak and write fluent English and have a demonstrable knowledge of several European languages. I love specialty coffee and on the weekends you might see me on my bike going to look for coffee cuppings in town.. 
+My preferred languages include Swift, C, C++, full stack, front and back end with PHP, JS. I also love Python! 
+
+I love specialty coffee and on the weekends you might see me on my bike going to look for coffee cuppings in town. 
 
 Get in touch on [Linkedin](https://www.linkedin.com/in/laurentbrusa) or say hello on [twitter](https://twitter.com/wrmultitudes).
  
