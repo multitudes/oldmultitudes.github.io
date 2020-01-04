@@ -5,7 +5,7 @@ title: About
  
 <!--   Study hard what interests you the most in the most undisciplined, irreverent and original manner possible.
   ― Richard Feynmann -->
-  > Learning another language is like becoming another person -- <cite>Haruki Murakami</cite>
+  >  “talk is cheap; show me the code.”  -- <cite>Linus Torvalds</cite>
 <!-- ![laurent](/assets/img/about.jpg){:class="profile_img"} -->
 
 <!-- ![image](/assets/img/) -->
@@ -28,6 +28,8 @@ I did the online courses on Artificial Intelligence offered by Jeremy Howard of 
 My preferred languages include Swift, C, C++, full stack, front and back end with PHP, JS. I also love Python! 
 
 I love specialty coffee and on the weekends you might see me on my bike going to look for coffee cuppings in town. 
+
+Here you can see [my Portfolio](https://github.com/multitudes/portfolio) and my public repositories on [GitHub](https://github.com/multitudes/).
 
 Get in touch on [Linkedin](https://www.linkedin.com/in/laurentbrusa) or say hello on [twitter](https://twitter.com/wrmultitudes).
  
