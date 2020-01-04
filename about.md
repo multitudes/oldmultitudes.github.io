@@ -1,6 +1,6 @@
 ---
 layout: page
-title: About
+title: About me
 ---
  
 <!--   Study hard what interests you the most in the most undisciplined, irreverent and original manner possible.
@@ -16,8 +16,8 @@ title: About
     <img style="float: left; margin-top: 1rem; margin-right: 1rem; border: 0.2rem solid white; height:180px ;padding: 0px;border-radius:50%" src="https://multitudes.github.io/assets/img/laurent.jpg" alt="Laurent Brusa profile picture" >
     </a>
     -->
-Hi, I am Laurent. 
-<br>
+
+
 
 I am passionate about developing for iOS, about sound and music applications, natural language application, education and deep learning applied to computer vision.
 
